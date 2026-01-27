@@ -15,3 +15,8 @@
 
 // isActive=true;
 // console.log( isActive);
+
+let name="JavaScript";
+console.log("Name:", name);
+let age=24;
+console.log("Age:", age);
