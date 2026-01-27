@@ -1,20 +1,17 @@
-let age = 21;
-let name = "Ishaan";
-let isStudent = true;
-let result;
-let data = null;
-let bigNumber = 9007199254740991n;
-let userId = Symbol("1");
-let user = {
-    age: age,
-    name: name,
-    isStudent: isStudent,
-    result: result,
-    data: data,
-    bigNumber: bigNumber,
-    id: userId
-};
+// console.log("Hello, World!");
+// console.log("This is a sample JavaScript file.");
 
-console.log(user);
-console.log("Symbol value:", userId);
-console.log("Type of Symbol:", userId);
+// age=24;
+// console.log("Age:", age);
+// age+=1;
+// console.log("Next Year Age:", age);
+// name="JAVASCRIPT";
+// console.log("Name:", name);
+
+// x=null;
+// y=undefined;
+// console.log(x);
+// console.log(y);
+
+// isActive=true;
+// console.log( isActive);
