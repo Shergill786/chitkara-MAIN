@@ -169,3 +169,34 @@
 //         printf("You are not eligible for any discount.\n");
 //     }
 // }
+
+
+// case study 4 
+// #include <stdio.h>
+// int main() {
+//     int age;
+//     char gender;
+//     printf("Enter your age: ");
+//     scanf("%d", &age);
+//     printf("Enter your gender (M/F): ");
+//     scanf(" %c", &gender);
+//     if (gender  == 'M') {
+//         if (age < 18) {
+//             printf("You are a boy.\n");
+//         } else {
+//             printf("You are a man.\n");
+//         }
+//     } 
+//     else    if (gender  == 'F') {
+//         if (age < 18) {
+//             printf("You are a girl.\n");
+//         } else {
+//             printf("You are a woman.\n");
+//         }   
+//     }
+//     else {
+//         printf("Invalid gender input.\n");
+//     }   
+// }
+
+

@@ -49,3 +49,59 @@
 //                 e;
 
 // console.log("The greatest number is:", greatest);
+
+
+// avg percentage of 5 subjects
+// let sub1 =Number(prompt("Enter marks of subject 1: "));
+// let sub2 =Number(prompt("Enter marks of subject 2: "));
+// let sub3 =Number(prompt("Enter marks of subject 3: "));
+// let sub4 =Number(prompt("Enter marks of subject 4: "));
+// let sub5 =Number(prompt("Enter marks of subject 5: "));
+// let total = sub1 + sub2 + sub3 + sub4 + sub5;
+// let avg = total / 5;
+// let per = (total / 500) * 100;
+// console.log("Total marks:", total);
+// console.log("Average marks:", avg);
+// console.log("Percentage:", per + "%");
+
+
+// squareroot ,cube root  of a number
+// let num =Number(prompt("Enter a number: "));
+// let sqrt=num ** 0.5;
+// let cbrt=num ** (1/3);
+// console.log("Square root of", num, "is:", sqrt);
+// console.log("Cube root of", num, "is:", cbrt);
+
+
+// greatest and smallest of 3 numbers
+// let n1 =Number(prompt("Enter first number: "));
+// let n2 =Number(prompt("Enter second number: "));
+// let n3 =Number(prompt("Enter third number: "));
+// if (n1 >= n2 && n1 >= n3) {
+//     console.log("The greatest number is:", n1);
+// }
+// else if (n2 >= n1 && n2 >= n3) {
+//     console.log("The greatest number is:", n2);
+// }
+// else {
+//     console.log("The greatest number is:", n3);
+// }
+// if (n1 <= n2 && n1 <= n3) {
+//     console.log("The smallest number is:", n1);
+// }
+// else if (n2 <= n1 && n2 <= n3) {
+//     console.log("The smallest number is:", n2);
+// }
+// else {
+//     console.log("The smallest number is:", n3);
+// }
+
+
+// area and volume of rectangle
+// let length =Number(prompt("Enter length of rectangle: "));
+// let width =Number(prompt("Enter width of rectangle: "));
+// let height =Number(prompt("Enter height of rectangle: "));
+// let area = length * width;
+// let volume = length * width * height;
+// console.log("Area of rectangle is:", area);
+// console.log("Volume of rectangle is:", volume); 
