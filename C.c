@@ -71,40 +71,78 @@
 // }
 
 //  if else calculator
+// #include <stdio.h>
+// int main() {
+    
+//     int choice;
+//     float a, b, result;
+//     printf("Select operation:\n");
+//     printf("1. Addition\n");
+//     printf("2. Subtraction\n");
+//     printf("3. Multiplication\n");
+//     printf("4. Division\n");
+//     printf("Enter your choice (1-4): ");
+//     scanf("%d", &choice);
+//     printf("Enter first number: ");
+//     scanf("%f", &a);
+//     printf("Enter second number: ");
+//     scanf("%f", &b);
+//     if (choice == 1) {
+//         result = a + b;
+//         printf("Result: %f\n", result);
+//     } else if (choice == 2) {
+//         result = a - b;
+//         printf("Result: %f\n", result);
+//     } else if (choice == 3) {
+//         result = a * b;
+//         printf("Result: %f\n", result);
+//     } else if (choice == 4) {
+//         if (b != 0) {
+//             result = a / b;
+//             printf("Result: %f\n", result);
+//         } else {
+//             printf("Error: Division by zero is not allowed.\n");
+//         }
+//     } else {
+//         printf("Invalid choice.\n");
+//     }
+//     return 0;
+// }
+
+
+// case study 1
+// #include <stdio.h>
+// int main() {
+//     int ps,exp;
+//     printf("Enter your performance score: ");
+//     scanf("%d", &ps);
+//     printf("Enter your years of experience: ");
+//     scanf("%d", &exp);
+//     if (ps >= 75 & exp > 3) {
+//         printf("You are eligible for promotion.\n");
+//     } else {
+//         printf("You are not eligible for promotion.\n");
+//     }
+// }
+
+
+// case study 2
 #include <stdio.h>
 int main() {
-    
-    int choice;
-    float a, b, result;
-    printf("Select operation:\n");
-    printf("1. Addition\n");
-    printf("2. Subtraction\n");
-    printf("3. Multiplication\n");
-    printf("4. Division\n");
-    printf("Enter your choice (1-4): ");
-    scanf("%d", &choice);
-    printf("Enter first number: ");
-    scanf("%f", &a);
-    printf("Enter second number: ");
-    scanf("%f", &b);
-    if (choice == 1) {
-        result = a + b;
-        printf("Result: %f\n", result);
-    } else if (choice == 2) {
-        result = a - b;
-        printf("Result: %f\n", result);
-    } else if (choice == 3) {
-        result = a * b;
-        printf("Result: %f\n", result);
-    } else if (choice == 4) {
-        if (b != 0) {
-            result = a / b;
-            printf("Result: %f\n", result);
-        } else {
-            printf("Error: Division by zero is not allowed.\n");
-        }
-    } else {
-        printf("Invalid choice.\n");
+    int num;
+    printf("Enter number of vehicles: ");
+    scanf("%d", &num);
+    if (num>50){
+        printf("geen\n");
     }
-    return 0;
+    else if (num>=30 & num<=50){
+        printf("yellow\n");
+    }
+    else if (num>=0 & num<30){
+        printf("red\n");
+    }
+    else {
+        printf("not valid\n");
+    }
+
 }
