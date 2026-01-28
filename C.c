@@ -131,14 +131,14 @@
 int main() {
     int num;
     printf("Enter number of vehicles: ");
-    scanf("%d", &num);
+    scanf("%i", &num);
     if (num>50){
-        printf("geen\n");
+        printf("green\n");
     }
-    else if (num>=30 & num<=50){
+    else if (num>=20 & num<=50){
         printf("yellow\n");
     }
-    else if (num>=0 & num<30){
+    else if (num>=0 & num<20){
         printf("red\n");
     }
     else {
