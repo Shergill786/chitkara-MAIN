@@ -127,22 +127,22 @@
 
 
 // case study 2
-#include <stdio.h>
-int main() {
-    int num;
-    printf("Enter number of vehicles: ");
-    scanf("%i", &num);
-    if (num>50){
-        printf("green\n");
-    }
-    else if (num>=20 & num<=50){
-        printf("yellow\n");
-    }
-    else if (num>=0 & num<20){
-        printf("red\n");
-    }
-    else {
-        printf("not valid\n");
-    }
+// #include <stdio.h>
+// int main() {
+//     int num;
+//     printf("Enter number of vehicles: ");
+//     scanf("%i", &num);
+//     if (num>50){
+//         printf("green\n");
+//     }
+//     else if (num>=20 && num<=50){
+//         printf("yellow\n");
+//     }
+//     else if (num>=0 && num<20){
+//         printf("red\n");
+//     }
+//     else {
+//         printf("not valid\n");
+//     }
 
-}
+// }
