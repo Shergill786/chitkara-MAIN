@@ -146,3 +146,26 @@
 //     }
 
 // }
+
+// case study 3
+#include <stdio.h>
+int main() {
+    int amt , discount;
+    printf("Enter the total amount: ");
+    scanf("%d", &amt);
+    if (amt >=5000) {
+        discount = amt * 0.2;
+        printf("You are eligible for 20%% discount.\n");
+        printf("Discount amount: %d\n", discount);
+        printf("Final amount: %d\n", amt - discount);
+    } 
+    else if (amt >=2000 && amt <5000) {
+        discount = amt * 0.1;
+        printf("You are eligible for 10%% discount.\n");
+        printf("Discount amount: %d\n", discount);
+        printf("Final amount: %d\n", amt - discount);
+    } 
+    else {
+        printf("You are not eligible for any discount.\n");
+    }
+}
