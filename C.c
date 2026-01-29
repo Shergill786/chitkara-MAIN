@@ -265,3 +265,34 @@
 //         printf("Low consumption\n");
 //     }
 // }
+
+
+// case study 7
+// #include <stdio.h>
+// int main(){
+//     int d1,d2,d3,d4;
+//     printf("calorie burned in d1:");
+//     scanf("%d", &d1);
+//     printf("calorie burned in d2:");
+//     scanf("%d", &d2);
+//     printf("calorie burned in d3:");
+//     scanf("%d", &d3);
+//     printf("calorie burned in d4:");
+//     scanf("%d", &d4);
+//     int total = d1 + d2 + d3 + d4;
+//     printf("Total calorie burned: %d\n", total);
+//     int avg = total / 4;
+//     if (avg >= 500) {
+//         printf("Excellent\n");
+//     } 
+//     else if (avg >= 300 && avg < 500) {
+//         printf("Good\n");
+//     } 
+//     else {
+//         printf("need improvement \n");
+//     }
+// }
+
+
+// case study 8
+#include <stdio.h>
