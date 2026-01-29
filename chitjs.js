@@ -73,6 +73,8 @@
 // console.log("Cube root of", num, "is:", cbrt);
 
 
+
+
 // greatest and smallest of 3 numbers
 // let n1 =Number(prompt("Enter first number: "));
 // let n2 =Number(prompt("Enter second number: "));
@@ -105,3 +107,104 @@
 // let volume = length * width * height;
 // console.log("Area of rectangle is:", area);
 // console.log("Volume of rectangle is:", volume); 
+
+
+// let age=Number(prompt("Enter your age: "));
+// if(age>=18){
+//     console.log("You are an adult.");
+// }
+// else{
+//     console.log("You are a minor.");
+// }
+
+// if else
+// let temp=Number(prompt("Enter the temperature: "));
+// if(temp>35){
+//     console.log("day is hot");
+// }
+// else if(temp>=20 && temp<=35){
+//     console.log("day is warm");
+// }
+// else{
+//     console.log("day is cold");
+// }
+
+
+// switch case
+// let day=Number(prompt("Enter day of the week: "));
+// switch(day){
+//     case 1  :
+//         console.log("Today is Monday"); 
+//         break;
+//     case 2:
+//         console.log("Today is Tuesday");    
+//         break;
+//     case 3  :
+//         console.log("Today is Wednesday");  
+//         break;
+//     case 4  :
+//         console.log("Today is Thursday");  
+//         break;  
+//     case 5:
+//         console.log("Today is Friday");
+//         break;
+//     case 6  :
+//         console.log("Today is Saturday");
+//         break;
+//     case 7:
+//         console.log("Today is Sunday");
+//         break;
+//     default:
+//         console.log("Invalid day");
+// }
+
+// let a =Number(prompt("Enter your age: "));
+// if (a>60 ){
+//     console.log("You are eligible ");
+// }
+// else{
+//     console.log("You are not eligible");
+// }
+
+
+// let char=prompt("Enter a character: ");
+// if (char>='A' && char<='Z'){
+//     console.log(char,"is an uppercase letter.");
+// }
+// else {
+//     console.log(char,"is a lowercase letter.");
+// }
+
+
+// let num=Number(prompt("Enter your numbers: "));
+// if (num>90){
+//     console.log("Grade A");
+// }
+// else if (num>80){
+//     console.log("Grade B");
+// }
+// else if (num>70){
+//     console.log("Grade C");
+// }
+// else if (num>60){
+//     console.log("Grade D");
+// }
+// else{
+//     console.log("Grade F");
+// }
+
+
+// let age=Number(prompt("Enter your age: "));
+// let inc=Number(prompt("Enter your income: "));
+// if (age>=30 && inc<=600000){
+//     console.log("You are eligible for 1 lkh loan.");
+// }
+// else if (age>=40 && age<=45 && inc<1200000){
+//     console.log("You are eligible for 5 lkh loan.");
+// }
+// else if (age>=45 && age<=60 && inc<2400000){
+//     console.log("You are eligible for 25 lkh loan.");
+// }
+// else{
+//     console.log("You are not eligible for loan.");
+// }
