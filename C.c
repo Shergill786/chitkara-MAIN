@@ -243,25 +243,25 @@
 
 
 // case study 6
-// #include <stdio.h>
-// int main()
-// {
-//     int d1 , d2 , d3;
-//     printf("Enter power usage in d1 :");
-//     scanf("%d", &d1);
-//     printf("Enter power usage in d2 :");
-//     scanf("%d", &d2);
-//     printf("Enter power usage in d3 :");
-//     scanf("%d", &d3);
-//     int total = d1*24 + d2*24 + d3*24;
-//     printf("Total power consumption in a day: %d watts\n", total);
-//     if (total >= 300) {
-//         printf("high Usage\n");
-//     } 
-//     else if (total > 150 && total <= 300) {
-//         printf("Moderate consumption\n");
-//     } 
-//     else {
-//         printf("Low consumption\n");
-//     }
-// }
+#include <stdio.h>
+int main()
+{
+    int d1 , d2 , d3;
+    printf("Enter power usage in d1 :");
+    scanf("%d", &d1);
+    printf("Enter power usage in d2 :");
+    scanf("%d", &d2);
+    printf("Enter power usage in d3 :");
+    scanf("%d", &d3);
+    int total = d1*24 + d2*24 + d3*24;
+    printf("Total power consumption in a day: %d watts\n", total);
+    if (total >= 300) {
+        printf("high Usage\n");
+    } 
+    else if (total > 150 && total <= 300) {
+        printf("Moderate consumption\n");
+    } 
+    else {
+        printf("Low consumption\n");
+    }
+}
