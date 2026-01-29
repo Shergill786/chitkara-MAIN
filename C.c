@@ -200,3 +200,68 @@
 // }
 
 
+// case study 5
+// #include <stdio.h>
+// int main() {
+//     int maths,eng,sci,sst,hin;
+//     printf("Enter your marks in maths: ");
+//     scanf("%d", &maths);
+//     printf("Enter your marks in english: ");
+//     scanf("%d", &eng);
+//     printf("Enter your marks in science: ");
+//     scanf("%d", &sci);
+//     printf("Enter your marks in social studies: ");
+//     scanf("%d", &sst);
+//     printf("Enter your marks in hindi: ");
+//     scanf("%d", &hin);
+//     int total = maths + eng + sci + sst + hin;
+//     int average = total / 5;
+//     if (average >= 85) {
+//         printf("Grade: A\n");
+//         printf("percentage: %d\n", average);
+//     } 
+//     else if (average >= 75 && average<85) {
+//         printf("Grade: B\n");
+//         printf("percentage: %d\n", average);
+//     } 
+//     else if (average >= 60 && average<75) {
+//         printf("Grade: C\n");
+//         printf("percentage: %d\n", average);
+//     } 
+//     else if (average >= 50 && average<60) {
+//         printf("Grade: D\n");
+//     } 
+//     else if (average >= 40 && average<50) {
+//         printf("Grade: E\n");
+//         printf("percentage: %d\n", average);
+//     }
+//     else {
+//         printf("Grade: F\n");
+//         printf("percentage: %d\n", average);
+//     }
+// }
+
+
+// case study 6
+// #include <stdio.h>
+// int main()
+// {
+//     int d1 , d2 , d3;
+//     printf("Enter power usage in d1 :");
+//     scanf("%d", &d1);
+//     printf("Enter power usage in d2 :");
+//     scanf("%d", &d2);
+//     printf("Enter power usage in d3 :");
+//     scanf("%d", &d3);
+//     int total = d1*24 + d2*24 + d3*24;
+//     printf("Total power consumption in a day: %d watts\n", total);
+//     if (total >= 300) {
+//         printf("high Usage\n");
+//     } 
+//     else if (total > 150 && total <= 300) {
+//         printf("Moderate consumption\n");
+//     } 
+//     else {
+//         printf("Low consumption\n");
+//     }
+// }
