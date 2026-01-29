@@ -208,3 +208,37 @@
 // else{
 //     console.log("You are not eligible for loan.");
 // }
+
+
+// username with switch case 10 digits 1 uppercase 1 number  3 attempts
+// let attempts = 3;
+// while (attempts > 0) {
+//     let username = prompt("Enter username:");
+//     switch (true) {
+//         case username.length === 4 &&
+//              /[A-Z]/.test(username) &&
+//              /\d/.test(username):
+//             console.log("Login successful");
+//             attempts = 0; 
+//             break;
+//         default:
+//             console.log("Invalid username");
+//             attempts--;
+//     }
+// }
+
+
+// email validation
+// let attempts = 3;
+// while (attempts > 0) {
+//     let email = prompt("Enter your email address:");
+//     switch (true) {
+//         case email.includes("@") && email.includes("."):
+//             console.log("Valid email address");
+//             attempts = 0; 
+//             break;
+//         default:
+//             console.log("Invalid email address");
+//             attempts--;
+//     }
+// }
