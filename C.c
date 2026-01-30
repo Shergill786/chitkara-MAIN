@@ -332,24 +332,25 @@
 
 
 // bit wise operators
-#include <stdio.h>  
-int main() {
-    int a = 4;  // 0100 in binary
-    int b = 5;  // 0101 in binary
-    printf("Bitwise AND: %d\n", a & b);   // 0100 in binary = 4
-    printf("Bitwise OR: %d\n", a | b);    // 0101 in binary = 5
-    printf("Bitwise XOR: %d\n", a ^ b);   // 0001 in binary = 1
-    printf("Bitwise NOT of a: %d\n", ~a); // two's complement = -5
-    printf("Left Shift a by 1: %d\n", a << 1); // 1000 in binary = 8
-    printf("Right Shift a by 1: %d\n", a >> 1); // 0010 in binary = 2
-    return 0;
-}
+// #include <stdio.h>  
+// int main() {
+//     int a = 4;  // 0100 in binary
+//     int b = 5;  // 0101 in binary
+//     printf("Bitwise AND: %d\n", a & b);   // 0100 in binary = 4
+//     printf("Bitwise OR: %d\n", a | b);    // 0101 in binary = 5
+//     printf("Bitwise XOR: %d\n", a ^ b);   // 0001 in binary = 1
+//     printf("Bitwise NOT of a: %d\n", ~a); // two's complement = -5
+//     printf("Left Shift a by 1: %d\n", a << 1); // 1000 in binary = 8
+//     printf("Right Shift a by 1: %d\n", a >> 1); // 0010 in binary = 2
+//     return 0;
+// }
 
-#include <stdio.h>
-int main(){
-    int a=8;
-    int b=9;
-    printf("Bitwise AND: %d\n", a & b);
-    printf("Bitwise OR: %d\n", a | b);   
+// #include <stdio.h>
+// int main(){
+//     int a=8;
+//     int b=9;
+//     printf("Bitwise AND: %d\n", a & b);
+//     printf("Bitwise OR: %d\n", a | b);   
     
-}
+// }
+
