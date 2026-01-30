@@ -294,5 +294,27 @@
 // }
 
 
-// case study 8
-#include <stdio.h>
+// case study 8 calculate salary based on basic pay
+// #include <stdio.h>
+// int main() {
+//     int basic, hra, da, gross ,tax, id;
+//     printf("Enter your ID: ");
+//     scanf("%d", &id);
+//     printf("Enter your basic pay: ");
+//     scanf("%d", &basic);
+//     hra = basic * 0.20;
+//     da = basic * 0.10;
+//     gross = basic + hra + da;
+//     printf("Gross Salary: %d\n", gross );
+//     if (gross >= 50000) {
+//         tax = gross * 0.15;
+//         printf("Tax: %d \n", tax);
+//     }
+//     else {
+//         tax = gross * 0.05;
+//         printf("Tax: %d\n", tax);
+//     }
+//     printf("total Salary: %d\n", gross+tax);
+// }
+
+
