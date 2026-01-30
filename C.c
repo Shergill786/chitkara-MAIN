@@ -351,6 +351,9 @@
 //     int b=9;
 //     printf("Bitwise AND: %d\n", a & b);
 //     printf("Bitwise OR: %d\n", a | b);   
-    
+//     printf("Bitwise XOR: %d\n", a ^ b);
+//     printf("Bitwise NOT of a: %d\n", ~a);
+//     printf("Left Shift a by 1: %d\n", a << 1);
+//     printf("Right Shift a by 1: %d\n", a >> 1);    
 // }
 
