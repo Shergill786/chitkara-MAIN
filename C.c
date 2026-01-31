@@ -378,3 +378,17 @@
 // printf("%d %d", x, y);
 // return 0;
 // }   
+
+
+// #include <stdio.h>
+// int main() {
+//     int x=5;
+//     if (x++ >5 && ++x <8) {
+//         printf("True");
+//         printf("%d", x);
+//     }
+//     else {
+//         printf("false\n");
+//         printf("%d", x);
+//     }
+// }
