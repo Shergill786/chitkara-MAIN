@@ -357,3 +357,24 @@
 //     printf("Right Shift a by 1: %d\n", a >> 1);    
 // }
 
+
+// conditional operator greater of 3 numbers
+// #include <stdio.h>
+// int main() {
+//     int a, b, c, max;
+//     printf("Enter three numbers: ");
+//     scanf("%d %d %d", &a, &b, &c);
+//     max = (a > b) ? ((a > c) ? a : c) : ((b > c) ? b : c);
+//     printf("The greatest number is: %d\n", max);
+//     return 0;
+// }
+
+
+
+// #include <stdio.h>
+// int main() {
+// int x=5;
+// int y= x++ + ++x;
+// printf("%d %d", x, y);
+// return 0;
+// }   
