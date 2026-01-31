@@ -384,11 +384,31 @@
 // int main() {
 //     int x=5;
 //     if (x++ >5 && ++x <8) {
-//         printf("True");
+//         printf("True/n");
 //         printf("%d", x);
 //     }
 //     else {
 //         printf("false\n");
 //         printf("%d", x);
 //     }
+// }
+
+
+// check even number of 1 using bitwise operator
+// #include <stdio.h>
+// int main() {
+//     int id, count = 0;
+//     printf("Enter packet id: ");
+//     scanf("%d", &id);
+//     while (id) {
+//         count += id & 1;
+//         id >>= 1;
+//     }
+//     if (count % 2 == 0) {
+//         printf("invalid.\n");
+//     } 
+//     else {
+//         printf("valid.\n");
+//     }
+//     return 0;
 // }
