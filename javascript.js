@@ -26,17 +26,36 @@
 
 
 
-let attempts = 3;
-while (attempts > 0) {
-    let email = prompt("Enter your email address:");
-    switch (true) {
-        case email.includes("@") && email.includes("."):
-            console.log("Valid email address");
-            attempts = 0; 
-            break;
-        default:
-            console.log("Invalid email address");
-            attempts--;
-    }
-}
+// let attempts = 3;
+// while (attempts > 0) {
+//     let email = prompt("Enter your email address:");
+//     switch (true) {
+//         case email.includes("@") && email.includes("."):
+//             console.log("Valid email address");
+//             attempts = 0; 
+//             break;
+//         default:
+//             console.log("Invalid email address");
+//             attempts--;
+//     }
+// }
+
+
+
+// let num=Number(prompt("Enter your marks: "));
+// if (num>=90){
+//     console.log("Grade A");
+// }
+// else if (num>=80){
+//     console.log("Grade B");
+// }
+// else if (num>=70){
+//     console.log("Grade C");
+// }
+// else if (num>=60){
+//     console.log("Grade D");
+// }
+// else{
+//     console.log("Grade F");
+// }
 
