@@ -445,14 +445,45 @@
 
 
 // ternary operator 
-#include <stdio.h>
-int main() {
-    int a, b, max;
-    printf("Enter two numbers: ");
-    scanf("%d %d", &a, &b);
-    max = (a > b) ? a : b;
-    printf("The maximum number is: %d\n", max);
-    return 0;
-}
+// #include <stdio.h>
+// int main() {
+//     int a, b, max;
+//     printf("Enter two numbers: ");
+//     scanf("%d %d", &a, &b);
+//     max = (a > b) ? a : b;
+//     printf("The maximum number is: %d\n", max);
+//     return 0;
+// }
+
+
+// #include <stdio.h>
+// int main() {
+//     int num;
+//     printf("Enter an integer: ");
+//     scanf("%d", &num);
+//     (num % 2 == 0) ? printf("Even\n") : printf("Odd\n");
+//     return 0;
+// }
+
+
+
+// #include <stdio.h>
+// int main() {
+//     int age;
+//     printf("Enter your age: ");
+//     scanf("%d", &age);
+//     (age >= 18) ? printf("You are an adult.\n") : printf("You are not an adult.\n");
+//     return 0;
+// }
+
+
+// #include <stdio.h>
+// int main() {    
+//     int marks;
+//     printf("Enter your marks: ");
+//     scanf("%d", &marks);
+//     (marks >= 50) ? printf("Pass\n") : printf("Fail\n");
+//     return 0;
+// }
 
 
