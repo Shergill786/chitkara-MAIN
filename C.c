@@ -523,33 +523,41 @@
 // find the avg saving per week and display saving category on pecentage
 // inp 5 major animites
 //  50 for good , 30-50 for average , less than 30 poor
-// #include <stdio.h>
-// int main() {
-// int gro,ele,veh,loan,oth,sal,total,savings,saving_week,saving_per;
-// printf("Enter salary: ");
-// scanf("%d", &sal);
-// printf("Enter grocery expense: ");
-// scanf("%d", &gro);
-// printf("Enter electricity expense: ");
-// scanf("%d", &ele);
-// printf("Enter vehicle expense: ");
-// scanf("%d", &veh);
-// printf("Enter loan expense: ");
-// scanf("%d", &loan);
-// printf("Enter other expense: ");
-// scanf("%d", &oth);
-// total = gro + ele + veh + loan + oth;
-// savings= sal - total;
-// saving_week= savings / 4;
-// saving_per = (savings * 100) / sal;
-// printf("Total savings per month: %d\n", savings);
-// printf("Average savings per week: %d\n", saving_week);
-// printf("Savings percentage: %d%%\n", saving_per);
-// if (saving_per >= 50) {
-//     printf("Savings category: Good\n");
-// } else if (saving_per >= 30) {
-//     printf("Savings category: Average\n");
-// } else {
-//     printf("Savings category: Poor\n");
-// }
-// }
+#include <stdio.h>
+int main() {
+int gro,ele,veh,loan,oth,sal,total,savings,saving_week,saving_per;
+char ln;
+printf("Enter salary: ");
+scanf("%d", &sal);
+printf("Enter grocery expense: ");
+scanf("%d", &gro);
+printf("Enter electricity expense: ");
+scanf("%d", &ele);
+printf("Enter vehicle expense: ");
+scanf("%d", &veh);
+printf("do you have any loan expense? if yes enter y else n\n");
+scanf(" %c",&ln);
+if (ln =='y'){
+    printf("Enter loan expense: ");
+    scanf("%d", &loan);
+}
+else {
+    loan=0;
+}
+printf("Enter other expense: ");
+scanf("%d", &oth);
+total = gro + ele + veh + loan + oth;
+savings= sal - total;
+saving_week= savings / 4;
+saving_per = (savings * 100) / sal;
+printf("Total savings per month: %d\n", savings);
+printf("Average savings per week: %d\n", saving_week);
+printf("Savings percentage: %d%%\n", saving_per);
+if (saving_per >= 50) {
+    printf("Savings category: Good\n");
+} else if (saving_per >= 30) {
+    printf("Savings category: Average\n");
+} else {
+    printf("Savings category: Poor\n");
+}
+}
