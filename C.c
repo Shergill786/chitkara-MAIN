@@ -487,3 +487,34 @@
 // }
 
 
+// case study 9
+// a sensor records temp,humidity,pressure-- read values ,use comma operator to assign and calculate avg
+// display all values
+// #include <stdio.h>
+// int main() {
+//     float temp, humidity, pressure, avg;
+//     printf("Enter temperature, humidity, and pressure: ");
+//     scanf("%f, %f, %f", &temp, &humidity, &pressure);
+//     avg = (temp + humidity + pressure) / 3;
+//     printf("Temperature: %.2f\n", temp);
+//     printf("Humidity: %.2f\n", humidity);
+//     printf("Pressure: %.2f\n", pressure);
+//     printf("Average: %.2f\n", avg);
+// }
+
+
+// case study 10
+// read battery %
+// #include <stdio.h>
+// int main() {
+//     int b1, b2, level;
+//     printf("Enter battery percentages (start end): ");
+//     scanf("%d %d", &b1, &b2);
+//     level = b1 - b2;
+//     (level >= 60) ? printf("Battery: High Drain\n") :
+//     (level >= 30) ? printf("Battery: Medium Drain\n") :
+//     (level >= 0)  ? printf("Battery: Low Drain\n") :
+//                     printf("Enter correct value\n");
+// }
+
+
