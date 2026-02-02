@@ -49,7 +49,7 @@
 // else if (num>=80){
 //     console.log("Grade B");
 // }
-// else if (num>=70){
+// else if (num>=70){x
 //     console.log("Grade C");
 // }
 // else if (num>=60){
