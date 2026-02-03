@@ -79,3 +79,15 @@
 //     factorial*=i;
 // }
 // console.log("Factorial of", n, "is", factorial);
+
+
+// while 
+let n=prompt("Enter a number to calculate its factorial: ");
+n=Number(n);
+let factorial=1;
+let i=1;
+while (i<=n){
+    factorial*=i;
+    i++;
+}
+console.log("Factorial of", n, "is", factorial);
