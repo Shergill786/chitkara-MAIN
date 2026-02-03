@@ -91,3 +91,8 @@
 //     i++;
 // }
 // console.log("Factorial of", n, "is", factorial);
+
+
+for (let i=1;i<=10;i++){
+    console.log(i);
+}
