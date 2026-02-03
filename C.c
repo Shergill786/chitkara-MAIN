@@ -602,11 +602,18 @@
 //  }
 
 
-#inckude <stdio.h>
-int main() {
-    int a = 5, b = 10, c = 15;
-    int result = (a + b) * c;
-    printf("Result: %d\n", result);
- }
+// #inckude <stdio.h>
+// int main() {
+//     int a = 5, b = 10, c = 15;
+//     int result = (a + b) * c;
+//     printf("Result: %d\n", result);
+//  }
 
- 
+ #include <stdio.h>
+ int main() {
+     int x = 4;
+     int y = 2;
+     int z = 8;
+     int result = x + y * z - y / x;
+     printf("Result: %d\n", result);
+ }
