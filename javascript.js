@@ -61,3 +61,21 @@
 
 
 
+// loops
+// for (let i=1;i<=5;i++){
+//     console.log("Iteration:", i);
+// }
+
+// let count=1;
+// while (count<=5){
+//     console.log("Count:", count);
+//     count++;
+// }
+
+// let n=prompt("Enter a number to calculate its factorial: ");
+// n=Number(n);
+// let factorial=1;
+// for (let i=1;i<=n;i++){
+//     factorial*=i;
+// }
+// console.log("Factorial of", n, "is", factorial);
