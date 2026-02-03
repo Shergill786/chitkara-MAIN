@@ -562,4 +562,31 @@
 // }
 // }
 
+// #include <stdio.h>
+// int main() {
+// if ('A'<10){
+//     printf("hyee\n");
+// }
+// else {
+//     printf("hello9\n");
+// }
+// }
 
+
+// | **Category**   | **Operators**                      | **Associativity** |              |              |
+// | -------------- | ---------------------------------- | ----------------- | ------------ | ------------ |
+// | Postfix        | `()  []  ++  --`                   | Left → Right      |              |              |
+// | Unary          | `+  -  !  ~  ++  --  *  &  sizeof` | Right → Left      |              |              |
+// | Multiplicative | `*  /  %`                          | Left → Right      |              |              |
+// | Additive       | `+  -`                             | Left → Right      |              |              |
+// | Shift          | `<<  >>`                           | Left → Right      |              |              |
+// | Relational     | `<  <=  >  >=`                     | Left → Right      |              |              |
+// | Equality       | `==  !=`                           | Left → Right      |              |              |
+// | Bitwise AND    | `&`                                | Left → Right      |              |              |
+// | Bitwise XOR    | `^`                                | Left → Right      |              |              |
+// | Bitwise OR     | `                                  | Left → Right      |              |              |
+// | Logical AND    | `&&`                               | Left → Right      |              |              |
+// | Logical OR     | `                                  | Left → Right      |              |              |
+// | Conditional    | `?:`                               | Right → Left      |              |              |
+// | Assignment     | `=  +=  -=  *=  /=  %=`            | Right → Left      |              |              |
+// | Comma          | `,`                                | Left → Right      |              |              |
