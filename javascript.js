@@ -135,17 +135,17 @@
 // }
 
 // double triangle
-for(let i=1;i<=7;i++){
-    let row=""; 
-    if(i<=4){
-    for (let j=1;j<=i;j++){
-         row+="*";
-        }
-    }
-    else{
-        for (let j=1;j<=8-i;j++){
-            row+="*";
-        }   
-    }
-    console.log(row);
-}
+// for(let i=1;i<=7;i++){
+//     let row=""; 
+//     if(i<=4){
+//     for (let j=1;j<=i;j++){
+//          row+="*";
+//         }
+//     }
+//     else{
+//         for (let j=1;j<=8-i;j++){
+//             row+="*";
+//         }   
+//     }
+//     console.log(row);
+// }
