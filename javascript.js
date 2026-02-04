@@ -149,3 +149,13 @@
 //     }
 //     console.log(row);
 // }
+
+// let n = parseInt(prompt("Enter number of levels:"));
+
+// for (let i = 1; i <= n; i++) {
+//   console.log("*".repeat(2 ** i));
+// }
+
+// for (let i = n - 1; i >= 1; i--) {
+//   console.log("*".repeat(2 ** i));
+// }
