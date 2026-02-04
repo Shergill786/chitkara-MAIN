@@ -118,8 +118,34 @@
 // }
 
 
-// table of 3
 // let num=3;
-// for (let i=1;i<=10;i++){
+// for (let i=1;i<=5;i++){
 //     console.log(num,"x",i,"=",num*i);
 // }
+
+
+// let str=1;
+// for(let i=1;i<=5;i++){
+//     str=str*3;
+//     let row="";
+//     for (let j=1;j<=i;j++){
+//        row+="*";
+//     }
+//     console.log(row);
+// }
+
+// double triangle
+for(let i=1;i<=7;i++){
+    let row=""; 
+    if(i<=4){
+    for (let j=1;j<=i;j++){
+         row+="*";
+        }
+    }
+    else{
+        for (let j=1;j<=8-i;j++){
+            row+="*";
+        }   
+    }
+    console.log(row);
+}
