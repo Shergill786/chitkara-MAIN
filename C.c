@@ -609,11 +609,42 @@
 //     printf("Result: %d\n", result);
 //  }
 
- #include <stdio.h>
- int main() {
-     int x = 4;
-     int y = 2;
-     int z = 8;
-     int result = x + y * z - y / x;
-     printf("Result: %d\n", result);
- }
+
+//  #include <stdio.h>
+//  int main() {
+//      int x = 4;
+//      int y = 2;
+//      int z = 8;
+//      int result = x + y * z - y / x;
+//      printf("Result: %d\n", result);
+//  }
+
+// switch case in grading system
+#include <stdio.h>
+int main() {
+    int x;
+    printf("Enter your marks : ");
+    scanf("%d", &x);
+    switch (x/10) {
+        case 10:
+            printf("Grade A+\n");
+            break;
+        case 9:
+            printf("Grade A\n");
+            break;
+        case 8:
+            printf("Grade B\n");
+            break;
+        case 7:
+            printf("Grade C\n");
+            break;
+        case 6:
+            printf("Grade D\n");
+            break;
+        case 5:
+            printf("Grade E\n");
+            break;
+        default:
+            printf("Grade F\n");
+    }
+}
