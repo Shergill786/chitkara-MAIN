@@ -100,3 +100,26 @@
 //     }
 //     console.log(row.trim());
 //   }
+
+
+// let rows = 3;
+
+// for (let i = 1; i <= rows; i++) {
+//     let stars = "";
+//     for (let j = 1; j <= i * 2; j++) {
+//         stars += "* ";
+//     }
+//     console.log(stars);
+// }
+
+
+// for (let i = 1; i <= 5; i++) {
+//     console.log(2 ** i);
+// }
+
+
+// table of 3
+// let num=3;
+// for (let i=1;i<=10;i++){
+//     console.log(num,"x",i,"=",num*i);
+// }
