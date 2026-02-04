@@ -622,10 +622,12 @@
 // switch case in grading system
 // #include <stdio.h>
 // int main() {
-//     int x;
+//     int x,m1 ,m2 , m3, m4, m5;
 //     printf("Enter your marks : ");
-//     scanf("%d", &x);
-//     switch (x/10) {
+//     scanf("%d %d %d %d %d", &m1, &m2, &m3, &m4, &m5);
+//     x = (m1 + m2 + m3 + m4 + m5) / 5;
+//     }
+//     switch (x / 10) {
 //         case 10:
 //             printf("Grade A+\n");
 //             break;
