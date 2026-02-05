@@ -233,9 +233,11 @@
 // console.log("Highest score is:", max);
 
 
-let arr=[10,20,30,40,50];
-let sum=0;
-for (let value of arr){
-    sum+=value;
-}
-console.log("Sum of array values:", sum);
+// let arr=[10,20,30,40,50];
+// let sum=0;
+// for (let value of arr){
+//     sum+=value;
+// }
+// console.log("Sum of array values:", sum);
+
+

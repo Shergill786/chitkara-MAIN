@@ -652,3 +652,57 @@
 // }
 
 
+// #include <stdio.h>
+// int main() {
+//     int m_g , b_l , e_o;
+//     printf("enter 0 if main grid fails else 1: ");
+//     scanf("%d", &m_g);
+//     printf("enter 0 if battery low else 1: ");
+//     scanf("%d", &b_l);
+//     printf("enter 0 if emergency overload else 1: ");
+//     scanf("%d", &e_o);
+//     if (m_g == 0 || b_l == 1) {
+//         printf("backup generator on\n");
+//     }
+//     else if (e_o==0) {
+//         printf("backup generator on\n");
+//     }
+//     else {
+//         printf("backup generator off\n");
+//     }
+// }   
+
+
+
+// #include <stdio.h>
+// int main() {
+//     float purchaseAmount, deliveryFee, totalBill;
+//     printf("Enter purchase amount: ");
+//     scanf("%f", &purchaseAmount);
+//     deliveryFee = (purchaseAmount >= 500) 
+//                   ? purchaseAmount * 0.05 
+//                   : purchaseAmount * 0.15
+//     totalBill = purchaseAmount + deliveryFee;
+//     printf("Delivery Fee: %.2f\n", deliveryFee);
+//     printf("Total Bill Amount: %.2f\n", totalBill);
+// }
+
+
+
+// #include <stdio.h>
+// int main() {
+//     char grade;
+//     printf("Enter grade: ");
+//     scanf(" %c", &grade);
+//     switch (grade) {
+//         case 'A':
+//             printf("Excellent\n");
+//             break;
+//         case 'B':
+//         case 'C':
+//             printf("Good\n");
+//             break;
+//         default:
+//             printf("Invalid Grade\n");
+//     }
+// }
