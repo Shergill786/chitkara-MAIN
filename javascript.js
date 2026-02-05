@@ -159,3 +159,83 @@
 // for (let i = n - 1; i >= 1; i--) {
 //   console.log("*".repeat(2 ** i));
 // }
+
+
+// let n=Number(prompt("enter a number "));
+// let i=1;
+// let sum=0;
+// while (i<=n){
+//     sum+=i;
+//     i++;
+// }
+// console.log("sum=",sum);
+
+
+//sum of  even number using loops upto 30
+// let sum=0;
+// for (let i=1;i<=30;i++){
+//     if (i%2==0){
+//         sum+=i;
+//     }
+// }
+// console.log("Sum of even numbers up to 30:", sum);  
+
+
+// table of 5 
+// let num=5;
+// for (let i=1;i<=10;i++){
+//     console.log(num,"x",i,"=",num*i);
+// }
+
+
+// palendrome
+// let num=Number(prompt("Enter a number: "));
+// let originalNum=num;
+// let rev=0;
+// while (num>0){
+//     let digit=num%10;
+//     rev=rev*10+digit;
+//     num=Math.floor(num/10);
+// }
+// if (originalNum==rev){
+//     console.log(originalNum,"is a palindrome number.");
+// }
+// else{
+//     console.log(originalNum,"is not a palindrome number.");
+// }
+
+//  for off loop is used to ittrate over values of ittrable like arrays ,strings, maps and sets 
+//  for in loop is used to ittrate over properties of object
+
+
+// let person={name:"John", age:30, city:"New York"};
+// for (let key in person){
+//     console.log(key)
+// }
+
+
+// sum of all keys
+// let obj={a:1,b:2,c:3,d:4};
+// let sum=0;
+// for (let key in obj){
+//     sum+=obj[key];
+// }
+// console.log("Sum of all values:", sum);
+
+
+// let score  ={a:45,b:30,c:225};
+// let max =score["a"]
+// for (let key in score){
+//     if (score[key]>max){
+//         max=score[key];
+//     }
+// }
+// console.log("Highest score is:", max);
+
+
+let arr=[10,20,30,40,50];
+let sum=0;
+for (let value of arr){
+    sum+=value;
+}
+console.log("Sum of array values:", sum);
