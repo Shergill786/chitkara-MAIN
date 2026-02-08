@@ -716,3 +716,14 @@
 //     return 0;
 // }
 
+#include <stdio.h>
+int main() {
+    int num, firstDigit, lastDigit, sum;
+    printf("Enter a four-digit number: ");
+    scanf("%d", &num);
+    lastDigit = num % 10; // Get the last digit
+    firstDigit = num / 1000; // Get the first digit
+    sum = firstDigit + lastDigit; // Calculate the sum
+    printf("Sum of the first and last digit: %d\n", sum);
+    return 0;
+}
