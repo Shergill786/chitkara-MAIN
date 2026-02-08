@@ -5,8 +5,6 @@
 // }
 
 // user se input lena hai aur usko print karna hai
-
-
 // #include <stdio.h>
 // int main() {
 //     int num;
@@ -16,13 +14,10 @@
 // }
 
 
-
 // make a calculater
-
 // #include <stdio.h>
 // int main() {
-
-//     float a, b;
+//     float a,b;
 //     float sum, sub, mul, div;
 //     printf("Enter first number: ");
 //     scanf("%f", &a);
@@ -706,3 +701,18 @@
 //             printf("Invalid Grade\n");
 //     }
 // }
+
+
+// sum of first and last digit of 4 digit number
+// #include <stdio.h>
+// int main() {
+//     int num, firstDigit, lastDigit, sum;
+//     printf("Enter a four-digit number: ");
+//     scanf("%d", &num);
+//     lastDigit = num % 10; // Get the last digit
+//     firstDigit = num / 1000; // Get the first digit
+//     sum = firstDigit + lastDigit; // Calculate the sum
+//     printf("Sum of the first and last digit: %d\n", sum);
+//     return 0;
+// }
+
