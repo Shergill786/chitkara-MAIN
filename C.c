@@ -716,14 +716,69 @@
 //     return 0;
 // }
 
-#include <stdio.h>
-int main() {
-    int num, firstDigit, lastDigit, sum;
-    printf("Enter a four-digit number: ");
-    scanf("%d", &num);
-    lastDigit = num % 10; // Get the last digit
-    firstDigit = num / 1000; // Get the first digit
-    sum = firstDigit + lastDigit; // Calculate the sum
-    printf("Sum of the first and last digit: %d\n", sum);
-    return 0;
-}
+// #include <stdio.h>
+// int main() {
+//     int num, firstDigit, lastDigit, sum;
+//     printf("Enter a four-digit number: ");
+//     scanf("%d", &num);
+//     lastDigit = num % 10; // Get the last digit
+//     firstDigit = num / 1000; // Get the first digit
+//     sum = firstDigit + lastDigit; // Calculate the sum
+//     printf("Sum of the first and last digit: %d\n", sum);
+//     return 0;
+// }
+
+
+// #include <stdio.h>
+// int main() {
+//     // Negation
+//     int temperature = 20;
+//     int negative_temp = -temperature;
+  
+//     // Unary Plus (limited use case)
+//     double pi = 3.14159;
+//     int rounded_pi = +(int)pi;
+  
+//     // Pre-increment vs. Post-increment
+//     int loop_counter = 0;
+  
+//     // Pre-increment: modify then print
+//     printf("Pre-increment: %d\n", ++loop_counter);
+  
+//     // Post-increment: print then modify
+//     printf("Post-increment: %d\n", loop_counter++);
+//     printf("Final loop counter: %d\n", loop_counter);
+  
+//     // Pre-decrement vs. Post-decrement
+//     int health_points = 100;
+  
+//     // Pre-decrement: modify then print
+//     printf("Damage taken: %d\n", --health_points);
+  
+//     // Post-decrement: print then modify
+//     printf("Remaining health points: %d\n", health_points--);
+//     printf("Final health points: %d\n", health_points);
+  
+//     // Sizeof
+//     printf("\nSize of data types:\n");
+//     printf("  - Size of integer: %zu bytes\n", sizeof(int));
+//     printf("  - Size of double: %zu bytes\n", sizeof(double));
+//     printf("  - Size of character: %zu byte\n", sizeof(char));
+  
+//     // Address-of and Dereference
+//     int value = 10;
+//     int *ptr = &value; // ptr now stores the memory address of value
+//     printf("\nAddress-of and Dereference:\n");
+//     printf("  - Address of value: %p\n", ptr);  // %p for pointer address
+  
+//     // Dereference the pointer to access the value at the stored address
+//     int dereferenced_value = *ptr;
+//     printf("  - Dereferenced value: %d\n", dereferenced_value);
+    
+//     // Summarize results
+//     printf("\nUnary Operator Results:\n");
+//     printf("  - Negative temperature: %d degrees Celsius\n", negative_temp);
+//     printf("  - Rounded pi: %d\n", rounded_pi);
+//     return 0;
+//   }
+
