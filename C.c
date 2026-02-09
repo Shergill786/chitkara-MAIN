@@ -816,3 +816,23 @@
 //         printf("%d\n", i);
 //     }
 // }
+
+
+#include <stdio.h>
+int main() {
+    int i, n;
+    printf("Enter a number: ");
+    scanf("%d", &n);
+    printf("Odd numbers:");
+    for (i = 1; i <= n; i++) {
+        if (i % 2 != 0) {
+            printf("%d ", i);
+        }
+    }
+    printf("\nEven numbers:");
+    for (i = 1; i <= n; i++) {
+        if (i % 2 == 0) {
+            printf("%d ", i);
+        }
+    }
+}
