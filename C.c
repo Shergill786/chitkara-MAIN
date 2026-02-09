@@ -818,21 +818,52 @@
 // }
 
 
-#include <stdio.h>
-int main() {
-    int i, n;
-    printf("Enter a number: ");
-    scanf("%d", &n);
-    printf("Odd numbers:");
-    for (i = 1; i <= n; i++) {
-        if (i % 2 != 0) {
-            printf("%d ", i);
-        }
-    }
-    printf("\nEven numbers:");
-    for (i = 1; i <= n; i++) {
-        if (i % 2 == 0) {
-            printf("%d ", i);
-        }
-    }
-}
+// #include <stdio.h>
+// int main() {
+//     int i, n;
+//     printf("Enter a number: ");
+//     scanf("%d", &n);
+//     printf("Odd numbers:");
+//     for (i = 1; i <= n; i++) {
+//         if (i % 2 != 0) {
+//             printf("%d ", i);
+//         }
+//     }
+//     printf("\nEven numbers:");
+//     for (i = 1; i <= n; i++) {
+//         if (i % 2 == 0) {
+//             printf("%d ", i);
+//         }
+//     }
+// }
+
+// sum of even and odd numbers separately
+// #include <stdio.h>
+// int main() {
+//     int i, n, sumEven = 0, sumOdd = 0;
+//     printf("Enter a number: ");
+//     scanf("%d", &n);
+//     for (i = 1; i <= n; i++) {
+//         if (i % 2 == 0) {
+//             sumEven += i;
+//         } else {
+//             sumOdd += i;
+//         }
+//     }
+    
+//     printf("Sum of even numbers: %d\n", sumEven);
+//     printf("Sum of odd numbers: %d\n", sumOdd);
+// }
+
+
+// table of a number
+// #include <stdio.h>
+// int main() {
+//     int i, n;
+//     printf("Enter a number: ");
+//     scanf("%d", &n);
+//     printf("Multiplication table of %d:\n", n);
+//     for (i = 1; i <= 10; i++) {
+//         printf("%d x %d = %d\n", n, i, n * i);
+//     }
+// }
