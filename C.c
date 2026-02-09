@@ -794,15 +794,25 @@
 // }
 
 // Each test case will contain a number n where 1000<=n<=9999.
-#include <stdio.h>
-int main() {             
-    int n;  
-    scanf("%d", &n);
-    int d1 = n / 1000; 
-    int d2 = (n / 100) % 10;
-    int d3 = (n / 10) % 10;
-    int d4 = n % 10;
-    int result = d1 * 1000 + d2 * 100 + d3 * 10 + d4;
-    printf("Digits: %d %d %d %d\n", d1, d2, d3, d4);
+// #include <stdio.h>
+// int main() {             
+//     int n;  
+//     scanf("%d", &n);
+//     int d1 = n / 1000; 
+//     int d2 = (n / 100) % 10;
+//     int d3 = (n / 10) % 10;
+//     int d4 = n % 10;
+//     int result = d1 * 1000 + d2 * 100 + d3 * 10 + d4;
+//     printf("Digits: %d %d %d %d\n", d1, d2, d3, d4);
 //     return 0;    
 // }  
+
+
+// LOOPS
+// #include <stdio.h>
+// int main() {
+//     int i;  
+//     for (i = 1; i < 11; i++) {
+//         printf("%d\n", i);
+//     }
+// }
