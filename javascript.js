@@ -328,36 +328,18 @@
 // }
 
 //  arrey meh se search krke agr h toh index print krna h else element not found usin g let search 
-// let arr=[10,20,30,40,50];
-// let search=Number(prompt("Enter a number to search:"));
-// let found=false;
-// for (let i=0;i<arr.length;i++){
-//     if (arr[i]===search){
-//         found=i;
-//         break;
-//     }
-// }
-// if (!found){
-//     console.log("Element found at index:", found);
-// }
-// else{
-//     console.log("Element not found in the array.");
+// let arr = [10, 25, 30, 45, 50, 60];
+// let key = parseInt(prompt("Enter element to search:"));
+// let found = false;
+
+// for (let index in arr) {
+//   if (arr[index] === key) {
+//     console.log("Element found at index:", index);
+//     found = true;
+//     break;
+//   }
 // }
 
-
-
-let arr = [10, 25, 30, 45, 50, 60];
-let key = parseInt(prompt("Enter element to search:"));
-let found = false;
-
-for (let index in arr) {
-  if (arr[index] === key) {
-    console.log("Element found at index:", index);
-    found = true;
-    break;
-  }
-}
-
-if (!found) {
-  console.log("Element not found");
-}
+// if (!found) {
+//   console.log("Element not found");
+// }
