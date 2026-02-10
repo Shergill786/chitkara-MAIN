@@ -291,3 +291,24 @@
 //     console.log("Poor Performer");
 // else
 //     console.log("Average Performer");
+
+
+// find mini and max and find sum of values in array
+// let arr=[10,20,5,15,30];
+// let min=arr[0];
+// let max=arr[0];  
+// let sum=0;
+// for (let value of arr){
+//     sum+=value;
+//     if (value<min){
+//         min=value;
+//     }
+//     if (value>max){
+//         max=value;
+//     }
+// }
+// console.log("Minimum value:", min);
+// console.log("Maximum value:", max);
+// console.log("Sum of array values:", sum);
+
+
