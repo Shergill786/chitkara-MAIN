@@ -895,3 +895,75 @@
 //             sum += i;
 //         }
 //     }
+
+    
+
+// while loops
+// 1-n numbers 
+// #include <stdio.h>
+// int main() {
+//     int n, i = 1;
+//     printf("Enter a number: ");
+//     scanf("%d", &n);
+//     while (i <= n) {
+//         printf("%d\n", i);
+//         i++;
+//     }
+//     return 0;
+// }
+
+
+// uppercase suing ascii values
+// #include <stdio.h>
+// int main() {
+//     char ch;
+//     printf("Enter a lowercase letter: ");
+//     scanf("%c", &ch);
+//     if (ch >= 'a' && ch <= 'z') {
+//         char uppercase = ch - ('a' - 'A');
+//         printf("Uppercase letter: %c\n", uppercase);
+
+//     } else {
+//         printf("Invalid input. Please enter a lowercase letter.\n");
+//     }
+
+//     return 0;
+
+// factorial using while loop
+// #include <stdio.h>
+// int main() {
+//     int n, factorial = 1;
+//     printf("Enter a number: ");
+//     scanf("%d", &n);
+
+//     int i = 1;
+//     while (i <= n) {
+//         factorial *= i;
+//         i++;
+
+//     }
+//     printf("Factorial of %d is: %d\n", n, factorial);
+//     return 0;
+// }
+
+
+// perfect number using while loop
+// #include <stdio.h>
+// int main() {
+//     int n, sum = 0;
+//     printf("Enter a number: ");
+//     scanf("%d", &n);
+//     int i = 1;
+//     while (i < n) {
+//         if (n % i == 0) {
+//             sum += i;
+//         }
+//         i++;
+//     }
+//     if (sum == n) {
+//         printf("%d is a perfect number.\n", n);
+//     } else {
+//         printf("%d is not a perfect number.\n", n);
+//     }
+//     return 0;
+// }
