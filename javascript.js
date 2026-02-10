@@ -241,3 +241,53 @@
 // console.log("Sum of array values:", sum);
 
 
+
+// either results shows in terminal or node js terminal 
+// console is used to \
+
+
+//  console.table("student")
+// console.warn("very bad")
+// console.log(10+5)
+
+
+// console.error("something went wrong")
+// let students=[
+//     {name:"John", marks:80},
+//     {name:"Alice", marks:90}
+// ];
+// console.table(students)
+// console.warn("very bad");
+// console.log(10+5);
+
+
+
+// let marks = {
+//     math: Number(prompt("Math marks:")),
+//     science: Number(prompt("Science marks:")),
+//     english: Number(prompt("English marks:")),
+//     computer: Number(prompt("Computer marks:")),
+//     hindi: Number(prompt("Hindi marks:"))
+// };
+
+// let sum = 0, count = 0;
+
+// for (let subject in marks) {
+//     sum += marks[subject];
+//     count++;
+// }
+
+// let percentage = sum / count;
+
+// console.log("Percentage =", percentage);
+
+// if (percentage > 90)
+//     console.log("Excellent Performer");
+// else if (percentage > 70)
+//     console.log("Very Good Performer");
+// else if (percentage > 50)
+//     console.log("Good Performer");
+// else if (percentage < 30)
+//     console.log("Poor Performer");
+// else
+//     console.log("Average Performer");

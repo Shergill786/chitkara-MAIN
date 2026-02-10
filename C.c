@@ -967,3 +967,26 @@
 //     }
 //     return 0;
 // }
+
+
+// #include <stdio.h>
+// int main() {
+//     int n;
+//     char choice;
+//     printf("Do you want to enter a number? (y/n): ");
+//     scanf(" %c", &choice);
+//     while(choice == 'y' || choice == 'Y') {
+//         printf("Enter a number: ");
+//         scanf("%d", &n);
+//         if(n > 0)
+//             printf("The number is Positive\n");
+//         else if(n < 0)
+//             printf("The number is Negative\n");
+//         else
+//             printf("The number is Zero\n");
+//         printf("Do you want to enter another number? (y/n): ");
+//         scanf(" %c", &choice);
+//     }
+//     printf("Program Ended\n");
+//     return 0;
+// }
