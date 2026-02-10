@@ -311,4 +311,27 @@
 // console.log("Maximum value:", max);
 // console.log("Sum of array values:", sum);
 
+//  pattern print 
+// 1
+// 1 3
+// 1 3 5 7
+// // 1 3 5 7 9
+// let n=4;
+// for (let i=1;i<=n;i++){
+//     let row="";
+//     for (let j=1;j<=2*i-1;j++){
+//         if (j%2!=0){
+//             row+=j+" ";
+//         }
+//     }
+
+//     console.log(row);
+// }
+
+
+//  pattern print and sum 
+// 1
+// 1 3
+// 1 3 5 7
+// 1 3 5 7 9
 
