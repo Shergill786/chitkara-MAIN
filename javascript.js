@@ -315,7 +315,7 @@
 // 1
 // 1 3
 // 1 3 5 7
-// // 1 3 5 7 9
+// 1 3 5 7 9
 // let n=4;
 // for (let i=1;i<=n;i++){
 //     let row="";
@@ -328,10 +328,20 @@
 //     console.log(row);
 // }
 
+//  arrey meh se search krke agr h toh index print krna h else element not found usin g let search 
+// let arr=[10,20,30,40,50];
+// let search=30;
+// let foundIndex=-1;
+// for (let i=0;i<arr.length;i++){
+//         if (arr[i]===search){
+//         foundIndex=i;
+//         break;
+// }
+// if (foundIndex!==-1){
+//     console.log("Element found at index:", foundIndex);
+// }
+// else{
+//     console.log("Element not found in the array.");
+// }
 
-//  pattern print and sum 
-// 1
-// 1 3
-// 1 3 5 7
-// 1 3 5 7 9
-
+// }
