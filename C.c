@@ -1108,3 +1108,64 @@
 // }
 
 
+// 1
+// 23
+// 456
+// 78910
+// #include <stdio.h>
+// int main() {
+//     int n, num = 1;
+//     printf("Enter the number of rows: ");
+//     scanf("%d", &n);
+//     for (int i = 1; i <= n; i++) {
+//         for (int j = 1; j <= i; j++) {
+//             printf("%d ", num);
+//             num++;
+//         }
+//     }
+//     return 0;
+// }
+
+
+//    1
+//   12
+//  123
+// 1234
+#include <stdio.h>
+int main() {
+    int n;
+    printf("Enter the number of rows: ");
+    scanf("%d", &n);
+    for (int i = 1; i <= n; i++) {
+        for (int j = 1; j <= n - i; j++) {
+            printf(" ");
+        }
+        for (int k = 1; k <= i; k++) {
+            printf("%d", k);
+        }
+        printf("\n");
+    }
+    return 0;
+}
+
+
+//    1 
+//   1 2
+//  1 2 3
+// 1 2 3 4 
+// #include <stdio.h>
+// int main() {
+//     int n;
+//     printf("Enter the number of rows: ");
+//     scanf("%d", &n);
+//     for (int i = 1; i <= n; i++) {
+//         for (int j = 1; j <= n - i; j++) {
+//             printf(" ");
+//         }
+//         for (int k = 1; k <= i; k++) {
+//             printf("%d ", k);
+//         }
+//         printf("\n");
+//     }
+//     return 0;
+// }
