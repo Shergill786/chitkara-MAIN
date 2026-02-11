@@ -1015,16 +1015,16 @@
 // }
 
 
-// leap year of 1 to n 
+// leap year of  n to 2026
 // #include <stdio.h>
 // int main() {
-//     int n, year;
+//     int year;
 //     printf("Enter a year: ");
-//     scanf("%d", &n);
-//     printf("Leap years from 1 to %d are:\n", n);
-//     for (year = 1; year <= n; year++) {
-//         if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
-//             printf("%d ", year);
+//     scanf("%d", &year);
+//     printf("Leap years from %d to 2026 are:\n", year);
+//     for (int i = year; i <= 2026; i++) {
+//         if ((i % 4 == 0 && i % 100 != 0) {
+//             printf("%d ", i);
 //         }
 //     }
 //     return 0;
@@ -1048,18 +1048,63 @@
 
 
 // lcm of 2 numbers
-#include <stdio.h>
-int main() {
-    int num1, num2, lcm;
-    printf("Enter two numbers: ");
-    scanf("%d %d", &num1, &num2);
-    lcm = (num1 > num2) ? num1 : num2; // Start with the greater number
-    while (1) {
-        if (lcm % num1 == 0 && lcm % num2 == 0) {
-            break;
-        }
-        lcm++;
-    }
-    printf("LCM of %d and %d is: %d\n", num1, num2, lcm);
-    return 0;
-}
+// #include <stdio.h>
+// int main() {
+//     int num1, num2, lcm;
+//     printf("Enter two numbers: ");
+//     scanf("%d %d", &num1, &num2);
+//     lcm = (num1 > num2) ? num1 : num2; // Start with the greater number
+//     while (1) {
+//         if (lcm % num1 == 0 && lcm % num2 == 0) {
+//             break;
+//         }
+//         lcm++;
+//     }
+//     printf("LCM of %d and %d is: %d\n", num1, num2, lcm);
+//     return 0;
+// }
+
+
+// armstrong number
+// #include <stdio.h>
+// int main() {
+//     int num, originalNum, remainder, result = 0;
+//     printf("Enter a three-digit integer: ");
+//     scanf("%d", &num);
+//     originalNum = num;
+//     while (originalNum != 0) {
+//         remainder = originalNum % 10;
+//         result += remainder * remainder * remainder;
+//         originalNum /= 10;
+//     }
+//     if (result == num) {
+//         printf("%d is an Armstrong number.\n", num);
+//     } else {
+//         printf("%d is not an Armstrong number.\n", num);
+//     }
+//     return 0;
+// }
+
+
+// palindrome number
+// #include <stdio.h>
+// int main() {
+//     int num, n, reversedNum = 0, remainder;
+//     printf("Enter an integer: ");
+//     scanf("%d", &num);
+//     originalNum = num;
+//     n = num;
+//     while (n>0) {
+//         remainder = n % 10;
+//         reversedNum = reversedNum * 10 + remainder;
+//         n /= 10;
+//     }
+//     if (reversedNum == num) {
+//         printf("%d is a palindrome number.\n", num);
+//     } else {
+//         printf("%d is not a palindrome number.\n", num);
+//     }
+//     return 0;
+// }
+
+
