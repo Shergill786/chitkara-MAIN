@@ -343,3 +343,7 @@
 // if (!found) {
 //   console.log("Element not found");
 // }
+
+
+// prime no form 1 to n
+// let n=Number(prompt("Enter a number: "));

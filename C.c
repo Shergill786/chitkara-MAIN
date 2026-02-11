@@ -990,3 +990,76 @@
 //     printf("Program Ended\n");
 //     return 0;
 // }
+
+
+// prime no form 1 to n
+// #include <stdio.h>
+// int main() {
+//     int n, i, j, isPrime;
+//     printf("Enter a number: ");
+//     scanf("%d", &n);
+//     printf("Prime numbers from 1 to %d are:\n", n);
+//     for (i = 2; i <= n; i++) {
+//         isPrime = 1;
+//         for (j = 2; j <= i / 2; j++) {
+//             if (i % j == 0) {
+//                 isPrime = 0;
+//                 break;
+//             }
+//         }
+//         if (isPrime) {
+//             printf("%d ", i);
+//         }
+//     }
+//     return 0;
+// }
+
+
+// leap year of 1 to n 
+// #include <stdio.h>
+// int main() {
+//     int n, year;
+//     printf("Enter a year: ");
+//     scanf("%d", &n);
+//     printf("Leap years from 1 to %d are:\n", n);
+//     for (year = 1; year <= n; year++) {
+//         if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
+//             printf("%d ", year);
+//         }
+//     }
+//     return 0;
+// }
+
+
+// hcf of 2 numbers
+// #include <stdio.h>
+// int main() {
+//     int num1, num2, hcf;
+//     printf("Enter two numbers: ");
+//     scanf("%d %d", &num1, &num2);
+//     for (int i = 1; i <= num1 && i <= num2; i++) {
+//         if (num1 % i == 0 && num2 % i == 0) {
+//             hcf = i;
+//         }
+//     }
+//     printf("HCF of %d and %d is: %d\n", num1, num2, hcf);
+//     return 0;
+// }
+
+
+// lcm of 2 numbers
+#include <stdio.h>
+int main() {
+    int num1, num2, lcm;
+    printf("Enter two numbers: ");
+    scanf("%d %d", &num1, &num2);
+    lcm = (num1 > num2) ? num1 : num2; // Start with the greater number
+    while (1) {
+        if (lcm % num1 == 0 && lcm % num2 == 0) {
+            break;
+        }
+        lcm++;
+    }
+    printf("LCM of %d and %d is: %d\n", num1, num2, lcm);
+    return 0;
+}
