@@ -1,21 +1,24 @@
-include <stdio.h>
+
 int main() {
-    int n, i, j, isPrime;
-    printf("Enter a number: ");
-    scanf("%d", &n);
-    printf("Prime numbers from 1 to %d are:\n", n);
-    for (i = 2; i <= n; i++) {
-        isPrime = 1; // Assume i is prime
-        for (j = 2; j <= i / 2; j++) {
-            if (i % j == 0) {
-                isPrime = 0; // i is not prime
-                break;
-            }
+    int i, j, space;
+    int n = 4;
+    for (i = 1; i <= n; i++) {
+        for (space = 1; space <= n - i; space++) {
+            printf(" ");
         }
-        if (isPrime) {
-            printf("%d ", i);
+        for (j = 1; j <= i; j++) {
+            printf("%d ", j);
         }
+        printf("\n");
     }
-    printf("\n");
+    for (i = n - 1; i >= 1; i--) {
+        for (space = 1; space <= n - i; space++) {
+            printf(" ");
+        }
+        for (j = 1; j <= i; j++) {
+            printf("%d ", j);
+        }
+        printf("\n");
+    }
     return 0;
 }
