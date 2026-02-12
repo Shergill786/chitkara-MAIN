@@ -345,5 +345,138 @@
 // }
 
 
-// prime no form 1 to n
-// let n=Number(prompt("Enter a number: "));
+// a=number(prompt("Enter a number:"));
+// b=number(prompt("Enter another number:"));
+// function add(a,b){
+// //     console.log(a+b);
+// // }
+// // add(a,b);
+// function multiply(a,b){
+//    return (a*b);
+// }
+// function add(a,b){
+//     return (a+b);
+// }
+// function subtract(a,b){
+//     return (a-b);
+// }
+// function divide(a,b){
+//         return (a/b);
+// }
+
+// let result=multiply(a,b);   
+// console.log("Multiplication result:", result);
+// let a=add(a,b);
+// console.log("Addition result:", a);
+// let s=subtract(a,b);
+// console.log("Subtraction result:", s);
+// let d=divide(a,b);
+// console.log("Division result:", d);
+
+
+// function st (name,age,marks){   
+//     console.log(name,age,marks);
+// }
+// st(age=24,name="JAVA",marks=90);
+
+
+
+// function sum(...numbers){
+// let total=0;
+// for (let n of numbers)   
+//     {
+//         total+=n;
+//     }
+//     console.log("Total:", total);
+// }   
+// sum (1,2,3,4,5);
+
+
+// function sumall(){
+//     let total=0;
+//     for (let i=0;i<arguments.length;i++){
+//         total+=arguments[i];
+//     }
+//     console.log("Total:", total);
+//     return total;
+// }  
+// let x=sumall(1,2,3,4,5);
+
+
+
+// function sumall(...numbers){
+//     let total=0;
+//     for (let n of numbers){
+//         total+=n;
+//     }
+//     console.log("Total:", total);
+//     return total;
+// }
+// let x=sumall(1,2,3,4,5,6,7,8,9,10);
+
+
+// let msg ="Hello ";
+// function show() {
+//     console.log(msg);
+// }
+// show();
+// console.log(msg);
+
+
+// calcute for 5-6 numbers and print sum and product
+
+// let num1 = Number(prompt("Enter first number:"));
+// let num2 = Number(prompt("Enter second number:"));
+// let num3 = Number(prompt("Enter third number:"));
+// let num4 = Number(prompt("Enter fourth number:"));
+// let num5 = Number(prompt("Enter fifth number:"));
+
+// function calculate(...numbers) {
+//     let sum = 0;
+//     let product = 1;
+//     for (let n of numbers) {
+//         sum += n;
+//         product *= n;
+//     }
+//     console.log("Sum:", sum);
+//     console.log("Product:", product);
+// }
+// calculate(num1, num2, num3, num4, num5);
+
+
+
+// function changeValue(x) {
+//     x=x+20;
+//     console.log("Value of x inside function:", x);
+// }
+// let num=10;
+// changeValue(num);
+// console.log("Outside function:", num);
+
+
+// let arr =[1,2,3,4,5];
+// console.log("before ", arr);
+// function doubleArray(a){
+//     for (let i=0;i<a.length;i++){
+//         a[i]=a[i]*2;
+//     }
+// }
+// doubleArray(arr);
+// console.log("after ", arr);
+
+
+// swap 2 numbers
+// function swap(a,b){
+//     let temp=a;
+//     a=b;
+
+//     b=temp;
+//     console.log("Inside function: a =", a, "b =", b);
+// }
+// let num1=10;
+// let num2=20;
+// console.log("Before swap: num1 =", num1, "num2 =", num2);
+// swap(num1,num2);
+// console.log("After swap: num1 =", num1, "num2 =", num2);
+
+
