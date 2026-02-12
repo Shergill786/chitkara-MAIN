@@ -1201,29 +1201,77 @@
 //  1 2 
 //   1
 
-#include <stdio.h>
-int main() {
-    int i, j, space;
-    int n = 4;
-    for (i = 1; i <= n; i++) {
-        for (space = 1; space <= n - i; space++) {
-            printf(" ");
-        }
-        for (j = 1; j <= i; j++) {
-            printf("%d ", j);
-        }
-        printf("\n");
-    }
-    for (i = n - 1; i >= 1; i--) {
-        for (space = 1; space <= n - i; space++) {
-            printf(" ");
-        }
-        for (j = 1; j <= i; j++) {
-            printf("%d ", j);
-        }
-        printf("\n");
-    }
-    return 0;
-}
+// #include <stdio.h>
+// int main() {
+//     int i, j, space;
+//     int n = 4;
+//     for (i = 1; i <= n; i++) {
+//         for (space = 1; space <= n - i; space++) {
+//             printf(" ");
+//         }
+//         for (j = 1; j <= i; j++) {
+//             printf("%d ", j);
+//         }
+//         printf("\n");
+//     }
+//     for (i = n - 1; i >= 1; i--) {
+//         for (space = 1; space <= n - i; space++) {
+//             printf(" ");
+//         }
+//         for (j = 1; j <= i; j++) {
+//             printf("%d ", j);
+//         }
+//         printf("\n");
+//     }
+//     return 0;
+// }
 
 
+
+// 1 2 3 4 5 
+//  1 2 3 4
+//   1 2 3
+//    1 2
+//     1
+//    1 2
+//   1 2 3
+// 1 2 3 4 5
+// #include <stdio.h>
+// int main() {
+//     int i, j, space;
+//     int n = 5;
+//     for (i = n; i >= 1; i--) {
+//         for (space = 1; space <= n - i; space++) {
+
+//             printf(" ");
+//         }
+//         for (j = 1; j <= i; j++) {
+
+//             printf("%d ", j);
+//         }
+//         printf("\n");
+//     }
+//     for (i = 2; i <= n; i++) {
+//         for (space = 1; space <= n - i; space++) {
+//             printf(" ");
+//         }
+//         for (j = 1; j <= i; j++) {
+//             printf("%d ", j);
+//         }
+//         printf("\n");
+//     }
+//     return 0;
+// }
+
+
+
+
+//     a
+//    b b
+//   C   c
+//  D     D
+// E       E
+//  d     d
+//   c   c 
+//    b b 
+//     a
