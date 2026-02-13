@@ -1276,49 +1276,93 @@
 //    b b 
 //     a
 
+// #include <stdio.h>
+
+// int main() {
+//     int i, j, n = 5;
+//     char ch;
+
+//     for(i = 1; i <= n; i++) {
+//         ch = 'A' + i - 1;
+
+//         for(j = 1; j <= n - i; j++) {
+//             printf(" ");
+//         }
+
+//         printf("%c", ch);
+
+//         if(i > 1) {
+//             for(j = 1; j <= 2 * i - 3; j++) {
+//                 printf(" ");
+//             }
+//             printf("%c", ch);
+//         }
+
+//         printf("\n");
+//     }
+
+//     for(i = n - 1; i >= 1; i--) {
+//         ch = 'A' + i - 1;
+
+//         for(j = 1; j <= n - i; j++) {
+//             printf(" ");
+//         }
+
+//         printf("%c", ch);
+
+//         if(i > 1) {
+//             for(j = 1; j <= 2 * i - 3; j++) {
+//                 printf(" ");
+//             }
+//             printf("%c", ch);
+//         }
+
+//         printf("\n");
+//     }
+
+//     return 0;
+// }
+
+
+// #include <stdio.h>
+// int main() {
+//     int n;
+//     printf("enter a number: ");
+//     scanf("%d", &n);
+    // for (int i = 1; i <= n; i++) {
+    //     printf("%d ", i);
+    // }
+//     for (int i = 1; i <= n; i++) {
+        
+//         if (n % 3 == 0) {
+//             continue;
+//         }
+//         else{
+//             printf("\n%d\n", n);
+//     }
+//     return 0;       
+// }
+// }
+
+
 #include <stdio.h>
-
 int main() {
-    int i, j, n = 5;
-    char ch;
-
-    for(i = 1; i <= n; i++) {
-        ch = 'A' + i - 1;
-
-        for(j = 1; j <= n - i; j++) {
-            printf(" ");
+    int N, i;
+    printf("Enter value of N: ");
+    scanf("%d", &N);
+    for (int i = 1; i <= N; i++) {
+            printf("%d ", i);
         }
-
-        printf("%c", ch);
-
-        if(i > 1) {
-            for(j = 1; j <= 2 * i - 3; j++) {
-                printf(" ");
-            }
-            printf("%c", ch);
+    for (i = 1; i <= N; i++) {
+        if (i == 8) {
+            goto end;
         }
-
-        printf("\n");
+        if (i % 3 == 0) {
+            continue;
+        }
+        printf("\n%d ", i);
     }
-
-    for(i = n - 1; i >= 1; i--) {
-        ch = 'A' + i - 1;
-
-        for(j = 1; j <= n - i; j++) {
-            printf(" ");
-        }
-
-        printf("%c", ch);
-
-        if(i > 1) {
-            for(j = 1; j <= 2 * i - 3; j++) {
-                printf(" ");
-            }
-            printf("%c", ch);
-        }
-
-        printf("\n");
-    }
-
+end:
+    printf("\nProgram finished");
     return 0;
 }
