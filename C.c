@@ -1345,24 +1345,24 @@
 // }
 
 
-#include <stdio.h>
-int main() {
-    int N, i;
-    printf("Enter value of N: ");
-    scanf("%d", &N);
-    for (int i = 1; i <= N; i++) {
-            printf("%d ", i);
-        }
-    for (i = 1; i <= N; i++) {
-        if (i == 8) {
-            goto end;
-        }
-        if (i % 3 == 0) {
-            continue;
-        }
-        printf("\n%d ", i);
-    }
-end:
-    printf("\nProgram finished");
-    return 0;
-}
+// #include <stdio.h>
+// int main() {
+//     int N, i;
+//     printf("Enter value of N: ");
+//     scanf("%d", &N);
+//     for (int i = 1; i <= N; i++) {
+//             printf("%d ", i);
+//         }
+//     for (i = 1; i <= N; i++) {
+//         if (i == 8) {
+//             goto end;
+//         }
+//         if (i % 3 == 0) {
+//             continue;
+//         }
+//         printf("\n%d ", i);
+//     }
+// end:
+//     printf("\nProgram finished");
+//     return 0;
+// }
