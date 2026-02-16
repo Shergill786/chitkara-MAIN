@@ -1459,7 +1459,6 @@ int main() {
 //     for (int i = 0; i < l; i++) {
 //         scanf("%d", &arr[i]);
 //     }
-//     // Swap first and last element
 //     int temp = arr[0];
 //     arr[0] = arr[l - 1];
 //     arr[l - 1] = temp;
@@ -1481,7 +1480,6 @@ int main() {
 //     for (int i = 0; i < l; i++) {
 //         scanf("%d", &arr[i]);
 //     }
-//     // Replace negative numbers with zero
 //     for (int i = 0; i < l; i++) {
 //         if (arr[i] < 0) {
 //             arr[i] = 0;
@@ -1493,6 +1491,8 @@ int main() {
 //         printf("%d ", arr[i]);
 //     }
 //     return 0;
+
+
 // }
 // sort array in ascending order and descending order
 // #include <stdio.h>
@@ -1505,7 +1505,6 @@ int main() {
 //     for (int i = 0; i < l; i++) {
 //         scanf("%d", &arr[i]);
 //     }
-//     // Sort array in ascending order
 //     for (int i = 0; i < l - 1; i++) {
 //         for (int j = 0; j < l - i - 1; j++) {
 //             if (arr[j] > arr[j + 1]) {
@@ -1520,8 +1519,6 @@ int main() {
 //     for (int i = 0; i < l; i++) {
 //         printf("%d ", arr[i]);
 //     }
-    
-// Sort array in descending order
 //     for (int i = 0; i < l - 1; i++) {
 //         for (int j = 0; j < l - i - 1; j++) {
 //             if (arr[j] < arr[j + 1]) {
