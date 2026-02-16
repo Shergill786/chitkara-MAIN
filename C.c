@@ -1375,10 +1375,196 @@
 //     for (int i = 0; i < 5; i++) {
 //         scanf("%d", &arr[i]);
 //     }
-//     printf("You entered: ");
 //     for (int i = 0; i < 5; i++) {
 //         printf("%d ", arr[i]);
 //     }
 //     return 0;
 // }
 
+// input number from user in form of array and find sum and product of all elements
+#include <stdio.h>
+int main() {
+    int l ;
+    printf("enter the length of array: ");
+    scanf("%d", &l);
+
+    int arr[l], sum = 0, product = 1;
+    printf("Enter %d integers: ", l);
+    for (int i = 0; i < l; i++) {
+        scanf("%d", &arr[i]);
+        sum += arr[i];
+        product *= arr[i];
+    }
+    printf("Sum of elements: %d\n", sum);
+    printf("Product of all elements: %d\n", product);
+    return 0;
+}
+
+// input numbers in array and find maximum and minimum number
+// #include <stdio.h>
+// int main() {
+//     int l;
+//     printf("Enter the length of array: ");
+//     scanf("%d", &l);
+//     int arr[l], max, min;
+//     printf("Enter %d integers: ", l);
+//     for (int i = 0; i < l; i++) {
+//         scanf("%d", &arr[i]);
+//     }
+//     max = min = arr[0];
+//     for (int i = 1; i < 5; i++) {
+//         if (arr[i] > max) {
+//             max = arr[i];
+//         }
+//         if (arr[i] < min) {
+//             min = arr[i];
+//         }
+//     }
+//     printf("Maximum number: %d\n", max);
+//     printf("Minimum number: %d\n", min);
+//     return 0;
+// }
+
+
+// input numbers in array and find even numbers
+// #include <stdio.h>
+// int main() {
+//     int l;
+//     printf("Enter the length of array: ");
+//     scanf("%d", &l);
+//     int arr[l];
+//     printf("Enter %d integers: ", l);
+//     for (int i = 0; i < l; i++) {
+//         scanf("%d", &arr[i]);
+//     }
+//     printf("Even numbers in the array: ");
+//     for (int i = 0; i < l; i++) {
+//         if (arr[i] % 2 == 0) {
+//             printf("%d ", arr[i]);
+//         }
+//     }
+//     return 0;
+// }
+
+
+
+// swap first and last element of array
+// #include <stdio.h>
+// int main() {
+//     int l;
+//     printf("Enter the length of array: ");
+//     scanf("%d", &l);
+//     int arr[l];
+//     printf("Enter %d integers: ", l);
+//     for (int i = 0; i < l; i++) {
+//         scanf("%d", &arr[i]);
+//     }
+//     // Swap first and last element
+//     int temp = arr[0];
+//     arr[0] = arr[l - 1];
+//     arr[l - 1] = temp;
+    
+//     printf("Array after swapping first and last element: ");
+//     for (int i = 0; i < l; i++) {
+//         printf("%d ", arr[i]);
+//     }
+//     return 0;
+}
+// replace neg with zero in array
+// #include <stdio.h>
+// int main() {
+//     int l;
+//     printf("Enter the length of array: ");
+//     scanf("%d", &l);
+//     int arr[l];
+//     printf("Enter %d integers: ", l);
+//     for (int i = 0; i < l; i++) {
+//         scanf("%d", &arr[i]);
+//     }
+//     // Replace negative numbers with zero
+//     for (int i = 0; i < l; i++) {
+//         if (arr[i] < 0) {
+//             arr[i] = 0;
+//         }
+//     }
+    
+//     printf("Array after replacing negative numbers with zero: ");
+//     for (int i = 0; i < l; i++) {
+//         printf("%d ", arr[i]);
+//     }
+//     return 0;
+// }
+// sort array in ascending order and descending order
+// #include <stdio.h>
+// int main() {
+//     int l;
+//     printf("Enter the length of array: ");
+//     scanf("%d", &l);
+//     int arr[l];
+//     printf("Enter %d integers: ", l);
+//     for (int i = 0; i < l; i++) {
+//         scanf("%d", &arr[i]);
+//     }
+//     // Sort array in ascending order
+//     for (int i = 0; i < l - 1; i++) {
+//         for (int j = 0; j < l - i - 1; j++) {
+//             if (arr[j] > arr[j + 1]) {
+//                 int temp = arr[j];
+//                 arr[j] = arr[j + 1];
+//                 arr[j + 1] = temp;
+//             }
+//         }
+//     }
+    
+//     printf("Array in ascending order: ");
+//     for (int i = 0; i < l; i++) {
+//         printf("%d ", arr[i]);
+//     }
+    
+// Sort array in descending order
+//     for (int i = 0; i < l - 1; i++) {
+//         for (int j = 0; j < l - i - 1; j++) {
+//             if (arr[j] < arr[j + 1]) {
+//                 int temp = arr[j];
+//                 arr[j] = arr[j + 1];
+//                 arr[j + 1] = temp;
+//             }
+//         }
+//     }
+    
+//     printf("\nArray in descending order: ");
+//     for (int i = 0; i < l; i++) {
+//         printf("%d ", arr[i]);
+//     }
+    
+//     return 0;
+// }
+//  seacrh an element in array and return its index
+// #include <stdio.h>
+// int main() {
+//     int l, target, index = -1;
+//     printf("Enter the length of array: ");
+//     scanf("%d", &l);
+//     int arr[l];
+//     printf("Enter %d integers: ", l);
+//     for (int i = 0; i < l; i++) {
+//         scanf("%d", &arr[i]);
+//     }
+//     printf("Enter the element to search: ");
+//     scanf("%d", &target);
+    
+//     for (int i = 0; i < l; i++) {
+//         if (arr[i] == target) {
+//             index = i;
+//             break;
+//         }
+//     }
+    
+//     if (index != -1) {
+//         printf("Element found at index: %d\n", index);
+//     } else {
+//         printf("Element not found in the array.\n");
+//     }
+    
+//     return 0;
+// }
