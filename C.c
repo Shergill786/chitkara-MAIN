@@ -1562,6 +1562,6 @@
 //     } else {
 //         printf("Element not found in the array.\n");
 //     }
-    
+
 //     return 0;
 // }
