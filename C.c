@@ -1382,23 +1382,23 @@
 // }
 
 // input number from user in form of array and find sum and product of all elements
-#include <stdio.h>
-int main() {
-    int l ;
-    printf("enter the length of array: ");
-    scanf("%d", &l);
+// #include <stdio.h>
+// int main() {
+//     int l ;
+//     printf("enter the length of array: ");
+//     scanf("%d", &l);
 
-    int arr[l], sum = 0, product = 1;
-    printf("Enter %d integers: ", l);
-    for (int i = 0; i < l; i++) {
-        scanf("%d", &arr[i]);
-        sum += arr[i];
-        product *= arr[i];
-    }
-    printf("Sum of elements: %d\n", sum);
-    printf("Product of all elements: %d\n", product);
-    return 0;
-}
+//     int arr[l], sum = 0, product = 1;
+//     printf("Enter %d integers: ", l);
+//     for (int i = 0; i < l; i++) {
+//         scanf("%d", &arr[i]);
+//         sum += arr[i];
+//         product *= arr[i];
+//     }
+//     printf("Sum of elements: %d\n", sum);
+//     printf("Product of all elements: %d\n", product);
+//     return 0;
+// }
 
 // input numbers in array and find maximum and minimum number
 // #include <stdio.h>
@@ -1468,7 +1468,7 @@ int main() {
 //         printf("%d ", arr[i]);
 //     }
 //     return 0;
-}
+// }
 // replace neg with zero in array
 // #include <stdio.h>
 // int main() {
