@@ -567,3 +567,31 @@
 // } else {
 //     console.log(number, "is not a palindrome number.");
 // }
+
+
+// filter fxn is used to filter elements from an array based on a condition and return a new array with the filtered elements.
+
+// let arr=[1,2,3,4,5,6];
+// let evenNumbers=arr.filter(num => num%2===0);
+// return arr%2===0;
+// console.log(evenNumbers);
+
+
+// sorting 
+// let arr=[5,2,9,1,5,6];
+// arr.sort((a,b) => a-b);
+// return a-b;
+// console.log(arr);
+
+// map 
+// let arr=[1,2,3,4,5];
+// let squared=arr.map(function(num){
+// return num*num;}); 
+// console.log(squared);
+
+// reduce
+// let arr=[1,2,3,4,5];
+// let sum=arr.reduce(function(accumulator,currentValue){
+// return accumulator+currentValue;},0);
+// console.log(sum);
+
