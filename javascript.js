@@ -547,3 +547,23 @@
 // };
 // let number = Number(prompt("Enter a number:"));
 // console.log("Reverse of", number, "is", reverse(number));
+
+
+// palindrome using arrow function
+// let isPalindrome = (num) => {
+//     let originalNum = num;
+//     let rev = 0;
+//     while (num > 0) {
+//         let digit = num % 10;
+//         rev = rev * 10 + digit;
+//         num = Math.floor(num / 10);
+//     }
+//     return originalNum === rev;
+
+// };
+// let number = Number(prompt("Enter a number:"));
+// if (isPalindrome(number)) {
+//     console.log(number, "is a palindrome number.");
+// } else {
+//     console.log(number, "is not a palindrome number.");
+// }
