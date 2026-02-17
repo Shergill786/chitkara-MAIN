@@ -1591,25 +1591,59 @@
 // }
 
 // transpose of a matrix
+// #include <stdio.h>
+// int main() {
+//     int m,n;
+//     printf("Enter the number of rows and columns: ");
+//     scanf("%d %d", &m, &n);
+//     int i;
+//     int arr[m][n];
+//     printf("Enter elements of the array:\n");
+//     for (i = 0; i < m; i++) {
+//         for (int j = 0; j < n; j++) {
+//             scanf("%d", &arr[i][j]);
+//         }
+//     }
+//     printf("Transpose of the matrix:\n");
+//     for (int j = 0; j < n; j++) {
+//         for (int i = 0; i < m; i++) {
+//             printf("%d ", arr[i][j]);
+//         }
+//         printf("\n");
+//     }
+//     return 0;
+// }
+
+// sum of individual row and column
 #include <stdio.h>
 int main() {
     int m,n;
     printf("Enter the number of rows and columns: ");
     scanf("%d %d", &m, &n);
-    int i;
     int arr[m][n];
     printf("Enter elements of the array:\n");
-    for (i = 0; i < m; i++) {
+    for (int i = 0; i < m; i++) {
         for (int j = 0; j < n; j++) {
             scanf("%d", &arr[i][j]);
         }
     }
-    printf("Transpose of the matrix:\n");
-    for (int j = 0; j < n; j++) {
-        for (int i = 0; i < m; i++) {
-            printf("%d ", arr[i][j]);
+    
+    printf("Sum of individual rows:\n");
+    for (int i = 0; i < m; i++) {
+        int rowSum = 0;
+        for (int j = 0; j < n; j++) {
+            rowSum += arr[i][j];
         }
-        printf("\n");
+        printf("Row %d: %d\n", i + 1, rowSum);
+    }
+    
+    printf("Sum of individual columns:\n");
+    for (int j = 0; j < n; j++) {
+        int colSum = 0;
+        for (int i = 0; i < m; i++) {
+            colSum += arr[i][j];
+        }
+        printf("Column %d: %d\n", j + 1, colSum);
     }
     return 0;
 }
