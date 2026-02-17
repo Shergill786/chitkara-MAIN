@@ -480,3 +480,44 @@
 // console.log("After swap: num1 =", num1, "num2 =", num2);
 
 
+//recursion
+// function factorial(n){
+//     if (n==0 || n==1){
+//         return 1;
+//     }
+//     return n*factorial(n-1);
+// }
+// let num=5;
+// console.log("Factorial of", num, "is", factorial(num));
+
+
+//n even nu 
+// function sumEven(n){
+//     if (n===0){
+//         return 2;
+//     }
+//     return 2*n+sumEven(n-1);
+// }
+// let n=5;
+// console.log("Sum of first", n, "even numbers is", sumEven(n));
+
+
+// fibonacci series upto 21 
+// function fibonacci(n){
+//     if (n==0){
+//         return 0;
+//     }
+//     else if (n==1){
+//         return 1;
+//     }
+//     return fibonacci(n-1)+fibonacci(n-2);
+// }
+// let n=9;
+// console.log("Fibonacci series up to", n, ":");
+// for (let i=0;i<n;i++){
+//     console.log(fibonacci(i));
+// }
+
+
+// let sq = (x) => x*x;
+// console.log(sq(5));
