@@ -521,3 +521,29 @@
 
 // let sq = (x) => x*x;
 // console.log(sq(5));
+//  even or odd using arrow function  
+
+// using for loop
+// let check= (num) => {
+//     if (num % 2 === 0) {
+//         return "Even";   
+//     } else {
+//         return "Odd";    
+//     }
+// };
+// let number = Number(prompt("Enter a number:"));
+// console.log(number, "is", check(number));
+
+
+// print reverse of a no using arrow function
+// let reverse = (num) => {
+//     let rev = 0;
+//     while (num > 0) {
+//         let digit = num % 10;
+//         rev = rev * 10 + digit;
+//         num = Math.floor(num / 10);
+//     }   
+//     return rev;
+// };
+// let number = Number(prompt("Enter a number:"));
+// console.log("Reverse of", number, "is", reverse(number));
