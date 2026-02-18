@@ -595,3 +595,16 @@
 // return accumulator+currentValue;},0);
 // console.log(sum);
 
+
+// filter value greater than 40 from array
+// let arr=[40,30,50,36];
+// let filtered=arr.filter(num => num>=40);
+// console.log(filtered);
+
+
+//  find max and mini form arr using reduce using accumulator 
+// let arr=[10,20,5,15,30];
+// let min number.reduce((min,current) => current<min ? current : min);
+// console.log("Minimum value:", min);
+// let max=arr.reduce((max,current) => current>max ? current : max);
+// console.log("Maximum value:", max);
