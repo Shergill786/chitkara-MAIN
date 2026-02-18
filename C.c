@@ -1688,3 +1688,37 @@
 //     }
 //     return 0;
 // }
+
+
+// strings 
+// print h,e,l,l,o
+// #include <stdio.h>
+// int main() {
+//     char a[]="hello";
+//     int i = 0;
+//     while (i<=4) {
+//         printf("%c\n", a[i]);
+//         i++;
+//     }
+//     return 0;
+// }
+
+// input a string and print it
+// #include <stdio.h>
+// int main() {
+//     char a[10];
+//     printf("first name : ");
+//     scanf("%[^\n]", a);
+//     printf("first name : %s\n", a);
+//     return 0;
+// }
+
+// #include <stdio.h>
+// int main() {
+//     char a[10];
+//     printf("first name : ");
+//     scanf("%9s", a);
+//     printf("first name : %s\n", a);
+//     return 0;
+// }
+

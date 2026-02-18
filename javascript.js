@@ -608,3 +608,5 @@
 // console.log("Minimum value:", min);
 // let max=arr.reduce((max,current) => current>max ? current : max);
 // console.log("Maximum value:", max);
+
+
