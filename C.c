@@ -1722,3 +1722,13 @@
 //     return 0;
 // }
 
+// gets and puts
+#include <stdio.h>
+int main() {
+    char a[100];
+    printf("Enter a string: ");
+    gets(a);
+    puts("hello sad asd ");
+    puts(a);
+    return 0;
+}
