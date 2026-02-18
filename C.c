@@ -1723,12 +1723,31 @@
 // }
 
 // gets and puts
-#include <stdio.h>
-int main() {
-    char a[100];
-    printf("Enter a string: ");
-    gets(a);
-    puts("hello sad asd ");
-    puts(a);
-    return 0;
-}
+// #include <stdio.h>
+// int main() {
+//     char a[100];
+//     printf("Enter a string: ");
+//     gets(a);
+//     puts("hello sad asd ");
+//     puts(a);
+//     return 0;
+// }
+
+// #include <stdio.h>
+// int main() {    
+//     char s[]="hello";
+//     s[1]='y';
+//     s[5]='0';
+//     printf("%s\n", s);
+//     return 0;
+// }
+
+// #include <stdio.h>
+// int main() {
+//     char firstName[20], lastName[20];
+//     printf("Enter your first name and last name: ");
+//     scanf("%s %s", firstName, lastName);
+//     printf("Full name: %s %s\n", firstName, lastName);
+//     return 0;
+// }
+
