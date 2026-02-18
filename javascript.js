@@ -620,3 +620,17 @@
 //     return "Prime";
 // }
 // console.log(isPrime(num));
+
+// // max of 3 num suing function expression
+// let a=Number(prompt("Enter first number:"));
+// let b=Number(prompt("Enter second number:"));
+// let c=Number(prompt("Enter third number:"));
+// let max = (a > b && a > c) ? a : (b > c) ? b : c;
+// console.log("Maximum number is:", max);
+
+// // min of 3 num 
+// let a=Number(prompt("Enter first number:"));
+// let b=Number(prompt("Enter second number:"));
+// let c=Number(prompt("Enter third number:"));
+// let min = (a < b && a < c) ? a : (b < c) ? b : c;
+// console.log("Minimum number is:", min);
