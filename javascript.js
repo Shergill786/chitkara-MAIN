@@ -634,3 +634,4 @@
 // let c=Number(prompt("Enter third number:"));
 // let min = (a < b && a < c) ? a : (b < c) ? b : c;
 // console.log("Minimum number is:", min);
+
