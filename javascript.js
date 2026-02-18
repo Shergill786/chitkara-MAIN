@@ -559,7 +559,6 @@
 //         num = Math.floor(num / 10);
 //     }
 //     return originalNum === rev;
-
 // };
 // let number = Number(prompt("Enter a number:"));
 // if (isPalindrome(number)) {
@@ -610,3 +609,14 @@
 // console.log("Maximum value:", max);
 
 
+// check prime or not prime using ternary 
+// num = number(prompt("Enter a number:"));
+// function isPrime(num) {
+//     for (let i =2 ; i<num ;i++){
+//         if (num % i === 0) {
+//             return "Not Prime";
+//         }   
+//     }
+//     return "Prime";
+// }
+// console.log(isPrime(num));
