@@ -635,3 +635,70 @@
 // let min = (a < b && a < c) ? a : (b < c) ? b : c;
 // console.log("Minimum number is:", min);
 
+// max of 5 no
+// let a=Number(prompt("Enter first number:"));
+// let b=Number(prompt("Enter second number:"));
+// let c=Number(prompt("Enter third number:"));
+// let d=Number(prompt("Enter fourth number:"));
+// let e=Number(prompt("Enter fifth number:"));
+// let max = (a > b && a > c && a > d && a > e) ? a : 
+//           (b > c && b > d && b > e) ? b : 
+//          (c > d && c > e) ? c : 
+//          (d > e) ? d : e;
+// console.log("Maximum number is:", max);
+
+
+
+// let person = {
+//     name: "Aman",
+//     greet: function() {
+//         console.log("Outer this:", this.name);
+//         let inner = () => {
+//             console.log("Inner this:", this.name);
+//         };
+//         inner();
+//     }
+// };
+
+// person.greet();
+// let person = {
+//     name: "Aman",
+//     changeName: function() {
+//         this.name = "Rama";
+//     }
+// };
+
+// person.changeName();
+// console.log(person.name);
+
+// function bankAccount(initialBalance) {
+//     let balance = initialBalance;
+
+//     return {
+//         deposit: function(amount) {
+//             balance += amount;
+//             console.log("Balance:", balance);
+//         },
+
+//         getBalance: function() {
+//             return balance;
+//         }
+//     };
+// }
+
+// let account = bankAccount(1000);
+
+// account.deposit(500);
+// console.log(account.g
+// etBalance());
+
+// function createMultiplier(x) {
+//     return function(y) {
+//         return x * y;
+//     };
+// }
+
+// const multiplyBy5 = createMultiplier(5);
+
+// console.log(multiplyBy5(2)); // 10
+// console.log(multiplyBy5(4)); // 20

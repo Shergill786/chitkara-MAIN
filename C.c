@@ -1761,3 +1761,40 @@
 // }
 
 
+// strings functions like strlen, strcpy, strcat, strcmp
+#include <stdio.h>
+#include <string.h>
+int main() {
+    char str1[20], str2[20];
+    printf("Enter first string: ");
+    scanf("%s", str1);
+    printf("Enter second string: ");
+    scanf("%s", str2);
+    
+    // strlen
+    printf("Length of first string: %zu\n", strlen(str1));
+    printf("Length of second string: %zu\n", strlen(str2));
+    
+    // strcpy
+    char copyStr[20];
+    strcpy(copyStr, str1);
+    printf("Copy of first string: %s\n", copyStr);
+    
+    // strcat
+    char concatStr[40];
+    strcpy(concatStr, str1);
+    strcat(concatStr, str2);
+    printf("Concatenated string: %s\n", concatStr);
+    
+    // strcmp
+    int cmpResult = strcmp(str1, str2);
+    if (cmpResult == 0) {
+        printf("The strings are equal.\n");
+    } else if (cmpResult < 0) {
+        printf("First string is less than second string.\n");
+    } else {
+        printf("First string is greater than second string.\n");
+    }
+    
+    return 0;
+}
