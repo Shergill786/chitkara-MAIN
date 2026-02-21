@@ -262,3 +262,52 @@
 // }
 
 
+
+// function demo() {
+//     var a = 10;
+//     let b = 20;
+//     if (true) {
+//       var a = 30;
+//       let b = 40;
+//     }
+//     console.log(a, b);
+//   }
+//   demo();
+
+// let a =5 ,b=10;
+// [a,b]=[b,a]
+// console.log(a,b)
+
+// let n=5;
+// if (n>0) 
+//     console.log("post")
+// else 
+//     console.log("neg")
+
+
+// switch case
+// let d=2;
+// switch (d){
+//     case 1: console.log("mon");break;
+//     case 2: console.log("tue");break;
+// }
+
+// for (let i=1;i<=5;i++)
+//     console.log(i)
+
+// let i = 2;
+// while (i <= 10) {
+//   console.log(i);
+//   i += 2;
+// }
+
+
+// let sum=0;
+// for (let i=1;i<=45;i++) 
+//     sum+=1
+// console.log(sum)
+
+for (let i=1; i<=10;i++){
+    if (i===6) break;
+    console.log(i)
+}
