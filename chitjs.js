@@ -520,3 +520,41 @@
 // let sum=arr.reduce((a,b)=>a+b,0);
 // console.log(sum);
 
+// let n=5;
+// for (let i=1;i<=n;i++){
+//         let row="";
+//         for (let j=1;j<=n;j++){
+//             row+="* ";
+//         }
+//         console.log(row);
+// }
+
+// triangle
+// let n=5;
+// for (let i=1;i<=n;i++){
+//     let row="";
+//     for (let j=1;j<=i;j++){
+//         row+="* ";
+//     }
+//     console.log(row);
+// }
+
+// let n=5;
+// for (let i=1;i<=n;i++){
+//     let row="";
+//     for (let j=1;j<=n-i+1;j++){
+//         row+="* ";
+//     }    console.log(row);
+// }
+
+// let n=5;
+// for (let i=1;i<=n;i++){
+//     let row="";
+//     for (let j=1;j<=n-i;j++){
+//         row+="  ";
+//     }
+//     for (let k=1;k<=2*i-1;k++){
+//         row+="* ";
+//     }   console.log(row);   
+// }
+
