@@ -103,7 +103,6 @@
 
 
 // let rows = 3;
-
 // for (let i = 1; i <= rows; i++) {
 //     let stars = "";
 //     for (let j = 1; j <= i * 2; j++) {
@@ -151,11 +150,9 @@
 // }
 
 // let n = parseInt(prompt("Enter number of levels:"));
-
 // for (let i = 1; i <= n; i++) {
 //   console.log("*".repeat(2 ** i));
 // }
-
 // for (let i = n - 1; i >= 1; i--) {
 //   console.log("*".repeat(2 ** i));
 // }
@@ -199,9 +196,11 @@
 // }
 // if (originalNum==rev){
 //     console.log(originalNum,"is a palindrome number.");
+//     console.log(originalNum);
 // }
 // else{
 //     console.log(originalNum,"is not a palindrome number.");
+//     console.log(originalNum);
 // }
 
 //  for off loop is used to ittrate over values of ittrable like arrays ,strings, maps and sets 

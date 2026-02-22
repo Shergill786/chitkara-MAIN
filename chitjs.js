@@ -364,3 +364,159 @@
 // for (let city of cities){
 //     console.log(city.toUpperCase());
 // }
+
+
+
+// factorial 
+// let n=5;
+// fact=1;
+// for (let i=1;i<=n;i++){
+//     fact*=i;
+// }
+// console.log(fact)
+
+// for (let i=1; i<=5; i++){
+//     let row="";
+//     for (let j=1; j<=i;j++){
+//         row+=(j)+" ";
+//     }
+//     console.log(row);
+// }
+
+// let rows=3;
+// for (let i=1;i<=rows;i++){
+//     let stars="";
+//     for (let j=1;j<=i;j++){
+//         stars+="* ";
+//     }
+//     console.log(stars);
+// }
+
+// for (let i=1; i<=5;i++){
+//     console.log(2**i);
+// }
+
+// let str=1;
+// for (let i=1;i<=5; i++){
+//     str=str*3;
+//     let row=""
+//     for (let j=1;j<=i;j++){
+//         row+="* ";
+//     }
+//     console.log(row);
+// }
+
+// for (let i=1;i<=7;i++){
+//     let row="";
+//     if (i<=4){
+//         for (let j=1;j<=i;j++){
+//             row+="*";
+//         }
+//     }
+//     else{
+// for (let j=1;j<=8-i;j++){
+//             row+="*";
+//         }
+//     }
+//     console.log(row);
+// }
+
+// let n=prompt("Enter a number: ");
+// for (let i=1;i<=n;i++){
+//     let row="";
+//     if (i<=n/2){
+//         for (let j=1;j<=i;j++){
+//             row+="*";
+//         }
+//     }
+//     else{
+//         for(let j=1;j<=n-i+1;j++){
+//             row+="*";
+//         }
+//     }
+//     console.log(row);
+// }
+
+// let n=5;
+// let orgnum=n;
+// let rev=0;
+// while(n>0){
+//     let digit=n%10;
+//     rev=rev*10+digit;
+//     n=Math.floor(n/10);
+// }
+// if (orgnum==rev){
+//     console.log("palendrome");
+// }
+// else{
+//     console.log("not")
+// }
+
+// let person={name:"john",age:30,city:"ambala"};
+// for (let value in person){
+//     console.log(person[value]);
+// }
+
+// let obj={a:1,b:2,c:3}
+// let sum=0;
+// for (let key in obj){
+//     sum+=obj[key];
+// }
+// console.log(sum)
+
+// let score ={a:45,b:54,c:133};
+// let max=score["a"];
+// for (let key in score){
+//     if (score[key]>max){
+//         max=score[key];
+//     }
+// }
+// console.log(max);
+
+// let arr=[12,2334,123,21,341,2213,213,12321,1343242542,522541];
+// let min=arr[0];
+// let max=arr[0];
+// let sum=0;
+// for (let value of arr){
+//     sum+=value;
+//     if(value<min){
+//         min=value;
+//     }
+//     if (value>max){
+//         max=value;
+//     }
+// }
+// console.log(min);
+// console.log(max);
+// console.log(sum);
+
+// function fabonacci(n){
+//     if(n==0){
+//         return 0;
+//     }
+//     else if (n==1){
+//         return 1 ;
+//     }
+//     return fabonacci(n-1)+fabonacci(n-2);
+// }
+// let n=9;
+// console.log(n);
+// for (let i=0;i<n;i++){
+//     console.log(fabonacci(i));
+// }
+
+// filter  => it creates a new array with all elements that pass the test implemented by the provided function.
+// let arr=[1,2,3,4,5,6,7,8,9,10];
+// let even=arr.filter(n=>n%2==0);
+// console.log(even);
+
+// map  => it creates a new array with the results of calling a provided function on every element in the calling array.
+// let arr=[1,2,3,4,5,6,7,8,9,10];
+// let doubled=arr.map(n=>n*2);
+// console.log(doubled);
+
+// reduce => it executes a reducer function on each element of the array, resulting in a single output value.
+// let arr=[1,2,3,4,5];
+// let sum=arr.reduce((a,b)=>a+b,0);
+// console.log(sum);
+
