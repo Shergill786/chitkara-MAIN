@@ -307,7 +307,60 @@
 //     sum+=1
 // console.log(sum)
 
-for (let i=1; i<=10;i++){
-    if (i===6) break;
-    console.log(i)
-}
+// for (let i=1; i<=10;i++){
+//     if (i===6) break;
+//     console.log(i)
+// }
+
+
+
+// a=prompt("Enter first number: ")
+// b=prompt("Enter second number: ")
+// function add(a,b){
+//     return a+b;
+// }
+// function sub(a,b){
+//     return a-b;
+// }
+// console.log(add(a,b));
+// console.log(sub(a,b));
+
+// function greet(name="user"){
+//     console.log(name);
+// }
+// greet();
+
+// function sum(...n){
+//     return n.reduce((a,b)=>a+b,0);
+// }
+// console.log(sum(1,2,3));
+
+// let sum=0;
+// for (i=1;i<=5;i++){
+//     sum+=i
+// }
+// console.log(sum)
+// console.log(i)
+
+// let str="hello"
+// for (let i of str){
+//     console.log(i)
+// }
+
+// let obj={
+//     item:"book",
+//     price:100,
+// };
+// // console.log(obj.item,obj.price);
+// let out=`The price of ${obj.item} is ${obj.price}`;
+// console.log(out)
+
+// let str = "helloworld";
+// console.log(str.length);
+// console.log(str);    
+
+
+// let cities=["delhi","mumbai","kolkata","chennai"];
+// for (let city of cities){
+//     console.log(city.toUpperCase());
+// }
