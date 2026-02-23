@@ -375,6 +375,7 @@
 
 // function st (name,age,marks){   
 //     console.log(name,age,marks);
+// return name,age,marks;
 // }
 // st(age=24,name="JAVA",marks=90);
 
