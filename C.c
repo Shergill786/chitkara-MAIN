@@ -340,6 +340,7 @@
 //     return 0;
 // }
 
+
 // #include <stdio.h>
 // int main(){
 //     int a=8;
@@ -363,7 +364,6 @@
 //     printf("The greatest number is: %d\n", max);
 //     return 0;
 // }
-
 
 
 // #include <stdio.h>
@@ -421,7 +421,6 @@
 //     printf("Reversed number: %d\n", reverse);
 //     return 0;
 // }
-
 
 
 // #include <stdio.h>
@@ -1781,10 +1780,10 @@
 //     printf("Copy of first string: %s\n", copyStr);
     
 //     // strcat
-//     char concatStr[40];
-//     strcpy(concatStr, str1);
-//     strcat(concatStr, str2);
-//     printf("Concatenated string: %s\n", concatStr);
+    char concatStr[40];
+    strcpy(concatStr, str1);
+    strcat(concatStr, str2);
+    printf("Concatenated string: %s\n", concatStr);
     
 //     // strcmp
 //     int cmpResult = strcmp(str1, str2);

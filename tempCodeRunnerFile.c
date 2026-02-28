@@ -1,10 +1,5 @@
-
-#include <stdio.h>
-int main() {
-    char a[13];
-    printf("Enter a number: ");
-    scanf("%13[+-123456789]s", a);
-    printf("You entered: %s\n", a);
-    return 0;
-}
-
+ncatStr[40];
+    strcpy(concatStr, str1);
+    strcat(concatStr, str2);
+    printf("Concatenated string: %s\n", concatStr);
+    
