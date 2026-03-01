@@ -1780,10 +1780,10 @@
 //     printf("Copy of first string: %s\n", copyStr);
     
 //     // strcat
-    char concatStr[40];
-    strcpy(concatStr, str1);
-    strcat(concatStr, str2);
-    printf("Concatenated string: %s\n", concatStr);
+    // char concatStr[40];
+    // strcpy(concatStr, str1);
+    // strcat(concatStr, str2);
+    // printf("Concatenated string: %s\n", concatStr);
     
 //     // strcmp
 //     int cmpResult = strcmp(str1, str2);
@@ -1794,5 +1794,4 @@
 //     } else {
 //         printf("First string is greater than second string.\n");
 //     }
-    
 //     return 0;
