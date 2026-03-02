@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hospital Feedback Form</title>
+    <link rel="stylesheet" href="css/feedback.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<!-- Back Button -->
+<div class="back-btn">
+    <a href="javascript:history.back()">
+        <i class="fas fa-arrow-left"></i> Back
+    </a>
+</div>
+
+<section class="feedback-section">
+    <div class="feedback-container">
+
+        <h2>Patient Feedback Form</h2>
+        <p>Your feedback helps us improve our healthcare services.</p>
+
+        <form>
+
+            <!-- Patient Details -->
+            <h3>Patient Information</h3>
+
+            <div class="row">
+                <div class="input-box">
+                    <label>Patient Name</label>
+                    <input type="text" required>
+                </div>
+
+                <div class="input-box">
+                    <label>Mobile Number</label>
+                    <input type="tel" required>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-box">
+                    <label>Email (Optional)</label>
+                    <input type="email">
+                </div>
+
+                <div class="input-box">
+                    <label>Age</label>
+                    <input type="number" min="1" max="120" required>
+                </div>
+            </div>
+
+            <!-- Visit Details -->
+            <h3>Visit Details</h3>
+
+            <div class="row">
+                <div class="input-box">
+                    <label>Date of Visit</label>
+                    <input type="date" required>
+                </div>
+
+                <div class="input-box">
+                    <label>Service Used</label>
+                    <select required>
+                        <option value="">Select</option>
+                        <option>OPD Consultation</option>
+                        <option>Emergency Care</option>
+                        <option>Inpatient / Ward</option>
+                        <option>ICU</option>
+                        <option>Lab Tests</option>
+                        <option>Radiology</option>
+                        <option>Pharmacy</option>
+                        <option>Ambulance</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="input-box">
+                <label>Doctor / Department Name</label>
+                <input type="text">
+            </div>
+
+            <!-- Ratings -->
+            <h3>Service Ratings</h3>
+
+            <div class="rating-box">
+                <label>Doctor Care</label>
+                <select required>
+                    <option>Excellent</option>
+                    <option>Good</option>
+                    <option>Average</option>
+                    <option>Poor</option>
+                </select>
+            </div>
+
+            <div class="rating-box">
+                <label>Nursing & Staff Behavior</label>
+                <select required>
+                    <option>Excellent</option>
+                    <option>Good</option>
+                    <option>Average</option>
+                    <option>Poor</option>
+                </select>
+            </div>
+
+            <div class="rating-box">
+                <label>Cleanliness & Hygiene</label>
+                <select required>
+                    <option>Excellent</option>
+                    <option>Good</option>
+                    <option>Average</option>
+                    <option>Poor</option>
+                </select>
+            </div>
+
+            <div class="rating-box">
+                <label>Waiting Time</label>
+                <select required>
+                    <option>Very Short</option>
+                    <option>Acceptable</option>
+                    <option>Long</option>
+                    <option>Very Long</option>
+                </select>
+            </div>
+
+            <!-- Overall -->
+            <h3>Overall Experience</h3>
+
+            <div class="radio-box">
+                <label>Overall Satisfaction</label>
+                <div class="options">
+                    <label><input type="radio" name="satisfaction" required> Very Satisfied</label>
+                    <label><input type="radio" name="satisfaction"> Satisfied</label>
+                    <label><input type="radio" name="satisfaction"> Neutral</label>
+                    <label><input type="radio" name="satisfaction"> Unsatisfied</label>
+                </div>
+            </div>
+
+            <div class="radio-box">
+                <label>Would you recommend our hospital?</label>
+                <div class="options">
+                    <label><input type="radio" name="recommend" required> Yes</label>
+                    <label><input type="radio" name="recommend"> No</label>
+                </div>
+            </div>
+
+            <!-- Comments -->
+            <div class="input-box">
+                <label>Suggestions / Complaints (if any)</label>
+                <textarea rows="4"></textarea>
+            </div>
+
+            <button type="submit">
+                <i class="fas fa-paper-plane"></i> Submit Feedback
+            </button>
+
+        </form>
+    </div>
+</section>
+
+</body>
+</html>

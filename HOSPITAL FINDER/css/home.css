@@ -1,0 +1,326 @@
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ================= BODY ================= */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f4f7fb;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ================= HEADER / NAVBAR ================= */
+header {
+  background-color: #0b5ed7;
+  color: white;
+}
+
+nav {
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+nav h1 {
+  font-size: 1.6rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* ================= HERO SECTION ================= */
+.hero {
+  background: linear-gradient(to right, #0b5ed7, #3b82f6);
+  color: white;
+  padding: 4rem 1.5rem;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  max-width: 750px;
+  margin: auto;
+  margin-bottom: 2rem;
+  font-size: 1.05rem;
+}
+
+/* ================= SEARCH ================= */
+.search {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.search select {
+  padding: 0.7rem;
+  width: 220px;
+  border-radius: 5px;
+  border: none;
+  font-size: 1rem;
+}
+
+.search button {
+  padding: 0.7rem 1.4rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #ffcc00;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.search button:hover {
+  background-color: #ffb703;
+}
+
+/* ================= ABOUT ================= */
+.about {
+  background: #ffffff;
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+.about h2 {
+  color: #0b5ed7;
+  margin-bottom: 1rem;
+}
+
+.about p {
+  max-width: 800px;
+  margin: auto;
+}
+/* ================= KEY FEATURES – BIG BOX ANIMATION ================= */
+
+/* Initial state: box stays box, stronger scale */
+.feature-box {
+  opacity: 0;
+  transform: scale(0.85) translateY(40px);
+  animation: featureBoxIn 0.9s ease-out forwards;
+}
+
+/* Staggered animation (one by one) */
+.feature-box:nth-child(1) { animation-delay: 0.1s; }
+.feature-box:nth-child(2) { animation-delay: 0.25s; }
+.feature-box:nth-child(3) { animation-delay: 0.4s; }
+.feature-box:nth-child(4) { animation-delay: 0.55s; }
+.feature-box:nth-child(5) { animation-delay: 0.7s; }
+.feature-box:nth-child(6) { animation-delay: 0.85s; }
+
+/* Hover: box lifts but stays rectangular */
+.feature-box:hover {
+  transform: scale(1.08) translateY(-6px);
+  transition: transform 0.35s ease;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.18);
+}
+
+/* Keyframes */
+@keyframes featureBoxIn {
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+/* ================= CENTER KEY FEATURES ================= */
+
+.features {
+  text-align: center;
+}
+
+.feature-grid {
+  justify-items: center;   /* centers boxes in grid */
+}
+/* ================= ATTRACTIVE KEY FEATURES ================= */
+
+.features {
+  background: linear-gradient(135deg, #eef3ff, #f9fbff);
+}
+
+/* grid already centered */
+.feature-grid {
+  justify-items: center;
+}
+
+/* feature box */
+.feature-box {
+  width: 100%;
+  max-width: 320px;
+  padding: 1.8rem 1.4rem;
+  background: white;
+  border-radius: 14px;
+  text-align: center;
+  font-weight: bold;
+  position: relative;
+
+  /* gradient border effect */
+  border: 2px solid transparent;
+  background-image:
+    linear-gradient(white, white),
+    linear-gradient(135deg, #0b5ed7, #3b82f6);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+
+  /* depth */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+
+  /* animation base */
+  opacity: 0;
+  transform: scale(0.85) translateY(40px);
+  animation: featureBoxIn 0.9s ease-out forwards;
+}
+
+/* staggered animation */
+.feature-box:nth-child(1) { animation-delay: 0.1s; }
+.feature-box:nth-child(2) { animation-delay: 0.25s; }
+.feature-box:nth-child(3) { animation-delay: 0.4s; }
+.feature-box:nth-child(4) { animation-delay: 0.55s; }
+.feature-box:nth-child(5) { animation-delay: 0.7s; }
+.feature-box:nth-child(6) { animation-delay: 0.85s; }
+
+/* hover interaction */
+.feature-box:hover {
+  transform: scale(1.08) translateY(-8px);
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.18);
+  transition: all 0.35s ease;
+}
+
+/* animation */
+@keyframes featureBoxIn {
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}/* ================= STEPS ================= */
+.steps {
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+.steps h2 {
+  color: #0b5ed7;
+  margin-bottom: 1.5rem;
+}
+
+.steps ol {
+  max-width: 500px;
+  margin: auto;
+  text-align: left;
+}
+
+.steps li {
+  margin: 0.8rem 0;
+  font-weight: bold;
+}
+
+/* ================= EMERGENCY ================= */
+.emergency {
+  background: #dc3545;
+  color: white;
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+.emergency h2 {
+  margin-bottom: 1rem;
+}
+
+.emergency p {
+  max-width: 700px;
+  margin: auto;
+}
+
+.emergency button {
+  margin-top: 1.2rem;
+  padding: 0.8rem 1.6rem;
+  background: white;
+  color: #dc3545;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.emergency button:hover {
+  background: #f8d7da;
+}
+
+/* ================= FOOTER ================= */
+footer {
+  background: #222;
+  color: #ccc;
+  text-align: center;
+  padding: 1.2rem;
+  font-size: 0.9rem;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .hero h2 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .search select,
+  .search button {
+    width: 100%;
+  }
+}
+
+/* ================= ICON HOVER ANIMATION ================= */
+
+.feature-icon {
+  display: inline-block;
+  font-size: 2rem;
+  margin-bottom: 0.6rem;
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+/* layout tweak */
+.feature-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+/* hover effect */
+.feature-box:hover .feature-icon {
+  transform: scale(1.3) rotate(8deg);
+  filter: drop-shadow(0 6px 10px rgba(11, 94, 215, 0.5));
+}
