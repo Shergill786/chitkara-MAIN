@@ -1,0 +1,128 @@
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ================= BODY ================= */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f7fb;
+  line-height: 1.6;
+}
+
+/* ================= HEADER ================= */
+header {
+  background: linear-gradient(135deg, #0066ff, #00c6ff);
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+/* ================= HOSPITAL SECTION ================= */
+.hospital-list {
+  padding: 40px 60px;
+}
+
+/* ================= HOSPITAL CARD ================= */
+.hospital-card {
+  background: #ffffff;
+  padding: 30px;
+  margin-bottom: 35px;
+  border-radius: 14px;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+  transition: 0.3s ease;
+  border-left: 6px solid #0077ff;
+}
+
+.hospital-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.hospital-card h2 {
+  margin-bottom: 15px;
+  color: #0077ff;
+  font-size: 22px;
+}
+
+/* ================= DETAILS TEXT ================= */
+.hospital-card p {
+  margin-bottom: 6px;
+  font-size: 14px;
+  color: #444;
+}
+
+.hospital-card strong {
+  color: #222;
+}
+
+/* ================= BUTTON GROUP ================= */
+.button-group {
+  margin-top: 18px;
+}
+
+/* ================= BUTTON BASE ================= */
+.btn {
+  text-decoration: none;
+  padding: 9px 16px;
+  border-radius: 6px;
+  margin-right: 10px;
+  font-size: 13px;
+  display: inline-block;
+  color: #ffffff;
+  transition: 0.3s ease;
+}
+
+/* ================= BUTTON COLORS ================= */
+.see {
+  background: #0077ff;
+}
+
+.map {
+  background: #00a651;
+}
+
+.book {
+  background: #ff6b00;
+}
+
+/* ================= BUTTON HOVER ================= */
+.btn:hover {
+  opacity: 0.85;
+  transform: scale(1.05);
+}
+
+/* ================= FOOTER ================= */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #222;
+  color: white;
+  margin-top: 40px;
+  font-size: 14px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .hospital-list {
+    padding: 20px;
+  }
+
+  .hospital-card {
+    padding: 20px;
+  }
+
+  .btn {
+    display: block;
+    margin-bottom: 10px;
+    width: 100%;
+    text-align: center;
+  }
+}
