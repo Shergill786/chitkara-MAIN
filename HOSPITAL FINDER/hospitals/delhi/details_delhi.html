@@ -4,150 +4,31 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Delhi Hospitals – Complete Details</title>
+  <link rel="stylesheet" href="css/details.css">
 
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: #f4f7fb;
-      color: #333;
-      line-height: 1.6;
-    }
-
-    header {
-      background: #0b5ed7;
-      color: #fff;
-      padding: 1rem 2rem;
-    }
-
-    nav {
-      max-width: 1200px;
-      margin: auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-
-    nav h1 {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 1.5rem;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .slider {
-      max-width: 1000px;
-      margin: 2.5rem auto;
-    }
-
-    .slider input { display: none; }
-
-    .slide {
-      display: none;
-      background: white;
-      padding: 2rem;
-      border-radius: 16px;
-      box-shadow: 0 14px 35px rgba(0,0,0,0.12);
-    }
-
-    .slide h2 { color: #0b5ed7; }
-    .slide h3 { margin-top: 1.2rem; color: #0b5ed7; }
-    .slide ul { margin-left: 1.2rem; }
-    .slide li { margin: 0.4rem 0; }
-
-    #h1:checked ~ .slides .s1,
-    #h2:checked ~ .slides .s2,
-    #h3:checked ~ .slides .s3,
-    #h4:checked ~ .slides .s4,
-    #h5:checked ~ .slides .s5 {
-      display: block;
-    }
-
-    .actions {
-      margin-top: 1.5rem;
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
-
-    .actions a {
-      padding: 0.7rem 1.4rem;
-      background: #0b5ed7;
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-    }
-
-    .actions a:hover {
-      background: #084298;
-    }
-
-    .controls {
-      text-align: center;
-      margin-top: 1.5rem;
-    }
-
-    .controls label {
-      display: inline-block;
-      padding: 8px 14px;
-      margin: 0 5px;
-      background: #0b5ed7;
-      color: white;
-      border-radius: 8px;
-      cursor: pointer;
-      font-weight: bold;
-    }
-
-    footer {
-      background: #222;
-      color: #ccc;
-      text-align: center;
-      padding: 1.2rem;
-      margin-top: 3rem;
-    }
-  </style>
-</head>
-
+  </head>
+  
 <body>
-
+  
+  <!-- Back Button -->
+  <div class="back-btn">
+      <a href="javascript:history.back()">
+          <i class="fas fa-arrow-left"></i> Back
+      </a>
+  </div>
 <header>
   <nav>
     <h1>🏥 Hospital Finder</h1>
     <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="hospitals_delhi.html">Hospitals</a></li>
-      <li><a href="details_delhi.html">Details</a></li>
-      <li><a href="emergency.html">Emergency</a></li>
-    </ul>
+      <li><a href="../delhi.html">Home</a></li>
+      <li><a href="../emergency.html">Emergency</a></li>
+     </ul>
   </nav>
 </header>
-
-<section class="slider">
-
-  <input type="radio" name="hospital" id="h1" checked>
-  <input type="radio" name="hospital" id="h2">
-  <input type="radio" name="hospital" id="h3">
-  <input type="radio" name="hospital" id="h4">
-  <input type="radio" name="hospital" id="h5">
-  <input type="radio" name="hospital" id="h6">
-
+<div class="slider">
   <div class="slides">
-<!-- ===== HOSPITAL 1 ===== -->
-    <div class="slide s1">
+    <!-- ===== HOSPITAL 1 ===== -->
+    <div class="slide s1" id="h1">
       <h2>City Care Hospital</h2>
       <p><strong>Address:</strong> Karol Bagh, New Delhi</p>
       <p><strong>Contact:</strong> +91 98123 45678</p>
@@ -172,7 +53,7 @@
       </ul>
       
       <h3>Visiting Hours</h3>
-      <p>10 AM – 12 PM | 4 PM – 7 PM</p>
+      <p>10 AM – 12 PM | 4 PM - 7 PM</p>
       <div class="actions">
         <a href="doctors_city.html">See Doctors</a>
         <a href="appointment.html">Book Appointment</a>
@@ -181,7 +62,7 @@
     </div>
 
     <!-- ===== HOSPITAL 2 ===== -->
-    <div class="slide s2">
+    <div class="slide s2" id="h2">
       <h2>LifeLine Multispeciality Hospital</h2>
       <p><strong>Address:</strong> Janakpuri, New Delhi</p>
       <p><strong>Contact:</strong> +91 98765 43210</p>
@@ -217,7 +98,7 @@
 
 
     <!-- HOSPITAL 3 -->
-    <div class="slide s3">
+    <div class="slide s3" id="h3">
       <h2>Green Valley Hospital</h2>
       <p><strong>Address:</strong> Rohini, New Delhi</p>
       <p><strong>Emergency:</strong> Available</p>
@@ -250,8 +131,8 @@
     </div>
 
     <!-- HOSPITAL 4 -->
-    <div class="slide s4">
-      <h2>Delhi Heart Center</h2>
+    <div class="slide s4" id="h4">
+      <h2>Heartcare Center</h2>
       <p><strong>Address:</strong> South Extension, New Delhi</p>
       <p><strong>Specialty Hospital:</strong> Cardiac Care</p>
 
@@ -283,7 +164,7 @@
     </div>
 
     <!-- HOSPITAL 5 -->
-    <div class="slide s5">
+    <div class="slide s5" id="h5">
       <h2>Metro General Hospital</h2>
       <p><strong>Address:</strong> Patel Nagar, New Delhi</p>
 
@@ -315,18 +196,9 @@
         <a href="https://maps.google.com">See Map</a>
       </div>
     </div>
-
+  </div>
   </div>
 
-  <div class="controls">
-    <label for="h1">1</label>
-    <label for="h2">2</label>
-    <label for="h3">3</label>
-    <label for="h4">4</label>
-    <label for="h5">5</label>
-  </div>
-
-</section>
 
 <footer>
   <p>© 2026 Hospital Finder | Delhi</p>

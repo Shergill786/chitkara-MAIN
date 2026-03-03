@@ -116,3 +116,26 @@
       align-items: center;
     }
   }
+  
+.back-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.back-btn a {
+    text-decoration: none;
+    background: #0354e0d2;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.3s;
+}
+
+.back-btn a:hover {
+    background: #004d40;
+}

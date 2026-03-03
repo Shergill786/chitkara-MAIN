@@ -301,3 +301,130 @@ footer {
   padding: 1rem;
   margin-top: 2rem;
 }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f4f7fb;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #0b5ed7;
+      color: #fff;
+      padding: 1rem 2rem;
+    }
+
+    nav {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    nav h1 {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .slider {
+      max-width: 1000px;
+      margin: 2.5rem auto;
+    }
+
+
+    .slide {
+      display: none;
+      background: white;
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 14px 35px rgba(0,0,0,0.12);
+    }
+    .actions {
+      margin-top: 1.5rem;
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .actions a {
+      padding: 0.7rem 1.4rem;
+      background: #0b5ed7;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+
+    .actions a:hover {
+      background: #084298;
+    }
+
+    footer {
+      background: #222;
+      color: #ccc;
+      text-align: center;
+      padding: 1.2rem;
+      margin-top: 3rem;
+    }
+    .slide {
+  display: none;
+}
+
+.slide:target {
+  display: block;
+}
+/* Hide all by default */
+.slide {
+  display: none;
+}
+
+/* Show selected hospital */
+.slide:target {
+  display: block;
+}
+
+/* Show first hospital ONLY when no hash is present */
+.slides:not(:has(.slide:target)) .slide:first-child {
+  display: block;
+}  
+
+
+.back-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.back-btn a {
+    text-decoration: none;
+    background: #0354e0d2;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.3s;
+}
+
+.back-btn a:hover {
+    background: #004d40;
+}
