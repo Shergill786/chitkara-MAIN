@@ -1841,3 +1841,105 @@
 //     return 0;
 // }
 
+// 2nd type of function
+// #include <stdio.h>
+// int add() {
+//     int num1, num2;
+//     printf("Enter two numbers for addition: ");
+//     scanf("%d %d", &num1, &num2);
+//     return num1 + num2;
+// }
+// int diff() {
+//     int num1, num2;
+//     printf("Enter two numbers for subtraction: ");
+//     scanf("%d %d", &num1, &num2);
+//     return num1 - num2;
+// }
+// int multiply() {
+//     int num1, num2;
+//     printf("Enter two numbers for multiplication: ");
+//     scanf("%d %d", &num1, &num2);
+//     return num1 * num2;
+// }
+// int divide() {
+//     int num1, num2;
+//     printf("Enter two numbers for division: ");
+//     scanf("%d %d", &num1, &num2);
+//     return num1 / num2;
+// }
+// int main() {
+//     int sum = add();
+//     int difference = diff();
+//     int product = multiply();
+//     int division = divide();
+    
+//     printf("Sum: %d\n", sum);
+//     printf("Difference: %d\n", difference);
+//     printf("Product: %d\n", product);
+//     printf("Division: %d\n", division);
+    
+//     return 0;
+// }
+
+// 3rd type of function
+// #include <stdio.h>
+// void add(int num1, int num2) {
+//     int sum = num1 + num2;
+//     printf("Sum of %d and %d is: %d\n", num1, num2, sum);
+// }
+// void diff(int num1, int num2) {
+//     int difference = num1 - num2;
+//     printf("Difference of %d and %d is: %d\n", num1, num2, difference);
+// }
+// void multiply(int num1, int num2) {
+//     int product = num1 * num2;
+//     printf("Product of %d and %d is: %d\n", num1, num2, product);
+// }
+// void divide(int num1, int num2) {
+//     int division = num1 / num2;
+//     printf("Division of %d and %d is: %d\n", num1, num2, division);
+// }
+// int main() {
+//     int num1, num2;
+//     printf("Enter two numbers: ");
+//     scanf("%d %d", &num1, &num2);
+    
+//     add(num1, num2);
+//     diff(num1, num2);
+//     multiply(num1, num2);
+//     divide(num1, num2);
+    
+//     return 0;
+// }
+
+// 4th type of function
+#include <stdio.h>
+int add(int num1, int num2) {
+    return num1 + num2;
+}
+int diff(int num1, int num2) {
+    return num1 - num2;
+}
+int multiply(int num1, int num2) {
+    return num1 * num2;
+}
+int divide(int num1, int num2) {
+    return num1 / num2;
+}
+int main() {
+    int num1, num2;
+    printf("Enter two numbers: ");
+    scanf("%d %d", &num1, &num2);
+    
+    int sum = add(num1, num2);
+    int difference = diff(num1, num2);
+    int product = multiply(num1, num2);
+    int division = divide(num1, num2);
+    
+    printf("Sum: %d\n", sum);
+    printf("Difference: %d\n", difference);
+    printf("Product: %d\n", product);
+    printf("Division: %d\n", division);
+    
+    return 0;
+}
