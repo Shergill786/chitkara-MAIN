@@ -1795,3 +1795,49 @@
 //         printf("First string is greater than second string.\n");
 //     }
 //     return 0;
+// }
+
+
+// ADD DIFF MULTIPLY DIVIDE 2 NUMBERS OF ALL 4 FUNCTIONS TYPE 
+
+
+// #include <stdio.h>
+// void add() {
+//     int num1, num2;
+//     printf("Enter two numbers for addition: ");
+//     scanf("%d %d", &num1, &num2);
+//     int sum = num1 + num2;
+//     printf("Sum of %d and %d is: %d\n", num1, num2, sum);
+// }
+
+// void diff() {
+//     int num1, num2;
+//     printf("Enter two numbers for subtraction: ");
+//     scanf("%d %d", &num1, &num2);
+//     int difference = num1 - num2;
+//     printf("Difference of %d and %d is: %d\n", num1, num2, difference);
+// }
+
+// void multiply() {
+//     int num1, num2;
+//     printf("Enter two numbers for multiplication: ");
+//     scanf("%d %d", &num1, &num2);
+//     int product = num1 * num2;
+//     printf("Product of %d and %d is: %d\n", num1, num2, product);
+// }
+
+// void divide() {
+//     int num1, num2;
+//     printf("Enter two numbers for division: ");
+//     scanf("%d %d", &num1, &num2);
+//     int division = num1 / num2;
+//     printf("Division of %d and %d is: %d\n", num1, num2, division);
+// }
+// int main() {
+//     add();
+//     diff();
+//     multiply();
+//     divide();
+//     return 0;
+// }
+
