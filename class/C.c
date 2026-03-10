@@ -1944,3 +1944,9 @@
     
 //     return 0;
 // }
+
+// 1) square of a number
+// 2) swap 2 nos
+// 3) check even or odd
+// 4) decimal to binary
+
