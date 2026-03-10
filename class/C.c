@@ -1950,3 +1950,50 @@
 // 3) check even or odd
 // 4) decimal to binary
 
+// #include <stdio.h>
+// int square() {
+//     int num;
+//     printf("Enter a number to find its square: ");
+//     scanf("%d", &num);
+//     return num * num;
+// }
+// int main() {
+//     int num1, num2;
+//     int sq = square();
+//     printf("Square: %d\n", sq);
+// }
+
+// # include <stdio.h>
+// int swap(){
+//     int num1 ,num2, temp;
+//     printf("Enter 1st numbers to swap: ");
+//     scanf("%d", &num1);
+//     printf("Enter 2nd number to swap: ");
+//     scanf("%d", &num2);
+//     temp = num1;
+//     num1 = num2;
+//     num2 = temp;
+//     printf("After swapping: num1 = %d, num2 = %d\n", num1, num2);
+//     return 0;
+// }
+// int main() {
+//     swap();
+//     return 0;
+// }
+
+// #include <stdio.h>
+// int evenOrOdd() {
+//     int num;
+//     printf("Enter a number to check if it's even or odd: ");
+//     scanf("%d", &num);
+//     if (num % 2 == 0) {
+//         printf("%d is an even number.\n", num);
+//     } else {
+//         printf("%d is an odd number.\n", num);
+//     }
+//     return 0;
+// }   
+// int main() {
+//     evenOrOdd();
+//     return 0;
+// }
