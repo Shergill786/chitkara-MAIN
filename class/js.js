@@ -98,3 +98,84 @@
 
 
 // string
+
+
+
+// function reverse(inputstring){
+//     let res="";
+//     for (i=inputstring.length-1;i>=0;i--){
+//         console.log(inputstring[i])
+        
+//         res+=inputstring[i];
+//     }
+//     console.log(res);
+// }
+// reverse("hello")
+
+
+// function factorial(input){
+//     let result=1;
+//     for (i=1;i<=input;i++){
+//         result*=i;
+//     }
+//     console.log(result);
+// }
+// factorial(4)
+
+
+// function leapyr(input){
+//     if (input % 4 == 0){
+//         return true;
+//     }
+//     else{
+//     return false ;
+//     }
+// }
+
+// console.log(leapyr(2000))
+
+
+// function sum(input){
+//     const string = input.toString();
+//     const list = string.split('');
+//     let sum =0;
+//     list.forEach(num=>{
+//     sum=sum+parseInt(num) ;
+//     })
+//     return sum;
+// }
+// console.log(sum(43))
+
+// function sum(input){
+//     const string = input.toString();
+//     const list = string.split('');
+//     let sum =0;
+//     list.forEach(num=>{
+//         sum=sum+parseInt(num);
+//     })
+//     return sum;
+// }
+// console.log(sum(567))
+
+
+// function biggestnumber (array){
+//     let biggest = array[0];
+//     for (i=1;i<array.length;i++){
+//         if (array[i]>biggest){
+//             biggest=array[i];
+//         }
+//     }
+//     return biggest;
+// }
+// console.log(biggestnumber ([1,2,3,5]));
+
+// function biggest(array){
+//     let biggest=array[0];
+//     for (i=1;i<array.length;i++){
+//         if (biggest<array[i]){
+//             biggest=array[i];
+//         }
+//     }
+//     return biggest;
+// }
+// console.log(biggest([1,2,3,4]))
