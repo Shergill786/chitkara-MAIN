@@ -579,4 +579,13 @@
 //     }   console.log(row);
 // }
 
+// const Arr1 = ["abc", "def", "ghi"];
+// const [a, b] = Arr1;
+// console.log(a); 
+// console.log(b);
 
+// const Arr1 = [10, 20, 30, 40, 50];
+// const [a, b, ...rest] = Arr1;
+// console.log(a); 
+// console.log(b); 
+// console.log(rest);
