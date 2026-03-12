@@ -1981,6 +1981,27 @@
 //     return 0;
 // }
 
+// call by reference swap
+
+// #include <stdio.h>
+// void swap(int *num1, int *num2) {
+//     int temp;
+//     temp = *num1;
+//     *num1 = *num2;
+//     *num2 = temp;
+// }
+// int main() {
+//     int num1, num2;
+//     printf("Enter 1st number to swap: ");
+//     scanf("%d", &num1);
+//     printf("Enter 2nd number to swap: ");
+//     scanf("%d", &num2);
+//     swap(&num1, &num2);
+//     printf("After swapping: num1 = %d, num2 = %d\n", num1, num2);
+//     return 0;
+// }
+
+
 // #include <stdio.h>
 // int evenOrOdd() {
 //     int num;
@@ -1995,5 +2016,19 @@
 // }   
 // int main() {
 //     evenOrOdd();
+//     return 0;
+// }
+
+// inline fxn
+// #include <stdio.h>
+// inline int square(int num) {
+//     return num * num;
+// }
+// int main() {
+//     int num;
+//     printf("Enter a number to find its square: ");
+//     scanf("%d", &num);
+//     int sq = square(num);
+//     printf("Square: %d\n", sq);
 //     return 0;
 // }
