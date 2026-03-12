@@ -2032,3 +2032,60 @@
 //     printf("Square: %d\n", sq);
 //     return 0;
 // }
+
+// factorial using recursion decomposition
+// #include <stdio.h>
+// int factorial(int n) {
+//     if (n == 0 || n == 1) {
+//         return 1;
+//     }
+//     return n * factorial(n - 1);
+// }
+// int main() {
+//     int num;
+//     printf("Enter a number to find its factorial: ");
+//     scanf("%d", &num);
+//     printf("Factorial: %d\n", factorial(num));
+//     return 0;
+// }
+
+// fibonacci using recursion 
+// #include <stdio.h>
+// int fibonacci(int n) {
+//     if (n == 0) {
+//         return 0;
+//     } else if (n == 1) {
+//         return 1;
+//     }
+//     return fibonacci(n - 1) + fibonacci(n - 2);
+// }
+// int main() {
+//     int n;
+//     printf("Enter the number of terms in Fibonacci series: ");
+//     scanf("%d", &n);
+//     printf("Fibonacci series: ");
+//     for (int i = 0; i < n; i++) {
+//         printf("%d ", fibonacci(i));
+//     }
+//     return 0;
+// }
+
+// print reverse of a number using recursion
+// #include <stdio.h>
+// int reverse(int num) {
+//     if (num == 0) {
+//         return 0;
+//     }
+//     printf("%d", num % 10);
+//     reverse(num / 10);
+// }
+// int main() {
+//     int num;
+//     printf("Enter a number to find its reverse: ");
+//     scanf("%d", &num);
+//     printf("Reverse: ");
+//     reverse(num);
+//     printf("\n");
+//     return 0;
+// }
+
