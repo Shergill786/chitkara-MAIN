@@ -89,8 +89,5 @@ let 3d_shape = {
     perimeter : {
         length : 10,
         width : 5}
-
-
-
-
+    shape : square,
 };

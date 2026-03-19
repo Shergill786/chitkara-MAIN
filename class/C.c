@@ -2208,28 +2208,86 @@
 //     return 0;
 // }
 
-#include <stdio.h>
+// #include <stdio.h>
 
-int main() {
-    char str[100];
-    int i = 0, count = 0;
+// int main() {
+//     char str[100];
+//     int i = 0, count = 0;
 
-    printf("Enter a string: ");
-    fgets(str, sizeof(str), stdin);
+//     printf("Enter a string: ");
+//     fgets(str, sizeof(str), stdin);
 
-    while (str[i] != '\0') {
-        char ch = str[i];
+//     while (str[i] != '\0') {
+//         char ch = str[i];
 
-        if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u' ||
-            ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U') {
-            count++;
-        }
+//         if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u' ||
+//             ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U') {
+//             count++;
+//         }
 
-        i++;
-    }
+//         i++;
+//     }
 
-    printf("Number of vowels: %d\n", count);
+//     printf("Number of vowels: %d\n", count);
 
-    return 0;
-}
+//     return 0;
+// }
 
+
+
+// #include <stdio.h>
+
+// int main() {
+//     int r, c;
+
+//     printf("Enter rows and columns: ");
+//     scanf("%d %d", &r, &c);
+
+//     int a[r][c];
+
+//     // Input matrix
+//     printf("Enter matrix elements:\n");
+//     for(int i = 0; i < r; i++) {
+//         for(int j = 0; j < c; j++) {
+//             scanf("%d", &a[i][j]);
+//         }
+//     }
+
+//     // Column sum
+//     printf("\nColumn Sum:\n");
+//     for(int j = 0; j < c; j++) {
+//         int sum = 0;
+//         for(int i = 0; i < r; i++) {
+//             sum += a[i][j];
+//         }
+//         printf("Column %d = %d\n", j + 1, sum);
+//     }
+
+//     // Column difference
+//     printf("\nColumn Difference:\n");
+//     for(int j = 0; j < c; j++) {
+//         int diff = a[0][j];  // start from first element
+//         for(int i = 1; i < r; i++) {
+//             diff -= a[i][j];
+//         }
+//         printf("Column %d = %d\n", j + 1, diff);
+//     }
+
+//     return 0;
+// }
+
+
+// convert to lowercase
+// #include <stdio.h>  
+// int main() {  
+//     char str[100];  
+//     printf("Enter a string: ");  
+//     fgets(str, sizeof(str), stdin);  
+//     for(int i = 0; str[i]; i++) {  
+//         if(str[i] >= 'A' && str[i] <= 'Z') {  
+//             str[i] = str[i] + ('a' - 'A');  
+//         }  
+//     }
+//     printf("Lowercase string: %s\n", str);  
+//     return 0;  
+// }
