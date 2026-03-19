@@ -73,7 +73,6 @@ let obj1 = {
         "10th": { phy: 87, chem: 76, maths: 86 }
     }
 };
-
 console.log(obj1.name);
 console.log(obj1.email.chitkara);
 console.log(obj1.perdetails["12th"].maths);
