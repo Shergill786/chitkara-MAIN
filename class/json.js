@@ -51,3 +51,29 @@
 // kernal is the core of an operating system, responsible for managing system resources and facilitating communication between hardware and software. It handles tasks such as memory management, process scheduling, and device input/output operations. The kernel operates in a privileged mode, allowing it to access and control hardware directly, ensuring efficient and secure operation of the system.
 // shell is the interface that allows users to interact with the operating system. It provides a command-line or graphical interface for users to execute commands, run applications, and manage files. The shell acts as an intermediary between the user and the kernel, translating user commands into actions that the kernel can execute. It also provides features such as scripting capabilities and command history, enhancing user productivity and system control.
 
+
+// change subject of python to C 
+
+// let obj1 = {name : "abhay" , email : "asdfasdf@dsa",rollno : 67, subjects : ["FAA","FEE0","python"]};
+// let obj2 = JSON.stringify(obj1);
+// obj2 = JSON.parse(obj2);
+// obj2.subjects[2] = "C";
+// console.log(obj1.subjects);
+// console.log(obj2.subjects[2]);
+
+
+let obj1 = {
+    name: "jaskirat",
+    email: {
+        personal: "asd@asd",
+        chitkara: "asda@chitkara"
+    },
+    perdetails: {
+        "12th": { phy: 87, chem: 78, maths: 87 },
+        "10th": { phy: 87, chem: 76, maths: 86 }
+    }
+};
+
+console.log(obj1.name);
+console.log(obj1.email.chitkara);
+console.log(obj1.perdetails["12th"].maths);
