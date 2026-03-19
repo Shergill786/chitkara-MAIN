@@ -2117,16 +2117,94 @@
 
 // For example, the call of evenDigits(8342116) should return 8426 and the call of evenDigits(35179) should return 0.
 
-int evenDigits(int n) {
-    if (n == 0) {
-        return 0;
-    }
-    int lastDigit = n % 10;
-    int remainingDigits = evenDigits(n / 10);
+// int evenDigits(int n) {
+//     if (n == 0) {
+//         return 0;
+//     }
+//     int lastDigit = n % 10;
+//     int remainingDigits = evenDigits(n / 10);
     
-    if (lastDigit % 2 == 0) {
-        return remainingDigits * 10 + lastDigit;
-    } else {
-        return remainingDigits;
-    }
-}
+//     if (lastDigit % 2 == 0) {
+//         return remainingDigits * 10 + lastDigit;
+//     } else {
+//         return remainingDigits;
+//     }
+// }
+
+// #include <stdio.h>
+
+// int main() {
+//     int r, c;
+
+//     // Input rows and columns
+//     printf("Enter number of rows: ");
+//     scanf("%d", &r);
+//     printf("Enter number of columns: ");
+//     scanf("%d", &c);
+
+//     int a[r][c], b[r][c];
+//     int i, j, equal = 1;
+
+//     // Input first matrix
+//     printf("Enter elements of first matrix:\n");
+//     for(i = 0; i < r; i++) {
+//         for(j = 0; j < c; j++) {
+//             scanf("%d", &a[i][j]);
+//         }
+//     }
+
+//     // Input second matrix
+//     printf("Enter elements of second matrix:\n");
+//     for(i = 0; i < r; i++) {
+//         for(j = 0; j < c; j++) {
+//             scanf("%d", &b[i][j]);
+//         }
+//     }
+
+//     // Compare matrices
+//     for(i = 0; i < r; i++) {
+//         for(j = 0; j < c; j++) {
+//             if(a[i][j] != b[i][j]) {
+//                 equal = 0;
+//                 break;
+//             }
+//         }
+//         if(equal == 0) break;
+//     }
+
+//     // Output result
+//     if(equal)
+//         printf("Matrices are equal\n");
+//     else
+//         printf("Matrices are not equal\n");
+
+//     return 0;
+// }
+
+// #include <stdio.h>
+// #include <math.h>
+
+// int main() {
+//     int base, exp;
+//     double result = 1;
+
+//     printf("Enter base: ");
+//     scanf("%d", &base);
+
+//     printf("Enter exponent: ");
+//     scanf("%d", &exp);
+
+//     if (exp < 0) {
+//         // Negative exponent → print in form
+//         printf("neg exp form"); 
+//     } else {
+//         // Positive exponent → calculate
+//         for(int i = 1; i <= exp; i++) {
+//             result = result * base;
+//         }
+//         printf("Result: %.0lf\n", result);
+//     }
+
+//     return 0;
+// }
+

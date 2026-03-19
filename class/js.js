@@ -333,46 +333,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // function reverse(inputstring){
 //     let res="";
 //     for (i=inputstring.length-1;i>=0;i--){
@@ -451,3 +411,4 @@
 //     return biggest;
 // }
 // console.log(biggest([1,2,3,4]))
+
