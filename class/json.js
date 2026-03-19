@@ -62,17 +62,35 @@
 // console.log(obj2.subjects[2]);
 
 
-let obj1 = {
-    name: "jaskirat",
-    email: {
-        personal: "asd@asd",
-        chitkara: "asda@chitkara"
-    },
-    perdetails: {
-        "12th": { phy: 87, chem: 78, maths: 87 },
-        "10th": { phy: 87, chem: 76, maths: 86 }
-    }
+// let obj1 = {
+//     name: "jaskirat",
+//     email: {
+//         personal: "asd@asd",
+//         chitkara: "asda@chitkara"
+//     },
+//     perdetails: {
+//         "12th": { phy: 87, chem: 78, maths: 87 },
+//         "10th": { phy: 87, chem: 76, maths: 86 }
+//     }
+// };
+// console.log(obj1.name);
+// console.log(obj1.email.chitkara);
+// console.log(obj1.perdetails["12th"].maths);
+// console.log(obj1.perdetails["10th"].phy);
+
+
+
+let 3d_shape = {
+    shape : rectangle,
+    dimensions : {
+    area:{
+        length : 10,
+        width : 5,}
+    perimeter : {
+        length : 10,
+        width : 5}
+
+
+
+
 };
-console.log(obj1.name);
-console.log(obj1.email.chitkara);
-console.log(obj1.perdetails["12th"].maths);
