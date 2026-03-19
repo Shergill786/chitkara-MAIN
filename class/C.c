@@ -2089,3 +2089,44 @@
 //     return 0;
 // }
 
+
+// Write a program that accepts an integer n (where n >=2) and print all the prime factors of n using recursion.
+// #include <stdio.h>
+// int primeFactors(int n, int divisor) {
+//     if (n < 2) {
+//         return 0 ;
+//     }
+//     if (n % divisor == 0) {
+//         printf("%d ", divisor);
+//         primeFactors(n / divisor, divisor);
+//     } else {
+//         primeFactors(n, divisor + 1);
+//     }
+// }
+// int main() {
+//     int n;
+//     printf("Enter an integer (n >= 2): ");
+//     scanf("%d", &n);
+//     printf("Prime factors of %d: ", n);
+//     primeFactors(n, 2);
+//     printf("\n");
+//     return 0;
+// }
+
+// Write a recursive function evenDigits that accepts an integer parameter n and returns a new integer containing only the even digits from n, in the same order. If n does not contain any even digits, return 0.
+
+// For example, the call of evenDigits(8342116) should return 8426 and the call of evenDigits(35179) should return 0.
+
+int evenDigits(int n) {
+    if (n == 0) {
+        return 0;
+    }
+    int lastDigit = n % 10;
+    int remainingDigits = evenDigits(n / 10);
+    
+    if (lastDigit % 2 == 0) {
+        return remainingDigits * 10 + lastDigit;
+    } else {
+        return remainingDigits;
+    }
+}

@@ -702,3 +702,4 @@
 
 // console.log(multiplyBy5(2)); // 10
 // console.log(multiplyBy5(4)); // 20
+
