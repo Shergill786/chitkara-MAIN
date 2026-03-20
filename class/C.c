@@ -2291,3 +2291,54 @@
 //     printf("Lowercase string: %s\n", str);  
 //     return 0;  
 // }
+
+
+// avg marks and grade of a student function
+// #include <stdio.h>
+// void calculateGrade(int marks) {
+//     char grade;
+//     if (marks >= 90) {
+//         grade = 'A';
+//     } else if (marks >= 80) {
+//         grade = 'B';
+//     } else if (marks >= 70) {
+//         grade = 'C';
+//     } else if (marks >= 60) {
+//         grade = 'D';
+//     } else {
+//         grade = 'F';
+//     }
+//     printf("Grade: %c\n", grade);
+// }
+// int main() {
+//     int marks;
+//     printf("Enter marks: ");
+//     scanf("%d", &marks);
+//     calculateGrade(marks);
+//     return 0;
+// }
+
+
+// function to cal compound interest
+// #include <stdio.h>
+// #include <math.h>
+
+// float cal_ci(float p, float r, int t) {
+//     float ci = p * pow((1 + r / 100), t) - p;
+//     return ci;
+// }
+
+// int main() {
+//     float p, r, ci;
+//     int t;
+//     printf("Enter principal amount: ");
+//     scanf("%f", &p);
+//     printf("Enter rate of interest: ");
+//     scanf("%f", &r);
+//     printf("Enter time in years: ");
+//     scanf("%d", &t);
+//     ci = cal_ci(p, r, t);
+
+//     printf("Compound Interest: %.1f\n", ci);
+//     return 0;
+// }
