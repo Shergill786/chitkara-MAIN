@@ -2342,3 +2342,66 @@
 //     printf("Compound Interest: %.1f\n", ci);
 //     return 0;
 // }
+
+// #include <stdio.h>
+// int cal_total(int price[], int n) {
+//     int total = 0;
+//     for (int i = 0; i < n; i++) {
+//         total += price[i];  
+//     }
+//     return total;
+// }
+
+// float dis(int total) {
+//     float discount = 0;
+//     if (total > 5000) {
+//         discount = total * 0.2;
+//     } 
+//     else if (total > 2000) {
+//         discount = total * 0.1;
+//     }
+
+//     return discount;
+// }
+
+// float bill(int total, float discount) {
+//     return total - discount;
+// }
+
+// int main() {
+//     int n;
+//     printf("Enter number of items: ");
+//     scanf("%d", &n);
+//     int price[n];
+//     for (int i = 0; i < n; i++) {
+//         printf("Enter price of item %d: ", i + 1);
+//         scanf("%d", &price[i]);
+//     }
+//     int total = cal_total(price, n);
+//     float discount = dis(total);
+//     float final = bill(total, discount);
+//     printf("\nTotal = %d", total);
+//     printf("\nDiscount = %.2f", discount);
+//     printf("\nFinal Bill = %.2f", final);
+
+//     return 0;
+// }
+
+// library charges fine 2 per 1-5 days, 3 per 6-10 days, 5 per day after 10 days
+// #include <stdio.h>  
+// int main() {  
+//     int days;  
+//     float fine;  
+//     printf("Enter days :");
+//     scanf("%d", &days);
+//     if(days <= 5){
+//         fine = days * 2;    
+//     } else if(days <= 10){
+//         fine = (5 * 2) + ((days - 5) * 3);
+//     } else {
+//         fine = (5 * 2) + (5 * 3) + ((days - 10) * 5);
+//     }
+//     printf("fine: %.2f", fine);
+//     return 0;  
+// }
+
