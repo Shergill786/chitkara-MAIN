@@ -80,14 +80,14 @@
 
 
 
-let 3d_shape = {
-    shape : rectangle,
-    dimensions : {
-    area:{
-        length : 10,
-        width : 5,}
-    perimeter : {
-        length : 10,
-        width : 5}
-    shape : square,
-};
+// let 3d_shape = {
+//     shape : rectangle,
+//     dimensions : {
+//     area:{
+//         length : 10,
+//         width : 5,}
+//     perimeter : {
+//         length : 10,
+//         width : 5}
+//     shape : square,
+// };
