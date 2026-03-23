@@ -1,6 +1,14 @@
+function swap(a,b){
+    let temp=a;
+    a=b;
 
-let obj1 = {a:1, b: {c: 2 ,d:3 ,e:4 }};
-let obj2 = JSON.parse(JSON.stringify(obj1));
-obj2.b.d = 10;
-console.log(obj1.b.d);
-console.log(obj2.b.d);
+    b=temp;
+    console.log("Inside function: a =", a, "b =", b);
+}
+let num1=10;
+let num2=20;
+console.log("Before swap: num1 =", num1, "num2 =", num2);
+swap(num1,num2);
+console.log("After swap: num1 =", num1, "num2 =", num2);
+
+
