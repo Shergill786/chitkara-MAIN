@@ -2405,3 +2405,10 @@
 //     return 0;  
 // }
 
+// storage clauses auto, register, static, extern
+// name inital value visibility lifetime
+// auto garbage local function block 
+// extern 0 global entire program
+// static 0 local function block end of program
+// register garbage local function block entire program
+
