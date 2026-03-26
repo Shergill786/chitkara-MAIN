@@ -1,11 +1,17 @@
-include <stdio.h>
-inline int multiply(int a, int b) {
-    int c = a * b;
-     return c;
-}
+
+#include <stdio.h>
 int main() {
-    int c;
-    c = multiply(5, 10);
-    printf("Product: %d\n", c);
+    char alphabet[27] = "abcdefghijklmnopqrstuvwxyz";
+    char *ptr = alphabet;  
+    
+    printf("All lowercase alphabets using pointers:\n");
+    while (*ptr != '\0') { 
+        printf("%c ", *ptr);  
+        ptr++;  
+    }
+    printf("\n\n");
+
+    printf("\n");    
     return 0;
 }
+

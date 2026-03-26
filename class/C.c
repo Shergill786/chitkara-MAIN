@@ -1,3 +1,6 @@
+
+// Print all alphabets using pointers
+
 // #include <stdio.h>
 // int main() {
 //     printf("Hello \nWorld");
@@ -2412,3 +2415,70 @@
 // static 0 local function block end of program
 // register garbage local function block entire program
 
+//  add 2 number using pointer
+// #include <stdio.h>
+// int main() {
+//     int num1, num2, sum;
+//     printf("Enter first number: ");
+//     scanf("%d", &num1);
+//     printf("Enter second number: ");
+//     scanf("%d", &num2);
+    
+//     sum = num1 + num2;
+    
+//     printf("Sum: %d\n", sum);
+    
+//     return 0;
+// }
+
+// Sum of 2 numbers using pointers
+// #include <stdio.h>
+// int main() {
+//     int num1, num2, sum;
+//     int *ptr1 = &num1;   // Pointer to num1
+//     int *ptr2 = &num2;   // Pointer to num2
+    
+//     printf("Enter first number: ");
+//     scanf("%d", ptr1);  
+    
+//     printf("Enter second number: ");
+//     scanf("%d", ptr2);    
+    
+//     sum = *ptr1 + *ptr2;
+    
+//     printf("Sum of %d and %d is: %d\n", *ptr1, *ptr2, sum);
+
+//     return 0;
+// }
+
+// aplhabet using pointer
+// #include <stdio.h>
+// int main() {
+//     char alphabet[27] = "abcdefghijklmnopqrstuvwxyz";
+//     char *ptr = alphabet;  
+    
+//     while (*ptr != '\0') { 
+//         printf("%c",*ptr);  
+//         ptr++;  
+//     }
+//     printf("\n");    
+//     return 0;
+// }
+
+// swapping 2 numbers using pointers
+#include <stdio.h>
+void swap(int *a, int *b) {
+    int temp = *a;  
+    *a = *b;        
+    *b = temp;
+    
+    printf("%d, %d", *a,*b);      
+}
+int main() {
+    int a=10;
+    int b=20;
+    printf("%d,%d", a,b);
+    swap(&a, &b);
+    printf("%d,%d", a,b);
+    return 0;
+}
