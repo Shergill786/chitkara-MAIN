@@ -2466,19 +2466,202 @@
 // }
 
 // swapping 2 numbers using pointers
-#include <stdio.h>
-void swap(int *a, int *b) {
-    int temp = *a;  
-    *a = *b;        
-    *b = temp;
+// #include <stdio.h>
+// void swap(int *a, int *b) {
+//     int temp = *a;  
+//     *a = *b;        
+//     *b = temp;
     
-    printf("%d, %d", *a,*b);      
-}
-int main() {
-    int a=10;
-    int b=20;
-    printf("%d,%d", a,b);
-    swap(&a, &b);
-    printf("%d,%d", a,b);
-    return 0;
-}
+//     printf("%d, %d", *a,*b);      
+// }
+// int main() {
+//     int a=10;
+//     int b=20;
+//     printf("%d,%d", a,b);
+//     swap(&a, &b);
+//     printf("%d,%d", a,b);
+//     return 0;
+// }
+
+
+// write a program to find the sum and product of 1 to n number using functions
+// #include <stdio.h>
+// int sum (int n) {
+//     int s = 0;
+//     for (int i = 1; i <= n; i++) {
+//         s += i;
+//     }
+//     return s;
+// }
+// int product (int n) {
+//     int p = 1;
+//     for (int i = 1; i <= n; i++) {
+//         p *= i;
+//     }
+//     return p;
+// }
+// int main() {
+//     int n;
+//     printf("Enter the value of n: ");
+//     scanf("%d", &n);
+//     int totalSum = sum(n);
+//     int totalProduct = product(n);
+//     printf( "%d\n", totalSum);
+//     printf( "%d\n", totalProduct);
+//     return 0;
+// }
+
+
+// find cgpa of a student of 5 subjects using credits in functions
+#include <stdio.h>
+
+// Function to convert marks to grade points
+// float getGradePoint(int marks) {
+//     if (marks >= 90) return 10;
+//     else if (marks >= 80) return 9;
+//     else if (marks >= 70) return 8;
+//     else if (marks >= 60) return 7;
+//     else if (marks >= 50) return 6;
+//     else if (marks >= 40) return 5;
+//     else return 0;
+// }
+
+// float calculateCGPA(int marks[], int credits[], int n) {
+//     float totalPoints = 0;
+//     int totalCredits = 0;
+//     for (int i = 0; i < n; i++) {
+//         float gp = getGradePoint(marks[i]);
+//         totalPoints += gp * credits[i];
+//         totalCredits += credits[i];
+//     }
+//     return totalPoints / totalCredits;
+// }
+// int main() {
+//     int marks[5], credits[5];
+//     float cgpa;
+//     printf("Enter marks of 5 subjects:\n");
+//     for (int i = 0; i < 5; i++) {
+//         scanf("%d", &marks[i]);
+//     }
+//     printf("Enter credits of 5 subjects:\n");
+//     for (int i = 0; i < 5; i++) {
+//         scanf("%d", &credits[i]);
+//     }
+//     cgpa = calculateCGPA(marks, credits, 5);
+//     printf("CGPA = %.2f\n", cgpa);
+//     return 0;
+// }
+
+// write a program to find the sum and product of 1 to n by array using function
+// #include <stdio.h>
+// int sum(int arr[], int n) {
+//     int s = 0;
+//     for (int i = 0; i < n; i++) {
+//         s += arr[i];
+//     }
+//     return s;
+// }
+// int product(int arr[], int n) {
+//     int p = 1;
+//     for (int i = 0; i < n;  i++) {
+//         p *= arr[i];
+//     }
+//     return p;
+// }
+// int main() {
+//     int n;
+//     printf("Enter the value of n: ");
+//     scanf("%d", &n);
+//     int arr[n];
+//     printf("Enter %d numbers:\n", n);
+//     for (int i = 0; i < n; i++) {
+//         scanf("%d", &arr[i]);
+//     }
+//     int totalSum = sum(arr, n);
+//     int totalProduct = product(arr, n);
+//     printf("Sum: %d\n", totalSum);
+//     printf("Product: %d\n", totalProduct);
+//     return 0;
+// }
+
+//pasing array to function
+// #include <stdio.h>
+// void p(int x[], int y)
+// {
+//     printf("Array elements:\n");
+//     for (int i = 0; i < y; i++)
+//     {
+//         printf("%d ", x[i]);
+//     }
+//     printf("\n");
+// }
+// int main()
+// {
+//     int n;
+//     int a[20];
+//     printf("Enter n: ");
+//     scanf("%d", &n);
+//     printf("Enter %d elements:\n", n);
+//     for (int i = 0; i < n; i++)
+//     {
+//         scanf("%d", &a[i]);
+//     }
+//     p(a, n);
+//     return 0;
+// }
+
+
+//  sum and product of 1 to n without return 
+// #include <stdio.h>
+// void sumProduct(int n)
+// {
+//     int i, sum = 0, product = 1;
+//     for(i = 1; i <= n; i++)
+//     {
+//         sum = sum + i;
+//         product = product * i;
+//     }
+//     printf("Sum = %d\n", sum);
+//     printf("Product = %d\n", product);
+// }
+// int main()
+// {
+//     int n;
+//     printf("Enter value of n: ");
+//     scanf("%d", &n);
+//     sumProduct(n);
+//     return 0;
+// }
+
+
+// sum and product of 1 to n with return
+// #include <stdio.h>
+// int findSum(int n)
+// {
+//     int i, sum = 0;
+//     for(i = 1; i <= n; i++)
+//     {
+//         sum = sum + i;
+//     }
+//     return sum;
+// }
+// int findProduct(int n)
+// {
+//     int i, product = 1;
+//     for(i = 1; i <= n; i++)
+//     {
+//         product = product * i;
+//     }
+//     return product;
+// }
+// int main()
+// {
+//     int n, s, p;
+//     printf("Enter value of n: ");
+//     scanf("%d", &n);
+//     s = findSum(n);
+//     p = findProduct(n);
+//     printf("Sum = %d\n", s);
+//     printf("Product = %d\n", p);
+//     return 0;
+// }

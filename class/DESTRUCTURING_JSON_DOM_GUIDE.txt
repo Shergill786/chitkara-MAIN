@@ -1,0 +1,867 @@
+COMPREHENSIVE GUIDE: DESTRUCTURING, JSON & DOM MANIPULATION
+===========================================================
+
+TABLE OF CONTENTS
+1. Destructuring in JavaScript
+2. JSON Handling
+3. DOM Manipulation
+4. Quick Reference
+5. Common Use Cases & Examples
+
+================================================================================
+1. DESTRUCTURING IN JAVASCRIPT
+================================================================================
+
+DEFINITION:
+Destructuring is a JavaScript expression that makes it possible to unpack values
+from arrays, or properties from objects, into distinct variables in a single,
+concise statement.
+
+ADVANTAGES:
+✓ Cleaner, more readable code
+✓ Less repetition when accessing nested values
+✓ Extract only the values you need
+✓ Easier parameter handling in functions
+✓ Improved code maintainability
+
+
+1.1 ARRAY DESTRUCTURING
+------------------------
+
+BASIC DESTRUCTURING:
+  const [a, b, c] = [1, 2, 3];
+  console.log(a, b, c);  // 1, 2, 3
+
+SKIP ELEMENTS:
+  const [first, , third] = ["x", "y", "z"];
+  console.log(first, third);  // "x", "z"
+
+REST OPERATOR (...):
+  const [head, ...tail] = [1, 2, 3, 4, 5];
+  console.log(head);  // 1
+  console.log(tail);  // [2, 3, 4, 5]
+
+DEFAULT VALUES:
+  const [a = 10, b = 20] = [5];
+  console.log(a, b);  // 5, 20 (b uses default)
+
+VARIABLE SWAPPING:
+  let x = 5, y = 10;
+  [x, y] = [y, x];
+  console.log(x, y);  // 10, 5
+
+NESTED ARRAYS:
+  const [[a, b], [c, d]] = [[1, 2], [3, 4]];
+  console.log(a, b, c, d);  // 1, 2, 3, 4
+
+FUNCTION PARAMETERS:
+  function processCoords([x, y]) {
+    console.log(`X: ${x}, Y: ${y}`);
+  }
+  processCoords([10, 20]);  // X: 10, Y: 20
+
+
+1.2 OBJECT DESTRUCTURING
+------------------------
+
+BASIC DESTRUCTURING:
+  const {name, age} = {name: "Alice", age: 28};
+  console.log(name, age);  // "Alice", 28
+
+SELECTIVE DESTRUCTURING:
+  const {name} = {name: "Bob", age: 30, city: "NYC"};
+  console.log(name);  // "Bob"
+
+RENAME PROPERTIES:
+  const {name: fullName, age: years} = {name: "Charlie", age: 25};
+  console.log(fullName, years);  // "Charlie", 25
+
+DEFAULT VALUES:
+  const {name = "Unknown", email = "no-email"} = {name: "Dave"};
+  console.log(name, email);  // "Dave", "no-email"
+
+NESTED OBJECT DESTRUCTURING:
+  const person = {
+    name: "Eve",
+    address: {city: "Boston", zip: "02101"}
+  };
+  const {name, address: {city}} = person;
+  console.log(name, city);  // "Eve", "Boston"
+
+REST OPERATOR:
+  const {a, b, ...others} = {a: 1, b: 2, c: 3, d: 4};
+  console.log(others);  // {c: 3, d: 4}
+
+FUNCTION PARAMETERS:
+  function displayUser({name, age, city = "Unknown"}) {
+    console.log(`${name}, ${age}, ${city}`);
+  }
+  displayUser({name: "Frank", age: 35});
+  // Frank, 35, Unknown
+
+COMBINING WITH RENAMING:
+  const {firstName: first, lastName: last} = {
+    firstName: "Grace",
+    lastName: "Hopper"
+  };
+  console.log(first, last);  // "Grace", "Hopper"
+
+
+1.3 SHALLOW COPY VS DEEP COPY
+------------------------------
+
+SHALLOW COPY DEFINITION:
+A shallow copy creates a new object, but nested objects/arrays still reference
+the original. Only the first level is copied.
+
+SHALLOW COPY METHODS:
+  1. Object.assign():
+     const copy = Object.assign({}, original);
+
+  2. Spread Operator:
+     const copy = {...original};
+
+  3. Array.slice():
+     const copy = array.slice();
+
+  4. Array Spread:
+     const copy = [...array];
+
+SHALLOW COPY PROBLEM:
+  const original = {x: 1, nested: {y: 2}};
+  const shallow = {...original};
+  shallow.nested.y = 999;
+  console.log(original.nested.y);  // 999! ← PROBLEM
+
+
+DEEP COPY DEFINITION:
+A deep copy recursively copies all nested objects and arrays. The copy is
+completely independent of the original.
+
+DEEP COPY METHODS:
+
+  1. JSON Method (Simple but limited):
+     const deepCopy = JSON.parse(JSON.stringify(object));
+     ✓ Works for most cases
+     ✗ Doesn't work with functions, undefined, Symbols
+
+  2. Recursive Function:
+     function deepCopy(obj) {
+       if (obj === null || typeof obj !== "object") return obj;
+       if (Array.isArray(obj)) return obj.map(item => deepCopy(item));
+       
+       const newObj = {};
+       for (let key in obj) {
+         newObj[key] = deepCopy(obj[key]);
+       }
+       return newObj;
+     }
+
+  3. Manual Copy (for specific cases):
+     const original = {name: "Henry", scores: [85, 90]};
+     const copy = {
+       name: original.name,
+       scores: [...original.scores]
+     };
+
+DEEP COPY SOLUTION:
+  const original = {x: 1, nested: {y: 2}};
+  const deep = JSON.parse(JSON.stringify(original));
+  deep.nested.y = 999;
+  console.log(original.nested.y);  // 2 ✓ Original unchanged
+
+
+================================================================================
+2. JSON HANDLING
+================================================================================
+
+DEFINITION:
+JSON (JavaScript Object Notation) is a lightweight, language-independent format
+for storing and exchanging data. It uses human-readable text.
+
+USES:
+✓ APIs and web services
+✓ Configuration files
+✓ Data storage and transmission
+✓ Local storage in browsers
+✓ Cross-platform data exchange
+
+JSON STRUCTURE:
+
+Data Types:
+  1. Object: {"name": "John", "age": 30}
+  2. Array: [1, 2, 3, "hello"]
+  3. String: "Hello World"
+  4. Number: 42, 3.14, -5
+  5. Boolean: true, false
+  6. Null: null
+  7. Nested: {"user": {"name": "John", "scores": [90, 85]}}
+
+VALID vs INVALID JSON:
+  ✓ VALID: {"name": "John"}
+  ✗ INVALID: {name: "John"}  // Keys must be quoted
+  ✗ INVALID: {"name": "John",}  // No trailing comma
+
+
+2.1 JSON.stringify() - Convert Object to String
+------------------------------------------------
+
+PURPOSE:
+Convert JavaScript objects/arrays into JSON strings for:
+  • Sending to server/API
+  • Local storage
+  • Data transmission
+  • File storage
+
+SYNTAX:
+  JSON.stringify(value, [replacer], [space])
+
+PARAMETERS:
+  value: The value to convert
+  replacer: (Optional) Function or array to filter properties
+  space: (Optional) Number of spaces or string for indentation
+
+EXAMPLES:
+
+  Basic Usage:
+    const person = {name: "Alice", age: 28};
+    const json = JSON.stringify(person);
+    console.log(json);
+    // Output: {"name":"Alice","age":28}
+
+  With Formatting (Indentation):
+    const json = JSON.stringify(person, null, 2);
+    console.log(json);
+    /* Output:
+    {
+      "name": "Alice",
+      "age": 28
+    }
+    */
+
+  With Replacer Function (Filter):
+    const json = JSON.stringify(person, (key, value) => {
+      if (typeof value === "string") return value.toUpperCase();
+      return value;
+    });
+    // Output: {"name":"ALICE","age":28}
+
+  With Replacer Array (Select Properties):
+    const json = JSON.stringify(person, ["name"]);
+    // Output: {"name":"Alice"}
+
+  Practical: API Request
+    const data = {username: "bob", email: "bob@example.com"};
+    fetch('/api/users', {
+      method: 'POST',
+      body: JSON.stringify(data)
+    });
+
+
+2.2 JSON.parse() - Convert String to Object
+--------------------------------------------
+
+PURPOSE:
+Convert JSON strings back to JavaScript objects for:
+  • Processing API responses
+  • Reading stored data
+  • Parsing configuration
+  • Loading data from files
+
+SYNTAX:
+  JSON.parse(text, [reviver])
+
+PARAMETERS:
+  text: The JSON string to parse
+  reviver: (Optional) Function to transform values during parsing
+
+EXAMPLES:
+
+  Basic Usage:
+    const json = '{"name":"Bob","age":30}';
+    const obj = JSON.parse(json);
+    console.log(obj.name);  // "Bob"
+    console.log(obj.age);   // 30
+
+  Parsing Array:
+    const json = '[{"id":1,"name":"Item1"},{"id":2,"name":"Item2"}]';
+    const arr = JSON.parse(json);
+    console.log(arr[0].name);  // "Item1"
+
+  With Reviver Function (Transform):
+    const json = '{"date":"2024-03-26","amount":100}';
+    const obj = JSON.parse(json, (key, value) => {
+      if (key === "date") return new Date(value);
+      if (key === "amount") return "$" + value;
+      return value;
+    });
+
+  Error Handling:
+    try {
+      const obj = JSON.parse(invalidJson);
+    } catch (error) {
+      console.error("Invalid JSON:", error.message);
+    }
+
+  Real-world API Response:
+    fetch('/api/users/1')
+      .then(response => response.json())  // JSON.parse() called
+      .then(data => console.log(data.name))
+      .catch(error => console.error(error));
+
+
+2.3 JSON Methods Using JSON Stringify/Parse
+--------------------------------------------
+
+DEEP COPY USING JSON:
+  const original = {x: 1, nested: {y: 2}};
+  const copy = JSON.parse(JSON.stringify(original));
+
+REMOVING PROPERTIES:
+  const obj = {name: "Charlie", password: "secret", age: 25};
+  const filtered = JSON.parse(JSON.stringify(obj));
+  // password will be lost if we only stringify name and age
+
+FORMATTING/PRETTY PRINTING:
+  const json = JSON.stringify(data, null, 2);
+  console.log(json);  // Nicely formatted output
+
+API COMMUNICATION CYCLE:
+  1. Get data from user/database
+  2. Convert to JSON: const jsonData = JSON.stringify(data);
+  3. Send to server
+  4. Server sends back JSON
+  5. Parse on client: const data = JSON.parse(response);
+
+
+================================================================================
+3. DOM MANIPULATION
+================================================================================
+
+DEFINITION:
+DOM (Document Object Model) is a programming interface that represents HTML
+documents as a tree of objects. It allows JavaScript to access and modify
+web page elements dynamically.
+
+WHY DOM MANIPULATION MATTERS:
+✓ Make pages interactive
+✓ Respond to user actions
+✓ Update content without reloading
+✓ Create dynamic HTML
+✓ Handle user input
+✓ Build single-page applications (SPAs)
+
+
+3.1 DOM TREE & STRUCTURE
+------------------------
+
+HIERARCHY EXAMPLE:
+  document
+  ├── html
+  │   ├── head
+  │   │   ├── title
+  │   │   └── meta
+  │   └── body
+  │       ├── header
+  │       ├── nav
+  │       ├── main
+  │       │   ├── h1
+  │       │   ├── p
+  │       │   │   └── "Text content" (Text Node)
+  │       │   └── button
+  │       └── footer
+
+TERMINOLOGY:
+  Parent: Element containing other elements
+  Child: Element inside another element
+  Sibling: Elements at same level
+  Ancestor: Parent, grandparent, etc.
+  Descendant: Child, grandchild, etc.
+
+
+3.2 DOM SELECTORS
+-----------------
+
+SELECTOR METHODS:
+
+1. getElementById()
+   Syntax: document.getElementById("id-name")
+   Returns: Single Element or null
+   Use: When you know the exact ID
+   
+   Example:
+     const main = document.getElementById("main-app");
+
+2. querySelector()
+   Syntax: document.querySelector("selector")
+   Returns: First matching element or null
+   Use: Any CSS selector
+   
+   Examples:
+     const btn = document.querySelector("button");
+     const primary = document.querySelector(".btn-primary");
+     const input = document.querySelector("#search-box");
+     const p = document.querySelector("div > p");
+     const first = document.querySelector(".item:first-child");
+
+3. querySelectorAll()
+   Syntax: document.querySelectorAll("selector")
+   Returns: NodeList of all matches
+   Use: Get multiple elements
+   
+   Examples:
+     const items = document.querySelectorAll(".item");
+     const links = document.querySelectorAll("a");
+     const inputs = document.querySelectorAll("input[type='text']");
+
+4. getElementsByClassName()
+   Syntax: document.getElementsByClassName("class-name")
+   Returns: HTMLCollection (live)
+   Use: By class name
+   
+   Example:
+     const active = document.getElementsByClassName("active");
+
+5. getElementsByTagName()
+   Syntax: document.getElementsByTagName("tag-name")
+   Returns: HTMLCollection (live)
+   Use: By tag name
+   
+   Examples:
+     const allDivs = document.getElementsByTagName("div");
+     const allPs = document.getElementsByTagName("p");
+
+SELECTOR COMPARISON:
+
+  getElementById()            - Most specific, fastest
+  querySelector()            - Flexible, CSS selectors
+  querySelectorAll()         - Get all matches
+  getElementsByClassName()   - By class (live)
+  getElementsByTagName()     - By tag (live)
+
+  "Live" = Automatically updates if DOM changes
+
+
+3.3 READ/WRITE HTML & CSS
+--------------------------
+
+READING/WRITING CONTENT:
+
+1. innerHTML
+   Read: Get entire HTML inside element
+   Write: Replace HTML content
+   
+   Examples:
+     const content = element.innerHTML;  // "<p>Hello</p>"
+     element.innerHTML = "<span>New</span>";
+
+2. textContent
+   Read: Get only text (no HTML)
+   Write: Set plain text
+   
+   Examples:
+     const text = element.textContent;  // "Hello"
+     element.textContent = "New text";
+
+3. innerText
+   Similar to textContent but considers visibility
+   (rarely used nowadays)
+
+READING/WRITING ATTRIBUTES:
+
+1. getAttribute()
+   Get attribute value
+   
+   Examples:
+     const id = element.getAttribute("id");
+     const data = element.getAttribute("data-value");
+     const type = element.getAttribute("type");
+
+2. setAttribute()
+   Set attribute value
+   
+   Examples:
+     element.setAttribute("disabled", "true");
+     element.setAttribute("data-status", "active");
+     element.setAttribute("class", "btn-primary");
+
+3. Direct Properties
+   Some attributes can be set directly
+   
+   Examples:
+     element.id = "new-id";
+     element.className = "active";
+     element.title = "Hover text";
+
+READING/WRITING STYLES:
+
+1. style Property (Inline CSS)
+   Syntax: element.style.property = "value"
+   Note: CSS hyphenated names become camelCase
+   
+   CSS to JavaScript:
+     background-color → backgroundColor
+     font-size → fontSize
+     margin-top → marginTop
+   
+   Examples:
+     element.style.color = "blue";
+     element.style.backgroundColor = "#FF0000";
+     element.style.fontSize = "20px";
+     element.style.display = "none";
+     element.style.padding = "10px 20px";
+
+2. classList (Recommended)
+   Add multiple styles via CSS classes
+   
+   Methods:
+     element.classList.add("class-name");
+     element.classList.remove("class-name");
+     element.classList.toggle("class-name");
+     element.classList.contains("class-name");
+   
+   Examples:
+     element.classList.add("highlight", "active");
+     element.classList.remove("disabled");
+     element.classList.toggle("dark-mode");
+     if (element.classList.contains("active")) { ... }
+
+3. getComputedStyle()
+   Read all styles applied (CSS + inline)
+   
+   Example:
+     const styles = getComputedStyle(element);
+     console.log(styles.color);
+     console.log(styles.backgroundColor);
+
+
+3.4 CREATING & APPENDING NODES
+------------------------------
+
+STEPS TO CREATE ELEMENTS:
+
+1. CREATE - Use document.createElement()
+2. CONFIGURE - Set properties/content
+3. APPEND - Add to DOM with appendChild()
+
+METHODS:
+
+1. createElement()
+   Syntax: document.createElement("tag-name")
+   Returns: New element (not yet in DOM)
+   
+   Examples:
+     const div = document.createElement("div");
+     const p = document.createElement("p");
+     const button = document.createElement("button");
+
+2. appendChild()
+   Syntax: parentElement.appendChild(newElement)
+   Effect: Adds as last child
+   
+   Example:
+     const container = document.getElementById("container");
+     const newDiv = document.createElement("div");
+     newDiv.textContent = "New content";
+     container.appendChild(newDiv);
+
+3. append()
+   Syntax: parentElement.append(child1, child2, ...)
+   Effect: Add multiple children + text nodes
+   
+   Examples:
+     container.append(elem1, elem2, "text");
+     container.append(...arrayOfElements);
+
+4. prepend()
+   Syntax: parentElement.prepend(newElement)
+   Effect: Add as first child
+   
+   Example:
+     container.prepend(newDiv);
+
+5. insertBefore()
+   Syntax: parent.insertBefore(newElement, referenceElement)
+   Effect: Insert before reference element
+   
+   Example:
+     const firstP = container.querySelector("p");
+     const newP = document.createElement("p");
+     container.insertBefore(newP, firstP);
+
+PRACTICAL EXAMPLE - Create List:
+  const list = document.getElementById("my-list");
+  const items = ["Apple", "Banana", "Cherry"];
+  
+  items.forEach(text => {
+    const li = document.createElement("li");
+    li.textContent = text;
+    list.appendChild(li);
+  });
+
+
+3.5 DELETING NODES
+------------------
+
+METHODS:
+
+1. remove()
+   Syntax: element.remove()
+   Effect: Delete element from DOM
+   Advantage: Direct, simple
+   
+   Example:
+     const elem = document.getElementById("temp");
+     elem.remove();
+
+2. removeChild()
+   Syntax: parentElement.removeChild(childElement)
+   Effect: Remove child from parent
+   Requires: Reference to parent
+   
+   Example:
+     const parent = document.getElementById("container");
+     const child = document.getElementById("item");
+     parent.removeChild(child);
+
+3. replaceChild()
+   Syntax: parent.replaceChild(newElement, oldElement)
+   Effect: Replace one element with another
+   
+   Example:
+     const newElem = document.createElement("span");
+     newElem.textContent = "Replaced!";
+     parent.replaceChild(newElem, oldElem);
+
+4. Clear All Content
+   Methods:
+     element.innerHTML = "";  // Remove all HTML
+     element.textContent = "";  // Remove all text
+     
+   Loop Method:
+     while (element.firstChild) {
+       element.removeChild(element.firstChild);
+     }
+
+PRACTICAL EXAMPLES:
+
+  Remove Multiple:
+    const items = document.querySelectorAll(".old-item");
+    items.forEach(item => item.remove());
+
+  Remove If Condition Met:
+    const items = document.querySelectorAll("li");
+    items.forEach(item => {
+      if (item.textContent === "Delete Me") {
+        item.remove();
+      }
+    });
+
+  Replace Content:
+    const old = document.getElementById("old");
+    const newContent = document.createElement("div");
+    newContent.innerHTML = "<p>Updated content</p>";
+    old.parentNode.replaceChild(newContent, old);
+
+
+================================================================================
+4. QUICK REFERENCE
+================================================================================
+
+DESTRUCTURING SYNTAX:
+┌─────────────────────────────────────┬────────────────────────────────────┐
+│ Array Destructuring                 │ Object Destructuring               │
+├─────────────────────────────────────┼────────────────────────────────────┤
+│ const [a, b] = array                │ const {name, age} = object         │
+│ const [a, , c] = array              │ const {name: n} = object           │
+│ const [a, ...rest] = array          │ const {name = "John"} = object     │
+│ const [a = 5] = array               │ const {nested: {x}} = object       │
+│ [a, b] = [b, a]  // swap            │ const {...others} = object         │
+└─────────────────────────────────────┴────────────────────────────────────┘
+
+JSON METHODS COMPARISON:
+┌──────────────────────┬──────────────────┬────────────────────────┐
+│ Method               │ Input            │ Output                 │
+├──────────────────────┼──────────────────┼────────────────────────┤
+│ JSON.stringify()     │ Object/Array     │ JSON String            │
+│ JSON.parse()        │ JSON String      │ Object/Array           │
+│ Round trip          │ Object → String → Object (with modifications) │
+└──────────────────────┴──────────────────┴────────────────────────┘
+
+DOM SELECTOR USAGE:
+┌──────────────────────────┬────────────────────────┬──────────────┐
+│ Selector Method          │ Syntax                 │ Returns      │
+├──────────────────────────┼────────────────────────┼──────────────┤
+│ getElementById()         │ ("#id")                │ Element      │
+│ querySelector()          │ (".class", "#id")      │ 1st match    │
+│ querySelectorAll()       │ (".class", "tag")      │ NodeList     │
+│ getElementsByClassName() │ ("class")              │ Collection   │
+│ getElementsByTagName()   │ ("tag")                │ Collection   │
+└──────────────────────────┴────────────────────────┴──────────────┘
+
+DOM MANIPULATION OPERATIONS:
+┌────────────────────────┬──────────────────────────┬──────────────────┐
+│ Operation              │ Method                   │ Example          │
+├────────────────────────┼──────────────────────────┼──────────────────┤
+│ Get/Set HTML           │ innerHTML                │ el.innerHTML ... │
+│ Get/Set Text           │ textContent              │ el.textContent..│
+│ Get Attribute          │ getAttribute()           │ el.getAttribute()|
+│ Set Attribute          │ setAttribute()           │ el.setAttribute()│
+│ Change Style           │ style property           │ el.style.color  │
+│ Add Class              │ classList.add()          │ cl.add("class") │
+│ Create Element         │ createElement()          │ document.create │
+│ Add Child              │ appendChild()            │ parent.append.. │
+│ Remove Element         │ remove()                 │ el.remove()     │
+└────────────────────────┴──────────────────────────┴──────────────────┘
+
+
+================================================================================
+5. COMMON USE CASES & EXAMPLES
+================================================================================
+
+USE CASE 1: FORM HANDLING WITH DESTRUCTURING
+---------------------------------------------
+
+HTML:
+  <form id="userForm">
+    <input name="name" placeholder="Name">
+    <input name="email" placeholder="Email">
+    <input name="phone" placeholder="Phone">
+    <button>Submit</button>
+  </form>
+
+JavaScript:
+  document.getElementById("userForm").addEventListener("submit", (e) => {
+    e.preventDefault();
+    const {name, email, phone} = e.target.elements;
+    
+    console.log({
+      name: name.value,
+      email: email.value,
+      phone: phone.value
+    });
+  });
+
+
+USE CASE 2: API DATA HANDLING WITH JSON
+----------------------------------------
+
+Fetch Data:
+  fetch('/api/users/1')
+    .then(response => response.json())  // Parse JSON
+    .then(({id, name, email, address: {city}}) => {
+      // Destructure nested data
+      console.log(`${name} from ${city}`);
+    });
+
+Send Data:
+  const user = {name: "Alice", email: "alice@example.com"};
+  fetch('/api/users', {
+    method: 'POST',
+    body: JSON.stringify(user),  // Convert to JSON
+    headers: {'Content-Type': 'application/json'}
+  });
+
+
+USE CASE 3: DYNAMIC TODO LIST (COMPLETE EXAMPLE)
+-----------------------------------------------
+
+HTML:
+  <div id="app">
+    <input id="taskInput" placeholder="Add a task...">
+    <button id="addBtn">Add</button>
+    <ul id="taskList"></ul>
+  </div>
+
+JavaScript:
+  const {taskInput, addBtn} = document.getElementById("app").elements;
+  const taskList = document.getElementById("taskList");
+  
+  addBtn.addEventListener("click", () => {
+    if (!taskInput.value.trim()) return;
+    
+    // Create task element
+    const li = document.createElement("li");
+    li.innerHTML = `
+      <span>${taskInput.value}</span>
+      <button class="delete">Delete</button>
+    `;
+    
+    // Add delete functionality
+    li.querySelector(".delete").addEventListener("click", () => {
+      li.remove();
+    });
+    
+    taskList.appendChild(li);
+    taskInput.value = "";
+  });
+
+
+USE CASE 4: LOCAL STORAGE WITH JSON
+------------------------------------
+
+Save Data:
+  const user = {
+    name: "Bob",
+    preferences: {theme: "dark", language: "en"}
+  };
+  localStorage.setItem("user", JSON.stringify(user));
+
+Load Data:
+  const user = JSON.parse(localStorage.getItem("user"));
+  const {name, preferences: {theme}} = user;
+  document.body.className = theme;
+
+
+USE CASE 5: ARRAY OPERATIONS WITH DESTRUCTURING
+-----------------------------------------------
+
+Functions with Rest Operator:
+  function sum(...numbers) {
+    return numbers.reduce((a, b) => a + b, 0);
+  }
+  console.log(sum(1, 2, 3, 4));  // 10
+
+Filter First & Rest:
+  const [winner, ...participants] = ["Alice", "Bob", "Charlie"];
+  console.log(winner);       // "Alice"
+  console.log(participants); // ["Bob", "Charlie"]
+
+Combining Arrays:
+  const [arr1, arr2] = [[1, 2], [3, 4]];
+  const combined = [...arr1, ...arr2];
+  console.log(combined);  // [1, 2, 3, 4]
+
+
+USE CASE 6: DOM API DATA WITH DESTRUCTURING
+-------------------------------------------
+
+Get Multiple Elements:
+  const {heading, content, footer} = {
+    heading: document.querySelector("h1"),
+    content: document.querySelector("main"),
+    footer: document.querySelector("footer")
+  };
+
+Update Styles:
+  const style = {color: "blue", fontSize: "20px"};
+  const {color, fontSize} = style;
+  element.style.color = color;
+  element.style.fontSize = fontSize;
+
+
+================================================================================
+END OF GUIDE
+================================================================================
+
+For interactive practice, use the HTML file: destructuring_json_dom.html
+For code examples, see: destructuring_json_dom.js
+
+Key Takeaways:
+1. Destructuring makes code cleaner and more readable
+2. Deep copy for independent data, shallow copy for simple objects
+3. JSON bridges JavaScript and external data formats
+4. DOM selectors find elements, properties modify them
+5. Create, manipulate, and delete elements dynamically
+
+Happy Learning! 🚀
