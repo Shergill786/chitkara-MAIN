@@ -2665,3 +2665,48 @@
 //     printf("Product = %d\n", p);
 //     return 0;
 // }
+
+
+// #include <stdio.h>
+// int sum(int a,int b);
+// int prod(int a,int b);
+// int avg(int a,int b);
+
+// int main(){
+//     int x=2,y=2;
+//     int s,p,t;
+//     s=sum(x,y);
+//     p=prod(x,y);
+//     t=avg(x,y);
+//     printf("%d,%d,%d",s,p,t );\
+//     return 0;
+// }
+// int sum(int a,int b){
+//     return a+b;
+// }
+// int prod(int a,int b){
+//     return a*b;
+// }
+// int avg(int a,int b){
+//     return (a+b)/2;
+// }
+
+
+
+// #include <stdio.h>
+// int sum(int a,int b);
+// int prod(int a,int b);
+// int main(){
+//     int x = 2, y = 2;
+//     int s, p;
+//     s = sum(x, y);     // function call
+//     p = prod(x, y);    // function call
+//     printf("%d, %d", s, p);
+//     return 0;
+// }
+// int sum(int a,int b){
+//     return a + b;
+// }
+// int prod(int a,int b){
+//     return a * b;
+// }
