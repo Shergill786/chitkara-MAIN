@@ -222,3 +222,29 @@
 
 //     return 0;
 // }
+
+
+// #include <stdio.h>
+// int main() {
+//     float f = 123.456789;
+//     int i=123;
+//     printf("%d\n",f);
+//     printf("%.4f \n",f);
+// }
+// int main(){
+//     int x = 10, y = 3;
+//     double result = (double)x / y;
+//     printf("%.2f\n", result);
+//     return 0;
+// }
+
+// #include <stdio.h>
+// int main() {
+//     int totalDays;
+//     int years, weeks, days;
+//     scanf("%d", &totalDays);
+//     years = totalDays / 365;
+//     totalDays %= 365;   
+//     printf("%d %d %d %d", years, weeks, days, totalDays);
+//     return 0;
+// }
