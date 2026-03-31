@@ -2513,7 +2513,7 @@
 
 
 // find cgpa of a student of 5 subjects using credits in functions
-#include <stdio.h>
+// #include <stdio.h>
 
 // Function to convert marks to grade points
 // float getGradePoint(int marks) {
@@ -2709,4 +2709,260 @@
 // }
 // int prod(int a,int b){
 //     return a * b;
+// }
+
+// #include <stdio.h>
+// int main() {
+//     char a[26];
+//     char *p=a;
+//     for (int i =0; i<26;i++){
+//         *p ='A'+i;
+//         p++;
+
+//     }
+//     printf("%s", a);
+//     return 0;
+// }
+
+
+//  sum of a,b using pointer 
+// #include <stdio.h>
+// int main() {
+//     int a, b, sum;
+//     int *ptr1 = &a;   // Pointer to a
+//     int *ptr2 = &b;   // Pointer to b
+    
+//     printf("Enter first number: ");
+//     scanf("%d", ptr1);  
+    
+//     printf("Enter second number: ");
+//     scanf("%d", ptr2);    
+    
+//     sum = *ptr1 + *ptr2;
+    
+//     printf("Sum of %d and %d is: %d\n", *ptr1, *ptr2, sum);
+
+//     return 0;
+// }
+
+
+// #include <stdio.h>
+// int main() {
+//     int a = 10;
+//     void *ptr = &a;  // Pointer to a
+//     printf("Value of a: %d\n", *(int*)ptr);  // Dereferencing pointer to get value of a
+//     char b = 'A';
+//     void *p1 = &b;  
+//     printf("Value of b: %c\n", *(char*)p1);  // Dereferencing pointer to get value of b
+    
+//     return 0;
+// }
+
+
+// print elements of an array using pointer in reverse order
+// #include <stdio.h>
+// int main(){
+//     int *n;
+//     int arr[5] = {1, 2, 3, 4, 5};
+//     int *p = arr + 4;
+//     for (int i=0;i<5;i++){
+//         printf("%d ",*p);
+//         p--;
+//     }
+//     return 0;
+// }
+
+// using pointer with array name 
+// #include <stdio.h>
+// int main() {
+//     int arr[5] = {1,2,3,4,5};
+//     int *ptr = arr+4;
+    
+//     for (int i = 0; i < 5; i++) {
+//         printf("%d ", *ptr);  
+//                 ptr--; 
+//     }
+//     printf("\n");   
+//     return 0;
+// }
+
+
+// copy a,b using pointer
+// #include <stdio.h>
+// int main() {
+//     int a, b;
+//     int *ptr1 = &a;   
+//     int *ptr2 = &b;   
+//     printf("Enter value for a: ");
+//     scanf("%d", ptr1);
+//     printf("Enter value for b: ");
+//     scanf("%d", ptr2);
+//     *ptr2 = *ptr1;  
+//     printf("Value of a: %d\n", *ptr1);
+//     printf("Value of b: %d\n", *ptr2);
+//     return 0;
+// }
+
+
+
+
+// passing array to function by single element and find avg
+// #include <stdio.h>
+// float avg(int arr[], int n) {
+//     int sum = 0;
+//     for (int i = 0; i < n; i++) {
+//         sum += arr[i];
+//     }
+//     return (float)sum / n;
+// }
+// int main() {
+//     int n;
+//     scanf("%d", &n);
+//     int arr[n];
+//     for (int i = 0; i < n; i++) {
+//         scanf("%d", &arr[i]);
+//     }
+//     float average = avg(arr, n);
+//     printf("Average: %.2f\n", average);
+//     return 0;
+// }
+
+
+// #include <stdio.h>
+// void avg(int a[]);
+// int main(){
+//         int a[6] = {1,2,3,4,5,6};
+//         avg(a);
+// }
+// void avg(int a[]){
+//     int sum = 0;
+//     for (int i=0;i<6;i++){
+//         sum += a[i];
+//     }
+//     printf("avg: %.2f", (float)sum/6);
+// }
+
+
+
+// #include <stdio.h>
+// void avg(int a[]);
+// int main(){
+//         int a[6] = {1,2,3,4,5,6};
+//         avg(a);
+// }
+// void avg(int *p){
+//     int sum = 0;
+//     for (int i=0;i<6;i++){
+//         sum += *(p + i);
+//     }
+//     printf("avg: %.2f", (float)sum/6);
+// }
+
+// #include <stdio.h>
+
+// int main() {
+//     int arr[5], i, j, temp;
+//     int *p = arr;   // pointer to array
+
+//     printf("Enter 5 elements:\n");
+//     for(i = 0; i < 5; i++) {
+//         scanf("%d", (p + i));   // input using pointer
+//     }
+
+//     // sorting (ascending)
+//     for(i = 0; i < 4; i++) {
+//         for(j = i + 1; j < 5; j++) {
+//             if(*(p + i) > *(p + j)) {
+//                 temp = *(p + i);
+//                 *(p + i) = *(p + j);
+//                 *(p + j) = temp;
+//             }
+//         }
+//     }
+
+//     printf("Sorted array:\n");
+//     for(i = 0; i < 5; i++) {
+//         printf("%d ", *(p + i));   // print using pointer
+//     }
+
+//     return 0;
+// }
+
+// #include<stdio.h>
+// int *p(){
+// 	int x=10;
+// 	return &x;
+// }
+// int main(){
+// 	int *x=p();
+// 	printf("%d",*x);
+
+//     return 0;
+// }
+
+
+// #include<stdio.h>
+// int *p(int n){
+// 	static int a[20];
+// 	int s=0;
+// 	for(int i=0;i<n;i++){
+// 		a[i]=s;
+// 		s=s+2;
+		
+// 	}
+// 	return a;
+// }
+// int main(){
+// 	int n,*a;
+// 	scanf("%d",&n);
+// 	a=p(n);
+// 	for(int i=0;i<n;i++){
+// 		printf("%d",*(a+i));
+// 	}
+// }
+
+// #include<stdio.h>
+// int *p(int n){
+// 	static int a[20];
+// 	for(int i=0;i<n;i++){
+// 		a[i]=i*4;
+// 	}
+// 	return a;
+// }
+// int main(){
+// 	int n,*a;
+// 	scanf("%d",&n);
+// 	a=p(n);
+// 	for(int i=0;i<n;i++){
+// 		printf("%d",*(a+i));
+// 	}
+// }
+
+// #include<stdio.h>
+// int *p(){
+// 	int x=10;
+// 	return &x;
+// }
+// int main(){
+// 	int *x=p();
+// 	printf("%d",*x);
+
+//     return 0;
+// }
+
+// #include<stdio.h>
+// int *p(int n){
+// 	static int a[20];
+// 	for(int i=0;i<n;i++){
+// 		a[i]=i*4;
+// 	}
+// 	return a;
+// }
+// int main(){
+// 	int n,*a;
+// 	scanf("%d",&n);
+// 	a=p(n);
+// 	for(int i=0;i<n;i++){
+// 		printf("%d",*(a+i));
+// 	}
 // }
