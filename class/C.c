@@ -3042,12 +3042,14 @@
 // int main() {
 // 	int arr[] = {1, 2, 3, 4, 5, 6};
 // 	int n = sizeof(arr) / sizeof(arr[0]);
-// 	int d = 1;  
+// 	int d =3;  
 // 	rotateRight(arr, n, d);
 // 	printf("Array after right rotation: ");
 // 	for (int i = 0; i < n; i++) {
 // 		printf("%d ", arr[i]);
+
 // 	}
+// 	printf("n = %d",n);
 // 	return 0;
 // }
 
@@ -3066,39 +3068,81 @@
 // }
 
 
+// #include <stdio.h>
+// void printPattern(int *arr, int n) {
+//     int start = 0;
+//     int end = n - 1;
+
+//     while(start <= end) {
+//         if(start == end) {
+//             printf("%d ", *(arr + start));
+//         } else {
+//             printf("%d %d ", *(arr + start), *(arr + end));
+//         }
+//         start++;
+//         end--;
+//     }
+// }
+// int main() {
+//     int n, i;
+//     printf("Enter number of elements: ");
+//     scanf("%d", &n);
+//     int arr[n];
+//     printf("Enter elements:\n");
+//     for(i = 0; i < n; i++) {
+//         scanf("%d", (arr + i));  
+//     }
+//     printf("Output pattern:\n");
+//     printPattern(arr, n); 
+//     return 0;
+// }
+
+
+// use pointer to print elements of an array and address of elements of an array
 #include <stdio.h>
 
-
-void printPattern(int *arr, int n) {
-    int start = 0;
-    int end = n - 1;
-
-    while(start <= end) {
-        if(start == end) {
-            printf("%d ", *(arr + start));
-        } else {
-            printf("%d %d ", *(arr + start), *(arr + end));
-        }
-        start++;
-        end--;
-    }
-}
-
 int main() {
-    int n, i;
+    int n, m, p;
 
-    printf("Enter number of elements: ");
+    printf("Enter number of int elements: ");
     scanf("%d", &n);
 
+    printf("Enter number of float elements: ");
+    scanf("%d", &m);
+
+    printf("Enter number of char elements: ");
+    scanf("%d", &p);
+
     int arr[n];
+    float arr2[m];
+    char arr3[p];
 
-    printf("Enter elements:\n");
-    for(i = 0; i < n; i++) {
-        scanf("%d", (arr + i));  
+    printf("Enter int elements:\n");
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+
     }
-
-    printf("Output pattern:\n");
-    printPattern(arr, n); 
-
+    printf("Enter float elements:\n");
+    for (int i = 0; i < m; i++) {
+        scanf("%f", &arr2[i]);
+    }
+    printf("Enter char elements:\n");
+    for (int i = 0; i < p; i++) {
+        scanf(" %c", &arr3[i]);
+    }
+    printf("\nInt array elements and addresses:\n");
+    for (int i = 0; i < n; i++) {
+        printf("Element: %d, Address: %p\n", *(arr + i), (void*)(arr + i));
+    }
+    printf("\nFloat array elements and addresses:\n");
+    for (int i = 0; i < m; i++) {
+        printf("Element: %f, Address: %p\n", *(arr2 + i), (void*)(arr2 + i));
+    }
+    printf("\nChar array elements and addresses:\n");
+    for (int i = 0; i < p; i++) {
+        printf("Element: %c, Address: %p\n", *(arr3 + i), (void*)(arr3 + i));
+    }
     return 0;
 }
+
+
