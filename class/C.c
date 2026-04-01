@@ -2890,7 +2890,7 @@
 
 // #include<stdio.h>
 // int *p(){
-// 	int x=10;
+// 	static int x=10;
 // 	return &x;
 // }
 // int main(){
@@ -2966,3 +2966,139 @@
 // 		printf("%d",*(a+i));
 // 	}
 // }
+
+
+// # include <stdio.h>
+
+// int main(){
+// float price[] = {100.0, 200.0, 300.0};
+// //printf("enter 3 prices : ");
+
+// // scanf("%f", &price[0]);
+// // scanf("%f", &price[1]);
+// // scanf("%f", &price[2]);
+
+// printf("total price 1 : %f\n", price[0]+(0.18*price[0]));
+// printf("total price 2 : %f\n", price[1]+(0.18*price[1]));
+// printf("total price 3 : %f\n", price [2]+(0.18*price[2]));
+// return 0;
+// }
+
+
+
+
+
+// // return max element of an array
+// #include <stdio.h>
+// int main(){
+// 	int arr[5]={10,20,5,15,25};
+// 	int max=arr[0];
+// 	for(int i=1;i<5;i++){
+// 		if(arr[i]>max){
+// 			max=arr[i];
+// 		}
+// 	}
+// 	printf("Max element: %d", max);
+// 	return 0;
+// }
+
+
+// //  swap elements of 2 array of same order
+// #include <stdio.h>
+// int main() {
+// 	int arr1[]={1,2,3,4,5};
+// 	int arr2[]={6,7,8,9,10};
+// 	int temp;
+// 	for (int i=0;i<5;i++){
+// 		temp=arr1[i];
+// 		arr1[i]=arr2[i];
+// 		arr2[i]=temp;
+// 	}
+// 	printf("Array 1: ");
+// 	for (int i=0;i<5;i++){
+// 		printf("%d ", arr1[i]);
+// 	}
+// 	printf("\nArray 2: ");
+// 	for (int i=0;i<5;i++){
+// 		printf("%d ", arr2[i]);
+// 	}
+// 	return 0;
+// }
+
+// // rotate an array to right position by n positions
+// #include <stdio.h>
+// void rotateRight(int arr[], int n, int d) {
+// 	int temp[d];
+// 	for (int i = 0; i < d; i++) {
+// 		temp[i] = arr[n - d + i];  
+// 	}
+// 	for (int i = n - 1; i >= d; i--) {
+// 		arr[i] = arr[i - d];  
+// 	}
+// 	for (int i = 0; i < d; i++) {
+// 		arr[i] = temp[i];  
+// 	}
+// }
+// int main() {
+// 	int arr[] = {1, 2, 3, 4, 5, 6};
+// 	int n = sizeof(arr) / sizeof(arr[0]);
+// 	int d = 1;  
+// 	rotateRight(arr, n, d);
+// 	printf("Array after right rotation: ");
+// 	for (int i = 0; i < n; i++) {
+// 		printf("%d ", arr[i]);
+// 	}
+// 	return 0;
+// }
+
+// // sum of elements of an array using pointer
+// #include <stdio.h>
+// int main() {
+// 	int arr[5] = {1, 2, 3, 4, 5};
+// 	int *ptr = arr;  
+// 	int sum = 0;
+// 	for (int i = 0; i < 5; i++) {
+// 		sum += *ptr;  
+// 		ptr++;  
+// 	}
+// 	printf("Sum of array elements: %d\n", sum);
+// 	return 0;
+// }
+
+
+#include <stdio.h>
+
+
+void printPattern(int *arr, int n) {
+    int start = 0;
+    int end = n - 1;
+
+    while(start <= end) {
+        if(start == end) {
+            printf("%d ", *(arr + start));
+        } else {
+            printf("%d %d ", *(arr + start), *(arr + end));
+        }
+        start++;
+        end--;
+    }
+}
+
+int main() {
+    int n, i;
+
+    printf("Enter number of elements: ");
+    scanf("%d", &n);
+
+    int arr[n];
+
+    printf("Enter elements:\n");
+    for(i = 0; i < n; i++) {
+        scanf("%d", (arr + i));  
+    }
+
+    printf("Output pattern:\n");
+    printPattern(arr, n); 
+
+    return 0;
+}

@@ -1,19 +1,20 @@
-#include <stdio.h>
-int sum(int a,int b);
-int prod(int a,int b);
 
+#include<stdio.h>
+int *p(int n){
+	static int a[20];
+	int s=0;
+	for(int i=0;i<n;i++){
+		a[i]=s;
+		s=s+2;
+		
+	}
+	return a;
+}
 int main(){
-    int x=2,y=2;
-    int s,p;
-    s=sum(x,y);
-    p=prod(x,y);
-    printf("%d,%d",s,p );\
-    return 0;
-}
-int sum(int a,int b){
-    return a+b;
-    return s;
-}
-int prod(int a,int b){
-    return a*b;
+	int n,*a;
+	scanf("%d",&n);
+	a=p(n);
+	for(int i=0;i<n;i++){
+		printf("%d",*(a+i));
+	}
 }
