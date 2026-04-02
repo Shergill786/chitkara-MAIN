@@ -621,30 +621,65 @@
 // }
 
 
-#include <stdio.h>
-int main(){
-int arr[]={1,2,3,4,5};
-int min=arr[0];
-int min2=1001;
-for(int i=1;i<5;i++){
+// #include <stdio.h>
+// int main(){
+// int arr[]={1,2,3,4,5};
+// int min=arr[0];
+// int min2=1001;
+// for(int i=1;i<5;i++){
 
-    if (arr[i]<min){
-        min=arr[i];
-    }
-} 
-for(int i=1;i<5;i++){
-    if (arr[i]>min && arr[i]<min2){
-        min2=arr[i];
+//     if (arr[i]<min){
+//         min=arr[i];
+//     }
+// } 
+// for(int i=1;i<5;i++){
+//     if (arr[i]>min && arr[i]<min2){
+//         min2=arr[i];
 
-    }
-    }
+//     }
+//     }
 
     
-    if (min2==1001){
-        printf("%d",0);
+//     if (min2==1001){
+//         printf("%d",0);
 
-    }
-    else {
-        printf("%d",min2);
-}
-}
+//     }
+//     else {
+//         printf("%d",min2);
+// }
+// }
+
+
+
+// swapping 2 numbers 
+// #include <stdio.h>
+
+// void swap(int *a,int *b){
+//     int temp=*a;
+//     *a=*b;
+//     *b=temp;
+
+// }
+// int main(){
+//     int a=5,b=10;
+//     int temp;
+//     swap(&a,&b);  
+//     printf("%d %d",a,b);  
+// }
+
+
+// #include <stdio.h>
+// void compare(int *x ,int *y){
+//     if (*x==*y){
+//         printf("equal");
+//     }
+//     else{
+//         printf("not ");
+//     }
+// }
+// int main(){
+//     int a,b;
+//     printf("enter an number ");
+//     scanf("%d %d\n",&a,&b);
+//     compare(&a,&b);
+// }
