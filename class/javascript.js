@@ -564,4 +564,54 @@
 // alert(p);   
 
 
-let name = prompt("Your name :");
+// let name = prompt("Your name :");
+// let length=name.length
+// let sign="@"
+// let string=sign.concat(name);
+// console.log(string);
+// let fullname=string.concat(length);
+// console.log(fullname);
+
+
+// let arr=[1,2,3,4,5,6];
+// let n=arr.length;
+// for (let i=0;i<n;i++){
+//     console.log(arr[i]);
+// }
+// for (let i of arr){
+//     console.log(i);
+// }
+
+
+// let marks=[];
+// let n=Number(prompt("number of elements :"));
+// let sum=0;
+// let avg=0;
+
+// for (let i=0;i<n;i++){
+//     let mark=Number(prompt(`marks of:${i}`));
+//     marks[i]=mark;
+//     sum+=i;
+
+// }
+// avg=sum/n;
+// console.log(sum);
+// console.log(avg);
+// console.log(marks);
+
+
+// let arr=[100,200,300,400];
+// for (let i=0;i<arr.length;i++){
+//     let offer = arr[i]/10;
+//     arr[i]-=offer;
+
+// }
+// console.log(arr);
+
+// let i=0;
+// for (let val of arr){
+//     let offer = val/10;
+//     arr[i]-=offer;
+//     i++;
+// }
+// console.log(arr);
