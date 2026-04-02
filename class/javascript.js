@@ -480,3 +480,88 @@
 // console.log("After swap: num1 =", num1, "num2 =", num2);
 
 
+// let num=Number(prompt("Enter your marks:"));
+// if (num>=80 && num <=100){
+//     console.log("Grade A");
+// }
+// else if (num>=70 && num<80){
+//     console.log("Grade B");
+// }
+// else if (num>=60 && num<70){
+//     console.log("Grade C");
+// }
+// else if (num>=50 && num<60){
+//     console.log("Grade D");
+// }
+// else {
+//     console.log("Grade F");
+// }
+
+
+// sum of first n numbers 
+// let n=Number(prompt("number: "));
+// let sum=0;
+
+// for (i=0;i<=n;i++){
+//     sum += i ;
+// }
+// alert(sum);
+
+
+// let n=Number(prompt("number"));
+// let sum=0;
+// let i=1;
+// while (i<=n){
+//     sum+=i;
+//     i++;
+// }
+// console.log( sum);
+
+
+// let str="Hello World";
+// for (let i of str){
+//     console.log(i);
+// }
+
+
+// let obj={a:1,b:2,c:3}; 
+// for (let key in obj){
+//     console.log(key, obj[key]); 
+// }
+
+
+// for (let i=0;i<=100;i++){
+//     if (i%2==0){
+//     console.log("even number:", i);
+// }
+// }
+
+
+// let num=45;
+// let n=Number(prompt("Guess the number : "));
+// while (n>0){
+//     if (n==num){
+//         alert("right")
+//         break;
+//     }
+//     else {
+//         alert("again")
+//         n=Number(prompt("Guess the number : "));
+        
+//     }
+// }
+
+// let p=10;
+// let a="hi";
+// let str=`${a} age is ${p}`
+// console.log(str); 
+
+// let str="hello";
+// // p=str.toUpperCase()
+// // alert(p);
+
+// p=str.slice(1,3);
+// alert(p);   
+
+
+let name = prompt("Your name :");

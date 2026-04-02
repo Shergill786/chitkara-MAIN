@@ -3099,50 +3099,72 @@
 
 
 // use pointer to print elements of an array and address of elements of an array
+// #include <stdio.h>
+
+// int main() {
+//     int n, m, p;
+
+//     printf("Enter number of int elements: ");
+//     scanf("%d", &n);
+
+//     printf("Enter number of float elements: ");
+//     scanf("%d", &m);
+
+//     printf("Enter number of char elements: ");
+//     scanf("%d", &p);
+
+//     int arr[n];
+//     float arr2[m];
+//     char arr3[p];
+
+//     printf("Enter int elements:\n");
+//     for (int i = 0; i < n; i++) {
+//         scanf("%d", &arr[i]);
+
+//     }
+//     printf("Enter float elements:\n");
+//     for (int i = 0; i < m; i++) {
+//         scanf("%f", &arr2[i]);
+//     }
+//     printf("Enter char elements:\n");
+//     for (int i = 0; i < p; i++) {
+//         scanf(" %c", &arr3[i]);
+//     }
+//     printf("\nInt array elements and addresses:\n");
+//     for (int i = 0; i < n; i++) {
+//         printf("Element: %d, Address: %p\n", *(arr + i), (void*)(arr + i));
+//     }
+//     printf("\nFloat array elements and addresses:\n");
+//     for (int i = 0; i < m; i++) {
+//         printf("Element: %f, Address: %p\n", *(arr2 + i), (void*)(arr2 + i));
+//     }
+//     printf("\nChar array elements and addresses:\n");
+//     for (int i = 0; i < p; i++) {
+//         printf("Element: %c, Address: %p\n", *(arr3 + i), (void*)(arr3 + i));
+//     }
+//     return 0;
+// }
+
+
+// sum of elements of an array using function pointer
 #include <stdio.h>
-
-int main() {
-    int n, m, p;
-
-    printf("Enter number of int elements: ");
-    scanf("%d", &n);
-
-    printf("Enter number of float elements: ");
-    scanf("%d", &m);
-
-    printf("Enter number of char elements: ");
-    scanf("%d", &p);
-
-    int arr[n];
-    float arr2[m];
-    char arr3[p];
-
-    printf("Enter int elements:\n");
-    for (int i = 0; i < n; i++) {
-        scanf("%d", &arr[i]);
-
-    }
-    printf("Enter float elements:\n");
-    for (int i = 0; i < m; i++) {
-        scanf("%f", &arr2[i]);
-    }
-    printf("Enter char elements:\n");
-    for (int i = 0; i < p; i++) {
-        scanf(" %c", &arr3[i]);
-    }
-    printf("\nInt array elements and addresses:\n");
-    for (int i = 0; i < n; i++) {
-        printf("Element: %d, Address: %p\n", *(arr + i), (void*)(arr + i));
-    }
-    printf("\nFloat array elements and addresses:\n");
-    for (int i = 0; i < m; i++) {
-        printf("Element: %f, Address: %p\n", *(arr2 + i), (void*)(arr2 + i));
-    }
-    printf("\nChar array elements and addresses:\n");
-    for (int i = 0; i < p; i++) {
-        printf("Element: %c, Address: %p\n", *(arr3 + i), (void*)(arr3 + i));
-    }
-    return 0;
+int sum(int arr[], int n) {
+	int s = 0;
+	for (int i = 0; i < n; i++) {
+		s += arr[i];
+	}
+	return s;
 }
-
-
+int main() {
+	int n;
+	printf("Enter number of elements: ");
+	scanf("%d", &n);
+	int arr[n];
+	printf("Enter %d elements:\n", n);
+	for (int i = 0; i < n; i++) {
+		scanf("%d", &arr[i]);
+	}
+	int (*p)(int[], int) = sum;  
+	int c = p(arr, n);  
+	printf("Sum of array elements: %d\n", c);
+	return 0;

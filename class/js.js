@@ -412,3 +412,8 @@
 // }
 // console.log(biggest([1,2,3,4]))
 
+// const arr=[1,2,3];
+// arr[6]=7;
+// console.log(typeof arr);
+
+
