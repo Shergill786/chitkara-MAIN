@@ -2713,13 +2713,13 @@
 
 // #include <stdio.h>
 // int main() {
-//     char a[26];
-//     char *p=a;
-//     for (int i =0; i<26;i++){
-//         *p ='A'+i;
+//     char a[27];   // 26 letters + 1 for '\0'
+//     char *p = a;
+//     for (int i = 0; i < 26; i++) {
+//         *p = 'A' + i;
 //         p++;
-
 //     }
+//     a[26] = '\0';
 //     printf("%s", a);
 //     return 0;
 // }
@@ -2763,9 +2763,9 @@
 // #include <stdio.h>
 // int main(){
 //     int *n;
-//     int arr[5] = {1, 2, 3, 4, 5};
-//     int *p = arr + 4;
-//     for (int i=0;i<5;i++){
+//     int arr[6] = {1, 2, 3, 4, 5,6};
+//     int *p = arr + 5;  // Point to the last element of the array
+//     for (int i=0;i<6;i++){
 //         printf("%d ",*p);
 //         p--;
 //     }
@@ -2802,8 +2802,6 @@
 //     printf("Value of b: %d\n", *ptr2);
 //     return 0;
 // }
-
-
 
 
 // passing array to function by single element and find avg
@@ -2858,17 +2856,15 @@
 //     printf("avg: %.2f", (float)sum/6);
 // }
 
-// #include <stdio.h>
 
+// #include <stdio.h>
 // int main() {
 //     int arr[5], i, j, temp;
 //     int *p = arr;   // pointer to array
-
 //     printf("Enter 5 elements:\n");
 //     for(i = 0; i < 5; i++) {
 //         scanf("%d", (p + i));   // input using pointer
 //     }
-
 //     // sorting (ascending)
 //     for(i = 0; i < 4; i++) {
 //         for(j = i + 1; j < 5; j++) {
@@ -2879,12 +2875,10 @@
 //             }
 //         }
 //     }
-
 //     printf("Sorted array:\n");
 //     for(i = 0; i < 5; i++) {
 //         printf("%d ", *(p + i));   // print using pointer
 //     }
-
 //     return 0;
 // }
 
@@ -2908,7 +2902,7 @@
 // 	for(int i=0;i<n;i++){
 // 		a[i]=s;
 // 		s=s+2;
-		
+
 // 	}
 // 	return a;
 // }
@@ -3147,24 +3141,24 @@
 
 
 // sum of elements of an array using function pointer
-#include <stdio.h>
-int sum(int arr[], int n) {
-	int s = 0;
-	for (int i = 0; i < n; i++) {
-		s += arr[i];
-	}
-	return s;
-}
-int main() {
-	int n;
-	printf("Enter number of elements: ");
-	scanf("%d", &n);
-	int arr[n];
-	printf("Enter %d elements:\n", n);
-	for (int i = 0; i < n; i++) {
-		scanf("%d", &arr[i]);
-	}
-	int (*p)(int[], int) = sum;  
-	int c = p(arr, n);  
-	printf("Sum of array elements: %d\n", c);
-	return 0;
+// #include <stdio.h>
+// int sum(int arr[], int n) {
+// 	int s = 0;
+// 	for (int i = 0; i < n; i++) {
+// 		s += arr[i];
+// 	}
+// 	return s;
+// }
+// int main() {
+// 	int n;
+// 	printf("Enter number of elements: ");
+// 	scanf("%d", &n);
+// 	int arr[n];
+// 	printf("Enter %d elements:\n", n);
+// 	for (int i = 0; i < n; i++) {
+// 		scanf("%d", &arr[i]);
+// 	}
+// 	int (*p)(int[], int) = sum;  
+// 	int c = p(arr, n);  
+// 	printf("Sum of array elements: %d\n", c);
+// 	return 0;

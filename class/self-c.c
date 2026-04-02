@@ -683,3 +683,77 @@
 //     scanf("%d %d\n",&a,&b);
 //     compare(&a,&b);
 // }
+
+
+// #include <stdio.h>
+
+// int main(){
+//     int arr[5] = {1,2,3,4,5};
+//     int *p = arr;
+
+//     for(int i = 0; i < 5; i++){
+//         printf("%d ", *(p+i));
+//     }
+
+//     return 0;
+// }
+
+// #include <stdio.h>
+// int main(){
+//     int arr[5] = {1,2,3,4,5};
+//     int *strt=arr, *end=arr+4 ,temp;
+//     temp=*strt;
+//     *strt=*end;
+//     *end=temp;
+//     for (int i=0;i<5;i++){
+//         printf("%d",arr[i]);
+//     }
+// }
+
+
+// #include<stdio.h>
+// int main(){
+//     int arr[]={1,2,3,6,4};
+//     int sum=0;
+//     int *p=arr;
+//     for (int i=0;i<5;i++){
+//         sum+=*p+i;
+//     }
+//     printf("%d",sum);
+// }
+
+// #include<stdio.h>
+// int main(){
+//     int arr[]={1,2,3,6,4};
+//     int *p=arr;
+//     int min=*p;
+//     for (int i=0;i<5;i++){
+//         if ((*p+i)<min){
+//             min=*p+i;
+//         }
+//     }
+//     printf("%d",min);
+// }
+
+// #include <stdio.h>
+// int main(){
+//     int arr[9]={1,2,3,4,5,6,7,8,9};
+//     int count=0;
+//     int *p=arr;
+//     for (int i=0;i<9;i++){
+//         if (*(p+i)%2==0){
+//             count++;
+//         }
+//     }
+//     printf("%d",count);
+// }
+
+// #include <stdio.h>
+// int main(){
+//     int arr[3]={10,20,30};
+//     int *p=arr;
+
+//     for(int i=0;i<3;i++)
+//         printf("Value=%d Address=%u\n", *(p+i), (p+i));
+// }
+

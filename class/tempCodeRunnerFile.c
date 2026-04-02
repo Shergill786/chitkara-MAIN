@@ -1,20 +1,11 @@
-
-#include<stdio.h>
-int *p(int n){
-	static int a[20];
-	int s=0;
-	for(int i=0;i<n;i++){
-		a[i]=s;
-		s=s+2;
-		
-	}
-	return a;
-}
+nclude <stdio.h>
 int main(){
-	int n,*a;
-	scanf("%d",&n);
-	a=p(n);
-	for(int i=0;i<n;i++){
-		printf("%d",*(a+i));
-	}
+    int *n;
+    int arr[5] = {1, 2, 3, 4, 5};
+    int *p = arr + 4;
+    for (int i=0;i<5;i++){
+        printf("%d ",*p);
+        p--;
+    }
+    return 0;
 }
