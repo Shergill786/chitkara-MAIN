@@ -615,3 +615,128 @@
 //     i++;
 // }
 // console.log(arr);
+
+
+// let arr=[100,200,300,400];
+// arr.splice(0,2,50,150);
+// console.log(arr);
+
+// let arr=[];
+// let n =Number(prompt("no of companies"));
+// for (let i =0;i<n;i++){
+//     let com=prompt("companies");
+//     arr[i]=com;
+// }
+// console.log(arr);
+// arr.shift();
+// console.log(arr);
+// arr.splice(2,1,"free");
+// console.log(arr);
+// arr.push("amazon");
+// console.log(arr);
+
+
+// let str=prompt("String :");
+// let count=0;
+// function retstr(){
+//     for (let i of str){
+//         if (i==='a'||i==='e'||i==='o'||i==='u'||i==='i'){
+//             count+=1;
+//         }
+
+//     }
+//     console.log(count);
+// }
+// retstr();
+// console.log(str.length);
+
+
+// let arr=[12,34,32,41,213,1312];
+// let count =0;
+// arr.forEach(function helo(i) {
+//     console.log(i);
+//     count++;
+// })
+// console.log(count);
+
+
+// let arr=[];
+// let n=Number(prompt("no of no"));
+// for (let i =0;i<n;i++){
+//     let s=prompt("numbers");
+//     arr[i]=s;
+// }
+// arr.forEach(function square(v,i){
+//     arr[i]=v*v;
+// })
+// console.log(arr);
+
+
+
+// let arr=[1,2,3,123,4,5];
+// arr.map((i)=>{
+//     console.log(i);
+// })
+// arr.map((i) =>{
+//     console.log(i * i);
+// })
+
+// let even = arr.filter((i)=>{
+//     return i>2;
+// })
+// console.log(even);
+
+// let sum=arr.reduce((res,cur)=>{
+//     return res+cur;
+// })
+// console.log(sum); 
+
+// let max=arr[0];
+// let max2=1011;
+// arr.map((i)=>{
+//     if (i<max){
+//         max=i;
+//     }})
+// arr.map((i)=>{
+//     if (i>max&&i<max2){
+//         max2=i; }
+// })
+// if (max2==1011)
+//     console.log("0");
+// else{
+
+// console.log(max);
+// console.log(max2);}
+// let arr=[1,2,3,123,4,5];
+
+// let output = arr.reduce((prev,curr)=>{ 
+//     return (prev>curr)?prev:curr;
+// })
+// console.log(output);
+
+
+
+// let arr=[78,79,68,98,69,90,56,57];
+// let top=arr.filter((i)=>{
+//    return i>70;
+// })
+
+// let sum=arr.reduce((res,curr)=>{
+//     return res+curr;
+// })
+
+// let prod=arr.reduce((res,curr)=>{
+//     return res*curr;
+// })
+// let max=arr.reduce((prev,curr)=>{
+//     return prev>curr?prev:curr;
+// })
+// let min=arr.reduce((prev,curr)=>{
+//     return prev<curr?prev:curr;
+// })
+// console.log(top);
+// console.log(sum);
+// console.log(max);
+// console.log(prod);
+// console.log(min);
+

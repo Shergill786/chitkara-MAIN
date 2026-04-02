@@ -621,3 +621,30 @@
 // }
 
 
+#include <stdio.h>
+int main(){
+int arr[]={1,2,3,4,5};
+int min=arr[0];
+int min2=1001;
+for(int i=1;i<5;i++){
+
+    if (arr[i]<min){
+        min=arr[i];
+    }
+} 
+for(int i=1;i<5;i++){
+    if (arr[i]>min && arr[i]<min2){
+        min2=arr[i];
+
+    }
+    }
+
+    
+    if (min2==1001){
+        printf("%d",0);
+
+    }
+    else {
+        printf("%d",min2);
+}
+}
