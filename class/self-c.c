@@ -627,7 +627,6 @@
 // int min=arr[0];
 // int min2=1001;
 // for(int i=1;i<5;i++){
-
 //     if (arr[i]<min){
 //         min=arr[i];
 //     }
@@ -635,14 +634,10 @@
 // for(int i=1;i<5;i++){
 //     if (arr[i]>min && arr[i]<min2){
 //         min2=arr[i];
-
 //     }
 //     }
-
-    
 //     if (min2==1001){
 //         printf("%d",0);
-
 //     }
 //     else {
 //         printf("%d",min2);
@@ -686,15 +681,12 @@
 
 
 // #include <stdio.h>
-
 // int main(){
 //     int arr[5] = {1,2,3,4,5};
 //     int *p = arr;
-
 //     for(int i = 0; i < 5; i++){
 //         printf("%d ", *(p+i));
 //     }
-
 //     return 0;
 // }
 
@@ -752,8 +744,18 @@
 // int main(){
 //     int arr[3]={10,20,30};
 //     int *p=arr;
-
 //     for(int i=0;i<3;i++)
 //         printf("Value=%d Address=%u\n", *(p+i), (p+i));
 // }
+
+// #include <stdio.h>
+// int main(){
+//     int arr[5]={1,2,3,4,5};
+//     int *p=arr+4;
+//     for (int i=0;i<5;i++){
+//         printf("%d ",*p);
+//         p--;
+        
+//     }
+//     return 0;}
 
