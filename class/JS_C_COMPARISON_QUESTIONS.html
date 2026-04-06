@@ -1,0 +1,1868 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript vs C - Comprehensive Guide with Examples & Questions</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 30px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 30px 80px rgba(0,0,0,0.4);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 50px 40px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 15px;
+            font-weight: 900;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        header p {
+            font-size: 1.2em;
+            opacity: 0.95;
+            letter-spacing: 0.5px;
+        }
+        
+        .section {
+            border-bottom: 3px solid #667eea;
+            padding: 40px 30px;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.02) 0%, rgba(118, 75, 162, 0.02) 100%);
+            margin: 10px 0;
+        }
+        
+        .section:last-child {
+            border-bottom: none;
+        }
+        
+        .section-title {
+            color: #667eea;
+            font-size: 2em;
+            margin-bottom: 30px;
+            padding: 15px 0 15px 15px;
+            border-bottom: 3px dashed #764ba2;
+            border-left: 6px solid #667eea;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+        
+        .comparison {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 40px;
+            padding: 20px;
+            background: #fafafa;
+            border-radius: 10px;
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
+        }
+        
+        .code-block {
+            background: #f5f5f5;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.95em;
+            line-height: 1.8;
+            overflow-x: auto;
+            position: relative;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            display: block;
+        }
+        
+        .code-block.javascript {
+            border-left: 8px solid #f7df1e;
+            background: linear-gradient(to right, #fffbf0 0%, #ffffff 100%);
+        }
+        
+        .code-block.c {
+            border-left: 8px solid #00599c;
+            background: linear-gradient(to right, #f0f8ff 0%, #ffffff 100%);
+        }
+        
+        .language-label {
+            display: inline-block;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-size: 0.9em;
+            font-weight: 900;
+            margin-bottom: 15px;
+            font-family: Arial, sans-serif;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+        
+        .language-label.javascript {
+            background: #f7df1e;
+            color: #333;
+            border: 2px solid #e8c600;
+        }
+        
+        .language-label.c {
+            background: #00599c;
+            color: white;
+            border: 2px solid #003d6b;
+        }
+        
+        .description {
+            color: #333;
+            margin-top: 20px;
+            font-size: 1em;
+            font-family: Arial, sans-serif;
+            line-height: 1.8;
+            padding: 15px;
+            background: white;
+            border-radius: 6px;
+            border-left: 4px solid #764ba2;
+        }
+        
+        .question-box {
+            background: linear-gradient(135deg, #e8f5e9 0%, #f1f8e9 100%);
+            border-left: 6px solid #4caf50;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            font-family: Arial, sans-serif;
+            box-shadow: 0 4px 8px rgba(76, 175, 80, 0.2);
+            border: 2px solid #4caf50;
+        }
+        
+        .question-box h4 {
+            color: #2e7d32;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        .question-box p {
+            color: #333;
+            line-height: 1.8;
+            margin-bottom: 8px;
+        }
+        
+        .question-box code {
+            background: #f0f0f0;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            color: #d63384;
+        }
+        
+        .answer-box {
+            background: #fff3e0;
+            border-left: 6px solid #ff9800;
+            padding: 15px;
+            margin: 10px 0 20px 0;
+            border-radius: 6px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.95em;
+            border: 2px solid #ff9800;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            line-height: 1.8;
+        }
+        
+        .operator-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            font-family: Arial, sans-serif;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .operator-table th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 700;
+            font-size: 1.05em;
+        }
+        
+        .operator-table td {
+            border-bottom: 2px solid #e0e0e0;
+            padding: 15px;
+            font-size: 0.95em;
+            line-height: 1.6;
+        }
+        
+        .operator-table tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+        
+        .operator-table tr:hover {
+            background: #f0f4ff;
+            transition: background 0.2s;
+        }
+        
+        code {
+            background: #f0f0f0;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-weight: 600;
+            color: #d63384;
+            border: 1px solid #e0e0e0;
+        }
+        
+        .note {
+            background: linear-gradient(135deg, #fffacd 0%, #ffffe0 100%);
+            border-left: 6px solid #ffd700;
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 8px;
+            font-family: Arial, sans-serif;
+            box-shadow: 0 4px 8px rgba(255, 215, 0, 0.2);
+            border: 2px solid #ffd700;
+        }
+        
+        .note strong {
+            color: #b8860b;
+            font-size: 1.05em;
+        }
+        
+        @media (max-width: 900px) {
+            .comparison {
+                grid-template-columns: 1fr;
+                gap: 20px;
+                padding: 15px;
+            }
+            
+            header h1 {
+                font-size: 2em;
+            }
+            
+            .section-title {
+                font-size: 1.5em;
+            }
+            
+            .code-block {
+                font-size: 0.85em;
+                line-height: 1.8;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>⚡ JavaScript vs C - Complete Guide ⚡</h1>
+            <p>Comprehensive Examples with Practice Questions</p>
+        </header>
+        
+        <!-- 1. BASIC OUTPUT & INPUT -->
+        <div class="section">
+            <h2 class="section-title">1️⃣ Basic Output & Input</h2>
+            
+            <h3 style="color: #667eea; margin: 20px 0 15px 0; font-size: 1.3em;">Example 1: Simple Output</h3>
+            <div class="comparison">
+                <div>
+                    <span class="language-label javascript">JavaScript</span>
+                    <div class="code-block javascript">// Simple output example
+console.log("Hello, World!");
+console.log("Welcome to JavaScript");
+
+let name = "Alice";
+let age = 25;
+console.log("Name:", name);
+console.log("Age:", age);
+
+// Multiple outputs
+let x = 10, y = 20;
+console.log("Sum:", x + y);
+console.log("Product:", x * y);</div>
+                </div>
+                
+                <div>
+                    <span class="language-label c">C</span>
+                    <div class="code-block c">#include <stdio.h>
+
+int main() {
+    // Simple output example
+    printf("Hello, World!\n");
+    printf("Welcome to C\n");
+    
+    char name[] = "Alice";
+    int age = 25;
+    printf("Name: %s\n", name);
+    printf("Age: %d\n", age);
+    
+    // Multiple outputs
+    int x = 10, y = 20;
+    printf("Sum: %d\n", x + y);
+    printf("Product: %d\n", x * y);
+    
+    return 0;
+}</div>
+                </div>
+            </div>
+            
+            <h3 style="color: #667eea; margin: 20px 0 15px 0; font-size: 1.3em;">Example 2: User Input</h3>
+            <div class="comparison">
+                <div>
+                    <span class="language-label javascript">JavaScript</span>
+                    <div class="code-block javascript">// Getting user input
+let name = prompt("What is your name?");
+console.log("Hello, " + name);
+
+let age = Number(
+    prompt("How old are you?")
+);
+console.log("You are " + age + 
+            " years old");
+
+// Get multiple inputs
+let num1 = Number(
+    prompt("Enter first number:")
+);
+let num2 = Number(
+    prompt("Enter second number:")
+);
+console.log("Sum: " + (num1 + num2));</div>
+                </div>
+                
+                <div>
+                    <span class="language-label c">C</span>
+                    <div class="code-block c">#include <stdio.h>
+
+int main() {
+    // Getting user input
+    char name[50];
+    printf("What is your name? ");
+    scanf("%s", name);
+    printf("Hello, %s\n", name);
+    
+    // Input integer
+    int age;
+    printf(
+        "How old are you? "
+    );
+    scanf("%d", &age);
+    printf("You are %d years old\n", 
+           age);
+    
+    // Multiple inputs
+    int num1, num2;
+    printf("Enter first number: ");
+    scanf("%d", &num1);
+    printf("Enter second number: ");
+    scanf("%d", &num2);
+    printf("Sum: %d\n", num1 + num2);
+    
+    return 0;
+}</div>
+                </div>
+            </div>
+            
+            <div class="question-box">
+                <h4>❓ Practice Questions:</h4>
+                <p><strong>Q1:</strong> Write a program to output your name and favorite color.</p>
+                <details>
+                    <summary>Show Answer</summary>
+                    <div class="answer-box">
+// JavaScript
+console.log("My name is Bob");
+console.log("My favorite color is blue");
+
+// C
+#include <stdio.h>
+int main() {
+    printf("My name is Bob\n");
+    printf("Favorite color: blue\n");
+    return 0;
+}
+                    </div>
+                </details>
+                
+                <p style="margin-top: 15px;"><strong>Q2:</strong> Take user input for two numbers and display them.</p>
+                <details>
+                    <summary>Show Answer</summary>
+                    <div class="answer-box">
+// JavaScript
+let num1 = Number(prompt("Enter num1:"));
+let num2 = Number(prompt("Enter num2:"));
+console.log("Numbers: " + num1 + ", " + num2);
+
+// C
+int num1, num2;
+scanf("%d %d", &num1, &num2);
+printf("Numbers: %d, %d\n", num1, num2);
+                    </div>
+                </details>
+            </div>
+        </div>
+        
+        <!-- 2. VARIABLES & DATA TYPES -->
+        <div class="section">
+            <h2 class="section-title">2️⃣ Variables & Data Types</h2>
+            
+            <h3 style="color: #667eea; margin: 20px 0 15px 0; font-size: 1.3em;">Example 1: Variable Declaration</h3>
+            <div class="comparison">
+                <div>
+                    <span class="language-label javascript">JavaScript</span>
+                    <div class="code-block javascript">// Variables in JavaScript
+let age = 25;        // let block-scoped
+const pi = 3.14;     // const immutable
+var score = 100;     // var function-scoped
+
+// Different data types
+let num = 42;        // number
+let name = "John";   // string
+let isActive = true; // boolean
+let result = null;   // null
+let x;               // undefined
+
+// Dynamic typing - can change type
+let value = 10;
+console.log(typeof value);   // "number"
+value = "hello";
+console.log(typeof value);   // "string"</div>
+                </div>
+                
+                <div>
+                    <span class="language-label c">C</span>
+                    <div class="code-block c">#include <stdio.h>
+
+int main() {
+    // Static typing - declare type
+    int age = 25;
+    int score = 100;
+    
+    // Different data types
+    float pi = 3.14;
+    double precise = 3.14159;
+    char letter = 'A';
+    char name[] = "John";
+    
+    // Printing types
+    printf("Age: %d\n", age);
+    printf("Pi: %f\n", pi);
+    printf("Letter: %c\n", letter);
+    printf("Name: %s\n", name);
+    
+    // Memory size
+    printf("Size of int: %lu\n", 
+           sizeof(int));
+    
+    return 0;
+}</div>
+                </div>
+            </div>
+            
+            <div class="question-box">
+                <h4>❓ Practice Questions:</h4>
+                <p><strong>Q1:</strong> Declare variables for your name, age, and height, then print them.</p>
+                <details>
+                    <summary>Show Answer</summary>
+                    <div class="answer-box">
+// JavaScript
+let name = "John";
+let age = 20;
+let height = 5.9;
+console.log(name, age, height);
+
+// C
+#include <stdio.h>
+int main() {
+    char name[] = "John";
+    int age = 20;
+    float height = 5.9;
+    printf("%s %d %.1f\n", name, age, height);
+    return 0;
+}
+                    </div>
+                </details>
+                
+                <p style="margin-top: 15px;"><strong>Q2:</strong> What is the difference between let, const, and var in JavaScript?</p>
+                <div class="answer-box" style="margin-top: 10px;">
+let/const: block-scoped (within {})
+var: function-scoped
+const: cannot be reassigned
+let: can be reassigned
+                </div>
+            </div>
+        </div>
+        
+        <!-- 3. ARITHMETIC OPERATIONS -->
+        <div class="section">
+            <h2 class="section-title">3️⃣ Arithmetic Operations</h2>
+            
+            <h3 style="color: #667eea; margin: 20px 0 15px 0; font-size: 1.3em;">Example: Calculator Program</h3>
+            <div class="comparison">
+                <div>
+                    <span class="language-label javascript">JavaScript</span>
+                    <div class="code-block javascript">let a = 15, b = 4;
+
+// Basic operations
+console.log("Addition:",a + b);
+// 19
+console.log("Subtraction:",a - b);
+// 11
+console.log("Multiplication:",a * b);
+// 60
+console.log("Division:",a / b);
+// 3.75
+console.log("Modulo:",a % b);
+// 3
+console.log("Power:",a ** 2);
+// 225
+
+// Compound operations
+let result = (a + b) * 2;
+console.log("Result:", result);
+// 38</div>
+                </div>
+                
+                <div>
+                    <span class="language-label c">C</span>
+                    <div class="code-block c">#include <stdio.h>
+#include <math.h>
+
+int main() {
+    int a = 15, b = 4;
+    
+    // Basic operations
+    printf("Addition: %d\n", a + b);
+    // 19
+    printf("Subtraction: %d\n", 
+           a - b);
+    // 11
+    printf("Multiplication: %d\n", 
+           a * b);
+    // 60
+    printf("Division: %d\n", a / b);
+    // 3 (integer division)
+    printf("Modulo: %d\n", a % b);
+    // 3
+    printf("Power: %d\n", 
+           (int)pow(a, 2));
+    // 225
+    
+    int result = (a + b) * 2;
+    printf("Result: %d\n", result);
+    // 38
+    
+    return 0;
+}</div>
+                </div>
+            </div>
+            
+            <div class="question-box">
+                <h4>❓ Practice Questions:</h4>
+                <p><strong>Q1:</strong> Write a program to calculate the area of a rectangle (length × width).</p>
+                <details>
+                    <summary>Show Answer</summary>
+                    <div class="answer-box">
+// JavaScript
+let length = 10, width = 5;
+let area = length * width;
+console.log("Area:", area);
+
+// C
+#include <stdio.h>
+int main() {
+    int length = 10, width = 5;
+    int area = length * width;
+    printf("Area: %d\n", area);
+    return 0;
+}
+                    </div>
+                </details>
+                
+                <p style="margin-top: 15px;"><strong>Q2:</strong> Calculate the simple interest: SI = (P × R × T) / 100. Take P=1000, R=5, T=2.</p>
+                <details>
+                    <summary>Show Answer</summary>
+                    <div class="answer-box">
+// JavaScript
+let P = 1000, R = 5, T = 2;
+let SI = (P * R * T) / 100;
+console.log("Simple Interest:", SI);
+
+// C
+#include <stdio.h>
+int main() {
+    int P = 1000, R = 5, T = 2;
+    float SI = (P * R * T) / 100.0;
+    printf("SI: %.2f\n", SI);
+    return 0;
+}
+                    </div>
+                </details>
+            </div>
+        </div>
+        
+        <!-- 4. COMPARISON OPERATORS -->
+        <div class="section">
+            <h2 class="section-title">4️⃣ Comparison Operators</h2>
+            
+            <h3 style="color: #667eea; margin: 20px 0 15px 0; font-size: 1.3em;">Example: Comparing Numbers</h3>
+            <div class="comparison">
+                <div>
+                    <span class="language-label javascript">JavaScript</span>
+                    <div class="code-block javascript">let a = 20, b = 10;
+
+// Comparison operators
+console.log(a > b);   // true
+console.log(a < b);   // false
+console.log(a >= 20); // true
+console.log(a <= 19); // false
+console.log(a == 20); // true
+console.log(a != b);  // true
+
+// Strict equality
+console.log(5 == "5");   // true
+console.log(5 === "5");  // false
+
+// Using in variables
+let isGreater = a > b;
+console.log(isGreater); // true</div>
+                </div>
+                
+                <div>
+                    <span class="language-label c">C</span>
+                    <div class="code-block c">#include <stdio.h>
+
+int main() {
+    int a = 20, b = 10;
+    
+    // Comparison operators
+    printf("%d\n", a > b);   // 1 (true)
+    printf("%d\n", a < b);   // 0 (false)
+    printf("%d\n", a >= 20); // 1 (true)
+    printf("%d\n", a <= 19); // 0 (false)
+    printf("%d\n", a == 20); // 1 (true)
+    printf("%d\n", a != b);  // 1 (true)
+    
+    // Note: No === operator
+    // Must cast for type checking
+    
+    // Using in variables
+    int isGreater = (a > b);
+    printf("%d\n", isGreater); // 1
+    
+    return 0;
+}</div>
+                </div>
+            </div>
+            
+            <div class="question-box">
+                <h4>❓ Practice Questions:</h4>
+                <p><strong>Q1:</strong> Check if number 50 is greater than 30.</p>
+                <details>
+                    <summary>Show Answer</summary>
+                    <div class="answer-box">
+// JavaScript
+console.log(50 > 30);  // true
+
+// C
+printf("%d\n", 50 > 30);  // 1
+                    </div>
+                </details>
+                
+                <p style="margin-top: 15px;"><strong>Q2:</strong> Check if two numbers are equal using == operator.</p>
+                <details>
+                    <summary>Show Answer</summary>
+                    <div class="answer-box">
+// JavaScript
+let x = 10, y = 10;
+console.log(x == y);  // true
+
+// C
+int x = 10, y = 10;
+printf("%d\n", x == y);  // 1
+                    </div>
+                </details>
+            </div>
+        </div>
+        
+        <!-- 5. LOGICAL OPERATORS -->
+        <div class="section">
+            <h2 class="section-title">5️⃣ Logical Operators</h2>
+            
+            <h3 style="color: #667eea; margin: 20px 0 15px 0; font-size: 1.3em;">Example: Combining Conditions</h3>
+            <div class="comparison">
+                <div>
+                    <span class="language-label javascript">JavaScript</span>
+                    <div class="code-block javascript">let age = 25, income = 50000;
+
+// AND operator (&&)
+if (age > 18 && income > 40000) {
+    console.log("Eligible for loan");
+}
+
+// OR operator (||)
+let hasLicense = false;
+let hasPassport = true;
+if (hasLicense || hasPassport) {
+    console.log("Can travel");
+}
+
+// NOT operator (!)
+let isRaining = false;
+if (!isRaining) {
+    console.log("Go for a walk");
+}
+
+// Complex conditions
+if ((age >= 18 && age < 65) && 
+    (income > 25000 || 
+     income < 100000)) {
+    console.log("Approved");
+}</div>
+                </div>
+                
+                <div>
+                    <span class="language-label c">C</span>
+                    <div class="code-block c">#include <stdio.h>
+
+int main() {
+    int age = 25, income = 50000;
+    
+    // AND operator (&&)
+    if (age > 18 && income > 40000) {
+        printf(
+            "Eligible for loan\n"
+        );
+    }
+    
+    // OR operator (||)
+    int hasLicense = 0;
+    int hasPassport = 1;
+    if (hasLicense || hasPassport) {
+        printf("Can travel\n");
+    }
+    
+    // NOT operator (!)
+    int isRaining = 0;
+    if (!isRaining) {
+        printf("Go for a walk\n");
+    }
+    
+    // Complex conditions
+    if ((age >= 18 && age < 65) && 
+        (income > 25000 || 
+         income < 100000)) {
+        printf("Approved\n");
+    }
+    
+    return 0;
+}</div>
+                </div>
+            </div>
+            
+            <div class="question-box">
+                <h4>❓ Practice Questions:</h4>
+                <p><strong>Q1:</strong> Check if a student passed (marks >= 40) AND attended class (attendance > 75%).</p>
+                <details>
+                    <summary>Show Answer</summary>
+                    <div class="answer-box">
+// JavaScript
+let marks = 50, attendance = 80;
+if (marks >= 40 && attendance > 75) {
+    console.log("Student passed");
+}
+
+// C
+int marks = 50, attendance = 80;
+if (marks >= 40 && attendance > 75) {
+    printf("Student passed\n");
+}
+                    </div>
+                </details>
+            </div>
+        </div>
+        
+        <!-- 6. IF-ELSE STATEMENTS -->
+        <div class="section">
+            <h2 class="section-title">6️⃣ Conditional Statements (if/else)</h2>
+            
+            <h3 style="color: #667eea; margin: 20px 0 15px 0; font-size: 1.3em;">Example 1: Grading System</h3>
+            <div class="comparison">
+                <div>
+                    <span class="language-label javascript">JavaScript</span>
+                    <div class="code-block javascript">let marks = 85;
+let grade;
+
+if (marks >= 90) {
+    grade = "A+";
+} else if (marks >= 80) {
+    grade = "A";
+} else if (marks >= 70) {
+    grade = "B";
+} else if (marks >= 60) {
+    grade = "C";
+} else {
+    grade = "F";
+}
+
+console.log("Grade: " + grade);</div>
+                </div>
+                
+                <div>
+                    <span class="language-label c">C</span>
+                    <div class="code-block c">#include <stdio.h>
+
+int main() {
+    int marks = 85;
+    char* grade;
+    
+    if (marks >= 90) {
+        grade = "A+";
+    } else if (marks >= 80) {
+        grade = "A";
+    } else if (marks >= 70) {
+        grade = "B";
+    } else if (marks >= 60) {
+        grade = "C";
+    } else {
+        grade = "F";
+    }
+    
+    printf("Grade: %s\n", grade);
+    
+    return 0;
+}</div>
+                </div>
+            </div>
+            
+            <h3 style="color: #667eea; margin: 20px 0 15px 0; font-size: 1.3em;">Example 2: Voting Eligibility</h3>
+            <div class="comparison">
+                <div>
+                    <span class="language-label javascript">JavaScript</span>
+                    <div class="code-block javascript">let age = 17;
+
+if (age >= 18) {
+    console.log("Eligible to vote");
+} else {
+    console.log("Not eligible to vote");
+}
+
+// With citizenship check
+let isCitizen = true;
+
+if (age >= 18 && isCitizen) {
+    console.log("Can vote");
+} else {
+    console.log("Cannot vote");
+}</div>
+                </div>
+                
+                <div>
+                    <span class="language-label c">C</span>
+                    <div class="code-block c">#include <stdio.h>
+
+int main() {
+    int age = 17;
+    
+    if (age >= 18) {
+        printf("Eligible to vote\n");
+    } else {
+        printf("Not eligible to vote\n");
+    }
+    
+    // Citizenship check
+    int isCitizen = 1;  // true
+    
+    if (age >= 18 && isCitizen) {
+        printf("Can vote\n");
+    } else {
+        printf("Cannot vote\n");
+    }
+    
+    return 0;
+}</div>
+                </div>
+            </div>
+            
+            <div class="question-box">
+                <h4>❓ Practice Questions:</h4>
+                <p><strong>Q1:</strong> Write a program to check if a number is positive, negative, or zero.</p>
+                <details>
+                    <summary>Show Answer</summary>
+                    <div class="answer-box">
+// JavaScript
+let num = -5;
+if (num > 0) {
+    console.log("Positive");
+} else if (num < 0) {
+    console.log("Negative");
+} else {
+    console.log("Zero");
+}
+
+// C
+#include <stdio.h>
+int main() {
+    int num = -5;
+    if (num > 0) {
+        printf("Positive\n");
+    } else if (num < 0) {
+        printf("Negative\n");
+    } else {
+        printf("Zero\n");
+    }
+    return 0;
+}
+                    </div>
+                </details>
+                
+                <p style="margin-top: 15px;"><strong>Q2:</strong> Check if a person is eligible for a senior citizen discount (age >= 60).</p>
+                <details>
+                    <summary>Show Answer</summary>
+                    <div class="answer-box">
+// JavaScript
+let age = 65;
+if (age >= 60) {
+    console.log("Eligible for discount");
+} else {
+    console.log("Not eligible");
+}
+
+// C
+int age = 65;
+if (age >= 60) {
+    printf("Eligible for discount\n");
+} else {
+    printf("Not eligible\n");
+}
+                    </div>
+                </details>
+            </div>
+        </div>
+        
+        <!-- 7. SWITCH STATEMENTS -->
+        <div class="section">
+            <h2 class="section-title">7️⃣ Switch Statements</h2>
+            
+            <h3 style="color: #667eea; margin: 20px 0 15px 0; font-size: 1.3em;">Example: Day of Week</h3>
+            <div class="comparison">
+                <div>
+                    <span class="language-label javascript">JavaScript</span>
+                    <div class="code-block javascript">let day = 3;
+let dayName;
+
+switch (day) {
+    case 1:
+        dayName = "Monday";
+        break;
+    case 2:
+        dayName = "Tuesday";
+        break;
+    case 3:
+        dayName = "Wednesday";
+        break;
+    case 4:
+        dayName = "Thursday";
+        break;
+    case 5:
+        dayName = "Friday";
+        break;
+    case 6:
+        dayName = "Saturday";
+        break;
+    case 7:
+        dayName = "Sunday";
+        break;
+    default:
+        dayName = "Invalid day";
+}
+
+console.log("Day: " + dayName);</div>
+                </div>
+                
+                <div>
+                    <span class="language-label c">C</span>
+                    <div class="code-block c">#include <stdio.h>
+
+int main() {
+    int day = 3;
+    char* dayName;
+    
+    switch (day) {
+        case 1:
+            dayName = "Monday";
+            break;
+        case 2:
+            dayName = "Tuesday";
+            break;
+        case 3:
+            dayName = "Wednesday";
+            break;
+        case 4:
+            dayName = "Thursday";
+            break;
+        case 5:
+            dayName = "Friday";
+            break;
+        case 6:
+            dayName = "Saturday";
+            break;
+        case 7:
+            dayName = "Sunday";
+            break;
+        default:
+            dayName = "Invalid day";
+    }
+    
+    printf("Day: %s\n", dayName);
+    
+    return 0;
+}</div>
+                </div>
+            </div>
+            
+            <div class="question-box">
+                <h4>❓ Practice Questions:</h4>
+                <p><strong>Q1:</strong> Write a switch statement for months (1=January, 2=February, etc.).</p>
+                <details>
+                    <summary>Show Answer</summary>
+                    <div class="answer-box">
+// JavaScript (simplified)
+let month = 5;
+switch (month) {
+    case 1: console.log("January"); break;
+    case 2: console.log("February"); break;
+    case 5: console.log("May"); break;
+    default: console.log("Invalid");
+}
+                    </div>
+                </details>
+            </div>
+        </div>
+        
+        <!-- 8. FOR LOOPS -->
+        <div class="section">
+            <h2 class="section-title">8️⃣ Loops - FOR Loop</h2>
+            
+            <h3 style="color: #667eea; margin: 20px 0 15px 0; font-size: 1.3em;">Example 1: Simple Counting</h3>
+            <div class="comparison">
+                <div>
+                    <span class="language-label javascript">JavaScript</span>
+                    <div class="code-block javascript">// Print numbers 1 to 5
+for (let i = 1; i <= 5; i++) {
+    console.log(i);
+}
+
+// Print in reverse
+for (let i = 5; i >= 1; i--) {
+    console.log(i);
+}
+
+// Print even numbers (0-10)
+for (let i = 0; i <= 10; i += 2) {
+    console.log(i);
+}</div>
+                </div>
+                
+                <div>
+                    <span class="language-label c">C</span>
+                    <div class="code-block c">#include <stdio.h>
+
+int main() {
+    // Print numbers 1 to 5
+    for (int i = 1; i <= 5; i++) {
+        printf("%d\n", i);
+    }
+    
+    printf("\n");
+    
+    // Print in reverse
+    for (int i = 5; i >= 1; i--) {
+        printf("%d\n", i);
+    }
+    
+    printf("\n");
+    
+    // Print even numbers (0-10)
+    for (int i = 0; i <= 10; i += 2) {
+        printf("%d\n", i);
+    }
+    
+    return 0;
+}</div>
+                </div>
+            </div>
+            
+            <h3 style="color: #667eea; margin: 20px 0 15px 0; font-size: 1.3em;">Example 2: Multiplication Table</h3>
+            <div class="comparison">
+                <div>
+                    <span class="language-label javascript">JavaScript</span>
+                    <div class="code-block javascript">// Multiplication table of 5
+let num = 5;
+
+for (let i = 1; i <= 10; i++) {
+    console.log(num + " x " + i + 
+                " = " + (num * i));
+}
+
+// Output:
+// 5 x 1 = 5
+// 5 x 2 = 10
+// ... etc</div>
+                </div>
+                
+                <div>
+                    <span class="language-label c">C</span>
+                    <div class="code-block c">#include <stdio.h>
+
+int main() {
+    // Multiplication table of 5
+    int num = 5;
+    
+    for (int i = 1; i <= 10; i++) {
+        printf(
+            "%d x %d = %d\n", 
+            num, i, (num * i)
+        );
+    }
+    
+    // Output:
+    // 5 x 1 = 5
+    // 5 x 2 = 10
+    // ... etc
+    
+    return 0;
+}</div>
+                </div>
+            </div>
+            
+            <div class="question-box">
+                <h4>❓ Practice Questions:</h4>
+                <p><strong>Q1:</strong> Print numbers from 10 to 1 using a for loop.</p>
+                <details>
+                    <summary>Show Answer</summary>
+                    <div class="answer-box">
+// JavaScript
+for (let i = 10; i >= 1; i--) {
+    console.log(i);
+}
+
+// C
+for (int i = 10; i >= 1; i--) {
+    printf("%d\n", i);
+}
+                    </div>
+                </details>
+                
+                <p style="margin-top: 15px;"><strong>Q2:</strong> Calculate sum of numbers 1 to 100 using a loop.</p>
+                <details>
+                    <summary>Show Answer</summary>
+                    <div class="answer-box">
+// JavaScript
+let sum = 0;
+for (let i = 1; i <= 100; i++) {
+    sum += i;
+}
+console.log("Sum:", sum);  // 5050
+
+// C
+int sum = 0;
+for (int i = 1; i <= 100; i++) {
+    sum += i;
+}
+printf("Sum: %d\n", sum);  // 5050
+                    </div>
+                </details>
+            </div>
+        </div>
+        
+        <!-- 9. WHILE LOOPS -->
+        <div class="section">
+            <h2 class="section-title">9️⃣ Loops - WHILE Loop</h2>
+            
+            <h3 style="color: #667eea; margin: 20px 0 15px 0; font-size: 1.3em;">Example 1: Simple While Loop</h3>
+            <div class="comparison">
+                <div>
+                    <span class="language-label javascript">JavaScript</span>
+                    <div class="code-block javascript">// Print numbers 1 to 5
+let i = 1;
+
+while (i <= 5) {
+    console.log(i);
+    i++;
+}
+
+// Countdown
+let count = 5;
+
+while (count > 0) {
+    console.log(count);
+    count--;
+}</div>
+                </div>
+                
+                <div>
+                    <span class="language-label c">C</span>
+                    <div class="code-block c">#include <stdio.h>
+
+int main() {
+    // Print numbers 1 to 5
+    int i = 1;
+    
+    while (i <= 5) {
+        printf("%d\n", i);
+        i++;
+    }
+    
+    printf("\n");
+    
+    // Countdown
+    int count = 5;
+    
+    while (count > 0) {
+        printf("%d\n", count);
+        count--;
+    }
+    
+    return 0;
+}</div>
+                </div>
+            </div>
+            
+            <h3 style="color: #667eea; margin: 20px 0 15px 0; font-size: 1.3em;">Example 2: User Input Loop</h3>
+            <div class="comparison">
+                <div>
+                    <span class="language-label javascript">JavaScript</span>
+                    <div class="code-block javascript">// Keep asking until positive
+let num;
+
+while (num <= 0 || !num) {
+    num = Number(
+        prompt("Enter positive number:")
+    );
+}
+
+console.log("You entered:", num);
+
+// Sum until user enters 0
+let sum = 0;
+let input = 1;
+
+while (input != 0) {
+    input = Number(prompt("Enter:"));
+    sum += input;
+}
+
+console.log("Total:", sum);</div>
+                </div>
+                
+                <div>
+                    <span class="language-label c">C</span>
+                    <div class="code-block c">#include <stdio.h>
+
+int main() {
+    // Keep asking until positive
+    int num = 0;
+    
+    while (num <= 0) {
+        printf("Enter positive number:");
+        scanf("%d", &num);
+    }
+    
+    printf("You entered: %d\n", num);
+    
+    // Sum until user enters 0
+    int sum = 0;
+    int input = 1;
+    
+    while (input != 0) {
+        printf("Enter: ");
+        scanf("%d", &input);
+        sum += input;
+    }
+    
+    printf("Total: %d\n", sum);
+    
+    return 0;
+}</div>
+                </div>
+            </div>
+            
+            <div class="question-box">
+                <h4>❓ Practice Questions:</h4>
+                <p><strong>Q1:</strong> Write a while loop to calculate factorial of 5.</p>
+                <details>
+                    <summary>Show Answer</summary>
+                    <div class="answer-box">
+// JavaScript
+let n = 5, factorial = 1, i = 1;
+while (i <= n) {
+    factorial *= i;
+    i++;
+}
+console.log("Factorial:", factorial);  // 120
+
+// C
+int n = 5, factorial = 1, i = 1;
+while (i <= n) {
+    factorial *= i;
+    i++;
+}
+printf("Factorial: %d\n", factorial);
+                    </div>
+                </details>
+            </div>
+        </div>
+        
+        <!-- 10. ARRAYS -->
+        <div class="section">
+            <h2 class="section-title">🔟 Arrays</h2>
+            
+            <h3 style="color: #667eea; margin: 20px 0 15px 0; font-size: 1.3em;">Example 1: Basic Array Operations</h3>
+            <div class="comparison">
+                <div>
+                    <span class="language-label javascript">JavaScript</span>
+                    <div class="code-block javascript">// Create array
+let numbers = [1, 2, 3, 4, 5];
+
+// Access elements
+console.log(numbers[0]);  // 1
+console.log(numbers[2]);  // 3
+
+// Modify element
+numbers[1] = 10;
+
+// Print all elements
+for (let i = 0; i < numbers.length; i++) {
+    console.log(numbers[i]);
+}
+
+// Array methods
+numbers.push(6);      // Add
+numbers.pop();        // Remove
+let length = numbers.length;</div>
+                </div>
+                
+                <div>
+                    <span class="language-label c">C</span>
+                    <div class="code-block c">#include <stdio.h>
+
+int main() {
+    // Create array
+    int numbers[] = {1, 2, 3, 4, 5};
+    int n = 5;
+    
+    // Access elements
+    printf("%d\n", numbers[0]);  // 1
+    printf("%d\n", numbers[2]);  // 3
+    
+    // Modify element
+    numbers[1] = 10;
+    
+    // Print all elements
+    for (int i = 0; i < n; i++) {
+        printf("%d\n", numbers[i]);
+    }
+    
+    // Get size
+    printf("Size: %lu\n", 
+           sizeof(numbers) / 
+           sizeof(numbers[0]));
+    
+    return 0;
+}</div>
+                </div>
+            </div>
+            
+            <h3 style="color: #667eea; margin: 20px 0 15px 0; font-size: 1.3em;">Example 2: Array Sum and Average</h3>
+            <div class="comparison">
+                <div>
+                    <span class="language-label javascript">JavaScript</span>
+                    <div class="code-block javascript">let marks = [85, 90, 78, 92, 88];
+let sum = 0;
+
+// Calculate sum
+for (let i = 0; i < marks.length; i++) {
+    sum += marks[i];
+}
+
+let average = sum / marks.length;
+
+console.log("Sum:", sum);        // 433
+console.log("Average:", average); // 86.6
+
+// Find maximum
+let max = marks[0];
+for (let i = 1; i < marks.length; i++) {
+    if (marks[i] > max) {
+        max = marks[i];
+    }
+}
+console.log("Maximum:", max);    // 92</div>
+                </div>
+                
+                <div>
+                    <span class="language-label c">C</span>
+                    <div class="code-block c">#include <stdio.h>
+
+int main() {
+    int marks[] = {85, 90, 78, 92, 88};
+    int n = 5;
+    int sum = 0;
+    
+    // Calculate sum
+    for (int i = 0; i < n; i++) {
+        sum += marks[i];
+    }
+    
+    float average = sum / (float)n;
+    
+    printf("Sum: %d\n", sum);        // 433
+    printf("Average: %.1f\n", 
+           average);                 // 86.6
+    
+    // Find maximum
+    int max = marks[0];
+    for (int i = 1; i < n; i++) {
+        if (marks[i] > max) {
+            max = marks[i];
+        }
+    }
+    printf("Maximum: %d\n", max);   // 92
+    
+    return 0;
+}</div>
+                </div>
+            </div>
+            
+            <div class="question-box">
+                <h4>❓ Practice Questions:</h4>
+                <p><strong>Q1:</strong> Create an array of 5 numbers and find the minimum value.</p>
+                <details>
+                    <summary>Show Answer</summary>
+                    <div class="answer-box">
+// JavaScript
+let arr = [45, 23, 89, 12, 67];
+let min = arr[0];
+for (let i = 1; i < arr.length; i++) {
+    if (arr[i] < min) min = arr[i];
+}
+console.log("Minimum:", min);  // 12
+
+// C
+int arr[] = {45, 23, 89, 12, 67};
+int n = 5;
+int min = arr[0];
+for (int i = 1; i < n; i++) {
+    if (arr[i] < min) min = arr[i];
+}
+printf("Minimum: %d\n", min);
+                    </div>
+                </details>
+            </div>
+        </div>
+        
+        <!-- 11. FUNCTIONS -->
+        <div class="section">
+            <h2 class="section-title">1️⃣1️⃣ Functions</h2>
+            
+            <h3 style="color: #667eea; margin: 20px 0 15px 0; font-size: 1.3em;">Example 1: Simple Functions</h3>
+            <div class="comparison">
+                <div>
+                    <span class="language-label javascript">JavaScript</span>
+                    <div class="code-block javascript">// Function to add two numbers
+function add(a, b) {
+    return a + b;
+}
+
+console.log(add(5, 3));  // 8
+
+// Function with no return
+function greet(name) {
+    console.log("Hello, " + name);
+}
+
+greet("Alice");  // Hello, Alice
+
+// Arrow function
+const multiply = (a, b) => {
+    return a * b;
+};
+
+console.log(multiply(4, 5));  // 20</div>
+                </div>
+                
+                <div>
+                    <span class="language-label c">C</span>
+                    <div class="code-block c">#include <stdio.h>
+
+// Function to add two numbers
+int add(int a, int b) {
+    return a + b;
+}
+
+// Function with no return
+void greet(char name[]) {
+    printf("Hello, %s\n", name);
+}
+
+int main() {
+    printf("%d\n", add(5, 3));  // 8
+    
+    greet("Alice");  // Hello, Alice
+    
+    return 0;
+}</div>
+                </div>
+            </div>
+            
+            <h3 style="color: #667eea; margin: 20px 0 15px 0; font-size: 1.3em;">Example 2: Function to Calculate Area</h3>
+            <div class="comparison">
+                <div>
+                    <span class="language-label javascript">JavaScript</span>
+                    <div class="code-block javascript">// Circle area: π * r²
+function circleArea(radius) {
+    return 3.14 * radius * radius;
+}
+
+// Rectangle area: length * width
+function rectArea(length, width) {
+    return length * width;
+}
+
+console.log("Circle:", 
+    circleArea(5));        // 78.5
+console.log("Rectangle:", 
+    rectArea(10, 5));      // 50</div>
+                </div>
+                
+                <div>
+                    <span class="language-label c">C</span>
+                    <div class="code-block c">#include <stdio.h>
+
+// Circle area: π * r²
+float circleArea(float radius) {
+    return 3.14 * radius * radius;
+}
+
+// Rectangle area: length * width
+int rectArea(int length, int width) {
+    return length * width;
+}
+
+int main() {
+    printf("Circle: %.2f\n", 
+           circleArea(5));    // 78.50
+    printf("Rectangle: %d\n", 
+           rectArea(10, 5));  // 50
+    
+    return 0;
+}</div>
+                </div>
+            </div>
+            
+            <div class="question-box">
+                <h4>❓ Practice Questions:</h4>
+                <p><strong>Q1:</strong> Write a function to check if a number is even or odd.</p>
+                <details>
+                    <summary>Show Answer</summary>
+                    <div class="answer-box">
+// JavaScript
+function isEven(num) {
+    return num % 2 === 0;
+}
+console.log(isEven(4));   // true
+console.log(isEven(7));   // false
+
+// C
+int isEven(int num) {
+    return num % 2 == 0;
+}
+printf("%d\n", isEven(4));  // 1 (true)
+                    </div>
+                </details>
+                
+                <p style="margin-top: 15px;"><strong>Q2:</strong> Write a function to find the maximum of two numbers.</p>
+                <details>
+                    <summary>Show Answer</summary>
+                    <div class="answer-box">
+// JavaScript
+function max(a, b) {
+    return a > b ? a : b;
+}
+console.log(max(10, 20));  // 20
+
+// C
+int max(int a, int b) {
+    return a > b ? a : b;
+}
+printf("%d\n", max(10, 20));  // 20
+                    </div>
+                </details>
+            </div>
+        </div>
+        
+        <!-- 12. RECURSION -->
+        <div class="section">
+            <h2 class="section-title">1️⃣2️⃣ Recursion</h2>
+            
+            <h3 style="color: #667eea; margin: 20px 0 15px 0; font-size: 1.3em;">Example 1: Factorial</h3>
+            <div class="comparison">
+                <div>
+                    <span class="language-label javascript">JavaScript</span>
+                    <div class="code-block javascript">// Recursive factorial
+function factorial(n) {
+    // Base case
+    if (n <= 1) {
+        return 1;
+    }
+    // Recursive case
+    return n * factorial(n - 1);
+}
+
+console.log(factorial(5));  // 120
+console.log(factorial(0));  // 1
+
+// How it works:
+// factorial(5) = 5 * factorial(4)
+// factorial(4) = 4 * factorial(3)
+// ... until factorial(1) = 1</div>
+                </div>
+                
+                <div>
+                    <span class="language-label c">C</span>
+                    <div class="code-block c">#include <stdio.h>
+
+// Recursive factorial
+int factorial(int n) {
+    // Base case
+    if (n <= 1) {
+        return 1;
+    }
+    // Recursive case
+    return n * factorial(n - 1);
+}
+
+int main() {
+    printf("%d\n", factorial(5)); // 120
+    printf("%d\n", factorial(0)); // 1
+    
+    // How it works:
+    // factorial(5) = 5 * factorial(4)
+    // factorial(4) = 4 * factorial(3)
+    // ... until factorial(1) = 1
+    
+    return 0;
+}</div>
+                </div>
+            </div>
+            
+            <h3 style="color: #667eea; margin: 20px 0 15px 0; font-size: 1.3em;">Example 2: Fibonacci Sequence</h3>
+            <div class="comparison">
+                <div>
+                    <span class="language-label javascript">JavaScript</span>
+                    <div class="code-block javascript">// Fibonacci: 0, 1, 1, 2, 3, 5, 8...
+function fibonacci(n) {
+    if (n <= 1) {
+        return n;
+    }
+    return fibonacci(n - 1) + 
+           fibonacci(n - 2);
+}
+
+console.log(fibonacci(6));  // 8
+console.log(fibonacci(7));  // 13
+
+// Print first 10 Fibonacci numbers
+for (let i = 0; i < 10; i++) {
+    console.log(fibonacci(i));
+}</div>
+                </div>
+                
+                <div>
+                    <span class="language-label c">C</span>
+                    <div class="code-block c">#include <stdio.h>
+
+// Fibonacci: 0, 1, 1, 2, 3, 5, 8...
+int fibonacci(int n) {
+    if (n <= 1) {
+        return n;
+    }
+    return fibonacci(n - 1) + 
+           fibonacci(n - 2);
+}
+
+int main() {
+    printf("%d\n", fibonacci(6));  // 8
+    printf("%d\n", fibonacci(7));  // 13
+    
+    // Print first 10 Fibonacci numbers
+    for (int i = 0; i < 10; i++) {
+        printf("%d\n", fibonacci(i));
+    }
+    
+    return 0;
+}</div>
+                </div>
+            </div>
+            
+            <div class="question-box">
+                <h4>❓ Practice Questions:</h4>
+                <p><strong>Q1:</strong> Write a recursive function to find power of a number (a^b).</p>
+                <details>
+                    <summary>Show Answer</summary>
+                    <div class="answer-box">
+// JavaScript
+function power(a, b) {
+    if (b === 0) return 1;
+    return a * power(a, b - 1);
+}
+console.log(power(2, 5));  // 32
+
+// C
+int power(int a, int b) {
+    if (b == 0) return 1;
+    return a * power(a, b - 1);
+}
+printf("%d\n", power(2, 5));  // 32
+                    </div>
+                </details>
+            </div>
+        </div>
+        
+        <!-- 13. STRINGS -->
+        <div class="section">
+            <h2 class="section-title">1️⃣3️⃣ String Operations</h2>
+            
+            <h3 style="color: #667eea; margin: 20px 0 15px 0; font-size: 1.3em;">Example: String Methods</h3>
+            <div class="comparison">
+                <div>
+                    <span class="language-label javascript">JavaScript</span>
+                    <div class="code-block javascript">let str = "JavaScript";
+
+// Length
+console.log(str.length);  // 10
+
+// Character at index
+console.log(str.charAt(0));  // "J"
+console.log(str[4]);         // "S"
+
+// Substring
+console.log(str.slice(0, 4)); // "Java"
+console.log(str.substring(4));//"Script"
+
+// Case conversion
+console.log(str.toUpperCase());
+// "JAVASCRIPT"
+console.log(str.toLowerCase());
+// "javascript"
+
+// Search
+console.log(str.indexOf("Script"));
+// 4
+console.log(str.includes("Java"));
+// true
+
+// Replace
+console.log(str.replace("Java", "Type"));
+// "TypeScript"</div>
+                </div>
+                
+                <div>
+                    <span class="language-label c">C</span>
+                    <div class="code-block c">#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char str[] = "JavaScript";
+    
+    // Length
+    printf("%lu\n", 
+           strlen(str));  // 10
+    
+    // Character at index
+    printf("%c\n", str[0]);  // "J"
+    printf("%c\n", str[4]);  // "S"
+    
+    // Find character
+    char* pos = strchr(str, 'S');
+    printf("%ld\n", pos - str); // 4
+    
+    // Copy string
+    char copy[50];
+    strcpy(copy, str);
+    printf("%s\n", copy);
+    
+    // Compare strings
+    printf("%d\n", 
+        strcmp(str, "JavaScript"));
+    // 0 (equal)
+    
+    return 0;
+}</div>
+                </div>
+            </div>
+            
+            <div class="question-box">
+                <h4>❓ Practice Questions:</h4>
+                <p><strong>Q1:</strong> Write a program to count the number of vowels in a string.</p>
+                <details>
+                    <summary>Show Answer</summary>
+                    <div class="answer-box">
+// JavaScript
+let str = "hello";
+let vowels = "aeiouAEIOU";
+let count = 0;
+for (let char of str) {
+    if (vowels.includes(char)) count++;
+}
+console.log("Vowels:", count);  // 2
+
+// C
+#include <stdio.h>
+#include <string.h>
+int main() {
+    char str[] = "hello";
+    int count = 0;
+    for (int i = 0; str[i]; i++) {
+        if (strchr("aeiouAEIOU", str[i])) {
+            count++;
+        }
+    }
+    printf("Vowels: %d\n", count);
+    return 0;
+}
+                    </div>
+                </details>
+            </div>
+        </div>
+        
+        <!-- FOOTER -->
+        <div style="background: #f5f5f5; padding: 30px 20px; text-align: center; font-family: Arial, sans-serif; color: #666; margin-top: 40px;">
+            <p><strong>📚 Comprehensive JavaScript vs C Guide</strong></p>
+            <p style="font-size: 0.9em;">With 13+ Topics, Complete Examples & Practice Questions</p>
+            <p style="font-size: 0.85em; margin-top: 15px; color: #999;">Created: 2024-2026 | Keep practicing to master both languages!</p>
+        </div>
+    </div>
+</body>
+</html>

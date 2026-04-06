@@ -1,11 +1,11 @@
 
 // Print all alphabets using pointers
 
-// #include <stdio.h>
-// int main() {
-//     printf("Hello \nWorld");
-//     return 0;
-// }
+#include <stdio.h>
+int main() {
+    printf("Hello \nWorld");
+    return 0;
+}
 
 // user se input lena hai aur usko print karna hai
 // #include <stdio.h>
