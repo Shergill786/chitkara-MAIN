@@ -1,17 +1,23 @@
 #include <stdio.h>
-int main(){
-int num=1234;
-int arr[10];
-int count=0;
-int temp=num;
-
-while(temp>0){
-    arr[count]=temp%10;
-    count++;
-    temp/10;
-
+int findTopMarks(int marks[], int n) {
+    int top = marks[0];
+    for (int i = 1; i < n; i++) {
+        if (marks[i] > top) {
+            top = marks[i];
+        }
+    }
+    return top;
 }
-for (int i=count-1;i>=0;i--){
-    printf("%d",arr[i]);
-}
+int main() {
+    int n;
+    printf("Enter number of students: ");
+    scanf("%d", &n);
+    int marks[n];
+    printf("Enter marks of %d students:\n", n);
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &marks[i]);
+    }
+    int topMarks = findTopMarks(marks, n);
+    printf("Top marks: %d\n", topMarks);
+    return 0;
 }
