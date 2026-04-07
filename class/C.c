@@ -3247,3 +3247,203 @@
 //     return 0;
 // }
 
+// #include <stdio.h>
+// #include <stdlib.h>
+
+// malloc- memory allocation for a single variable or array of variables
+// calloc- memory allocation for an array of variables and initializes them to zero
+// realloc- changes the size of previously allocated memory block
+// free- deallocates previously allocated memory block
+
+// #include <stdio.h>
+// #include <stdlib.h>
+// // malloc example
+// int main() {
+//     int *p;
+//     p=(int *)malloc(4);
+//     *p=20;
+//     if (p == NULL) {
+//         printf("Memory allocation failed\n");  
+//     }
+//     else {
+//         printf("%d\n", *p);  
+//     }
+// }
+
+// n numbers input and same size of memory allocation using malloc then print it 
+// #include <stdio.h>
+// #include <stdlib.h>
+// int main() {
+//     int n;
+//     printf("number of elements");
+//     scanf("%d", &n);
+//     int *a;
+//     a = (int *)malloc(n * sizeof(int));  
+//     printf("Enter %d elements:\n", n);
+//     for (int i = 0; i < n; i++) {
+//         scanf("%d", a+i);
+//     }
+//     printf("You entered:\n");
+//     for (int i = 0; i < n; i++) {
+//         printf("%d", *(a+i));
+//     }
+//     return 0;
+// }   
+ 
+
+
+//  using calloc
+// #include <stdio.h>
+// #include <stdlib.h>
+// int main() {
+//     int n;
+//     printf("number of elements");
+//     scanf("%d", &n);
+//     int *a;
+//     a = (int *)calloc(n ,sizeof(int));  
+//     printf("Enter %d elements:\n", n);
+//     for (int i = 0; i < n; i++) {
+//         scanf("%d", a+i);
+//     }
+//     printf("You entered:\n");
+//     for (int i = 0; i < n; i++) {
+//         printf("%d", *(a+i));
+//     }
+//     return 0;
+// }   
+
+
+// print sum and product of n numbers using calloc and malloc 
+// #include <stdio.h>
+// #include <stdlib.h>
+// int main(){
+//     int n;
+//     printf("no of elements");
+//     scanf("%d",&n);
+//     int *p;
+//     int sum=0;
+//     int prod=1;
+//     p=(int *)malloc(n *sizeof(int));
+//     printf("enter elements ");
+//     for (int i=0;i<n;i++){
+//         scanf("%d",(p+i));
+//         sum+=*(p+i);
+//         prod*=*(p+i);
+//     }
+//     printf(" sum %d ",sum);
+//     printf(" product %d ",prod);
+// }
+
+// #include <stdio.h>
+// #include <stdlib.h>
+// int main(){
+//     int n;
+//     printf("no of elements");
+//     scanf("%d",&n);
+//     int *p;
+//     int sum=0;
+//     int prod=1;
+//     p=(int *)calloc(n , sizeof(int));
+//     printf("enter elements ");
+//     for (int i=0;i<n;i++){
+//         scanf("%d",(p+i));
+//         sum+=*(p+i);
+//         prod*=*(p+i);
+//     }
+//     printf(" sum %d ",sum);
+//     printf(" product %d ",prod);
+// }
+
+//  using functions
+// #include <stdio.h>
+// #include <stdlib.h>
+// int sumof (int *p, int n) {
+//     int s = 0;
+//     for (int i = 0; i < n; i++) {
+//         s += *(p + i);
+//     }
+//     return s;
+// }
+// int product(int *p, int n) {
+//     int prod = 1;
+//     for (int i = 0; i < n; i++) {
+//         prod *= *(p + i);
+//     }
+//     return prod;
+// }
+
+// int main(){
+//     int n;
+//     printf("no of elements");
+//     scanf("%d",&n);
+//     int *p;
+//     int sum=0;
+//     int prod=1;
+//     p=(int *)calloc(n , sizeof(int));
+//     printf("enter elements ");
+//     for (int i=0;i<n;i++){
+//         scanf("%d",(p+i));
+//     }
+//     sum = sumof(p, n);
+//     prod = product(p, n);
+//     printf(" sum %d ",sum);
+//     printf(" product %d ",prod);
+//     return 0;
+// }
+
+
+// #include <stdio.h>
+// #include <stdlib.h>
+// int sumof (int *p, int n) {
+//     int s = 0;
+//     for (int i = 0; i < n; i++) {
+//         s += *(p + i);
+//     }
+//     return s;
+// }
+// int product(int *p, int n) {
+//     int prod = 1;
+//     for (int i = 0; i < n; i++) {
+//         prod *= *(p + i);
+//     }
+//     return prod;
+// }
+
+// int main(){
+//     int n;
+//     printf("no of elements");
+//     scanf("%d",&n);
+//     int *p;
+//     int sum=0;
+//     int prod=1;
+//     p=(int *)malloc(n * sizeof(int));
+//     printf("enter elements ");
+//     for (int i=0;i<n;i++){
+//         scanf("%d",(p+i));
+//     }
+//     sum = sumof(p, n);
+//     prod = product(p, n);
+//     printf(" sum %d ",sum);
+//     printf(" product %d ",prod);
+//     return 0;
+// }
+
+// enter a array and double it value 
+// #include <stdio.h>
+// #include <stdlib.h>
+// int main(){
+//     int n;
+//     printf("no of elements");
+//     scanf("%d",&n);
+//     int *p;
+//     p=(int *)malloc(n * sizeof(int));
+//     printf("enter elements " );
+//     for (int i=0;i<n;i++){
+//         scanf("%d",(p+i));
+//         *(p+i)*=2;
+//     }
+//     printf("You entered:\n");
+//     for (int i=0;i<n;i++){
+//         printf("%d",*(p+i));
+//     }
+// }
