@@ -9,16 +9,16 @@
 // ╚════════════════════════════════════════════════════════════════════════════╝
 // */
 
-// #include <stdio.h>
-// #include <stdlib.h>
-// #include <string.h>
-// #include <ctype.h>
-// #include <math.h>
-// #include <limits.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
+#include <math.h>
+#include <limits.h>
 
 // // ═══════════════════════════════════════════════════════════════════════════
 // // SECTION 1: INPUT / OUTPUT FUNDAMENTALS
-// // ═══════════════════════════════════════════════════════════════════════════
+// // ════════════════════════════════════════
 
 // /* Q1.1: Write a program to print "Hello World". */
 // void s1_easy_1() {
