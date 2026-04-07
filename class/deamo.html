@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>University Form</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+
+        .container {
+            width: 1000px;
+            margin: 0 auto;
+            background-color: white;
+            border: 3px solid #000;
+            padding: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        h3 {
+            color: red;
+            text-align: center;
+            font-size: 22px;
+            margin-bottom: 20px;
+        }
+
+        .content-wrapper {
+            display: flex;
+            gap: 20px;
+        }
+
+        .left {
+            flex: 1;
+            padding-right: 15px;
+        }
+
+        .right {
+            flex: 1;
+            border: 2px solid #000;
+            padding: 15px;
+            background-color: #fafafa;
+            display: flex;
+            flex-direction: column;
+            min-height: 450px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-top: 12px;
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            font-size: 14px;
+            margin-bottom: 5px;
+            font-family: Arial, sans-serif;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+            margin-top: 5px;
+        }
+
+        .form-buttons {
+            margin-top: 15px;
+            display: flex;
+            gap: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #ddd;
+            border: 1px solid #999;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+            transition: background-color 0.2s;
+        }
+
+        button:hover {
+            background-color: #ccc;
+        }
+
+        button:active {
+            background-color: #bbb;
+        }
+
+        #div1Text {
+            margin-top: 15px;
+            padding: 12px;
+            background-color: #fffacd;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            min-height: 80px;
+            color: blue;
+            font-weight: bold;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            display: none;
+        }
+
+        #div1Text.show {
+            display: block;
+        }
+
+        #div3Content {
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f5f5f5;
+            border: 2px dashed #999;
+            color: #999;
+            font-size: 14px;
+            text-align: center;
+            padding: 20px;
+            min-height: 300px;
+        }
+
+        #div3Content img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        #div2Text {
+            color: green;
+            font-size: 14px;
+            padding: 10px;
+            background-color: #f0f0f0;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            margin-top: 10px;
+            display: none;
+        }
+
+        #div2Text.show {
+            display: block;
+        }
+
+        .button-group {
+            margin-top: auto;
+            padding-top: 15px;
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .button-group button {
+            flex: 1;
+            padding: 10px 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <h3>Welcome to Chitkara University</h3>
+
+    <div class="content-wrapper">
+        <!-- Left Side - Form -->
+        <div class="left">
+            <label>Name:</label>
+            <input type="text" id="name" placeholder="Enter your name">
+
+            <label>Email id:</label>
+            <input type="email" id="email" placeholder="Enter your email">
+
+            <label>Branch:</label>
+            <input type="text" id="branch" placeholder="Enter your branch">
+
+            <label>About / Grad university:</label>
+            <textarea id="about" placeholder="Write about yourself or your university..."></textarea>
+
+            <div class="form-buttons">
+            </div>
+
+            <div id="div1Text"></div>
+        </div>
+
+        <!-- Right Side - Display Area -->
+        <div class="right">
+            <div id="div3Content">
+                Content will appear here
+            </div>
+
+            <div id="div2Text"></div>
+
+            <div class="button-group">
+                <button onclick="updateDiv1()">ok</button>
+                <button onclick="showTextDiv2()">Show Text</button>
+                <button onclick="showImageDiv3()">Show Image</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function updateDiv1() {
+        let name = document.getElementById("name").value;
+        let email = document.getElementById("email").value;
+        let branch = document.getElementById("branch").value;
+        let about = document.getElementById("about").value;
+
+        let divText = document.getElementById("div1Text");
+
+        if (name || email || branch || about) {
+            divText.innerText = `Name: ${name}\nEmail: ${email}\nBranch: ${branch}\nAbout: ${about}`;
+            divText.classList.add("show");
+        } else {
+            divText.classList.remove("show");
+        }
+    }
+
+    function resetForm() {
+        document.getElementById("name").value = "";
+        document.getElementById("email").value = "";
+        document.getElementById("branch").value = "";
+        document.getElementById("about").value = "";
+        document.getElementById("div1Text").classList.remove("show");
+        document.getElementById("div2Text").classList.remove("show");
+        document.getElementById("div3Content").innerHTML = "Content will appear here";
+    }
+
+    function showTextDiv2() {
+        let div2Text = document.getElementById("div2Text");
+        div2Text.textContent = "This text is added using textContent on button click.";
+        div2Text.classList.add("show");
+        document.getElementById("div3Content").innerHTML = "";
+    }
+
+    function showImageDiv3() {
+        let div3 = document.getElementById("div3Content");
+        div3.innerHTML = `<img src="https://via.placeholder.com/250" alt="Sample Image" style="border:2px solid #ccc;">`;
+        document.getElementById("div2Text").classList.remove("show");
+    }
+</script>
+
+</body>
+</html>

@@ -1,101 +1,61 @@
-<!-- // DOM
-// the programing interface that represents an html document as a tree structure of objects
-// in js dom is used to access elements modify content change styles and handle events in a web page
-// dom is opened inside brower when a webpage loads the browser converts html page into dom tree then js further intracts with this dom
-
-// document.getElementById -->
-<!-- <!DOCTYPE html>
-<html>
-<body>
-
-<p id="demo">Hello World</p>
-
-<button onclick="changeText()">Click Me</button>
-
-<script>
-function changeText()
-{
-    document.getElementById("demo").innerText = "Text Changed!";
-    document.body.style.backgroundColor = "lightblue";
-    document.getElementById("demo").style.color = "red";
-    document.getElementById("demo").style.fontFamily = "Arial, sans-serif";
-    document.getElementById("demo").style.fontSize = "30px";
-    document.getElementById("demo").style.fontWeight = "bold";
-}
-</script>
-
-</body>
-</html> -->
-
-<!-- <!DOCTYPE html>
-<html lang="en">
-<body>
-
-    <div class="text">Hello</div>
-    <div class="text">World</div>
-    <div class="text">JavaScript</div>
-
-    <button onclick="changeAll()">Change All</button>
-
-    <script>
-        function changeAll() {
-            let elements = document.querySelectorAll(".text");
-
-            elements.forEach(function(el) {
-                el.innerText = "Updated";
-                el.style.color = "blue";
-                el.style.fontFamily = "Arial";
-                el.style.fontWeight = "bold";
-            });
-        }
-    </script>
-
-</body>
-</html> -->
-
+<!-- 
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Form DOM Styling</title>
-</head>
 <body>
 
-<h2>Student Form</h2>
-
-<form>
-    Name: <input type="text" id="name" class="field"><br><br>
-    Email: <input type="email" id="email" class="field"><br><br>
-    Roll No: <input type="text" id="roll" class="field"><br><br>
-    Branch: <input type="text" id="branch" class="field"><br><br>
-
-    <button type="button" onclick="okFunction()">OK</button>
-    <button type="button" onclick="cancelFunction()">Cancel</button>
-</form>
+<div id="container"></div>
+<button onclick="showInnerHTML()">Show Content</button>
 
 <script>
-function okFunction() {
-    let fields = document.getElementsByClassName("field");
-
-    for (let i = 0; i < fields.length; i++) {
-        fields[i].style.color = "blue";
-        fields[i].style.backgroundColor = "lightyellow";
-        fields[i].style.fontFamily = "Arial";
-        fields[i].style.fontSize = "18px";
-    }
-}
-
-function cancelFunction() {
-    let fields = document.getElementsByClassName("field");
-
-    for (let i = 0; i < fields.length; i++) {
-        fields[i].style.color = "black";
-        fields[i].style.backgroundColor = "white";
-        fields[i].style.fontFamily = "initial";
-        fields[i].style.fontSize = "16px";
-        fields[i].value = ""; // clears input
-    }
+function showInnerHTML() {
+    document.getElementById("container").innerHTML = `
+        <h2 style="color: white; background-color: teal; padding: 10px;">
+            Hello World
+        </h2>
+        <p>This paragraph has an <b>image</b>:</p>
+        <img src="https://via.placeholder.com/100" alt="placeholder image">
+    `;
 }
 </script>
 
 </body>
-</html>
+</html> -->
+<!-- 
+<html>
+<body>
+
+<div id="container"></div>
+<button onclick="showInnerText()">Show Content</button>
+
+<script>
+function showInnerText() {
+    let container = document.getElementById("container");
+    container.innerText = "This is an innerText example with styles applied via JS.";
+    container.style.color = "blue";
+    container.style.fontSize = "20px";
+    container.style.fontWeight = "bold";
+    container.style.fontFamily = "Arial, sans-serif";
+    container.style.backgroundColor = "lightgray";
+    container.style.padding = "10px";
+}
+</script>
+
+</body>
+</html> -->
+
+<!-- 
+<!DOCTYPE html>
+<html>
+<body>
+
+<div id="container"></div>
+<button onclick="showTextContent()">Show Content</button>
+
+<script>
+function showTextContent() {
+    document.getElementById("container").textContent = "This is a textContent example without any styles.";
+}
+</script>
+
+</body>
+</html> -->

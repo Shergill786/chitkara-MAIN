@@ -3447,3 +3447,37 @@
 //         printf("%d",*(p+i));
 //     }
 // }
+
+// input n numbers and make a array of n numbers and make another array which will consist of even numbers of elements from first array and print it in reverse order using pointer
+// #include <stdio.h>
+// #include <stdlib.h>
+// int main() {
+//     int n;
+//     printf("Enter number of elements: ");
+//     scanf("%d", &n);
+//     int *p;
+//     p = (int *)malloc(n * sizeof(int));
+//     printf("Enter %d elements:\n", n);
+//     for (int i = 0; i < n; i++) {
+//         scanf("%d", p+i);
+//     }
+//     int even = 0;
+//     for (int i = 0; i < n; i++) {
+//         if (p[i] % 2 == 0) {
+//             even++;
+//         }
+//     }
+//     int *p2 = (int *)calloc(even , sizeof(int));
+//     int j = 0;
+//     for (int i = 0; i < n; i++) {
+//         if (p[i] % 2 == 0) {
+//             p2[j++] = p[i];
+//         }
+//     }
+//     printf("reverse order:\n");
+//     for (int i = even - 1; i >= 0; i--) {
+//         printf("%d ", p2[i]);
+//     }
+//     return 0;
+// }
+

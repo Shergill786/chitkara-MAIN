@@ -740,3 +740,7 @@
 // console.log(prod);
 // console.log(min);
 
+// inner html- sets the HTML content of an element
+// text context- sets all text content of an element, and ignore html tags and shows them as plane text only
+// inner text- sets all text content of an element, and ignore html tags and shows them as plane text only but it also consider css and show only visible text
+
