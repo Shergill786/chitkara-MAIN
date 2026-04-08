@@ -3481,3 +3481,155 @@
 //     return 0;
 // }
 
+//  input 2 matrices and find sum of 2 matrices using memory allocation
+// #include <stdio.h>
+// #include <stdlib.h>
+// int main(){
+//     int r,c;
+//     printf("Enter number of rows and columns: ");
+//     scanf("%d %d", &r, &c);
+//     int **mat1 = (int **)malloc(r * sizeof(int *));
+//     int **mat2 = (int **)malloc(r * sizeof(int *));
+//     int **sum = (int **)malloc(r * sizeof(int *));
+//     for (int i = 0; i < r; i++) {
+//         mat1[i] = (int *)malloc(c * sizeof(int));
+//         mat2[i] = (int *)malloc(c * sizeof(int));
+//         sum[i] = (int *)malloc(c * sizeof(int));
+//     }
+//     printf("Enter elements of first matrix:\n");
+//     for (int i = 0; i < r; i++) {
+//         for (int j = 0; j < c; j++) {
+//             scanf("%d", &mat1[i][j]);
+//         }
+//     }
+//     printf("Enter elements of second matrix:\n");
+//     for (int i = 0; i < r; i++) {
+//         for (int j = 0; j < c; j++) {
+//             scanf("%d", &mat2[i][j]);
+//         }
+//     }
+//     for (int i = 0; i < r; i++) {
+//         for (int j = 0; j < c; j++) {
+//             sum[i][j] = mat1[i][j] + mat2[i][j];
+//         }
+//     }
+//     printf("Sum of the two matrices:\n");
+//     for (int i = 0; i < r; i++) {
+//         for (int j = 0; j < c; j++) {
+//             printf("%d ", sum[i][j]);
+//         }
+//         printf("\n");
+//     }
+//     return 0;
+// }
+
+
+// realloc - reallocate memory for an array of integers and print the new size of the array
+// free() - deallocate memory for an array of integers and print a message confirming the deallocation
+
+// input marks of n students and find avg ,highest marks also input no of students incresed in next week and find new avg and highest marks using realloc
+// #include <stdio.h>
+// #include <stdlib.h>  
+// int main() {
+//     int n;
+//     printf("number of students: ");
+//     scanf("%d", &n);
+//     int *marks = (int *)malloc(n * sizeof(int));
+//     printf("marks %d \n", n);
+//     for (int i = 0; i < n; i++) {
+//         scanf("%d", &marks[i]);
+//     }
+//     int sum = 0;
+//     int max = marks[0];
+//     for (int i = 0; i < n; i++) {
+//         sum += marks[i];
+//         if (marks[i] > max) {
+//             max = marks[i];
+//         }
+//     }
+//     printf("Avg  %.2f\n", (float)sum / n);
+//     printf("Highest %d\n", max);
+    
+//     int newStudents;
+//     printf("number of new students: ");
+//     scanf("%d", &newStudents);
+    
+//     marks = (int *)realloc(marks, (n + newStudents) * sizeof(int));
+    
+//     printf("marks %d \n", newStudents);
+//     for (int i = n; i < n + newStudents; i++) {
+//         scanf("%d", &marks[i]);
+//         sum += marks[i];
+//         if (marks[i] > max) {
+//             max = marks[i];
+//         }
+//     }
+//         printf("New avg %.2f\n", (float)sum / (n + newStudents));
+//     printf("New highest %d\n", max);  
+//     return 0;
+// }
+
+
+// n cart items store productid quantity price for each item and calculate total bill using malloc
+// #include <stdio.h>
+// #include <stdlib.h>
+
+// int main() {
+//     int n;
+//     printf("Enter number of cart items: ");
+//     scanf("%d", &n);
+
+//     int *productId = (int *)malloc(n * sizeof(int));
+//     int *quantity = (int *)malloc(n * sizeof(int));
+//     float *price = (float *)malloc(n * sizeof(float));
+    
+//     float Bill = 0.0;
+
+//     for (int i = 0; i < n; i++) {
+
+//         printf("Enter product ID: ");
+//         scanf("%d", &productId[i]);
+
+//         printf("Enter quantity: ");
+//         scanf("%d", &quantity[i]);
+
+//         printf("Enter price: ");
+//         scanf("%f", &price[i]);
+
+//         Bill += quantity[i] * price[i];
+//     }
+//     printf("\nTotal Bill: %.2f\n", Bill);
+//     return 0;
+// }
+
+
+// allocate memory for a string using malloc and resize it using realloc and count vowels and words
+// #include <stdio.h>
+// #include <stdlib.h>
+// int main() {
+//     char *str = (char *)malloc(30 * sizeof(char));
+//     int n;
+//     printf("Enter size of string: ");
+//     scanf("%d", &n);
+//     str = (char *)realloc(str, n * sizeof(char));
+//     printf("Enter a string: ");
+//     scanf("%s", str);
+    
+//     int vowelCount = 0;
+//     int wordCount = 1; 
+//     for (int i = 0; str[i] != '\0'; i++) {
+//         char ch = str[i];
+//         if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u' ||
+//             ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U') {
+//             vowelCount++;
+//         }
+//         if (ch == ' ') {
+//             wordCount++;
+//         }
+//     }
+    
+//     printf("Number of vowels: %d\n", vowelCount);
+//     printf("Number of words: %d\n", wordCount);
+    
+//     return 0;
+// }
