@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Manipulation - Complete Examples</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f5f5f5;
+      padding: 20px;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      color: #333;
+      margin-bottom: 30px;
+      border-bottom: 3px solid #007bff;
+      padding-bottom: 10px;
+    }
+
+    h2 {
+      color: #007bff;
+      margin-top: 30px;
+      margin-bottom: 15px;
+      font-size: 1.5em;
+    }
+
+    .example-section {
+      margin-bottom: 40px;
+      padding: 20px;
+      background-color: #f9f9f9;
+      border-left: 4px solid #007bff;
+      border-radius: 4px;
+    }
+
+    .example-header {
+      font-weight: bold;
+      color: #007bff;
+      margin-bottom: 10px;
+    }
+
+    button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin: 5px 5px 5px 0;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    button:active {
+      transform: scale(0.98);
+    }
+
+    input, textarea {
+      padding: 8px 12px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-family: inherit;
+      margin: 5px 5px 5px 0;
+    }
+
+    input:focus, textarea:focus {
+      outline: none;
+      border-color: #007bff;
+      box-shadow: 0 0 5px rgba(0,123,255,0.5);
+    }
+
+    #output, #results, #taskList, #itemList, #students, #colors {
+      background-color: #e7f3ff;
+      padding: 15px;
+      border-radius: 4px;
+      margin-top: 10px;
+      min-height: 30px;
+      border: 1px solid #b3d9ff;
+    }
+
+    .output-item {
+      padding: 8px;
+      background-color: white;
+      margin: 5px 0;
+      border-left: 3px solid #28a745;
+      padding-left: 10px;
+    }
+
+    li {
+      padding: 10px;
+      margin: 5px 0;
+      background-color: #fff3cd;
+      border-left: 4px solid #ffc107;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    li.completed {
+      background-color: #d4edda;
+      text-decoration: line-through;
+      color: #666;
+      border-left-color: #28a745;
+    }
+
+    .delete-btn {
+      background-color: #dc3545;
+      padding: 5px 10px;
+      font-size: 12px;
+      margin: 0;
+    }
+
+    .delete-btn:hover {
+      background-color: #c82333;
+    }
+
+    .highlight {
+      background-color: #ffeb3b;
+      padding: 2px 4px;
+      border-radius: 2px;
+    }
+
+    .active {
+      color: white;
+      background-color: #007bff;
+      padding: 10px;
+      border-radius: 4px;
+    }
+
+    .dark-mode {
+      background-color: #333;
+      color: white;
+    }
+
+    .dark-mode input, .dark-mode textarea {
+      background-color: #555;
+      color: white;
+      border-color: #666;
+    }
+
+    .error {
+      color: #dc3545;
+      background-color: #f8d7da;
+      padding: 10px;
+      border-radius: 4px;
+      margin-top: 10px;
+      display: none;
+    }
+
+    .success {
+      color: #155724;
+      background-color: #d4edda;
+      padding: 10px;
+      border-radius: 4px;
+      margin-top: 10px;
+      display: none;
+    }
+
+    .note {
+      background-color: #fff3cd;
+      border-left: 4px solid #ffc107;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 2px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>DOM Manipulation - Complete Examples</h1>
+    <p>This page demonstrates all DOM manipulation techniques including selectors, element creation, modification, and deletion.</p>
+
+    <!-- ============ EXAMPLE 1: DOM SELECTORS ============ -->
+    <div class="example-section">
+      <h2>1. DOM SELECTORS - querySelector, querySelectorAll, getElementById</h2>
+      <div class="example-header">Objective: Learn different ways to select DOM elements</div>
+
+      <p>Click buttons to see selector results:</p>
+      <button onclick="demoGetElementById()">getElementById()</button>
+      <button onclick="demoQuerySelector()">querySelector()</button>
+      <button onclick="demoQuerySelectorAll()">querySelectorAll()</button>
+
+      <div id="results"></div>
+
+      <div class="note">
+        <strong>Notes:</strong><br>
+        • getElementById() - fastest, specific for IDs<br>
+        • querySelector() - returns first match<br>
+        • querySelectorAll() - returns all matches as NodeList
+      </div>
+    </div>
+
+    <!-- ============ EXAMPLE 2: READ/WRITE HTML ============ -->
+    <div class="example-section">
+      <h2>2. READ/WRITE HTML & TEXT</h2>
+      <div class="example-header">Objective: Modify HTML content using innerHTML and textContent</div>
+
+      <button onclick="demoReadHTML()">Read innerHTML</button>
+      <button onclick="demoWriteHTML()">Write innerHTML</button>
+      <button onclick="demoReadText()">Read textContent</button>
+      <button onclick="demoWriteText()">Write textContent</button>
+
+      <div id="htmlDemo">
+        <p>Original content with <strong>bold text</strong></p>
+      </div>
+      <div id="output2"></div>
+
+      <div class="note">
+        <strong>Difference:</strong><br>
+        • innerHTML - gets/sets complete HTML including tags<br>
+        • textContent - gets/sets only plain text, ignores HTML tags
+      </div>
+    </div>
+
+    <!-- ============ EXAMPLE 3: READ/WRITE CSS & ATTRIBUTES ============ -->
+    <div class="example-section">
+      <h2>3. READ/WRITE CSS & ATTRIBUTES</h2>
+      <div class="example-header">Objective: Modify styles and attributes dynamically</div>
+
+      <button onclick="demoChangeStyle()">Change Style (color)</button>
+      <button onclick="demoAddClass()">Add CSS Class</button>
+      <button onclick="demoToggleClass()">Toggle Class</button>
+      <button onclick="demoSetAttribute()">Set Attribute</button>
+      <button onclick="demoDarkMode()">Dark Mode Toggle</button>
+
+      <div id="styleDemo" style="padding: 15px; background-color: #fff; border: 1px solid #ddd; margin-top: 10px;">
+        <p>This element's style will be modified</p>
+      </div>
+      <div id="output3"></div>
+    </div>
+
+    <!-- ============ EXAMPLE 4: CREATE ELEMENTS ============ -->
+    <div class="example-section">
+      <h2>4. CREATE & APPEND ELEMENTS</h2>
+      <div class="example-header">Objective: Dynamically create new HTML elements and add to DOM</div>
+
+      <label>Enter text:
+        <input type="text" id="elementText" placeholder="Enter text for new element">
+      </label>
+      <button onclick="createAndAppend()">Create & Append</button>
+      <button onclick="createList()">Create List Items</button>
+      <button onclick="createForm()">Create Form</button>
+
+      <ul id="itemList"></ul>
+      <div id="formContainer"></div>
+      <div id="output4"></div>
+
+      <div class="note">
+        <strong>Methods:</strong><br>
+        • createElement() - create new element<br>
+        • appendChild() - add as last child<br>
+        • prepend() - add as first child<br>
+        • insertBefore() - insert at specific position
+      </div>
+    </div>
+
+    <!-- ============ EXAMPLE 5: DELETE ELEMENTS ============ -->
+    <div class="example-section">
+      <h2>5. DELETE ELEMENTS</h2>
+      <div class="example-header">Objective: Remove elements from DOM</div>
+
+      <button onclick="createTaskItem()">Add Task</button>
+      <button onclick="clearAllTasks()">Clear All Tasks</button>
+
+      <ul id="taskList"></ul>
+      <div id="output5"></div>
+
+      <div class="note">
+        <strong>Methods:</strong><br>
+        • remove() - delete element directly<br>
+        • removeChild() - remove through parent<br>
+        • replaceChild() - replace with another element
+      </div>
+    </div>
+
+    <!-- ============ EXAMPLE 6: PRACTICAL TODO APP ============ -->
+    <div class="example-section">
+      <h2>6. PRACTICAL EXAMPLE: TODO APPLICATION</h2>
+      <div class="example-header">Complete CRUD operations using DOM manipulation</div>
+
+      <input type="text" id="todoInput" placeholder="Enter a new task...">
+      <button onclick="addTodo()">Add Task</button>
+
+      <ul id="todoList"></ul>
+      <button onclick="clearCompleted()" style="margin-top: 10px;">Clear Completed</button>
+      <div id="todoStats" style="margin-top: 10px; font-weight: bold;"></div>
+    </div>
+
+    <!-- ============ EXAMPLE 7: FORM MANIPULATION ============ -->
+    <div class="example-section">
+      <h2>7. FORM MANIPULATION</h2>
+      <div class="example-header">Create and handle forms dynamically</div>
+
+      <button onclick="createStudentForm()">Create Form</button>
+      <button onclick="displayFormData()">Display Submitted Data</button>
+
+      <div id="formOutputContainer"></div>
+      <div id="formResults"></div>
+    </div>
+
+    <!-- ============ EXAMPLE 8: ELEMENT PROPERTIES ============ -->
+    <div class="example-section">
+      <h2>8. READ ELEMENT PROPERTIES</h2>
+      <div class="example-header">Get information about elements</div>
+
+      <button onclick="getElementProperties()">Get Element Info</button>
+
+      <div id="infoDiv" style="color: blue; font-weight: bold; width: 200px; height: 100px; padding: 10px; background-color: lightblue;">
+        Sample Element
+      </div>
+      <div id="propertiesOutput"></div>
+    </div>
+
+    <!-- ============ EXAMPLE 9: EVENT DELEGATION ============ -->
+    <div class="example-section">
+      <h2>9. ADVANCED: COLOR SELECTOR WITH EVENT DELEGATION</h2>
+      <div class="example-header">Use event delegation for dynamic elements</div>
+
+      <button onclick="addColor()">Add Color Option</button>
+      <div id="colors"></div>
+      <div id="colorOutput"></div>
+
+      <div class="note">
+        <strong>Event Delegation:</strong> Instead of adding listeners to each element,<br>
+        we add one listener to parent and handle events as they bubble up.
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    // ============ EXAMPLE 1: DOM SELECTORS ============
+
+    function demoGetElementById() {
+      // getElementById() - Fast, specific for IDs
+      const element = document.getElementById("results");
+      const content = `
+        <div class="output-item">
+          <strong>getElementById():</strong><br>
+          Found element with ID "results"<br>
+          Element type: ${element.tagName}<br>
+          Current content: "${element.textContent.substring(0, 30)}..."
+        </div>
+      `;
+      document.getElementById("results").innerHTML = content;
+    }
+
+    function demoQuerySelector() {
+      // querySelector() - Returns first matching element
+      const button = document.querySelector("button");
+      const results = document.getElementById("results");
+      results.innerHTML = `
+        <div class="output-item">
+          <strong>querySelector():</strong><br>
+          Found first &lt;button&gt; element<br>
+          Button text: "${button.textContent.substring(0, 20)}..."<br>
+          Class: ${button.className || 'none'}
+        </div>
+      `;
+    }
+
+    function demoQuerySelectorAll() {
+      // querySelectorAll() - Returns all matching elements
+      const buttons = document.querySelectorAll("button");
+      const results = document.getElementById("results");
+      results.innerHTML = `
+        <div class="output-item">
+          <strong>querySelectorAll():</strong><br>
+          Found ${buttons.length} button elements<br>
+          First button text: "${buttons[0].textContent}"<br>
+          Type: NodeList (can use forEach)
+        </div>
+      `;
+    }
+
+    // ============ EXAMPLE 2: READ/WRITE HTML ============
+
+    function demoReadHTML() {
+      const htmlDemo = document.getElementById("htmlDemo");
+      const html = htmlDemo.innerHTML;
+      document.getElementById("output2").innerHTML = `
+        <div class="output-item">
+          <strong>Read innerHTML:</strong><br>
+          <code>${escapeHTML(html)}</code>
+        </div>
+      `;
+    }
+
+    function demoWriteHTML() {
+      const htmlDemo = document.getElementById("htmlDemo");
+      htmlDemo.innerHTML = "<h3>Content changed!</h3><p style='color: green;'>HTML was modified</p>";
+      document.getElementById("output2").innerHTML = `
+        <div class="output-item" style="color: green; font-weight: bold;">
+          ✓ innerHTML changed successfully!
+        </div>
+      `;
+    }
+
+    function demoReadText() {
+      const htmlDemo = document.getElementById("htmlDemo");
+      const text = htmlDemo.textContent;
+      document.getElementById("output2").innerHTML = `
+        <div class="output-item">
+          <strong>Read textContent:</strong><br>
+          "${text}"<br>
+          (No HTML tags included)
+        </div>
+      `;
+    }
+
+    function demoWriteText() {
+      const htmlDemo = document.getElementById("htmlDemo");
+      htmlDemo.textContent = "This text was set with textContent - HTML tags are treated as plain text";
+      document.getElementById("htmlDemo").innerHTML = "This text was set with textContent - HTML tags are treated as plain text";
+      document.getElementById("output2").innerHTML = `
+        <div class="output-item" style="color: green; font-weight: bold;">
+          ✓ textContent changed successfully!
+        </div>
+      `;
+    }
+
+    // ============ EXAMPLE 3: READ/WRITE CSS & ATTRIBUTES ============
+
+    function demoChangeStyle() {
+      const elem = document.getElementById("styleDemo");
+      elem.style.color = "white";
+      elem.style.backgroundColor = "#007bff";
+      elem.style.padding = "20px";
+      elem.style.borderRadius = "5px";
+      document.getElementById("output3").innerHTML = `
+        <div class="output-item" style="color: white; background-color: #007bff; padding: 10px; border-radius: 5px;">
+          ✓ Inline styles applied using element.style property
+        </div>
+      `;
+    }
+
+    function demoAddClass() {
+      const elem = document.getElementById("styleDemo");
+      elem.classList.add("active");
+      document.getElementById("output3").innerHTML = `
+        <div class="output-item">
+          <strong>CSS Class Added:</strong><br>
+          Added "active" class using classList.add()
+        </div>
+      `;
+    }
+
+    function demoToggleClass() {
+      const elem = document.getElementById("styleDemo");
+      elem.classList.toggle("highlight");
+      const hasClass = elem.classList.contains("highlight");
+      document.getElementById("output3").innerHTML = `
+        <div class="output-item">
+          <strong>Toggle Class:</strong><br>
+          "highlight" class is now: ${hasClass ? "ACTIVE" : "INACTIVE"}<br>
+          Click again to toggle!
+        </div>
+      `;
+    }
+
+    function demoSetAttribute() {
+      const elem = document.getElementById("styleDemo");
+      elem.setAttribute("data-state", "modified");
+      elem.setAttribute("title", "This is a custom attribute");
+      document.getElementById("output3").innerHTML = `
+        <div class="output-item">
+          <strong>Attributes Set:</strong><br>
+          data-state = "${elem.getAttribute('data-state')}"<br>
+          title = "${elem.getAttribute('title')}"<br>
+          (Hover over styled element to see title)
+        </div>
+      `;
+    }
+
+    let darkMode = false;
+    function demoDarkMode() {
+      darkMode = !darkMode;
+      const body = document.body;
+      if (darkMode) {
+        body.classList.add("dark-mode");
+        document.getElementById("output3").innerHTML = `
+          <div class="output-item" style="background-color: #333; color: white;">
+            ✓ Dark Mode: ON
+          </div>
+        `;
+      } else {
+        body.classList.remove("dark-mode");
+        document.getElementById("output3").innerHTML = `
+          <div class="output-item">
+            ✓ Dark Mode: OFF
+          </div>
+        `;
+      }
+    }
+
+    // ============ EXAMPLE 4: CREATE ELEMENTS ============
+
+    function createAndAppend() {
+      const text = document.getElementById("elementText").value;
+      if (!text.trim()) {
+        alert("Please enter text");
+        return;
+      }
+
+      const newLi = document.createElement("li");
+      newLi.textContent = text;
+      document.getElementById("itemList").appendChild(newLi);
+
+      document.getElementById("output4").innerHTML = `
+        <div class="output-item">
+          ✓ Created &lt;li&gt; element and appended to list
+        </div>
+      `;
+      document.getElementById("elementText").value = "";
+    }
+
+    function createList() {
+      const items = ["Apple", "Banana", "Cherry", "Date", "Elderberry"];
+      const list = document.getElementById("itemList");
+      list.innerHTML = "";
+
+      items.forEach(fruit => {
+        const li = document.createElement("li");
+        li.textContent = fruit;
+        list.appendChild(li);
+      });
+
+      document.getElementById("output4").innerHTML = `
+        <div class="output-item">
+          ✓ Created ${items.length} list items using forEach loop
+        </div>
+      `;
+    }
+
+    function createForm() {
+      const formContainer = document.getElementById("formContainer");
+      formContainer.innerHTML = `
+        <form style="margin: 20px 0;">
+          <input type="text" placeholder="Name" name="name" required>
+          <input type="email" placeholder="Email" name="email" required>
+          <button type="submit" onclick="handleFormSubmit(event)">Submit</button>
+        </form>
+      `;
+
+      document.getElementById("output4").innerHTML = `
+        <div class="output-item">
+          ✓ Form created dynamically<br>
+          Number of inputs: ${formContainer.querySelectorAll("input").length}
+        </div>
+      `;
+    }
+
+    function handleFormSubmit(event) {
+      event.preventDefault();
+      alert("Form would be submitted (prevent default used)");
+    }
+
+    // ============ EXAMPLE 5: DELETE ELEMENTS ============
+
+    let taskCount = 0;
+    function createTaskItem() {
+      taskCount++;
+      const li = document.createElement("li");
+      li.innerHTML = `
+        Task ${taskCount}
+        <button class="delete-btn" onclick="deleteTask(this)">Delete</button>
+      `;
+      document.getElementById("taskList").appendChild(li);
+
+      document.getElementById("output5").innerHTML = `
+        <div class="output-item">
+          ✓ Task ${taskCount} added
+        </div>
+      `;
+    }
+
+    function deleteTask(button) {
+      button.parentElement.remove();
+      document.getElementById("output5").innerHTML = `
+        <div class="output-item">
+          ✓ Task deleted using remove()
+        </div>
+      `;
+    }
+
+    function clearAllTasks() {
+      const taskList = document.getElementById("taskList");
+      const count = taskList.children.length;
+      taskList.innerHTML = "";
+
+      document.getElementById("output5").innerHTML = `
+        <div class="output-item">
+          ✓ Cleared ${count} tasks using innerHTML = ""
+        </div>
+      `;
+    }
+
+    // ============ EXAMPLE 6: TODO APP ============
+
+    let todos = [];
+
+    function addTodo() {
+      const input = document.getElementById("todoInput");
+      if (!input.value.trim()) return;
+
+      const todo = {
+        id: Date.now(),
+        text: input.value,
+        completed: false
+      };
+
+      todos.push(todo);
+      renderTodos();
+      input.value = "";
+      updateStats();
+    }
+
+    function renderTodos() {
+      const todoList = document.getElementById("todoList");
+      todoList.innerHTML = "";
+
+      todos.forEach(todo => {
+        const li = document.createElement("li");
+        li.className = todo.completed ? "completed" : "";
+        li.innerHTML = `
+          <span onclick="toggleTodo(${todo.id})" style="cursor: pointer; flex-grow: 1;">
+            ${todo.text}
+          </span>
+          <button class="delete-btn" onclick="deleteTodo(${todo.id})">Delete</button>
+        `;
+        todoList.appendChild(li);
+      });
+    }
+
+    function toggleTodo(id) {
+      todos = todos.map(todo =>
+        todo.id === id ? {...todo, completed: !todo.completed} : todo
+      );
+      renderTodos();
+      updateStats();
+    }
+
+    function deleteTodo(id) {
+      todos = todos.filter(todo => todo.id !== id);
+      renderTodos();
+      updateStats();
+    }
+
+    function clearCompleted() {
+      todos = todos.filter(todo => !todo.completed);
+      renderTodos();
+      updateStats();
+    }
+
+    function updateStats() {
+      const total = todos.length;
+      const completed = todos.filter(t => t.completed).length;
+      const remaining = total - completed;
+      document.getElementById("todoStats").textContent = 
+        `Total: ${total} | Completed: ${completed} | Remaining: ${remaining}`;
+    }
+
+    // ============ EXAMPLE 7: FORM MANIPULATION ============
+
+    function createStudentForm() {
+      const container = document.getElementById("formOutputContainer");
+      container.innerHTML = `
+        <form id="studentForm" style="margin: 15px 0;">
+          <input type="text" id="studentName" placeholder="Student Name" required>
+          <input type="email" id="studentEmail" placeholder="Email" required>
+          <input type="number" id="studentAge" placeholder="Age" required>
+          <button type="submit">Register</button>
+        </form>
+      `;
+
+      document.getElementById("studentForm").addEventListener("submit", (e) => {
+        e.preventDefault();
+        const name = document.getElementById("studentName").value;
+        const email = document.getElementById("studentEmail").value;
+        const age = document.getElementById("studentAge").value;
+
+        document.getElementById("formResults").innerHTML = `
+          <div class="output-item">
+            <strong>Form Data Captured:</strong><br>
+            Name: ${name}<br>
+            Email: ${email}<br>
+            Age: ${age}
+          </div>
+        `;
+      });
+    }
+
+    function displayFormData() {
+      const name = document.getElementById("studentName")?.value || "N/A";
+      const email = document.getElementById("studentEmail")?.value || "N/A";
+      const age = document.getElementById("studentAge")?.value || "N/A";
+
+      document.getElementById("formResults").innerHTML = `
+        <div class="output-item">
+          <strong>Current Form Values:</strong><br>
+          Name: ${name}<br>
+          Email: ${email}<br>
+          Age: ${age}
+        </div>
+      `;
+    }
+
+    // ============ EXAMPLE 8: ELEMENT PROPERTIES ============
+
+    function getElementProperties() {
+      const elem = document.getElementById("infoDiv");
+      const output = document.getElementById("propertiesOutput");
+
+      output.innerHTML = `
+        <div class="output-item">
+          <strong>Element Information:</strong><br>
+          Tag Name: ${elem.tagName}<br>
+          ID: ${elem.id || "none"}<br>
+          Classes: ${elem.className || "none"}<br>
+          Width: ${elem.offsetWidth}px<br>
+          Height: ${elem.offsetHeight}px<br>
+          Content: "${elem.textContent}"<br>
+          Computed Color: ${getComputedStyle(elem).color}
+        </div>
+      `;
+    }
+
+    // ============ EXAMPLE 9: COLOR SELECTOR ============
+
+    let colorCount = 0;
+
+    function addColor() {
+      colorCount++;
+      const colors = ["Red", "Blue", "Green", "Yellow", "Purple"];
+      const color = colors[colorCount % colors.length];
+
+      const div = document.createElement("div");
+      div.style.display = "inline-block";
+      div.style.padding = "10px 15px";
+      div.style.margin = "5px";
+      div.style.backgroundColor = color.toLowerCase();
+      div.style.color = "white";
+      div.style.cursor = "pointer";
+      div.style.borderRadius = "4px";
+      div.textContent = color;
+      div.className = "colorOption";
+
+      document.getElementById("colors").appendChild(div);
+    }
+
+    document.addEventListener("click", function(event) {
+      if (event.target.classList.contains("colorOption")) {
+        document.getElementById("colorOutput").innerHTML = `
+          <div class="output-item">
+            ✓ Color Selected: <strong>${event.target.textContent}</strong><br>
+            (Using Event Delegation on parent container)
+          </div>
+        `;
+      }
+    });
+
+    // ============ UTILITY FUNCTIONS ============
+
+    function escapeHTML(html) {
+      const div = document.createElement("div");
+      div.textContent = html;
+      return div.innerHTML;
+    }
+  </script>
+
+</body>
+</html>
