@@ -19,11 +19,11 @@ function showInnerHTML() {
 </script>
 
 </body>
-</html> -->
+</html> 
 
 
 
-<!-- 
+
 <html>
 <body>
 
@@ -44,9 +44,9 @@ function showInnerText() {
 </script>
 
 </body>
-</html> -->
+</html>
 
-<!-- 
+
 <!DOCTYPE html>
 <html>
 <body>
@@ -61,4 +61,180 @@ function showTextContent() {
 </script>
 
 </body>
+</html>  -->
+
+
+<!-- deleting elements from the DOM-->
+ <!-- remove()-completely removes the element from the DOM. div
+ removeChild() - removes a specified child element from its parent element. div1,div2
+  -->
+
+ <!-- <!DOCTYPE html>
+<html>
+<body>
+
+<div id="parent">
+    <p id="child1">Child 1</p>
+    <p id="child2">Child 2</p>
+</div>
+
+<button onclick="removeUsingRemove()">Remove()</button>
+<button onclick="removeUsingRemoveChild()">removeChild()</button>
+
+<script>
+function removeUsingRemove() {
+    let el = document.getElementById("child1");
+    el.remove();
+}
+
+function removeUsingRemoveChild() {
+    let parent = document.getElementById("parent");
+    let child = document.getElementById("child2");
+    parent.removeChild(child);
+}
+</script>
+
+</body>
 </html> -->
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Div Structure</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #f4f4f4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .main-div {
+        width: 400px;
+        padding: 20px;
+        border: 2px solid #333;
+        border-radius: 10px;
+        background: white;
+        text-align: center;
+    }
+
+    .child-container {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+    .box {
+        width: 45%;
+        height: 120px;
+        border: 2px solid #444;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        border-radius: 8px;
+        background: #e9f5ff;
+    }
+
+    /* Buttons */
+    .buttons {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    button {
+        padding: 8px 16px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="main-div" id="mainDiv">
+    <h3>Main Div</h3>
+
+    <div class="child-container">
+        <div class="box" id="div1">Hello</div>
+        <div class="box" id="div2">How are you</div>
+    </div>
+
+    <div class="buttons">
+        <button class="ok-btn" onclick="deleteMainDiv()">OK</button>
+        <button class="delete-btn" onclick="deleteRightDiv()">Delete</button>
+    </div>
+</div>
+
+<script>
+    function deleteRightDiv() {
+        let div = document.getElementById("div2");
+        if (div) {
+            div.remove(); }
+
+    }
+    function deleteMainDiv() {
+        document.getElementById("mainDiv").remove();
+    }
+</script>
+
+</body>
+</html> -->
+
+
+<!-- 
+style.display property sets the display behavior of an element. 
+classname property sets all class attribute and overwrite all existing classes.
+classlist is used to remove,add or toggle object classes.doesnt overwrite all classes i.e in classlist is most commonly used. -->
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .active {
+            background-color: green;
+            color: white;
+        }
+
+        .newClass {
+            border: 2px solid red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="box" class="active">Hello</div>
+    <button onclick="useStyle()">Style</button>
+    <button onclick="useClassName()">ClassName</button>
+    <button onclick="useClassList()">ClassList</button>
+
+    <script>
+        function useStyle() {
+            let el = document.getElementById("box");
+            console.log(el.style.color);
+            el.style.backgroundColor = "blue";
+            el.style.color = "white";
+        }
+
+        function useClassName() {
+            let el = document.getElementById("box");
+            console.log(el.className);
+            el.className = "newClass";
+        }
+
+        function useClassList() {
+            let el = document.getElementById("box");
+            console.log(el.classList.contains("active"));
+            el.classList.add("newClass");
+            el.classList.remove("active");
+            el.classList.toggle("newClass");
+        }
+</script>
+</html> -->
+
