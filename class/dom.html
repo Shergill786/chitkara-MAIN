@@ -238,3 +238,66 @@ classlist is used to remove,add or toggle object classes.doesnt overwrite all cl
 </script>
 </html> -->
 
+<!-- appendchild method add a node as a last child of the parent element if accepts only one node at a time and return appended node .
+append methods add multiple node or text to the end it can append strings and elements togehther and doesnt return anything
+insert before method insert a node before the reference node as a child of a specified parent node it accepts two parameters newnode and referencenode and return the inserted node 
+replace child method used to replace a existing chlid node with a new node it works on the parent element
+  -->
+
+
+  <!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>DOM Methods Demo</title>
+</head>
+
+<body>
+
+<div id="container">
+    <p id="ref">Reference</p>
+    <p id="old">Old Element</p>
+</div>
+
+<br>
+
+<button onclick="appendChildFunc()">appendChild</button>
+<button onclick="appendFunc()">append</button>
+<button onclick="insertBeforeFunc()">insertBefore</button>
+<button onclick="replaceChildFunc()">replaceChild</button>
+
+<script>
+function appendChildFunc() {
+    let el = document.createElement("p");
+    el.textContent = "appendChild";
+    document.getElementById("container").appendChild(el);
+}
+
+function appendFunc() {
+    let el = document.createElement("p");
+    el.textContent = "append";
+    document.getElementById("container").append("Text ", el);
+}
+
+function insertBeforeFunc() {
+    let el = document.createElement("p");
+    el.textContent = "insertBefore";
+
+    let parent = document.getElementById("container");
+    let ref = document.getElementById("ref");
+    parent.insertBefore(el, ref);
+}
+
+function replaceChildFunc() {
+    let parent = document.getElementById("container");
+
+    let newEl = document.createElement("p");
+    newEl.textContent = "replaceChild";
+
+    let oldEl = document.getElementById("old");
+
+    parent.replaceChild(newEl, oldEl);
+}
+</script>
+
+</body>
+</html> -->
