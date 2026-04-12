@@ -3635,3 +3635,68 @@
 // }
 
 
+// #include <stdio.h>
+// #include <stdlib.h>
+// int *storereadings(int n){
+//     int *readings = (int *)malloc(n * sizeof(int));
+//     printf("Enter %d readings:\n", n);
+//     for (int i = 0; i < n; i++) {
+//         scanf("%d", &readings[i]);
+//     }
+//     return readings;
+// }
+// int findMax(int *readings,int n)
+// {
+//     int max = readings[0];
+//     for (int i = 1; i < n; i++) {
+//         if (readings[i] > max) {
+//             max = readings[i];
+//         }
+//     }
+//     return max;
+// }
+// int main() {
+//     int n;
+//     printf("Enter number of readings: ");
+//     scanf("%d", &n);
+//     int *readings = storereadings(n);
+//     int max = findMax(readings, n);
+//     printf("Maximum reading: %d\n", max);
+//     return 0;
+// }
+
+
+// #include <stdio.h>
+// #include <stdlib.h>
+// int *log(int n){
+//     int *arr = (int *)malloc(n * sizeof(int));
+//     printf("Enter %d elements:\n", n);
+//     for (int i = 0; i < n; i++) {
+//         scanf("%d", &arr[i]);
+//     }
+//     return arr;
+// }
+// int *find(int *arr, int n){
+//     for (int i = 0; i < n-1; i++) {
+//         for (int j = 0; j < n-i-1; j++) {
+//             if (arr[j] > arr[j+1]) {
+//                 int temp = arr[j];
+//                 arr[j] = arr[j+1];
+//                 arr[j+1] = temp;
+//             }
+//         }
+//     }
+//     return arr;
+// }
+// int main() {
+//     int n;
+//     printf("Enter number of elements: ");
+//     scanf("%d", &n);
+//     int *arr = log(n);
+//     arr = find(arr, n);
+//     printf("Sorted array in ascending order:\n");
+//     for (int i = 0; i < n; i++) {
+//         printf("%d ", arr[i]);
+//     }
+//     return 0;
+// }
