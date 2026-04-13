@@ -3730,7 +3730,7 @@
 // };
 // int main() {
 //     struct student s[3];
-//     for (int i = 0; i < 3; i++) {
+//      {
 //         printf("Enter name, roll number and marks of student %d:\n", i + 1);
 //         scanf("%s %d %d", s[i].name, &s[i].rollno, &s[i].marks);
 //     }
