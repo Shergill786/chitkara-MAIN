@@ -3790,55 +3790,49 @@
 
 // add complex numbers using structure and functions without return
 // #include <stdio.h>
-
 // typedef struct {
 //     int real;
 //     int img;
 // } complex;
-
 // void add(complex a, complex b, complex *c) {
 //     c->real = a.real + b.real;
 //     c->img = a.img + b.img;
 // }
-
 // int main() {
 //     complex a, b, c;
-
 //     printf("Enter real and imaginary part of first complex number:\n");
 //     scanf("%d %d", &a.real, &a.img);
-
 //     printf("Enter real and imaginary part of second complex number:\n");
 //     scanf("%d %d", &b.real, &b.img);
-
 //     add(a, b, &c);
-
 //     printf("Sum of complex numbers: %d + %di\n", c.real, c.img);
-
 //     return 0;
 // }
 
 
 // swap two complex numbers using structure and functions
-#include <stdio.h>
-struct complex {
-    int real;
-    int img;
-};
-void swap(struct complex *a, struct complex *b) {
-    struct complex temp;
-    temp = *a;
-    *a = *b;
-    *b = temp;
-}
-int main() {
-    struct complex a, b;
-    printf("Enter real and imaginary part of first complex number:\n");
-    scanf("%d %d", &a.real, &a.img);
-    printf("Enter real and imaginary part of second complex number:\n");
-    scanf("%d %d", &b.real, &b.img);
-    swap(&a, &b);
-    printf("After swapping:\n");
-    printf(" %d + %di\n", a.real, a.img);
-    printf(" %d + %di\n", b.real, b.img);
-    return 0;
-}
+// #include <stdio.h>
+// struct complex {
+//     int real;
+//     int img;
+// };
+// void swap(struct complex *a, struct complex *b) {
+//     struct complex temp;
+//     temp = *a;
+//     *a = *b;
+//     *b = temp;
+// }
+// int main() {
+//     struct complex a, b;
+//     printf("Enter real and imaginary part of first complex number:\n");
+//     scanf("%d %d", &a.real, &a.img);
+//     printf("Enter real and imaginary part of second complex number:\n");
+//     scanf("%d %d", &b.real, &b.img);
+//     swap(&a, &b);
+//     printf("After swapping:\n");
+//     printf(" %d + %di\n", a.real, a.img);
+//     printf(" %d + %di\n", b.real, b.img);
+//     return 0;
+// }
+
+
