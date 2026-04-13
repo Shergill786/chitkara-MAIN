@@ -3721,7 +3721,7 @@
 
 //     }
 
-// details of 3 students using structure and print 
+
 // #include <stdio.h>
 // struct student {
 //     char name[50];
@@ -3730,7 +3730,31 @@
 // };
 // int main() {
 //     struct student s[3];
+//     printf("Enter name, roll number and marks of student 1:\n");
+//     scanf("%s %d %d", s[0].name, &s[0].rollno, &s[0].marks);
+//     printf("Enter name, roll number and marks of student 2:\n");
+//     scanf("%s %d %d", s[1].name, &s[1].rollno, &s[1].marks);
+//     printf("Enter name, roll number and marks of student 3:\n");
+//     scanf("%s %d %d", s[2].name, &s[2].rollno, &s[2].marks);
+//     printf("\nDetails of students:\n");
+//     printf("Name: %s, Roll No: %d, Marks: %d\n", s[0].name, s[0].rollno, s[0].marks);
+//     printf("Name: %s, Roll No: %d, Marks: %d\n", s[1].name, s[1].rollno, s[1].marks);
+//     printf("Name: %s, Roll No: %d, Marks: %d\n", s[2].name, s[2].rollno, s[2].marks);
+//     return 0;
+// }
+
+
+// details of 3 students using structure and print 
+// #include <stdio.h>
+// struct student {
+//     char name[50];
+//     int rollno;
+//     int marks;
+// };
+// int main() {
+//     struct student s[50];
 //      {
+
 //         printf("Enter name, roll number and marks of student %d:\n", i + 1);
 //         scanf("%s %d %d", s[i].name, &s[i].rollno, &s[i].marks);
 //     }
@@ -3740,3 +3764,81 @@
 //     }
 //     return 0;
 // }
+
+// details of n students using structure and print
+// #include <stdio.h>
+// struct student {
+//     char name[50];
+//     int rollno;
+//     int marks;
+// };
+// int main() {
+//     int n;
+//     printf("Enter number of students: ");
+//     scanf("%d", &n);
+//     struct student s[n];
+//     for (int i = 0; i < n; i++) {
+//         printf("Enter name, roll number and marks of student %d:\n", i + 1);
+//         scanf("%s %d %d", s[i].name, &s[i].rollno, &s[i].marks);
+//     }
+//     for (int i = 0; i < n; i++) {
+//         printf("Name: %s, Roll No: %d, Marks: %d\n", s[i].name, s[i].rollno, s[i].marks);
+//     }
+//     return 0;
+// }
+
+
+// add complex numbers using structure and functions without return
+// #include <stdio.h>
+
+// typedef struct {
+//     int real;
+//     int img;
+// } complex;
+
+// void add(complex a, complex b, complex *c) {
+//     c->real = a.real + b.real;
+//     c->img = a.img + b.img;
+// }
+
+// int main() {
+//     complex a, b, c;
+
+//     printf("Enter real and imaginary part of first complex number:\n");
+//     scanf("%d %d", &a.real, &a.img);
+
+//     printf("Enter real and imaginary part of second complex number:\n");
+//     scanf("%d %d", &b.real, &b.img);
+
+//     add(a, b, &c);
+
+//     printf("Sum of complex numbers: %d + %di\n", c.real, c.img);
+
+//     return 0;
+// }
+
+
+// swap two complex numbers using structure and functions
+#include <stdio.h>
+struct complex {
+    int real;
+    int img;
+};
+void swap(struct complex *a, struct complex *b) {
+    struct complex temp;
+    temp = *a;
+    *a = *b;
+    *b = temp;
+}
+int main() {
+    struct complex a, b;
+    printf("Enter real and imaginary part of first complex number:\n");
+    scanf("%d %d", &a.real, &a.img);
+    printf("Enter real and imaginary part of second complex number:\n");
+    scanf("%d %d", &b.real, &b.img);
+    swap(&a, &b);
+    printf("After swapping:\n");
+    printf(" %d + %di\n", a.real, a.img);
+    printf(" %d + %di\n", b.real, b.img);
+    return 0;
+}
