@@ -3700,3 +3700,43 @@
 //     }
 //     return 0;
 // }
+
+
+// #include <stdio.h>
+// int main(){
+//     struct complex{
+//         int real;
+//         int img;
+//     };
+//         struct complex a,b,c;
+//         printf("enter real and img part of a");
+//         scanf("%d %d",&a.real,&a.img);
+//         printf("enter real and img part of b");
+//         scanf("%d %d",&b.real,&b.img);
+//         c.real=a.real+b.real;
+//         c.img=a.img+b.img;
+//         printf("sum of complex number is %d + %di",c.real,c.img);
+        
+//         return 0;
+
+//     }
+
+// details of 3 students using structure and print 
+// #include <stdio.h>
+// struct student {
+//     char name[50];
+//     int rollno;
+//     int marks;
+// };
+// int main() {
+//     struct student s[3];
+//     for (int i = 0; i < 3; i++) {
+//         printf("Enter name, roll number and marks of student %d:\n", i + 1);
+//         scanf("%s %d %d", s[i].name, &s[i].rollno, &s[i].marks);
+//     }
+//     printf("\nDetails of students:\n");
+//     for (int i = 0; i < 3; i++) {
+//         printf("Name: %s, Roll No: %d, Marks: %d\n", s[i].name, s[i].rollno, s[i].marks);
+//     }
+//     return 0;
+// }
