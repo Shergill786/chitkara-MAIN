@@ -3927,3 +3927,22 @@
 //     printf("Name: %s, Roll No: %d\n", p->name, p->rollno);
 //     return 0;   
 // }
+
+
+//  union
+
+#include <stdio.h>
+#include <string.h>
+
+union data{
+    char name[50];
+    int roll;
+    float marks;
+
+};
+void main(){
+    union data d;
+    strcpy(d.name,"asd");   // stores name
+    scanf("%d %f", &d.roll, &d.marks);  // overwrites same memory
+    printf("%d %f",d.roll,d.marks);
+}
