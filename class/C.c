@@ -3837,74 +3837,93 @@
 
 
 //  create a strut for n no of time in which user will enter hrs ,min ,sec and add&sub the time of 2 different time which users will enter 
-#include <stdio.h>
+// #include <stdio.h>
 
-struct time {
-    int h, m, s;
-};
+// struct time {
+//     int h, m, s;
+// };
 
-// Function to add time
-void add(struct time t1, struct time t2, struct time *sum) {
-    sum->s = t1.s + t2.s;
-    sum->m = t1.m + t2.m;
-    sum->h = t1.h + t2.h;
+// // Function to add time
+// void add(struct time t1, struct time t2, struct time *sum) {
+//     sum->s = t1.s + t2.s;
+//     sum->m = t1.m + t2.m;
+//     sum->h = t1.h + t2.h;
 
-    if(sum->s >= 60) {
-        sum->s -= 60;
-        sum->m++;
-    }
-    if(sum->m >= 60) {
-        sum->m -= 60;
-        sum->h++;
-    }
-    if(sum->h >= 24) {
-        sum->h -= 24;
-    }
-}
+//     if(sum->s >= 60) {
+//         sum->s -= 60;
+//         sum->m++;
+//     }
+//     if(sum->m >= 60) {
+//         sum->m -= 60;
+//         sum->h++;
+//     }
+//     if(sum->h >= 24) {
+//         sum->h -= 24;
+//     }
+// }
 
-// Function to subtract time
-void subtract(struct time t1, struct time t2, struct time *diff) {
-    int sec1 = t1.h*3600 + t1.m*60 + t1.s;
-    int sec2 = t2.h*3600 + t2.m*60 + t2.s;
+// // Function to subtract time
+// void subtract(struct time t1, struct time t2, struct time *diff) {
+//     int sec1 = t1.h*3600 + t1.m*60 + t1.s;
+//     int sec2 = t2.h*3600 + t2.m*60 + t2.s;
 
-    int d = sec1 - sec2;
-    if(d < 0) d += 24*3600;
+//     int d = sec1 - sec2;
+//     if(d < 0) d += 24*3600;
 
-    diff->h = d / 3600;
-    diff->m = (d % 3600) / 60;
-    diff->s = d % 60;
-}
+//     diff->h = d / 3600;
+//     diff->m = (d % 3600) / 60;
+//     diff->s = d % 60;
+// }
 
-int main() {
-    struct time t[10], sum, diff;
-    int n, i, a, b;
+// int main() {
+//     struct time t[10], sum, diff;
+//     int n, i, a, b;
 
-    printf("Enter number of times: ");
-    scanf("%d", &n);
+//     printf("Enter number of times: ");
+//     scanf("%d", &n);
 
-    // Input
-    for(i = 0; i < n; i++) {
-        printf("Enter time %d (h m s): ", i + 1);
-        scanf("%d %d %d", &t[i].h, &t[i].m, &t[i].s);
-    }
+//     // Input
+//     for(i = 0; i < n; i++) {
+//         printf("Enter time %d (h m s): ", i + 1);
+//         scanf("%d %d %d", &t[i].h, &t[i].m, &t[i].s);
+//     }
 
-    // Display
-    printf("\nTimes:\n");
-    for(i = 0; i < n; i++) {
-        printf("%d -> %02d:%02d:%02d\n", i + 1, t[i].h, t[i].m, t[i].s);
-    }
+//     printf("\nTimes:\n");
+//     for(i = 0; i < n; i++) {
+//         printf("%d -> %02d:%02d:%02d\n", i + 1, t[i].h, t[i].m, t[i].s);
+//     }
 
-    // Choose indices
-    printf("\nEnter two indices: ");
-    scanf("%d %d", &a, &b);
+//     printf("\nEnter two indices: ");
+//     scanf("%d %d", &a, &b);
 
-    // Call functions
-    add(t[a], t[b], &sum);
-    subtract(t[a], t[b], &diff);
+//     add(t[a], t[b], &sum);
+//     subtract(t[a], t[b], &diff);
 
-    // Output
-    printf("\nSum = %02d:%02d:%02d\n", sum.h, sum.m, sum.s);
-    printf("Difference = %02d:%02d:%02d\n", diff.h, diff.m, diff.s);
+//     printf("\nSum = %02d:%02d:%02d\n", sum.h, sum.m, sum.s);
+//     printf("Difference = %02d:%02d:%02d\n", diff.h, diff.m, diff.s);
 
-    return 0;
-}
+//     return 0;
+// }
+
+
+// pointer to struct / struct to pointer 
+// #include <stdio.h>
+// struct g5 {
+//     char name[50];
+//     int rollno;
+// };
+
+// int main(){
+//     struct g5 a;
+//     struct g5 *p=&a;
+// //     printf("Enter name and roll number: ");
+// //     scanf("%s %d", (*p).name, &(*p).rollno);
+// //     printf("Name: %s, Roll No: %d\n", (*p).name, (*p).rollno);
+// //     return 0;   
+// // }
+
+//     printf("Enter name and roll number: " );
+//     scanf("%s %d", p->name, &p->rollno);
+//     printf("Name: %s, Roll No: %d\n", p->name, p->rollno);
+//     return 0;   
+// }
