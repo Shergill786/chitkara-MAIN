@@ -3931,18 +3931,25 @@
 
 //  union
 
-#include <stdio.h>
-#include <string.h>
+// #include <stdio.h>
+// #include <string.h>
 
-union data{
-    char name[50];
-    int roll;
-    float marks;
+// union data {
+//     char name[50];
+//     int roll;
+//     float marks;
+// };
 
-};
-void main(){
-    union data d;
-    strcpy(d.name,"asd");   // stores name
-    scanf("%d %f", &d.roll, &d.marks);  // overwrites same memory
-    printf("%d %f",d.roll,d.marks);
-}
+// int main() {
+//     union data d;
+
+//     strcpy(d.name, "asd");
+//     printf("Name: %s\n", d.name);
+//     printf("Enter roll: ");
+//     scanf("%d", &d.roll);
+//     printf("Roll: %d\n", d.roll);
+//     printf("Enter marks: ");
+//     scanf("%f", &d.marks);
+//     printf("Marks: %.2f\n", d.marks);
+//     return 0;
+// }
