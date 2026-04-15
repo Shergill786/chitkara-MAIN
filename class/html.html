@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chitkara University</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+        }
+
+        .container {
+            border: 2px solid red;
+            padding: 20px;
+            width: 400px;
+            margin: 50px auto;
+            text-align: center;
+            background: white;
+            border-radius: 10px;
+        }
+
+        .card, .card2 {
+            border: 2px solid black;
+            margin: 20px 0;
+            padding: 15px;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        button {
+            padding: 8px 15px;
+            cursor: pointer;
+            border: none;
+            background: black;
+            color: white;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background: #444;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1>Chitkara University</h1>
+
+    <!-- Card 1 -->
+    <div class="card">
+        <h2 class="text1">About CU</h2>
+        <p class="text1">Good university and good culture</p>
+        <button id="btn1">OK</button>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card2">
+        <h2>Courses (BE CSE-AIML)</h2>
+        <p id="text2">Good course and good placements</p>
+        <button id="btn2">OK</button>
+    </div>
+</div>
+
+<script>
+    const btn1 = document.getElementById("btn1");
+    const btn2 = document.getElementById("btn2");
+    const text1 = document.getElementByclassName("text1");
+    const text2 = document.getElementById("text2");
+
+    // First button click
+    btn1.addEventListener("click", function() {
+        text1.style.color = "white";
+        text1.style.backgroundColor = "green";
+        text1.style.fontWeight = "bold";
+        text1.style.padding = "10px";
+    });
+
+    // Second button click
+    btn2.addEventListener("click", function() {
+        text2.style.color = "yellow";
+        text2.style.backgroundColor = "purple";
+        text2.style.fontSize = "20px";
+        text2.style.fontWeight = "bold";
+        text2.style.padding = "10px";
+    });
+</script>
+
+</body>
+</html>
