@@ -101,3 +101,171 @@
 // </html>
 
 
+// <!DOCTYPE html>
+// <html lang="en">
+// <head>
+//     <meta charset="UTF-8">
+//     <title>Chitkara University</title>
+
+//     <style>
+//         .container {
+//             border: 2px solid red;
+//             padding: 20px;
+//             text-align: center;
+//             border-radius: 10px;
+//         }
+
+//         .card, .card2 {
+//             border: 2px solid black;
+//             margin: 20px 0;
+//             padding: 15px;
+//             border-radius: 10px;
+//         }
+
+//         button {
+//             padding: 8px 15px;
+//             border-radius: 5px;
+//         }
+//     </style>
+// </head>
+
+// <body>
+
+// <div class="container">
+//     <h1>Chitkara University</h1>
+
+//     <!-- Card 1 -->
+//     <div class="card">
+//         <h2 id="text1">About CU</h2>
+//         <p id="text3">Good university and good culture</p>
+//         <button id="btn1">OK</button>
+//     </div>
+
+//     <!-- Card 2 -->
+//     <div class="card2">
+//         <h2>Courses (BE CSE-AIML)</h2>
+//         <p id="text2">Good course and good placements</p>
+//         <button id="btn2">OK</button>
+//     </div>
+// </div>
+
+// <script>
+//     const btn1 = document.getElementById("btn1");
+//     const btn2 = document.getElementById("btn2");
+//     const text1 = document.getElementById("text1");
+//     const text2 = document.getElementById("text2");
+//     const text3 = document.getElementById("text3");
+
+//     btn1.addEventListener("click", function() {
+//         text1.style.color = "white";
+//         text1.style.backgroundColor = "green";
+//         text1.style.fontWeight = "bold";
+//         text1.style.padding = "10px";
+//         text1.style.fontSize = "20px";
+//         text3.style.color = "white";
+//         text3.style.backgroundColor = "green";
+//         text3.style.fontWeight = "bold";
+//         text3.style.padding = "10px";
+//         text3.style.fontSize = "50px";
+
+//         btn1.style.backgroundColor = "blue";
+//         btn1.style.color = "white";
+//         btn1.style.fontWeight = "bold";
+//     });
+
+//     btn2.addEventListener("click", function() {
+//         text2.style.color = "yellow";
+//         text2.style.backgroundColor = "purple";
+//         text2.style.fontSize = "20px";
+//         text2.style.fontWeight = "bold";
+//         text2.style.padding = "10px";
+//         btn2.style.backgroundColor = "purple";
+//         btn2.style.color = "white";
+//         btn2.style.fontWeight = "bold";
+//     });
+
+// </script>
+// </body>
+// </html>
+
+// <!DOCTYPE html>
+// <html>
+
+// <head>
+//     <title>All Mouse Events</title>
+//     <style>
+//         #box {
+//             width: 200px;
+//             height: 200px;
+//             background-color: lightblue;
+//             text-align: center;
+//             line-height: 200px;
+//             margin: 50px;
+//             font-weight: bold;
+//         }
+//     </style>
+// </head>
+
+// <body>
+
+//     <div id="box">Hover / Click Me</div>
+
+//     <script>
+//         const box = document.getElementById("box");
+//         box.addEventListener("click", () => console.log("click"));
+//         box.addEventListener("dblclick", () => console.log("double click"));
+//         box.addEventListener("mousedown", () => console.log("mouse down"));
+//         box.addEventListener("mouseup", () => console.log("mouse up"));
+//         box.addEventListener("mouseenter", () => console.log("mouse enter"));
+//         box.addEventListener("mouseleave", () => console.log("mouse leave"));
+//         box.addEventListener("mouseover", () => console.log("mouse over"));
+//         box.addEventListener("mouseout", () => console.log("mouse out"));
+//         box.addEventListener("mousemove", () => console.log("mouse moving"));
+//     </script>
+
+// </body>
+
+// </html>
+
+
+
+
+// <!DOCTYPE html>
+// <html>
+
+// <head>
+//     <title>All Mouse Events</title>
+//     <style>
+//         #box {
+//             width: 200px;
+//             height: 200px;
+//             background-color: lightblue;
+//             text-align: center;
+//             line-height: 200px;
+//             margin: 50px;
+//             font-weight: bold;
+//         }
+//     </style>
+// </head>
+
+// <body>
+
+//     <div id="box">Hover / Click Me</div>
+
+//     <script>
+//         const box = document.getElementById("box");
+
+//         box.addEventListener("click", () => alert("click"));
+//         box.addEventListener("dblclick", () => alert("double click"));
+//         box.addEventListener("mousedown", () => alert("mouse down"));
+//         box.addEventListener("mouseup", () => alert("mouse up"));
+//         box.addEventListener("mouseenter", () => alert("mouse enter"));
+//         box.addEventListener("mouseleave", () => alert("mouse leave"));
+//         box.addEventListener("mouseover", () => alert("mouse over"));
+//         box.addEventListener("mouseout", () => alert("mouse out"));
+//         box.addEventListener("mousemove", () => alert("mouse moving"));
+//     </script>
+
+// </body>
+
+// </html>
