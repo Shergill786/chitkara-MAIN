@@ -269,3 +269,162 @@
 // </body>
 
 // </html>
+
+
+// <!DOCTYPE html>
+// <html lang="en">
+// <head>
+//     <meta charset="UTF-8">
+//     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+//     <title>keyboard Events</title>
+// </head>
+// <body>
+//     <script>
+//         const inputBox = document.getElementById('inputBox');
+//         inputBox.addEventListener('keydown', () => alert('Key down event triggered'));
+//         inputBox.addEventListener('keyup', () => alert('Key up event triggered'));
+//         inputBox.addEventListener('keypress', () => alert('Key press event triggered'));
+//     </script>
+// </body>
+// </html>
+
+
+// <!DOCTYPE html>
+// <html lang="en">
+// <head>
+//     <meta charset="UTF-8">
+//     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+//     <title>Document</title>
+
+//     <style>
+//         .main-div{
+//             border: 2px solid black;
+//             padding: 20px;
+//         }
+        
+//         .div1, .div2{
+//             border: 1px solid black;
+//             padding: 10px;
+//             margin: 10px 0;
+//         }
+//     </style>
+// </head>
+
+// <body>
+//     <main class="main-div">
+//         <div class="child-container">
+            
+//             <p id="text">HELLO EVERYONE</p>
+
+//             <div class="div1">
+//                 <input type="text" id="inputBox" placeholder="Type something">
+//             </div>
+
+//             <div class="div2">
+//                 <button id="hi">HI</button>
+//                 <button id="ok">OK</button>
+//                 <br><br>
+//                 <button id="setup">SETUP</button>
+//                 <button id="why">WHY</button>
+//             </div>
+
+//             <button id="bye">BYE</button>
+//         </div>
+
+//         <script>
+//             const text = document.getElementById("text");
+//             const inputBox = document.getElementById('inputBox');
+//             inputBox.addEventListener('keydown', () => alert('who the are you?'));
+            
+//             document.getElementById("hi").addEventListener("mouseover", function() {
+//                 alert("HI");
+//             });
+
+//             document.getElementById("hello").addEventListener("mousedown", function() {
+//                 alert("HELLO");
+//             });
+
+//             document.getElementById("ok").addEventListener("click", function() {
+//                 text.style.color = "red";
+//                 text.style.backgroundColor = "blue";
+//                 text.style.fontSize = "30px";
+//                 text.style.fontWeight = "bold";
+//                 text.style.fontFamily = "Times New Roman";
+//             });
+
+//             document.getElementById("setup").addEventListener("mouseout", function() {
+//                 alert("SETUP");
+//             });
+
+//             document.getElementById("why").addEventListener("mousedown", function() {
+//                 alert("WHY");
+//             });
+
+//             document.getElementById("bye").addEventListener("click", function() {
+//                 alert("BYE");
+//             });
+//         </script>
+//     </main>
+// </body>
+// </html>
+
+
+// event bubbling means when a event start from the target element child and then move upwards to the parent elemnet
+// if you click a button inside a div the button event happens first then the div 
+// event bubbling is a default behaviour in js it help when you want parent elements to react to child events without adding any listener
+
+// event capturing is the opposite of event bubbling  in this the event start from the parent element and then move downwards to the child element
+// it is topdown approach 
+// if you click button then the div event happens first then the button 
+// the event capture is commonly used when you want the parent to handle the event before child elements
+
+// event delegation means adding a single event listener to a parent element to handle events for its child elements 
+// instead of adding many event listener to each child in event bubbling the event delegation use 1 listener on parent and detect which child was it 
+// the event delegation improves preformance and is useful when elements are entered dynamically
+
+// <!DOCTYPE html>
+// <html lang="en">
+// <head>
+//     <meta charset="UTF-8">
+//     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+//     <title>Document</title>
+// </head>
+// <body>
+//     <div id="parent" style="padding: 40px;background:lightblue;">
+//     parent
+//     <button id="child"> click</button> 
+//     </div>
+//     <script>
+//         document.getElementById("child").addEventListener("click", function() {
+//             alert("Parent clicked!");
+//         });
+//         document.getElementById("child").addEventListener("click", function() {
+//         alert("Child clicked!");
+//         });
+//     </script>
+// </body>
+// </html>
+
+// <!DOCTYPE html>
+// <html lang="en">
+// <head>
+//     <meta charset="UTF-8">
+//     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+//     <title>Document</title>
+// </head>
+// <body>
+//     <div id="parent" style="padding: 40px;background:lightblue;">
+//     parent
+//     <button id="child"> click</button> 
+//     </div>
+//     <script>
+//         document.getElementById("child").addEventListener("click", function() {
+//             alert("Parent clicked!");
+//         },true);
+//         document.getElementById("child").addEventListener("click", function() {
+//         alert("Child clicked!");
+//         },true);
+//     </script>
+// </body>
+// </html>
+
