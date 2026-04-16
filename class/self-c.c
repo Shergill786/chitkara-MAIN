@@ -560,26 +560,26 @@
 // }
 
 // Q18: Count vowels in string using pointer
-// #include <stdio.h>
-// int countVowels(char *str) {
-//     int count = 0;
-//     while (*str != '\0') {
-//         if (*str == 'a' || *str == 'e' || *str == 'i' || 
-//             *str == 'o' || *str == 'u' ||
-//             *str == 'A' || *str == 'E' || *str == 'I' || 
-//             *str == 'O' || *str == 'U') {
-//             count++;
-//         }
-//         str++;
-//     }
-//     return count;
-// }
-// int main() {
-//     char str[] = "Hello World";
-//     printf("String: %s\n", str);
-//     printf("Vowel count: %d\n", countVowels(str));
-//     return 0;
-// }
+#include <stdio.h>
+int countVowels(char *str) {
+    int count = 0;
+    while (*str != '\0') {
+        if (*str == 'a' || *str == 'e' || *str == 'i' || 
+            *str == 'o' || *str == 'u' ||
+            *str == 'A' || *str == 'E' || *str == 'I' || 
+            *str == 'O' || *str == 'U') {
+            count++;
+        }
+        str++;
+    }
+    return count;
+}
+int main() {
+    char str[] = "Hello World";
+    printf("String: %s\n", str);
+    printf("Vowel count: %d\n", countVowels(str));
+    return 0;
+}
 
 // Q19: Check if two strings are equal using pointers
 // #include <stdio.h>

@@ -5,18 +5,10 @@
     <title>Chitkara University</title>
 
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #f5f5f5;
-        }
-
         .container {
             border: 2px solid red;
             padding: 20px;
-            width: 400px;
-            margin: 50px auto;
             text-align: center;
-            background: white;
             border-radius: 10px;
         }
 
@@ -25,20 +17,11 @@
             margin: 20px 0;
             padding: 15px;
             border-radius: 10px;
-            transition: 0.3s;
         }
 
         button {
             padding: 8px 15px;
-            cursor: pointer;
-            border: none;
-            background: black;
-            color: white;
             border-radius: 5px;
-        }
-
-        button:hover {
-            background: #444;
         }
     </style>
 </head>
@@ -50,8 +33,8 @@
 
     <!-- Card 1 -->
     <div class="card">
-        <h2 class="text1">About CU</h2>
-        <p class="text1">Good university and good culture</p>
+        <h2 id="text1">About CU</h2>
+        <p id="text3">Good university and good culture</p>
         <button id="btn1">OK</button>
     </div>
 
@@ -66,26 +49,38 @@
 <script>
     const btn1 = document.getElementById("btn1");
     const btn2 = document.getElementById("btn2");
-    const text1 = document.getElementByclassName("text1");
+    const text1 = document.getElementById("text1");
     const text2 = document.getElementById("text2");
+    const text3 = document.getElementById("text3");
 
-    // First button click
     btn1.addEventListener("click", function() {
         text1.style.color = "white";
         text1.style.backgroundColor = "green";
         text1.style.fontWeight = "bold";
         text1.style.padding = "10px";
+        text1.style.fontSize = "20px";
+        text3.style.color = "white";
+        text3.style.backgroundColor = "green";
+        text3.style.fontWeight = "bold";
+        text3.style.padding = "10px";
+        text3.style.fontSize = "50px";
+
+        btn1.style.backgroundColor = "blue";
+        btn1.style.color = "white";
+        btn1.style.fontWeight = "bold";
     });
 
-    // Second button click
     btn2.addEventListener("click", function() {
         text2.style.color = "yellow";
         text2.style.backgroundColor = "purple";
         text2.style.fontSize = "20px";
         text2.style.fontWeight = "bold";
         text2.style.padding = "10px";
+        btn2.style.backgroundColor = "purple";
+        btn2.style.color = "white";
+        btn2.style.fontWeight = "bold";
     });
-</script>
 
+</script>
 </body>
 </html>

@@ -843,4 +843,61 @@
 // }
 
 
-// // 
+// // count vowels 
+// #include <stdio.h>
+// void vowel(char *str,int *V,int *C){
+//     while (*str!='\0'){
+//         if (*str == 'a' || *str == 'e' || *str == 'i' || 
+//             *str == 'o' || *str == 'u' ||
+//             *str == 'A' || *str == 'E' || *str == 'I' || 
+//             *str == 'O' || *str == 'U') {
+//             (*V)++;
+
+//     }
+//     else{
+//         (*C)++;
+//     }
+//     str++;
+// }}
+// int main(){
+//     int V=0,C=0;
+//     char str[50];
+//     printf("string");
+//     scanf("%s",str);
+//     vowel(str,&V,&C);
+//     printf("%d %d",V,C);
+//     return 0;
+// }
+
+// // traverse a array 
+// #include <stdio.h>
+// void traverse(int *arr, int size) {
+//     for (int i = 0; i < size; i++) {
+//         printf("%d ", *(arr + i));
+//     }
+// }
+// int main() {
+//     int arr[] = {1, 2, 4,4,3, 5};
+//     int size = sizeof(arr) / sizeof(arr[0]);
+//     traverse(arr, size);
+//     return 0;
+// }
+
+
+// char str[] = "hello";
+// char *ptr = str;zw
+//     while (*ptr != '\0') {
+//     printf("%c ", *ptr);
+//     ptr++;   // move to next character
+
+// }
+
+// #include <stdio.h>
+// int main(){
+//     int arr[] = {1, 2, 3, 4, 5};
+//     int size = sizeof(arr) / sizeof(arr[0]);
+// printf("%d",size);
+// }
+
+
+// // largest and smallest 
