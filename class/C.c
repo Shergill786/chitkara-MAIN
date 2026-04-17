@@ -1417,7 +1417,7 @@
 //     for (int i = 1; i < 5; i++) {
 //         if (arr[i] > max) {
 //             max = arr[i];
-//         }
+//       }
 //         if (arr[i] < min) {
 //             min = arr[i];
 //         }
@@ -2211,26 +2211,26 @@
 //     return 0;
 // }
 
-#include <stdio.h>
+// #include <stdio.h>
 
-int main() {
-    char str[100];
-    int i = 0, count = 0;
+// int main() {
+//     char str[100];
+//     int i = 0, count = 0;
 
-    printf("Enter a string: ");
-    fgets(str, sizeof(str), stdin);
-    while (str[i] != '\0') {    
-        char ch = str[i];
+//     printf("Enter a string: ");
+//     fgets(str, sizeof(str), stdin);
+//     while (str[i] != '\0') {    
+//         char ch = str[i];
 
-        if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u' ||
-            ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U') {
-            count++;
-        }
-        i++;
-    }
-    printf("Number of vowels: %d\n", count);
-    return 0;
-}
+//         if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u' ||
+//             ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U') {
+//             count++;
+//         }
+//         i++;
+//     }
+//     printf("Number of vowels: %d\n", count);
+//     return 0;
+// }
 
 
 
@@ -2411,6 +2411,8 @@ int main() {
 // static 0 local function block end of program
 // register garbage local function block entire program
 
+
+
 //  add 2 number using pointer
 // #include <stdio.h>
 // int main() {
@@ -2423,7 +2425,7 @@ int main() {
 //     sum = num1 + num2;
     
 //     printf("Sum: %d\n", sum);
-    
+
 //     return 0;
 // }
 
@@ -3158,9 +3160,8 @@ int main() {
 // 	int c = p(arr, n);  
 // 	printf("Sum of array elements: %d\n", c);
 // 	return 0;
-
-
 // }
+
 
 // // function that updates interest of bank balance using pointer
 // #include <stdio.h>   
@@ -3712,9 +3713,7 @@ int main() {
 //         c.real=a.real+b.real;
 //         c.img=a.img+b.img;
 //         printf("sum of complex number is %d + %di",c.real,c.img);
-        
 //         return 0;
-
 //     }
 
 
@@ -3927,25 +3926,25 @@ int main() {
 
 //  union
 
-// #include <stdio.h>
-// #include <string.h>
+#include <stdio.h>
+#include <string.h>
 
-// union data {
-//     char name[50];
-//     int roll;
-//     float marks;
-// };
+union data {
+    char name[50];
+    int roll;
+    float marks;
+};
 
-// int main() {
-//     union data d;
+int main() {
+    union data d;
 
-//     strcpy(d.name, "asd");
-//     printf("Name: %s\n", d.name);
-//     printf("Enter roll: ");
-//     scanf("%d", &d.roll);
-//     printf("Roll: %d\n", d.roll);
-//     printf("Enter marks: ");
-//     scanf("%f", &d.marks);
-//     printf("Marks: %.2f\n", d.marks);
-//     return 0;
-// }
+    strcpy(d.name, "asd");
+    printf("Name: %s\n", d.name);
+    printf("Enter roll: ");
+    scanf("%d", &d.roll);
+    printf("Roll: %d\n", d.roll);
+    printf("Enter marks: ");
+    scanf("%f", &d.marks);
+    printf("Marks: %.2f\n", d.marks);
+    return 0;
+}
