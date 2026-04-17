@@ -901,3 +901,45 @@
 
 
 // // largest and smallest 
+// #include <stdio.h>
+// int main(){
+//     int arr[] = {1, 2, 3, 4, 5};
+//     int size = sizeof(arr) / sizeof(arr[0]);
+//     int max=arr[0],min=arr[0];
+//     for (int i = 1; i < size; i++) {
+//         if (arr[i] > max) {
+//             max = arr[i];
+//         }
+//         if (arr[i] < min) {
+//             min = arr[i];
+//         }
+//     }
+//     printf("largest %d smallest %d",max,min);
+// }
+
+// // 2largest and smallest
+// #include <stdio.h>
+// int main(){
+//     int arr[] = {1, 2, 3, 4, 5};
+//     int size = sizeof(arr) / sizeof(arr[0]);
+//     int max=arr[0],second_max=arr[0];
+//     int min=arr[0],second_min=arr[0];
+//     for (int i = 1; i < size; i++) {
+//         if (arr[i] > max) {
+//             second_max = max;
+//             max = arr[i];
+//         }
+//         else if (arr[i] > second_max && arr[i] != max) {
+//             second_max = arr[i];
+//         }
+//         if (arr[i] < min) {
+//             second_min = min;
+//             min = arr[i];
+//         }
+//         else if (arr[i] < second_min && arr[i] != min) {
+//             second_min = arr[i];
+//         }
+//     }
+//     printf("largest %d second largest %d smallest %d second smallest %d",max,second_max,min,second_min);
+// }
+

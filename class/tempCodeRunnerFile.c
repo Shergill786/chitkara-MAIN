@@ -1,20 +1,13 @@
-include <stdio.h>
-int countVowels(char *str) {
-    int count = 0;
-    while (*str != '\0') {
-        if (*str == 'a' || *str == 'e' || *str == 'i' || 
-            *str == 'o' || *str == 'u' ||
-            *str == 'A' || *str == 'E' || *str == 'I' || 
-            *str == 'O' || *str == 'U') {
-            count++;
-        }
-        str++;
-    }
-    return count;
-}
+#include <stdio.h>
 int main() {
-    char str[] = "Hello World";
-    printf("String: %s\n", str);
-    printf("Vowel count: %d\n", countVowels(str));
+    char a[27];   // 26 letters + 1 for '\0'
+    char *p = a;
+    for (int i = 0; i < 26; i++) {
+        *p = 'A' + i;
+        p++;
+    }
+    a[26] = '\0';
+    printf("%s", a);
     return 0;
 }
+
