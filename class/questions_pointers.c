@@ -943,3 +943,159 @@
 //     printf("largest %d second largest %d smallest %d second smallest %d",max,second_max,min,second_min);
 // }
 
+// #include <stdio.h>
+// enum days { sunday, monday, tuesday, wednesday, thursday, friday, saturday };
+// int main() {
+//     // printf("%d",sunday);
+//     // printf("%d",monday);
+//     // printf("%d",tuesday);
+//     // printf("%d",wednesday);
+//     // printf("%d",friday);
+//     // printf("%d",thursday);
+//     // printf("%d",saturday);
+//     //     return 0;
+//     for (int i = sunday; i <= saturday; i++) {
+//         printf("%d ", i);
+//     }
+// }
+
+
+// #include <stdio.h>
+// enum days {sunday=1, monday, tuesday, wednesday, thursday, friday, saturday};
+// int main() {
+//     int d;
+//     printf("Enter 1-7");
+//     scanf("%d", &d);
+//     switch(d) {
+//         case sunday:
+//             printf("Sunday\n");
+//             break;
+//         case monday:
+//             printf("Monday\n");
+//             break;
+//         case tuesday:
+//             printf("Tuesday\n");
+//             break;
+//         case wednesday:
+//             printf("Wednesday\n");
+//             break;
+//         case thursday:
+//             printf("Thursday\n");
+//             break;
+//         case friday:
+//             printf("Friday\n");
+//             break;
+//         case saturday:
+//             printf("Saturday\n");
+//             break;
+//         default:
+//             printf("Invalid day\n");
+//     }
+//     return 0;
+// }
+
+
+// #include <stdio.h>
+// enum days {sunday=1, monday, tuesday, wednesday, thursday, friday, saturday};
+// int main() {
+//     int d;
+//  for (int i = sunday; i <= saturday; i++) {
+//         printf("%d ", i);   
+// printf("Enter 1-7");
+//     scanf("%d", &d);
+//     switch(d) {
+//         case sunday:
+//             printf("Sunday\n");
+//             break;
+//         case monday:
+//             printf("Monday\n");
+//             break;
+//         case tuesday:
+//             printf("Tuesday\n");
+//             break;
+//         case wednesday:
+//             printf("Wednesday\n");
+//             break;
+//         case thursday:
+//             printf("Thursday\n");
+//             break;
+//         case friday:
+//             printf("Friday\n");
+//             break;
+//         case saturday:
+//             printf("Saturday\n");
+//             break;
+//         default:
+//             printf("Invalid day\n");
+//     }
+//     return 0;
+// }
+
+
+// store int or float value based on choice of user then print it using union
+
+// #include <stdio.h>
+// union Data {
+//     int i;
+//     float f;
+// };
+
+// void display(union Data *d, int choice) {
+//     if (choice == 1) {
+//         printf("integer: %d\n", d->i);
+//     } 
+//     else if (choice == 2) {
+//         printf("float: %.2f\n", d->f);
+//     } 
+//     else {
+//         printf("Invalid\n");
+//     }
+// }
+
+// int main() {
+//     union Data d;
+//     int choice;
+
+//     printf("1 int, 2 float)");
+//     scanf("%d", &choice);
+
+//     if (choice == 1) {
+//         printf("Enter integer value: ");
+//         scanf("%d", &d.i);
+//     } 
+//     else if (choice == 2) {
+//         printf("Enter float value: ");
+//         scanf("%f", &d.f);
+//     } 
+//     else {
+//         printf("Invalid input\n");
+//         return 0;
+//     }
+
+//     display(&d, choice);
+
+//     return 0;
+// }
+
+
+#include <stdio.h>
+struct Product {
+    float price;
+};
+void discount(struct Product *p) {
+    float d;
+    if (p->price <= 100) {
+        d = 0.20;   
+        } else {
+        d = 0.20;
+    }
+    p->price = p->price - (p->price * d);
+}
+int main() {
+    struct Product p;
+    printf("Enter product price: ");
+    scanf("%f", &p.price);
+    discount(&p);
+    printf("Final price after discount: %.2f\n", p.price);
+    return 0;
+}

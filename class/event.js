@@ -428,3 +428,231 @@
 // </body>
 // </html>
 
+// <!DOCTYPE html>
+// <html lang="en">
+// <head>
+//     <meta charset="UTF-8">
+//     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+//     <title>Document</title>
+
+//     <style>
+//         .main-div{
+//             border: 2px solid black;
+//             padding: 20px;
+//         }
+        
+//         .div1, .div2{
+//             border: 1px solid black;
+//             padding: 10px;
+//             margin: 10px 0;
+//         }
+//     </style>
+// </head>
+
+// <body>
+//     <main class="main-div">
+//         <div class="child-container">
+            
+//             <p id="text">HELLO EVERYONE</p>
+
+//             <div class="div1">
+//                 <input type="text" id="inputBox" placeholder="Type something">
+//             </div>
+
+//             <div class="div2">
+//                 <button id="hi">HI</button>
+//                 <button id="ok">OK</button>
+//                 <br><br>
+//                 <button id="setup">SETUP</button>
+//                 <button id="why">WHY</button>
+//             </div>
+
+//             <button id="bye">BYE</button>
+//         </div>
+
+//         <script>
+//             const text = document.getElementById("text");
+//             const inputBox = document.getElementById('inputBox');
+//             inputBox.addEventListener('keydown', () => alert('who the are you?'));
+            
+//             document.getElementById("hi").addEventListener("mouseover", function() {
+//                 alert("HI");
+//             });
+
+//             document.getElementById("hello").addEventListener("mousedown", function() {
+//                 alert("HELLO");
+//             });
+
+//             document.getElementById("ok").addEventListener("click", function() {
+//                 text.style.color = "red";
+//                 text.style.backgroundColor = "blue";
+//                 text.style.fontSize = "30px";
+//                 text.style.fontWeight = "bold";
+//                 text.style.fontFamily = "Times New Roman";
+//             });
+
+//             document.getElementById("setup").addEventListener("mouseout", function() {
+//                 alert("SETUP");
+//             });
+
+//             document.getElementById("why").addEventListener("mousedown", function() {
+//                 alert("WHY");
+//             });
+
+//             document.getElementById("bye").addEventListener("click", function() {
+//                 alert("BYE");
+//             });
+//         </script>
+//     </main>
+// </body>
+// </html>
+
+// <!DOCTYPE html>
+// <html>
+// <head>
+//     <title>Event Delegation</title>
+// </head>
+// <body>
+
+// <button id="addBtn">Add Item</button>
+
+// <ul id="list">
+//     <li>Item 1</li>
+//     <li>Item 2
+//         <ul>
+//             <li>Child Item A</li>
+//             <li>Child Item B</li>
+//         </ul>
+//     </li>
+//     <li>Item 3</li>
+// </ul>
+
+// <script>
+// let count =4;
+
+// document.getElementById("addBtn").addEventListener("click", () => {
+//     const li = document.createElement("li");
+//     li.textContent = "Item " + count++;
+//     document.getElementById("list").appendChild(li);
+// });
+
+// document.getElementById("list").addEventListener("click", (e) => {
+//     if (e.target.parentElement.id === "list") {
+//         alert(e.target.textContent);
+//     }
+// });
+// </script>
+
+// </body>
+// </html>
+
+// <!DOCTYPE html>
+// <html>
+// <head>
+//     <title>Event Delegation</title>
+// </head>
+// <body>
+
+// <button id="addBtn">Add Item</button>
+
+// <ul id="list">
+//     <li>Item 1</li>
+//     <li>Item 2</li>
+//     <li>Item 3
+//     <ul id="sub">
+//         <li>section 3.1</li>
+//         <ul id ="subsection"> 
+//             <li> section 3.1.1 </li>
+//         </ul> 
+// </ul>
+//     </li>
+// </ul>
+// <script>
+// let count = 2;
+// let scount=2;
+
+// document.getElementById("addBtn").addEventListener("click", () => {
+//     const li = document.createElement("li");
+//     li.textContent = "section 3.1." + count++;
+//     document.getElementById("subsection").appendChild(li);
+// });
+// document.getElementById("addBtn").addEventListener("click",()=>{
+//     const li = document.createElement("li");
+//     li.textContent = "section 3." + scount++;
+//     document.getElementById("sub").appendChild(li);
+// });
+
+// </script>
+
+// </body>
+// </html>
+
+// <!DOCTYPE html>
+// <html>
+// <head>
+// <title>Limit Sub Items</title>
+// <style>
+// button{margin:20px;padding:8px 15px;cursor:pointer;}
+// </style>
+// </head>
+// <body>
+
+// <button id="ok">OK</button>
+
+// <ul id="list">
+// <li>Item 1
+//     <ul>
+//         <li>Item 1.1</li>
+//         <li>Item 1.2</li>
+//     </ul>
+// </li>
+
+// <li>Item 2
+//     <ul>
+//         <li>Item 2.1
+//             <ul>
+//                 <li id="target">Item 2.1.1</li>
+//             </ul>
+//         </li>
+//     </ul>
+// </li>
+// </ul>
+
+// <script>
+// let count3 = 3;
+
+// document.getElementById("ok").addEventListener("click", () => {
+    
+//     let target = document.getElementById("target");
+//     let sub = target.querySelector("ul");
+
+//     // create sub list if not exists
+//     if (!sub) {
+//         sub = document.createElement("ul");
+//         target.appendChild(sub);
+//     }
+
+//     let count = sub.children.length;
+
+//     // limit check
+//     if (count >= 10) {
+//         alert("Limit reached (Item 2.1.1.10)");
+//         return;
+//     }
+
+//     // correct numbering        
+//     let li = document.createElement("li");
+//     li.textContent = "Item 2.1.1." + (count + 1);
+//     sub.appendChild(li);
+
+//     // add new main item
+//     let main = document.getElementById("list");
+//     let li3 = document.createElement("li");
+//     li3.textContent = "Item " + count3++;
+//     main.appendChild(li3);
+// });
+// </script>
+
+// </body>
+// </html>
+

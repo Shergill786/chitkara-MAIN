@@ -3948,3 +3948,53 @@ int main() {
     printf("Marks: %.2f\n", d.marks);
     return 0;
 }
+
+// // create enumerations for days and print in numbers // use switch case 
+// #include <stdio.h>
+// enum days { sunday, monday, tuesday, wednesday, thursday, friday, saturday };
+// int main() {
+//     // printf("%d",sunday);
+//     // printf("%d",monday);
+//     // printf("%d",tuesday);
+//     // printf("%d",wednesday);
+//     // printf("%d",friday);
+//     // printf("%d",thursday);
+//     // printf("%d",saturday);
+//     //     return 0;
+//     for (int i = sunday; i <= saturday; i++) {
+//         printf("%d ", i);
+//     }
+// }
+
+#include <stdio.h>
+enum days { sunday, monday, tuesday, wednesday, thursday, friday, saturday};
+int main(){
+    char d;
+    scanf("%s", &d);
+    switch(d) {
+        case sunday:
+            printf("Sunday\n");
+            break;
+        case monday:
+            printf("Monday\n");
+            break;
+        case tuesday:
+            printf("Tuesday\n");
+            break;
+        case wednesday:
+            printf("Wednesday\n");
+            break;
+        case thursday:
+            printf("Thursday\n");
+            break;
+        case friday:
+            printf("Friday\n");
+            break;
+        case saturday:
+            printf("Saturday\n");
+            break;
+        default:
+            printf("Invalid day\n");
+    }
+    return 0;
+}
