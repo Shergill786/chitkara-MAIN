@@ -656,3 +656,167 @@
 // </body>
 // </html>
 
+
+
+// <!DOCTYPE html>
+// <html lang="en">
+// <head>
+//     <meta charset="UTF-8">
+//     <title>Event Handling</title>
+// </head>
+// <body>
+
+// <button id="addBtn">Add Item</button>
+// <button id="toggleStop">Toggle stopPropagation</button>
+// <button id="enableCap">Enable Capturing</button>
+// <button id="disableCap">Disable Capturing</button>
+
+// <ul id="list">
+//     <li>Item 1</li>
+//     <li>Item 2</li>
+//     <ul>
+//         <li>Child Item A</li>
+//         <li>Child Item B</li>
+//     </ul>
+//     <li>Item 3</li>
+// </ul>
+
+// <script>
+// let count = 4;
+// let stopEnabled = false;
+// let useCapture = false;
+
+// const list = document.getElementById("list");
+
+// // Add Item (TC4)
+// document.getElementById("addBtn").addEventListener("click", () => {
+//     const li = document.createElement("li");
+//     li.textContent = "Item " + count++;
+//     list.appendChild(li);
+// });
+
+// // Main Handler (Delegation)
+// function handler(e) {
+
+//     const li = e.target.closest("li");
+//     if (!li) {
+//         alert("UL clicked");
+//         return;
+//     }
+
+//     // TC1, TC5: click any li (including nested)
+//     if (list.contains(li)) {
+//         alert(li.textContent.trim());
+
+//         // TC3: stopPropagation
+//         if (stopEnabled) {
+//             e.stopPropagation();
+//         }
+//     }
+// }
+// function attach() {
+//     list.removeEventListener("click", handler, true);
+//     list.removeEventListener("click", handler, false);
+//     list.addEventListener("click", handler, useCapture);
+// }
+
+// attach();
+
+
+// // Toggle stopPropagation (TC3)
+// document.getElementById("toggleStop").addEventListener("click", () => {
+//     stopEnabled = !stopEnabled;
+//     alert("stopPropagation: " + (stopEnabled ? "ON" : "OFF"));
+// });
+
+// // Enable Capturing (TC6)
+// document.getElementById("enableCap").addEventListener("click", () => {
+//     useCapture = true;
+//     attach();
+//     alert("Capturing Enabled");
+// });
+
+// // Disable Capturing (TC7)
+// document.getElementById("disableCap").addEventListener("click", () => {
+//     useCapture = false;
+//     attach();
+//     alert("Bubbling Mode");
+// });
+
+// </script>
+
+// </body>
+// </html>
+
+
+
+// <!DOCTYPE html>
+// <html>
+// <head>
+//     <title>Student Manager</title>
+//     <style>
+//         h1 {
+//             color: red;
+//             text-align: center;
+//             font-size: 30px;
+//         }
+
+//         #list {
+//             background-color: lightblue;
+//             border: 2px solid red;
+//             padding: 15px;
+//             list-style: none;
+//         }
+
+//         li {
+//             padding: 10px;
+//             margin: 5px;
+//             border: 1px solid black;
+//             cursor: pointer;
+//         }
+
+//         .first {
+//             color: red;
+//             font-weight: bold;
+//             background-color: gray;
+//         }
+//     </style>
+// </head>
+// <body>
+
+// <h1 id="heading">Student List</h1>
+
+
+// <button id="addBtn">Add Student</button>
+
+// <ul id="list">
+//     <li class="first">Student 1</li>
+//     <li>Student 2</li>
+//     <li>Student 3</li>
+// </ul>
+
+// <script>
+// let count = 4;
+
+// document.getElementById("addBtn").addEventListener("click", function () {
+//     let li = document.createElement("li");
+//     li.textContent = "New Student " + count++;
+
+//     li.style.color = "red";
+//     li.style.backgroundColor = "yellow";
+
+//     document.getElementById("list").appendChild(li);
+// });
+
+// document.getElementById("list").addEventListener("click", function (e) {
+//     if (e.target.tagName === "LI") {
+
+//         document.getElementById("heading").textContent = e.target.textContent;
+
+//         e.target.remove();
+//     }
+// });
+// </script>
+
+// </body>
+// </html>

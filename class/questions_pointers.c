@@ -1078,24 +1078,24 @@
 // }
 
 
-#include <stdio.h>
-struct Product {
-    float price;
-};
-void discount(struct Product *p) {
-    float d;
-    if (p->price <= 100) {
-        d = 0.20;   
-        } else {
-        d = 0.20;
-    }
-    p->price = p->price - (p->price * d);
-}
-int main() {
-    struct Product p;
-    printf("Enter product price: ");
-    scanf("%f", &p.price);
-    discount(&p);
-    printf("Final price after discount: %.2f\n", p.price);
-    return 0;
-}
+// #include <stdio.h>
+// struct Product {
+//     float price;
+// };
+// void discount(struct Product *p) {
+//     float d;
+//     if (p->price <= 100) {
+//         d = 0.20;   
+//         } else {
+//         d = 0.20;
+//     }
+//     p->price = p->price - (p->price * d);
+// }
+// int main() {
+//     struct Product p;
+//     printf("Enter product price: ");
+//     scanf("%f", &p.price);
+//     discount(&p);
+//     printf("Final price after discount: %.2f\n", p.price);
+//     return 0;
+// }
