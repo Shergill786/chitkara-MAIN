@@ -1,157 +1,91 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
-<title>Student Update Form</title>
+<title>U_trade</title>
+
 <style>
-body { font-family: Arial; }
-input { display: block; margin: 10px 0; padding: 8px; }
-.error { color: red; }
-.success { color: green; }
+h1 {
+    text-align: center;
+}
+
+input {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 8px;
+}
+
+.red {
+    color: red;
+}
+
+.blue {
+    color: blue;
+}
+
+.yellow {
+    background-color: yellow;
+    color: black;
+}
 </style>
+
 </head>
 
 <body>
 
-<h2>chitkara Updates</h2>
+<h1>U_trade</h1>
 
 <form id="form">
-<input type="text" id="name" placeholder="Name">
-<input type="text" id="fname" placeholder="First Name">
-<input type="text" id="mname" placeholder="Middle Name">
+<input type="text" id="fname" placeholder="F_Name">
 <input type="text" id="lname" placeholder="Last Name">
-
-<input type="email" id="email" placeholder="Email" readonly>
-
-
-<button type="submit">Submit</button>
-
+<input type="text" id="fullname" placeholder="Your Full Name" readonly>
+<input type="email" id="email" placeholder="Email ID" readonly>
+<input type="password" id="password" placeholder="Password (12 characters)">
+<button type="submit">OK</button>
 </form>
 
 <p id="msg"></p>
 
 <script>
-let name = document.getElementById("name");
 let fname = document.getElementById("fname");
-let mname = document.getElementById("mname");
 let lname = document.getElementById("lname");
+let fullname = document.getElementById("fullname");
 let email = document.getElementById("email");
+let password = document.getElementById("password");
 let form = document.getElementById("form");
 let msg = document.getElementById("msg");
 
-// Generate Email based on requirement
 function generateEmail() {
-    if (fname.value && mname.value && lname.value) {
-        let n = fname.value.substring(0,3).toLowerCase();
-        let f = fname.value.substring(0,3).toLowerCase();
-        let m = mname.value.substring(0,3).toLowerCase();
-        let l = lname.value.substring(0,3).toLowerCase();
+    if (fname.value && lname.value) {
 
-        email.value = n + f + m + l + "@gmail.com";
+        fullname.value = fname.value + lname.value;
+
+        let f = fullname.value.substring(0,10).toLowerCase();
+
+        email.value = f + l + "@gmail.com";
     }
 }
 
-// Event listeners
 fname.addEventListener("input", generateEmail);
-mname.addEventListener("input", generateEmail);
 lname.addEventListener("input", generateEmail);
 
-// Form Validation
 form.addEventListener("submit", function(e) {
-    
-    if (!fname.value || !mname.value || !lname.value || !email.value) {
-        e.preventDefault();
-        msg.innerText = "All fields are required";
-        msg.className = "error";
+    e.preventDefault();
+
+    if (password.value.length !== 12) {
+        msg.innerText = "Password must be 12 characters";
         return;
     }
+    fname.style.color = "red";
+    lname.style.color = "red";
 
+    fullname.style.color = "blue";
+    email.style.color = "blue";
+
+    password.style.backgroundColor = "yellow";
+    password.style.color = "black";
     msg.innerText = "Form submitted successfully";
-    msg.className = "success";
 });
-
 </script>
-
-</body>
-</html> -->
-
-
-
-
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Event Delegation Assignment</title>
-</head>
-<body>
-
-<h2>Product List</h2>
-
-<button id="addBtn">Add Product</button>
-<button id="stopBtn">Toggle stopPropagation</button>
-<button id="captureOn">Enable Capturing</button>
-<button id="captureOff">Disable Capturing</button>
-
-<ul id="list">
-    <li>Product 1</li>
-    <li>Product 2</li>
-    <li>Product 3</li>
-</ul>
-
-<script>
-let stop = false;
-let useCapture = false;
-let count = 4;
-
-const list = document.getElementById("list");
-
-// 🔹 EVENT DELEGATION (Single listener for all <li>)
-function handleClick(e) {
-    if (e.target.tagName === "LI") {
-        alert("Item: " + e.target.textContent);
-
-        if (stop) {
-            e.stopPropagation(); // control propagation
-        }
-    }
-}
-
-// Attach listener
-function attachListener() {
-    list.removeEventListener("click", handleClick, true);
-    list.removeEventListener("click", handleClick, false);
-
-    list.addEventListener("click", handleClick, useCapture);
-}
-
-attachListener();
-
-// 🔹 Add new item dynamically
-document.getElementById("addBtn").onclick = function () {
-    let li = document.createElement("li");
-    li.textContent = "Product " + count++;
-    list.appendChild(li);
-};
-
-// 🔹 Toggle stopPropagation
-document.getElementById("stopBtn").onclick = function () {
-    stop = !stop;
-    alert("stopPropagation: " + stop);
-};
-
-// 🔹 Enable capturing
-document.getElementById("captureOn").onclick = function () {
-    useCapture = true;
-    attachListener();
-    alert("Capturing Enabled");
-};
-
-// 🔹 Disable capturing (default bubbling)
-document.getElementById("captureOff").onclick = function () {
-    useCapture = false;
-    attachListener();
-    alert("Capturing Disabled");
-};
-</script>
-
 </body>
 </html>

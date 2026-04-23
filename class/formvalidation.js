@@ -99,3 +99,140 @@
 // </body>
 // </html>
 
+// <!-- <!DOCTYPE html>
+// <html>
+// <head>
+// <title>Student Update Form</title>
+// <style>
+// body { font-family: Arial; }
+// input { display: block; margin: 10px 0; padding: 8px; }
+// .error { color: red; }
+// .success { color: green; }
+// </style>
+// </head>
+
+// <body>
+
+// <h2>chitkara Updates</h2>
+
+// <form id="form">
+// <input type="text" id="name" placeholder="Name">
+// <input type="text" id="fname" placeholder="First Name">
+// <input type="text" id="mname" placeholder="Middle Name">
+// <input type="text" id="lname" placeholder="Last Name">
+
+// <input type="email" id="email" placeholder="Email" readonly>
+
+
+// <button type="submit">Submit</button>
+
+// </form>
+
+// <p id="msg"></p>
+
+// <script>
+// let name = document.getElementById("name");
+// let fname = document.getElementById("fname");
+// let mname = document.getElementById("mname");
+// let lname = document.getElementById("lname");
+// let email = document.getElementById("email");
+// let form = document.getElementById("form");
+// let msg = document.getElementById("msg");
+
+// // Generate Email based on requirement
+// function generateEmail() {
+//     if (fname.value && mname.value && lname.value) {
+//         let n = fname.value.substring(0,3).toLowerCase();
+//         let f = fname.value.substring(0,3).toLowerCase();
+//         let m = mname.value.substring(0,3).toLowerCase();
+//         let l = lname.value.substring(0,3).toLowerCase();
+
+//         email.value = n + f + m + l + "@gmail.com";
+//     }
+// }
+
+// // Event listeners
+// fname.addEventListener("input", generateEmail);
+// mname.addEventListener("input", generateEmail);
+// lname.addEventListener("input", generateEmail);
+
+// // Form Validation
+// form.addEventListener("submit", function(e) {
+    
+//     if (!fname.value || !mname.value || !lname.value || !email.value) {
+//         e.preventDefault();
+//         msg.innerText = "All fields are required";
+//         msg.className = "error";
+//         return;
+//     }
+
+//     msg.innerText = "Form submitted successfully";
+//     msg.className = "success";
+// });
+
+// </script>
+
+// </body>
+// </html> -->
+
+
+// <!DOCTYPE html>
+// <html>
+// <head>
+// <title>Form</title>
+// <style>
+// input { display:block; margin:10px; padding:8px; }
+// </style>
+// </head>
+// <body>
+// <form id="form">
+// <input type="text" id="fname" placeholder="First Name">
+// <input type="text" id="lname" placeholder="Last Name">
+// <input type="text" id="sname" placeholder="Surname">
+// <input type="text" id="mname" placeholder="Middle Name">
+// <input type="date" id="dob">
+// <input type="email" id="email" placeholder="Email">
+// <input type="password" id="password" placeholder="Password">
+// <button type="submit">Submit</button>
+// </form>
+// <p id="msg"></p>
+// <script>
+// let fname = document.getElementById("fname");
+// let lname = document.getElementById("lname");
+// let sname = document.getElementById("sname");
+// let mname = document.getElementById("mname");
+// let dob = document.getElementById("dob");
+// let email = document.getElementById("email");
+// let password = document.getElementById("password");
+// let form = document.getElementById("form");
+// let msg = document.getElementById("msg");
+function generateEmail() {
+    if (fname.value && lname.value && sname.value && mname.value && dob.value) {
+        let f = fname.value.substring(0,3).toLowerCase();
+        let l = lname.value.substring(0,3).toLowerCase();
+        let s = sname.value.substring(0,3).toLowerCase();
+        let m = mname.value.substring(0,3).toLowerCase();
+        let d = dob.value.replaceAll("-", "");
+        email.value = f + l + s + m + d + "@gmail.com";
+    }
+}
+// fname.addEventListener("input", generateEmail);
+// lname.addEventListener("input", generateEmail);
+// sname.addEventListener("input", generateEmail);
+// mname.addEventListener("input", generateEmail);
+// dob.addEventListener("change", generateEmail);
+
+form.addEventListener("submit", function(e) {
+    if (password.value.length !== 12) {
+        e.preventDefault();
+        msg.innerText = "Password must be 12 characters";
+        return;
+    }
+//     msg.innerText = "Form submitted successfully";
+//     e.preventDefault();
+// });
+// </script>
+
+// </body>
+// </html>
+
