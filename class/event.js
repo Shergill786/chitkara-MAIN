@@ -273,632 +273,632 @@
 // </html>
 
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>keyboard Events</title>
-</head>
-<body>
-    <script>
-        const inputBox = document.getElementById('inputBox');
-        inputBox.addEventListener('keydown', () => alert('Key down event triggered'));
-        inputBox.addEventListener('keyup', () => alert('Key up event triggered'));
-        inputBox.addEventListener('keypress', () => alert('Key press event triggered'));
-    </script>
-</body>
-</html>
+// <!DOCTYPE html>
+// <html lang="en">
+// <head>
+//     <meta charset="UTF-8">
+//     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+//     <title>keyboard Events</title>
+// </head>
+// <body>
+//     <script>
+//         const inputBox = document.getElementById('inputBox');
+//         inputBox.addEventListener('keydown', () => alert('Key down event triggered'));
+//         inputBox.addEventListener('keyup', () => alert('Key up event triggered'));
+//         inputBox.addEventListener('keypress', () => alert('Key press event triggered'));
+//     </script>
+// </body>
+// </html>
 
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+// <!DOCTYPE html>
+// <html lang="en">
+// <head>
+//     <meta charset="UTF-8">
+//     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+//     <title>Document</title>
 
-    <style>
-        .main-div{
-            border: 2px solid black;
-            padding: 20px;
-        }
+//     <style>
+//         .main-div{
+//             border: 2px solid black;
+//             padding: 20px;
+//         }
         
-        .div1, .div2{
-            border: 1px solid black;
-            padding: 10px;
-            margin: 10px 0;
-        }
-    </style>
-</head>
+//         .div1, .div2{
+//             border: 1px solid black;
+//             padding: 10px;
+//             margin: 10px 0;
+//         }
+//     </style>
+// </head>
 
-<body>
-    <main class="main-div">
-        <div class="child-container">
+// <body>
+//     <main class="main-div">
+//         <div class="child-container">
             
-            <p id="text">HELLO EVERYONE</p>
+//             <p id="text">HELLO EVERYONE</p>
 
-            <div class="div1">
-                <input type="text" id="inputBox" placeholder="Type something">
-            </div>
+//             <div class="div1">
+//                 <input type="text" id="inputBox" placeholder="Type something">
+//             </div>
 
-            <div class="div2">
-                <button id="hi">HI</button>
-                <button id="ok">OK</button>
-                <br><br>
-                <button id="setup">SETUP</button>
-                <button id="why">WHY</button>
-            </div>
+//             <div class="div2">
+//                 <button id="hi">HI</button>
+//                 <button id="ok">OK</button>
+//                 <br><br>
+//                 <button id="setup">SETUP</button>
+//                 <button id="why">WHY</button>
+//             </div>
 
-            <button id="bye">BYE</button>
-        </div>
+//             <button id="bye">BYE</button>
+//         </div>
 
-        <script>
-            const text = document.getElementById("text");
-            const inputBox = document.getElementById('inputBox');
-            inputBox.addEventListener('keydown', () => alert('who the are you?'));
+//         <script>
+//             const text = document.getElementById("text");
+//             const inputBox = document.getElementById('inputBox');
+//             inputBox.addEventListener('keydown', () => alert('who the are you?'));
             
-            document.getElementById("hi").addEventListener("mouseover", function() {
-                alert("HI");
-            });
+//             document.getElementById("hi").addEventListener("mouseover", function() {
+//                 alert("HI");
+//             });
 
-            document.getElementById("hello").addEventListener("mousedown", function() {
-                alert("HELLO");
-            });
+//             document.getElementById("hello").addEventListener("mousedown", function() {
+//                 alert("HELLO");
+//             });
 
-            document.getElementById("ok").addEventListener("click", function() {
-                text.style.color = "red";
-                text.style.backgroundColor = "blue";
-                text.style.fontSize = "30px";
-                text.style.fontWeight = "bold";
-                text.style.fontFamily = "Times New Roman";
-            });
+//             document.getElementById("ok").addEventListener("click", function() {
+//                 text.style.color = "red";
+//                 text.style.backgroundColor = "blue";
+//                 text.style.fontSize = "30px";
+//                 text.style.fontWeight = "bold";
+//                 text.style.fontFamily = "Times New Roman";
+//             });
 
-            document.getElementById("setup").addEventListener("mouseout", function() {
-                alert("SETUP");
-            });
+//             document.getElementById("setup").addEventListener("mouseout", function() {
+//                 alert("SETUP");
+//             });
 
-            document.getElementById("why").addEventListener("mousedown", function() {
-                alert("WHY");
-            });
+//             document.getElementById("why").addEventListener("mousedown", function() {
+//                 alert("WHY");
+//             });
 
-            document.getElementById("bye").addEventListener("click", function() {
-                alert("BYE");
-            });
-        </script>
-    </main>
-</body>
-</html>
+//             document.getElementById("bye").addEventListener("click", function() {
+//                 alert("BYE");
+//             });
+//         </script>
+//     </main>
+// </body>
+// </html>
 
 
-event bubbling means when a event start from the target element child and then move upwards to the parent elemnet
-if you click a button inside a div the button event happens first then the div 
-event bubbling is a default behaviour in js it help when you want parent elements to react to child events without adding any listener
+// event bubbling means when a event start from the target element child and then move upwards to the parent elemnet
+// if you click a button inside a div the button event happens first then the div 
+// event bubbling is a default behaviour in js it help when you want parent elements to react to child events without adding any listener
 
-event capturing is the opposite of event bubbling  in this the event start from the parent element and then move downwards to the child element
-it is topdown approach 
-if you click button then the div event happens first then the button 
-the event capture is commonly used when you want the parent to handle the event before child elements
+// event capturing is the opposite of event bubbling  in this the event start from the parent element and then move downwards to the child element
+// it is topdown approach 
+// if you click button then the div event happens first then the button 
+// the event capture is commonly used when you want the parent to handle the event before child elements
 
-event delegation means adding a single event listener to a parent element to handle events for its child elements 
-instead of adding many event listener to each child in event bubbling the event delegation use 1 listener on parent and detect which child was it 
-the event delegation improves preformance and is useful when elements are entered dynamically
+// event delegation means adding a single event listener to a parent element to handle events for its child elements 
+// instead of adding many event listener to each child in event bubbling the event delegation use 1 listener on parent and detect which child was it 
+// the event delegation improves preformance and is useful when elements are entered dynamically
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <div id="parent" style="padding: 40px;background:lightblue;">
-    parent
-    <button id="child"> click</button> 
-    </div>
-    <script>
-        document.getElementById("child").addEventListener("click", function() {
-            alert("Parent clicked!");
-        });
-        document.getElementById("child").addEventListener("click", function() {
-        alert("Child clicked!");
-        });
-    </script>
-</body>
-</html>
+// <!DOCTYPE html>
+// <html lang="en">
+// <head>
+//     <meta charset="UTF-8">
+//     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+//     <title>Document</title>
+// </head>
+// <body>
+//     <div id="parent" style="padding: 40px;background:lightblue;">
+//     parent
+//     <button id="child"> click</button> 
+//     </div>
+//     <script>
+//         document.getElementById("child").addEventListener("click", function() {
+//             alert("Parent clicked!");
+//         });
+//         document.getElementById("child").addEventListener("click", function() {
+//         alert("Child clicked!");
+//         });
+//     </script>
+// </body>
+// </html>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <div id="parent" style="padding: 40px;background:lightblue;">
-    parent
-    <button id="child"> click</button> 
-    </div>
-    <script>
-        document.getElementById("child").addEventListener("click", function() {
-            alert("Parent clicked!");
-        },true);
-        document.getElementById("child").addEventListener("click", function() {
-        alert("Child clicked!");
-        },true);
-    </script>
-</body>
-</html>
+// <!DOCTYPE html>
+// <html lang="en">
+// <head>
+//     <meta charset="UTF-8">
+//     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+//     <title>Document</title>
+// </head>
+// <body>
+//     <div id="parent" style="padding: 40px;background:lightblue;">
+//     parent
+//     <button id="child"> click</button> 
+//     </div>
+//     <script>
+//         document.getElementById("child").addEventListener("click", function() {
+//             alert("Parent clicked!");
+//         },true);
+//         document.getElementById("child").addEventListener("click", function() {
+//         alert("Child clicked!");
+//         },true);
+//     </script>
+// </body>
+// </html>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+// <!DOCTYPE html>
+// <html lang="en">
+// <head>
+//     <meta charset="UTF-8">
+//     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+//     <title>Document</title>
 
-    <style>
-        .main-div{
-            border: 2px solid black;
-            padding: 20px;
-        }
+//     <style>
+//         .main-div{
+//             border: 2px solid black;
+//             padding: 20px;
+//         }
         
-        .div1, .div2{
-            border: 1px solid black;
-            padding: 10px;
-            margin: 10px 0;
-        }
-    </style>
-</head>
+//         .div1, .div2{
+//             border: 1px solid black;
+//             padding: 10px;
+//             margin: 10px 0;
+//         }
+//     </style>
+// </head>
 
-<body>
-    <main class="main-div">
-        <div class="child-container">
+// <body>
+//     <main class="main-div">
+//         <div class="child-container">
             
-            <p id="text">HELLO EVERYONE</p>
+//             <p id="text">HELLO EVERYONE</p>
 
-            <div class="div1">
-                <input type="text" id="inputBox" placeholder="Type something">
-            </div>
+//             <div class="div1">
+//                 <input type="text" id="inputBox" placeholder="Type something">
+//             </div>
 
-            <div class="div2">
-                <button id="hi">HI</button>
-                <button id="ok">OK</button>
-                <br><br>
-                <button id="setup">SETUP</button>
-                <button id="why">WHY</button>
-            </div>
+//             <div class="div2">
+//                 <button id="hi">HI</button>
+//                 <button id="ok">OK</button>
+//                 <br><br>
+//                 <button id="setup">SETUP</button>
+//                 <button id="why">WHY</button>
+//             </div>
 
-            <button id="bye">BYE</button>
-        </div>
+//             <button id="bye">BYE</button>
+//         </div>
 
-        <script>
-            const text = document.getElementById("text");
-            const inputBox = document.getElementById('inputBox');
-            inputBox.addEventListener('keydown', () => alert('who the are you?'));
+//         <script>
+//             const text = document.getElementById("text");
+//             const inputBox = document.getElementById('inputBox');
+//             inputBox.addEventListener('keydown', () => alert('who the are you?'));
             
-            document.getElementById("hi").addEventListener("mouseover", function() {
-                alert("HI");
-            });
+//             document.getElementById("hi").addEventListener("mouseover", function() {
+//                 alert("HI");
+//             });
 
-            document.getElementById("hello").addEventListener("mousedown", function() {
-                alert("HELLO");
-            });
+//             document.getElementById("hello").addEventListener("mousedown", function() {
+//                 alert("HELLO");
+//             });
 
-            document.getElementById("ok").addEventListener("click", function() {
-                text.style.color = "red";
-                text.style.backgroundColor = "blue";
-                text.style.fontSize = "30px";
-                text.style.fontWeight = "bold";
-                text.style.fontFamily = "Times New Roman";
-            });
+//             document.getElementById("ok").addEventListener("click", function() {
+//                 text.style.color = "red";
+//                 text.style.backgroundColor = "blue";
+//                 text.style.fontSize = "30px";
+//                 text.style.fontWeight = "bold";
+//                 text.style.fontFamily = "Times New Roman";
+//             });
 
-            document.getElementById("setup").addEventListener("mouseout", function() {
-                alert("SETUP");
-            });
+//             document.getElementById("setup").addEventListener("mouseout", function() {
+//                 alert("SETUP");
+//             });
 
-            document.getElementById("why").addEventListener("mousedown", function() {
-                alert("WHY");
-            });
+//             document.getElementById("why").addEventListener("mousedown", function() {
+//                 alert("WHY");
+//             });
 
-            document.getElementById("bye").addEventListener("click", function() {
-                alert("BYE");
-            });
-        </script>
-    </main>
-</body>
-</html>
+//             document.getElementById("bye").addEventListener("click", function() {
+//                 alert("BYE");
+//             });
+//         </script>
+//     </main>
+// </body>
+// </html>
 
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Event Delegation</title>
-</head>
-<body>
+// <!DOCTYPE html>
+// <html>
+// <head>
+//     <title>Event Delegation</title>
+// </head>
+// <body>
 
-<button id="addBtn">Add Item</button>
+// <button id="addBtn">Add Item</button>
 
-<ul id="list">
-    <li>Item 1</li>
-    <li>Item 2
-        <ul>
-            <li>Child Item A</li>
-            <li>Child Item B</li>
-        </ul>
-    </li>
-    <li>Item 3</li>
-</ul>
+// <ul id="list">
+//     <li>Item 1</li>
+//     <li>Item 2
+//         <ul>
+//             <li>Child Item A</li>
+//             <li>Child Item B</li>
+//         </ul>
+//     </li>
+//     <li>Item 3</li>
+// </ul>
 
-<script>
-let count =4;
+// <script>
+// let count =4;
 
-document.getElementById("addBtn").addEventListener("click", () => {
-    const li = document.createElement("li");
-    li.textContent = "Item " + count++;
-    document.getElementById("list").appendChild(li);
-});
+// document.getElementById("addBtn").addEventListener("click", () => {
+//     const li = document.createElement("li");
+//     li.textContent = "Item " + count++;
+//     document.getElementById("list").appendChild(li);
+// });
 
-document.getElementById("list").addEventListener("click", (e) => {
-    if (e.target.parentElement.id === "list") {
-        alert(e.target.textContent);
-    }
-});
-</script>
+// document.getElementById("list").addEventListener("click", (e) => {
+//     if (e.target.parentElement.id === "list") {
+//         alert(e.target.textContent);
+//     }
+// });
+// </script>
 
-</body>
-</html>
+// </body>
+// </html>
 
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Event Delegation</title>
-</head>
-<body>
+// <!DOCTYPE html>
+// <html>
+// <head>
+//     <title>Event Delegation</title>
+// </head>
+// <body>
 
-<button id="addBtn">Add Item</button>
+// <button id="addBtn">Add Item</button>
 
-<ul id="list">
-    <li>Item 1</li>
-    <li>Item 2</li>
-    <li>Item 3
-    <ul id="sub">
-        <li>section 3.1</li>
-        <ul id ="subsection"> 
-            <li> section 3.1.1 </li>
-        </ul> 
-</ul>
-    </li>
-</ul>
-<script>
-let count = 2;
-let scount=2;
+// <ul id="list">
+//     <li>Item 1</li>
+//     <li>Item 2</li>
+//     <li>Item 3
+//     <ul id="sub">
+//         <li>section 3.1</li>
+//         <ul id ="subsection"> 
+//             <li> section 3.1.1 </li>
+//         </ul> 
+// </ul>
+//     </li>
+// </ul>
+// <script>
+// let count = 2;
+// let scount=2;
 
-document.getElementById("addBtn").addEventListener("click", () => {
-    const li = document.createElement("li");
-    li.textContent = "section 3.1." + count++;
-    document.getElementById("subsection").appendChild(li);
-});
-document.getElementById("addBtn").addEventListener("click",()=>{
-    const li = document.createElement("li");
-    li.textContent = "section 3." + scount++;
-    document.getElementById("sub").appendChild(li);
-});
+// document.getElementById("addBtn").addEventListener("click", () => {
+//     const li = document.createElement("li");
+//     li.textContent = "section 3.1." + count++;
+//     document.getElementById("subsection").appendChild(li);
+// });
+// document.getElementById("addBtn").addEventListener("click",()=>{
+//     const li = document.createElement("li");
+//     li.textContent = "section 3." + scount++;
+//     document.getElementById("sub").appendChild(li);
+// });
 
-</script>
+// </script>
 
-</body>
-</html>
+// </body>
+// </html>
 
-<!DOCTYPE html>
-<html>
-<head>
-<title>Limit Sub Items</title>
-<style>
-button{margin:20px;padding:8px 15px;cursor:pointer;}
-</style>
-</head>
-<body>
+// <!DOCTYPE html>
+// <html>
+// <head>
+// <title>Limit Sub Items</title>
+// <style>
+// button{margin:20px;padding:8px 15px;cursor:pointer;}
+// </style>
+// </head>
+// <body>
 
-<button id="ok">OK</button>
+// <button id="ok">OK</button>
 
-<ul id="list">
-<li>Item 1
-    <ul>
-        <li>Item 1.1</li>
-        <li>Item 1.2</li>
-    </ul>
-</li>
+// <ul id="list">
+// <li>Item 1
+//     <ul>
+//         <li>Item 1.1</li>
+//         <li>Item 1.2</li>
+//     </ul>
+// </li>
 
-<li>Item 2
-    <ul>
-        <li>Item 2.1
-            <ul>
-                <li id="target">Item 2.1.1</li>
-            </ul>
-        </li>
-    </ul>
-</li>
-</ul>
+// <li>Item 2
+//     <ul>
+//         <li>Item 2.1
+//             <ul>
+//                 <li id="target">Item 2.1.1</li>
+//             </ul>
+//         </li>
+//     </ul>
+// </li>
+// </ul>
 
-<script>
-let count3 = 3;
+// <script>
+// let count3 = 3;
 
-document.getElementById("ok").addEventListener("click", () => {
+// document.getElementById("ok").addEventListener("click", () => {
     
-    let target = document.getElementById("target");
-    let sub = target.querySelector("ul");
+//     let target = document.getElementById("target");
+//     let sub = target.querySelector("ul");
 
-    // create sub list if not exists
-    if (!sub) {
-        sub = document.createElement("ul");
-        target.appendChild(sub);
-    }
+//     // create sub list if not exists
+//     if (!sub) {
+//         sub = document.createElement("ul");
+//         target.appendChild(sub);
+//     }
 
-    let count = sub.children.length;
+//     let count = sub.children.length;
 
-    // limit check
-    if (count >= 10) {
-        alert("Limit reached (Item 2.1.1.10)");
-        return;
-    }
+//     // limit check
+//     if (count >= 10) {
+//         alert("Limit reached (Item 2.1.1.10)");
+//         return;
+//     }
 
-    // correct numbering        
-    let li = document.createElement("li");
-    li.textContent = "Item 2.1.1." + (count + 1);
-    sub.appendChild(li);
+//     // correct numbering        
+//     let li = document.createElement("li");
+//     li.textContent = "Item 2.1.1." + (count + 1);
+//     sub.appendChild(li);
 
-    // add new main item
-    let main = document.getElementById("list");
-    let li3 = document.createElement("li");
-    li3.textContent = "Item " + count3++;
-    main.appendChild(li3);
-});
-</script>
+//     // add new main item
+//     let main = document.getElementById("list");
+//     let li3 = document.createElement("li");
+//     li3.textContent = "Item " + count3++;
+//     main.appendChild(li3);
+// });
+// </script>
 
-</body>
-</html>
-
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Event Handling</title>
-</head>
-<body>
-
-<button id="addBtn">Add Item</button>
-<button id="toggleStop">Toggle stopPropagation</button>
-<button id="enableCap">Enable Capturing</button>
-<button id="disableCap">Disable Capturing</button>
-
-<ul id="list">
-    <li>Item 1</li>
-    <li>Item 2</li>
-    <ul>
-        <li>Child Item A</li>
-        <li>Child Item B</li>
-    </ul>
-    <li>Item 3</li>
-</ul>
-
-<script>
-let count = 4;
-let stopEnabled = false;
-let useCapture = false;
-
-const list = document.getElementById("list");
-
-// Add Item (TC4)
-document.getElementById("addBtn").addEventListener("click", () => {
-    const li = document.createElement("li");
-    li.textContent = "Item " + count++;
-    list.appendChild(li);
-});
-
-// Main Handler (Delegation)
-function handler(e) {
-
-    const li = e.target.closest("li");
-    if (!li) {
-        alert("UL clicked");
-        return;
-    }
-
-    // TC1, TC5: click any li (including nested)
-    if (list.contains(li)) {
-        alert(li.textContent.trim());
-
-        // TC3: stopPropagation
-        if (stopEnabled) {
-            e.stopPropagation();
-        }
-    }
-}
-function attach() {
-    list.removeEventListener("click", handler, true);
-    list.removeEventListener("click", handler, false);
-    list.addEventListener("click", handler, useCapture);
-}
-
-attach();
-
-
-// Toggle stopPropagation (TC3)
-document.getElementById("toggleStop").addEventListener("click", () => {
-    stopEnabled = !stopEnabled;
-    alert("stopPropagation: " + (stopEnabled ? "ON" : "OFF"));
-});
-
-// Enable Capturing (TC6)
-document.getElementById("enableCap").addEventListener("click", () => {
-    useCapture = true;
-    attach();
-    alert("Capturing Enabled");
-});
-
-// Disable Capturing (TC7)
-document.getElementById("disableCap").addEventListener("click", () => {
-    useCapture = false;
-    attach();
-    alert("Bubbling Mode");
-});
-
-</script>
-
-</body>
-</html>
+// </body>
+// </html>
 
 
 
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Student Manager</title>
-    <style>
-        h1 {
-            color: red;
-            text-align: center;
-            font-size: 30px;
-        }
+// <!DOCTYPE html>
+// <html lang="en">
+// <head>
+//     <meta charset="UTF-8">
+//     <title>Event Handling</title>
+// </head>
+// <body>
 
-        #list {
-            background-color: lightblue;
-            border: 2px solid red;
-            padding: 15px;
-            list-style: none;
-        }
+// <button id="addBtn">Add Item</button>
+// <button id="toggleStop">Toggle stopPropagation</button>
+// <button id="enableCap">Enable Capturing</button>
+// <button id="disableCap">Disable Capturing</button>
 
-        li {
-            padding: 10px;
-            margin: 5px;
-            border: 1px solid black;
-            cursor: pointer;
-        }
+// <ul id="list">
+//     <li>Item 1</li>
+//     <li>Item 2</li>
+//     <ul>
+//         <li>Child Item A</li>
+//         <li>Child Item B</li>
+//     </ul>
+//     <li>Item 3</li>
+// </ul>
 
-        .first {
-            color: red;
-            font-weight: bold;
-            background-color: gray;
-        }
-    </style>
-</head>
-<body>
+// <script>
+// let count = 4;
+// let stopEnabled = false;
+// let useCapture = false;
 
-<h1 id="heading">Student List</h1>
+// const list = document.getElementById("list");
 
+// // Add Item (TC4)
+// document.getElementById("addBtn").addEventListener("click", () => {
+//     const li = document.createElement("li");
+//     li.textContent = "Item " + count++;
+//     list.appendChild(li);
+// });
 
-<button id="addBtn">Add Student</button>
+// // Main Handler (Delegation)
+// function handler(e) {
 
-<ul id="list">
-    <li class="first">Student 1</li>
-    <li>Student 2</li>
-    <li>Student 3</li>
-</ul>
+//     const li = e.target.closest("li");
+//     if (!li) {
+//         alert("UL clicked");
+//         return;
+//     }
 
-<script>
-let count = 4;
+//     // TC1, TC5: click any li (including nested)
+//     if (list.contains(li)) {
+//         alert(li.textContent.trim());
 
-document.getElementById("addBtn").addEventListener("click", function () {
-    let li = document.createElement("li");
-    li.textContent = "New Student " + count++;
+//         // TC3: stopPropagation
+//         if (stopEnabled) {
+//             e.stopPropagation();
+//         }
+//     }
+// }
+// function attach() {
+//     list.removeEventListener("click", handler, true);
+//     list.removeEventListener("click", handler, false);
+//     list.addEventListener("click", handler, useCapture);
+// }
 
-    li.style.color = "red";
-    li.style.backgroundColor = "yellow";
-
-    document.getElementById("list").appendChild(li);
-});
-
-document.getElementById("list").addEventListener("click", function (e) {
-    if (e.target.tagName === "LI") {
-
-        document.getElementById("heading").textContent = e.target.textContent;
-
-        e.target.remove();
-    }
-});
-</script>
-
-</body>
-</html>
+// attach();
 
 
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Event Delegation Assignment</title>
-</head>
-<body>
+// // Toggle stopPropagation (TC3)
+// document.getElementById("toggleStop").addEventListener("click", () => {
+//     stopEnabled = !stopEnabled;
+//     alert("stopPropagation: " + (stopEnabled ? "ON" : "OFF"));
+// });
 
-<h2>Product List</h2>
+// // Enable Capturing (TC6)
+// document.getElementById("enableCap").addEventListener("click", () => {
+//     useCapture = true;
+//     attach();
+//     alert("Capturing Enabled");
+// });
 
-<button id="addBtn">Add Product</button>
-<button id="stopBtn">Toggle stopPropagation</button>
-<button id="captureOn">Enable Capturing</button>
-<button id="captureOff">Disable Capturing</button>
+// // Disable Capturing (TC7)
+// document.getElementById("disableCap").addEventListener("click", () => {
+//     useCapture = false;
+//     attach();
+//     alert("Bubbling Mode");
+// });
 
-<ul id="list">
-    <li>Product 1</li>
-    <li>Product 2</li>
-    <li>Product 3</li>
-</ul>
+// </script>
 
-<script>
-let stop = false;
-let useCapture = false;
-let count = 4;
+// </body>
+// </html>
 
-const list = document.getElementById("list");
 
-// 🔹 EVENT DELEGATION (Single listener for all <li>)
-function handleClick(e) {
-    if (e.target.tagName === "LI") {
-        alert("Item: " + e.target.textContent);
 
-        if (stop) {
-            e.stopPropagation(); // control propagation
-        }
-    }
-}
+// <!DOCTYPE html>
+// <html>
+// <head>
+//     <title>Student Manager</title>
+//     <style>
+//         h1 {
+//             color: red;
+//             text-align: center;
+//             font-size: 30px;
+//         }
 
-// Attach listener
-function attachListener() {
-    list.removeEventListener("click", handleClick, true);
-    list.removeEventListener("click", handleClick, false);
+//         #list {
+//             background-color: lightblue;
+//             border: 2px solid red;
+//             padding: 15px;
+//             list-style: none;
+//         }
 
-    list.addEventListener("click", handleClick, useCapture);
-}
+//         li {
+//             padding: 10px;
+//             margin: 5px;
+//             border: 1px solid black;
+//             cursor: pointer;
+//         }
 
-attachListener();
+//         .first {
+//             color: red;
+//             font-weight: bold;
+//             background-color: gray;
+//         }
+//     </style>
+// </head>
+// <body>
 
-// 🔹 Add new item dynamically
-document.getElementById("addBtn").onclick = function () {
-    let li = document.createElement("li");
-    li.textContent = "Product " + count++;
-    list.appendChild(li);
-};
+// <h1 id="heading">Student List</h1>
 
-// 🔹 Toggle stopPropagation
-document.getElementById("stopBtn").onclick = function () {
-    stop = !stop;
-    alert("stopPropagation: " + stop);
-};
 
-// 🔹 Enable capturing
-document.getElementById("captureOn").onclick = function () {
-    useCapture = true;
-    attachListener();
-    alert("Capturing Enabled");
-};
+// <button id="addBtn">Add Student</button>
 
-// 🔹 Disable capturing (default bubbling)
-document.getElementById("captureOff").onclick = function () {
-    useCapture = false;
-    attachListener();
-    alert("Capturing Disabled");
-};
-</script>
+// <ul id="list">
+//     <li class="first">Student 1</li>
+//     <li>Student 2</li>
+//     <li>Student 3</li>
+// </ul>
 
-</body>
-</html>
+// <script>
+// let count = 4;
+
+// document.getElementById("addBtn").addEventListener("click", function () {
+//     let li = document.createElement("li");
+//     li.textContent = "New Student " + count++;
+
+//     li.style.color = "red";
+//     li.style.backgroundColor = "yellow";
+
+//     document.getElementById("list").appendChild(li);
+// });
+
+// document.getElementById("list").addEventListener("click", function (e) {
+//     if (e.target.tagName === "LI") {
+
+//         document.getElementById("heading").textContent = e.target.textContent;
+
+//         e.target.remove();
+//     }
+// });
+// </script>
+
+// </body>
+// </html>
+
+
+// <!DOCTYPE html>
+// <html>
+// <head>
+//     <title>Event Delegation Assignment</title>
+// </head>
+// <body>
+
+// <h2>Product List</h2>
+
+// <button id="addBtn">Add Product</button>
+// <button id="stopBtn">Toggle stopPropagation</button>
+// <button id="captureOn">Enable Capturing</button>
+// <button id="captureOff">Disable Capturing</button>
+
+// <ul id="list">
+//     <li>Product 1</li>
+//     <li>Product 2</li>
+//     <li>Product 3</li>
+// </ul>
+
+// <script>
+// let stop = false;
+// let useCapture = false;
+// let count = 4;
+
+// const list = document.getElementById("list");
+
+// // 🔹 EVENT DELEGATION (Single listener for all <li>)
+// function handleClick(e) {
+//     if (e.target.tagName === "LI") {
+//         alert("Item: " + e.target.textContent);
+
+//         if (stop) {
+//             e.stopPropagation(); // control propagation
+//         }
+//     }
+// }
+
+// // Attach listener
+// function attachListener() {
+//     list.removeEventListener("click", handleClick, true);
+//     list.removeEventListener("click", handleClick, false);
+
+//     list.addEventListener("click", handleClick, useCapture);
+// }
+
+// attachListener();
+
+// // 🔹 Add new item dynamically
+// document.getElementById("addBtn").onclick = function () {
+//     let li = document.createElement("li");
+//     li.textContent = "Product " + count++;
+//     list.appendChild(li);
+// };
+
+// //  Toggle stopPropagation
+// document.getElementById("stopBtn").onclick = function () {
+//     stop = !stop;
+//     alert("stopPropagation: " + stop);
+// };
+
+// //  Enable capturing
+// document.getElementById("captureOn").onclick = function () {
+//     useCapture = true;
+//     attachListener();
+//     alert("Capturing Enabled");
+// };
+
+// //  Disable capturing (default bubbling)
+// document.getElementById("captureOff").onclick = function () {
+//     useCapture = false;
+//     attachListener();
+//     alert("Capturing Disabled");
+// };
+// </script>
+
+// </body>
+// </html>

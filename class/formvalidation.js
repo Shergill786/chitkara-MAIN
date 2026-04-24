@@ -206,28 +206,28 @@
 // let password = document.getElementById("password");
 // let form = document.getElementById("form");
 // let msg = document.getElementById("msg");
-function generateEmail() {
-    if (fname.value && lname.value && sname.value && mname.value && dob.value) {
-        let f = fname.value.substring(0,3).toLowerCase();
-        let l = lname.value.substring(0,3).toLowerCase();
-        let s = sname.value.substring(0,3).toLowerCase();
-        let m = mname.value.substring(0,3).toLowerCase();
-        let d = dob.value.replaceAll("-", "");
-        email.value = f + l + s + m + d + "@gmail.com";
-    }
-}
+// function generateEmail() {
+//     if (fname.value && lname.value && sname.value && mname.value && dob.value) {
+//         let f = fname.value.substring(0,3).toLowerCase();
+//         let l = lname.value.substring(0,3).toLowerCase();
+//         let s = sname.value.substring(0,3).toLowerCase();
+//         let m = mname.value.substring(0,3).toLowerCase();
+//         let d = dob.value.replaceAll("-", "");
+//         email.value = f + l + s + m + d + "@gmail.com";
+//     }
+// }
 // fname.addEventListener("input", generateEmail);
 // lname.addEventListener("input", generateEmail);
 // sname.addEventListener("input", generateEmail);
 // mname.addEventListener("input", generateEmail);
 // dob.addEventListener("change", generateEmail);
 
-form.addEventListener("submit", function(e) {
-    if (password.value.length !== 12) {
-        e.preventDefault();
-        msg.innerText = "Password must be 12 characters";
-        return;
-    }
+// form.addEventListener("submit", function(e) {
+//     if (password.value.length !== 12) {
+//         e.preventDefault();
+//         msg.innerText = "Password must be 12 characters";
+//         return;
+//     }
 //     msg.innerText = "Form submitted successfully";
 //     e.preventDefault();
 // });
@@ -235,4 +235,95 @@ form.addEventListener("submit", function(e) {
 
 // </body>
 // </html>
+
+// <!DOCTYPE html>
+// <html>
+// <head>
+// <title>U_trade</title>
+
+// <style>
+// h1 {
+//     text-align: center;
+// }
+
+// input {
+//     display: block;
+//     width: 100%;
+//     margin: 10px 0;
+//     padding: 8px;
+// }
+
+// .red {
+//     color: red;
+// }
+
+// .blue {
+//     color: blue;
+// }
+
+// .yellow {
+//     background-color: yellow;
+//     color: black;
+// }
+// </style>
+
+// </head>
+
+// <body>
+
+// <h1>U_trade</h1>
+
+// <form id="form">
+// <input type="text" id="fname" placeholder="F_Name">
+// <input type="text" id="lname" placeholder="Last Name">
+// <input type="text" id="fullname" placeholder="Your Full Name" readonly>
+// <input type="email" id="email" placeholder="Email ID" readonly>
+// <input type="password" id="password" placeholder="Password (12 characters)">
+// <button type="submit">OK</button>
+// </form>
+
+// <p id="msg"></p>
+
+// <script>
+// let fname = document.getElementById("fname");
+// let lname = document.getElementById("lname");
+// let fullname = document.getElementById("fullname");
+// let email = document.getElementById("email");
+// let password = document.getElementById("password");
+// let form = document.getElementById("form");
+// let msg = document.getElementById("msg");
+
+// function generateEmail() {
+//     if (fname.value && lname.value) {
+
+//         fullname.value = fname.value + lname.value;
+//         let f = fullname.value.substring(0,10).toLowerCase();
+//         email.value = f + "@gmail.com";
+//     }
+// }
+
+// fname.addEventListener("input", generateEmail);
+// lname.addEventListener("input", generateEmail);
+
+// form.addEventListener("submit", function(e) {
+//     e.preventDefault();
+
+//     if (password.value.length !== 12) {
+//         msg.innerText = "Password must be 12 characters";
+//         return;
+//     }
+//     fname.style.color = "red";
+//     lname.style.color = "red";
+
+//     fullname.style.color = "blue";
+//     email.style.color = "blue";
+
+//     password.style.backgroundColor = "yellow";
+//     password.style.color = "black";
+//     msg.innerText = "Form submitted successfully";
+// });
+// </script>
+// </body>
+// </html>
+
 
