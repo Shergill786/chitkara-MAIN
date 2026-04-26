@@ -1,0 +1,104 @@
+<!-- <html>
+    <button id ="b1">"click me " </button>
+<script>
+    document.getElementById("b1").addEventListener("click",function() {
+        alert("helo");
+    });
+</script>
+</html> -->
+
+
+
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        document.addEventListener("keydown",function(event) {
+            console.log("you pressed a key "+ event.key);
+        });
+    </script>
+</body>
+</html> -->
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="alert('helo')">click me</button>
+</body>
+</html> -->
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="b1">click me</button>
+    <script>
+        document.getElementById("b1").addEventListener("click",abc) 
+        function abc() {
+            alert("helo");
+        }
+    </script>
+</body>
+</html> -->
+
+
+<!-- element is clicked when the event is fired the button istravel in 2 direction 
+ top-down == capturing phase
+ doc - html- body- target 
+ 
+ 
+ target phase == actual event is clicked 
+
+ 
+ bottom - up == bubbling phase
+ target - body-html -doc
+ 
+
+-->
+
+<!-- addeventListener("click",function(),false) {
+}; -->
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+    <div id="d1"> 
+        <button id="b1">click me</button>
+    </div>
+    <script>
+        document.getElementById("d1").addEventListener("click", () => {
+            console.log("div is clicked");
+        },false);
+
+        document.getElementById("b1").addEventListener("click", () => {
+            console.log("button is clicked");
+        }); 
+    </script>
+
+</body>
+</html> -->

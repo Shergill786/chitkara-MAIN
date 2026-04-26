@@ -3926,75 +3926,101 @@
 
 //  union
 
-#include <stdio.h>
-#include <string.h>
-
-union data {
-    char name[50];
-    int roll;
-    float marks;
-};
-
-int main() {
-    union data d;
-
-    strcpy(d.name, "asd");
-    printf("Name: %s\n", d.name);
-    printf("Enter roll: ");
-    scanf("%d", &d.roll);
-    printf("Roll: %d\n", d.roll);
-    printf("Enter marks: ");
-    scanf("%f", &d.marks);
-    printf("Marks: %.2f\n", d.marks);
-    return 0;
-}
-
-// // create enumerations for days and print in numbers // use switch case 
 // #include <stdio.h>
-// enum days { sunday, monday, tuesday, wednesday, thursday, friday, saturday };
+// #include <string.h>
+
+// union data {
+//     char name[50];
+//     int roll;
+//     float marks;
+// };
+
 // int main() {
-//     // printf("%d",sunday);
-//     // printf("%d",monday);
-//     // printf("%d",tuesday);
-//     // printf("%d",wednesday);
-//     // printf("%d",friday);
-//     // printf("%d",thursday);
-//     // printf("%d",saturday);
-//     //     return 0;
-//     for (int i = sunday; i <= saturday; i++) {
-//         printf("%d ", i);
-//     }
+//     union data d;
+
+//     strcpy(d.name, "asd");
+//     printf("Name: %s\n", d.name);
+//     printf("Enter roll: ");
+//     scanf("%d", &d.roll);
+//     printf("Roll: %d\n", d.roll);
+//     printf("Enter marks: ");
+//     scanf("%f", &d.marks);
+//     printf("Marks: %.2f\n", d.marks);
+//     return 0;
 // }
 
-#include <stdio.h>
-enum days { sunday, monday, tuesday, wednesday, thursday, friday, saturday};
-int main(){
-    char d;
-    scanf("%s", &d);
-    switch(d) {
-        case sunday:
-            printf("Sunday\n");
-            break;
-        case monday:
-            printf("Monday\n");
-            break;
-        case tuesday:
-            printf("Tuesday\n");
-            break;
-        case wednesday:
-            printf("Wednesday\n");
-            break;
-        case thursday:
-            printf("Thursday\n");
-            break;
-        case friday:
-            printf("Friday\n");
-            break;
-        case saturday:
-            printf("Saturday\n");
-            break;
-        default:
-            printf("Invalid day\n");
-    }
-    return 0;
-}
+// // // create enumerations for days and print in numbers // use switch case 
+// // #include <stdio.h>
+// // enum days { sunday, monday, tuesday, wednesday, thursday, friday, saturday };
+// // int main() {
+// //     // printf("%d",sunday);
+// //     // printf("%d",monday);
+// //     // printf("%d",tuesday);
+// //     // printf("%d",wednesday);
+// //     // printf("%d",friday);
+// //     // printf("%d",thursday);
+// //     // printf("%d",saturday);
+// //     //     return 0;
+// //     for (int i = sunday; i <= saturday; i++) {
+// //         printf("%d ", i);
+// //     }
+// // }
+
+// #include <stdio.h>
+// enum days { sunday, monday, tuesday, wednesday, thursday, friday, saturday};
+// int main(){
+//     char d;
+//     scanf("%s", &d);
+//     switch(d) {
+//         case sunday:
+//             printf("Sunday\n");
+//             break;
+//         case monday:
+//             printf("Monday\n");
+//             break;
+//         case tuesday:
+//             printf("Tuesday\n");
+//             break;
+//         case wednesday:
+//             printf("Wednesday\n");
+//             break;
+//         case thursday:
+//             printf("Thursday\n");
+//             break;
+//         case friday:
+//             printf("Friday\n");
+//             break;
+//         case saturday:
+//             printf("Saturday\n");
+//             break;
+//         default:
+//             printf("Invalid day\n");
+//     }
+//     return 0;
+// }
+
+// file handling
+//create a file and write some text in it and read the text from the file and print it on console
+// #include <stdio.h>
+
+// int main() {
+//     FILE *p;
+//     char str[100];
+//     p = fopen("c.txt", "w");
+    
+//     printf("Enter a string: ");
+//     fgets(str, sizeof(str), stdin);
+//     fprintf(p, "%s", str);
+//     fclose(p);
+    
+//     p = fopen("c.txt", "r");
+    
+//     printf("content\n");
+//     while (fgets(str, sizeof(str), p)) {
+//         printf("%s", str);
+//     }
+    
+//     fclose(p);
+// }
+
+
