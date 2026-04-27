@@ -4114,3 +4114,22 @@
 //     fclose(p);
 //     return 0;
 // }
+
+
+
+//  size_t fread
+
+#include <stdio.h>
+int main() {
+    FILE *p = fopen("a.text","r");
+    int a[5];
+    fread(a, sizeof(int), 5, p);
+    for (int i = 0; i < 5; i++) {
+        scanf("%d ", &a[i]);
+    }
+    for (int i = 0; i < 5; i++) {
+        printf("%d ", a[i]);
+    }
+    fclose(p);
+    return 0;
+}
