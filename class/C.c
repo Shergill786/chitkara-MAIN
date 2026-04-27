@@ -4023,4 +4023,94 @@
 //     fclose(p);
 // }
 
+//  print character by character from a file
+// #include <stdio.h>
 
+// int main() {
+//     FILE *p;
+//     char ch;
+//     p = fopen("c.txt", "r");
+ 
+//     printf("\n");
+//     while ((ch = fgetc(p)) != EOF) {
+//         printf("%c", ch);
+//     }
+ 
+//     fclose(p);
+//     return 0;
+// }
+
+
+// 
+// #include <stdio.h>
+// int main() {
+//     FILE *p;
+//     char ch;
+//     p = fopen("c.txt", "r");
+//     int fputc(char ch, FILE *p);
+//     printf("\n");
+//     while ((ch = fputc('t', p)) != EOF) {
+//         printf("%c", ch);
+//     }
+ 
+//     fclose(p);
+//     return 0;
+// }
+
+
+// use fputc to write a character in a file
+// #include <stdio.h>
+// int main() {
+//     FILE *p;
+//     p = fopen("c.text", "w");
+//     fputc('t', p);
+//     fclose(p);
+//     return 0;
+// }
+
+// fseek seek_set
+
+// #include <stdio.h>
+// int main() {
+//     FILE *p;
+//     int ch;
+//     p = fopen("c.text", "r");
+
+//     fseek(p, 4, SEEK_SET);  
+
+//     while ((ch = fgetc(p)) != EOF) {
+//         printf("%c", ch);
+//     }
+
+//     fclose(p);
+//     return 0;
+// }
+
+// fseek seek_cur
+
+// #include <stdio.h>   
+// int main() {
+//     FILE *p;
+//     p = fopen("c.text", "r");
+//     fseek(p, 21, SEEK_CUR);
+//     char ch;
+//     while ((ch = fgetc(p)) != EOF) {
+//         printf("%c", ch);
+//     }
+//     fclose(p);
+//     return 0;
+// }
+
+//  fseek seek_end
+// #include <stdio.h>
+// int main() {
+//     FILE *p;
+//     p = fopen("c.text", "r");
+//     fseek(p,-10, SEEK_END);
+//     char ch;
+//     while ((ch = fgetc(p)) != EOF) {
+//         printf("%c", ch);
+//     }
+//     fclose(p);
+//     return 0;
+// }
