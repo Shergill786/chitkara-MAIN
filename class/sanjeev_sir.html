@@ -102,3 +102,99 @@
 
 </body>
 </html> -->
+
+<!-- event delegation  -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Delegation Example</title>
+</head>
+<body>
+
+    <ul id="l1">
+        <li>apple</li>
+        <li>banana</li>
+        <li>orange</li>
+    </ul>
+
+    <button id="b1">add item</button>
+    <button id="b2">remove item</button>
+    <textarea id="t1" placeholder="Enter item name"></textarea>
+    <script> 
+        document.getElementById("l1").addEventListener("click", function(e) {
+            if (e.target.tagName === "li") {
+                console.log("Item clicked:", e.target.textContent);
+            }
+        });
+        document.getElementById("b1").addEventListener("click", () => {
+            const newItem = document.createElement("li");
+            newItem.textContent = document.getElementById("t1").value;
+            document.getElementById("l1").appendChild(newItem);
+            newItem.style.color = "red";
+        });
+        document.getElementById("b2").addEventListener("click", () => {
+            const l= document.querySelectorAll("li");
+                l[l.length - 1].remove();
+        });
+
+    </script>   
+</body>
+</html> -->
+
+
+<!--  -->
+<!-- ek list ke andr nesteed list chl rhi voh bhi meh handle hogi ussi eventlistener  -->
+
+<!-- create a empty list and add item in it using textbox and also remove the item from list using textbox and by clicking the item -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="l1"></ul>
+    <textarea id="t1" placeholder="Enter item name"></textarea>
+    <br><br>
+
+    <button id="b1">Add Item</button>
+    <button id="b2">Remove Item </button>
+
+    <script> 
+
+        const list = document.getElementById("l1");
+        const input = document.getElementById("t1");
+
+        list.addEventListener("click", function(e) {
+            if (e.target.tagName === "LI") {
+                e.target.remove();
+            }
+        });
+
+        document.getElementById("b1").addEventListener("click", () => {
+            const value = input.value.trim();
+            const li = document.createElement("li");
+            li.textContent = value;
+
+            list.appendChild(li);
+        });
+
+        document.getElementById("b2").addEventListener("click", () => {
+            const value = input.value.trim();
+            const items = document.querySelectorAll("li");
+
+            items.forEach(item => {
+                if (item.textContent === value) {
+                    item.remove();
+                }
+            });
+        });
+
+    </script>   
+</body>
+</html>

@@ -236,13 +236,13 @@
 // </body>
 // </html>
 
-// <!DOCTYPE html>
-// <html>
-// <head>
-// <title>U_trade</title>
+// // <!DOCTYPE html>
+// // <html>
+// // <head>
+// // <title>U_trade</title>
 
-// <style>
-// h1 {
+// // <style>
+// // h1 {
 //     text-align: center;
 // }
 

@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Form</title>
+<style>
+input { display:block; margin:10px; padding:8px; }
+</style>
+</head>
+<body>
+<form id="form">
+<input type="text" id="fname" placeholder="First Name">
+<input type="date" id="dob">
+<input type="email" id="email" placeholder="Email">
+<input type="text" id="age" placeholder="Age">
+<input type="password" id="password" placeholder="Password">
+<button type="submit">Submit</button>
+</form>
+<p id="msg"></p>
+<script>
+    let fname = document.getElementById("fname");
+    let dob = document.getElementById("dob");
+    let email = document.getElementById("email");
+    let password = document.getElementById("password");
+    let form = document.getElementById("form");
+    let msg = document.getElementById("msg");
+    let age = document.getElementById("age");
+    
+    function generateEmail() {
+        if (fname.value && dob.value) {
+            let f = fname.value.substring(0,3).toLowerCase();
+            let d = dob.value.replaceAll("-", "");
+            let b = dob.value.split("-")[2];
+    
+            email.value = f + d + b + "@gmail.com";
+        }
+    }
+    
+    function generateAge() {
+        if (dob.value) {
+            let y = dob.value.split("-")[0];
+            let ageValue = 2026 - y;
+    
+            age.value = ageValue;        }
+    }
+    
+    fname.addEventListener("input", generateEmail);
+    dob.addEventListener("change", generateEmail);
+    dob.addEventListener("change", generateAge);
+    
+    form.addEventListener("submit", function(e) {
+        if (password.value.length !== 12) {
+            e.preventDefault();
+            msg.innerText = "Password must be 12 characters";
+            return;
+        }
+        msg.innerText = "Form submitted successfully";
+        e.preventDefault();
+    });
+    </script>
+</body>
+</html>
