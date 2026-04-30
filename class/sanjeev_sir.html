@@ -8,8 +8,6 @@
 </html> -->
 
 
-
-
 <!-- 
 <!DOCTYPE html>
 <html lang="en">
@@ -26,8 +24,6 @@
     </script>
 </body>
 </html> -->
-
-
 
 
 <!-- <!DOCTYPE html>
@@ -149,7 +145,7 @@
 
 <!-- create a empty list and add item in it using textbox and also remove the item from list using textbox and by clicking the item -->
 
-
+<!-- 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -197,4 +193,155 @@
 
     </script>   
 </body>
-</html>
+</html> -->
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form> 
+        <input type="email" required>
+        <input type="password" minlength="6" required >
+        <button type="submit">Submit</button>
+        <input type="text" pattern="[A-Za-Z]{3,}"
+    </form>
+    <script>
+        document.querySelector("form").addEventListener("submit", () => {
+            alert("form submitted");
+        });
+        </script>
+
+</body>
+</html>-->
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <input type="text" id="email" placeholder="email">
+        <button type="submit">Submit</button>
+    </form>
+
+    <script> 
+        const f = document.querySelector("form");
+
+        f.addEventListener("submit", function(e) {
+            const e1 = document.getElementById("email").value.trim();
+
+            if (!e1.includes("@")) {
+                e.preventDefault();
+                alert("invalid email"); 
+            } else {
+                alert("form submitted");
+            }
+        });
+    </script>
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+
+<form id="form">
+    <input type="text" id="email" placeholder="email"><br><br>
+    <input type="password" id="password" placeholder="password"><br><br>
+    <input type="password" id="confirm" placeholder="confirm password"><br><br>
+    <button type="submit" id="submit">Submit</button>
+</form>
+
+<script>
+    const e1 = document.getElementById("email");
+    const password = document.getElementById("password");
+    const confirm = document.getElementById("confirm");
+    const submit = document.getElementById("submit");
+    const form = document.getElementById("form");
+
+    e1.addEventListener("input", () => {
+        if (!e1.value.includes("@")) {
+           console.log("invalid email"); 
+        }
+    });
+
+    submit.addEventListener("click", (e) => {
+        if (password.value !== confirm.value) {
+            e.preventDefault();
+            alert("password do not match");
+        }
+    });
+
+</script>
+</body> 
+</html> -->
+
+
+<!-- if form is empty display error -->
+ <!-- password check lenght 8 alteast 1 alpha,1 spec,1 num-->
+  <!-- submit is disabled it is only valid when all fields are filled -->
+<!-- ek textbox for password if pass is less 6 then weak letter and numbers then medium >6 let ,num ,spec then strong -->
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+</head>
+<body>
+
+<form id="form">
+    <input type="text" id="name" placeholder="name"><br><br>
+    <input type="password" id="password" placeholder="password"><br><br>
+    <button type="submit" id="submit">Submit</button>
+</form>
+
+<script>
+    const name = document.getElementById("name");
+    const password = document.getElementById("password");
+    const submit = document.getElementById("submit");
+    const form = document.getElementById("form");
+
+    function checkPassword(){
+        const pass = password.value;
+        let strength = "weak";
+
+        if (pass.length >= 8 && /[A-Za-z]/.test(pass) && /\d/.test(pass)) {
+            strength = "medium";
+        }
+        if (pass.length >= 8 && /[A-Za-z]/.test(pass) && /\d/.test(pass) && /[!@#$%^&*]/.test(pass)) {
+            strength = "strong";
+        }
+
+        console.log("password strength:", strength);    
+    }
+    password.addEventListener("input", checkPassword);
+
+
+    submit.addEventListener("click", (e) => {
+    if(name.value=="" || password.value==""){
+        e.preventDefault();
+        alert("please fill all fields");
+    }
+});
+</script>
+
+</body>
+</html> -->
