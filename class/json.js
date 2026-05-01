@@ -91,3 +91,13 @@
 //         width : 5}
 //     shape : square,
 // };
+
+
+// function parent(){
+//     let c=0;
+//     return function child(){
+//         c++;
+//         console.log(c);
+//     }
+// }
+// let a = parent();

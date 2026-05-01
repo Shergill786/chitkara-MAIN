@@ -41,7 +41,7 @@
     </script>
 </body>
 </html>
- */}
+ */
 // <!DOCTYPE html>
 // <html lang="en">
 // <head>
@@ -120,3 +120,14 @@
 
 // </body>
 // </html>
+
+// function createFragmentExample() {
+//     const fragment = document.createDocumentFragment();
+//     for (let i = 0; i < 1000; i++) {
+//         const div = document.createElement("div");
+//         fragment.appendChild(div);
+//     }
+//     document.body.appendChild(fragment);
+// }
+
+
