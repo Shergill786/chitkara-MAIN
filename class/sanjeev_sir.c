@@ -86,3 +86,27 @@
 // }
 
 
+// no input 121 check palindrome or not using recursion
+
+// #include <stdio.h>
+
+// int reverse(int n){
+//     int temp = 0;
+//     while(n > 0){
+//         temp = temp * 10 + n % 10;
+//         n = n / 10;
+//     }
+//     return temp;
+// }
+
+// void check(int n){
+//     if(n == reverse(n)){
+//         printf("yes");
+//     } else {
+//         printf("no");
+//     }
+// }
+// int main(){
+//     int n = 121;
+//     check(n);
+// }
