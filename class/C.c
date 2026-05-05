@@ -4136,3 +4136,24 @@
 
 
 
+// find min of 2 no using preprosser 
+// #include <stdio.h>
+// #define min(a,b) ((a)<(b)?(a):(b))
+// int main() {
+//     int x, y;
+//     printf("Enter two numbers: ");
+//     scanf("%d %d", &x, &y);
+//     printf("Minimum: %d\n", min(x, y));
+// }
+
+
+// #include <stdio.h>
+// int main(int argc,char *argv[]){
+// 	int i;
+// 	printf("no of arguments: %d",argc);
+// 	for(int i=0;i<argc;i++){
+// 		printf("%s",argv[i]);
+// 	}
+// }
+
+

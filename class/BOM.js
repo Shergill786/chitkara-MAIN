@@ -131,3 +131,140 @@
 // }
 
 
+// et timeout is javascript function used to execute a piece of code after a specified delay
+//  It runs the function only once after the given times in milliseconds
+// The set timeout function is mainly used for tasks such as showing messages after delay or performing actions the delay time is given in milliseconds where one milliseconds is equal to one second Set interval 
+// Ut is a javascript function used to execute a function and a fixed time intervals in a repeated way it is commonly used for tasks like updating clocks animations and photo refreshing contents to stop the repeat execution of set interval clear interval method or function is used
+
+// <html>
+// <body>
+
+// <button onclick="startInterval()">Start Interval</button>
+// <button onclick="stopInterval()">Stop Interval</button>
+
+// <p id="timerOutput"></p>
+
+// <script>
+// let intervalId;
+
+// function startTimeout() {
+//     setTimeout(function () {
+//         document.getElementById("timerOutput").innerHTML = "Executed after 3 seconds";
+//     }, 3000);
+// }
+
+// function startInterval() {
+//     let count = 0;
+
+//     intervalId = setInterval(function () {
+//         count++;
+//         document.getElementById("timerOutput").innerHTML = "Count: " + count;
+//     }, 100);
+// }
+
+// function stopInterval() {
+//     clearInterval(intervalId);
+// }
+// </script>
+
+// </body>
+// </html>
+
+
+// <!DOCTYPE html>
+// <html>
+// <body>
+
+// <button onclick="startInterval()">Start Interval</button>
+// <button onclick="stopInterval()">Stop Interval</button>
+
+// <p id="timerOutput"></p>
+
+// <script>
+//     let intervalId;
+
+// function startTimeout() {
+
+//     setTimeout(function() {
+
+//         document.getElementById("timerOutput").innerHTML = "Executed after 3 seconds";
+
+//     }, 2000);
+
+// }
+
+// function startInterval() {
+
+//     let count = 0;
+
+//     intervalId = setInterval(function() {
+
+//         count++;
+
+//         document.getElementById("timerOutput").innerHTML = "Count: " + count;
+
+//     }, 1000);
+
+// }
+
+// function stopInterval() {
+
+//     clearInterval(intervalId);
+
+// }
+
+// </script>
+
+// </body>
+
+// </html>
+
+
+
+// <!DOCTYPE html>
+// <html>
+// <head>
+//     <title>Callback Functions</title>
+// </head>
+// <body>
+
+// <h2>Callback Function Demo</h2>
+// <button onclick="startProcess()">Start Process</button>
+// <p id="output"></p>
+
+// <script>
+// function processUser(name, callback) {
+//     document.getElementById("output").innerHTML = "Processing user: " + name;
+//     callback();
+// }
+
+// function showMessage() {
+//     document.getElementById("output").innerHTML += "<br>Welcome to JavaScript!";
+// }
+
+// function startProcess() {
+//     processUser("Sam", showMessage);
+// }
+// </script>
+
+// </body>
+// </html>
+
+// PROMISE IN JS 
+// 3 diff stages of promise lifecycle 
+// how to hanle error in promise
+// diff bw promise error handling and event loop in js
+
+
+// promise is a built-in object in JavaScript that represents the eventual completion (or failure) of an asynchronous operation and its resulting value. A promise can be in one of three states: pending, fulfilled, or rejected.
+
+
+// 1. Pending: The initial state of a promise. It is neither fulfilled nor rejected. The promise is waiting for the asynchronous operation to complete.
+// 2. Fulfilled: The state of a promise when the asynchronous operation has completed successfully. The promise is resolved with a value, which can be accessed using the .then() method.
+// 3. Rejected: The state of a promise when the asynchronous operation has failed. The promise is rejected with a reason (error), which can be accessed using the .catch() method.
+
+
+// To handle errors in promises, you can use the .catch() method, which allows you to specify a callback function that will be executed if the promise is rejected. This is useful for handling any errors that may occur during the asynchronous operation.
+
+
+// handling errors in promises is different from handling errors in the event loop because promises provide a more structured way to manage asynchronous operations and their associated errors. In the event loop, errors can be thrown and may not be caught if they occur in asynchronous code, leading to unhandled exceptions. In contrast, promises allow you to chain .then() and .catch() methods to handle both successful outcomes and errors in a more predictable manner, ensuring that errors are properly caught and handled without crashing the application.

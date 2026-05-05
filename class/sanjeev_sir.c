@@ -110,3 +110,126 @@
 //     int n = 121;
 //     check(n);
 // }
+
+
+// array ko pass krna h using pointers
+// #include <stdio.h>
+// void fun(int *a,int n){
+//     for(int i=0;i<n;i++){
+//         printf("%d ",a[i]);
+//     }
+// }
+// int main(){
+//     int a[5]={1,2,3,4,5};
+//     fun(a,5);
+// }
+
+
+// arr ko pointer se print krna h simple 
+// #include <stdio.h>
+// int main(){
+//     int arr[5]={1,2,3,4,5};
+//      int *p = arr;
+//      for (int i = 0; i < 5; i++)
+//          printf("%d ", *(p + i));
+// }
+
+
+// pointer to array 
+// int main(){
+// int arr[5]={1,2,3,4,5};
+//      int (*p)[5] = &arr;
+//      for (int i = 0; i < 5; i++)
+//          printf("%d ", (*p)[i]);
+// }
+
+
+// array of pointer
+// #include <stdio.h>
+// int main(){
+// int a=10,b=20,c=30;
+// int *p[3]={&a,&b,&c};
+// for (int i=0;i<3;i++){
+//     printf("%d",*p[i]);
+// }
+// }
+
+// #include <stdio.h>
+// int sum(int *a,int *b){
+//     *a+=*b;
+//     return *a;
+// }
+// int main(){
+//     int x=10,y=20;
+//     sum(&x,&y);
+//     printf("%d",x);
+// }
+
+
+// max using pointer
+// #include <stdio.h>
+// int max(int *a,int *b){
+//     if (*a>*b){
+//         return a;
+//     }
+//     else{
+//         return b;
+//     }
+// }
+// int main(){
+//     int x=1,y=2;
+//     int *p;
+//     p = max(&x,&y);
+//     printf("%d",*p);
+// }
+
+
+// function pointers 
+// #include <stdio.h>
+// int fun(int a,int b){
+//     return a+b;
+// }
+// int main(){
+//     int (*p)(int, int) ;
+//     p = fun;
+//     printf("%d", p(1, 2));
+// }
+
+
+// int main(){
+//     int *p = (int *)malloc(3*sizeof(int));
+//     for(int i=0;i<3;i++){
+//         scanf("%d",p+i);
+//     }
+//     for(int i=0;i<3;i++){
+//         printf("%d ",*(p+i));
+//     }}
+
+// #include <stdio.h>
+// int main(){
+// int *p = (int *)calloc(3, sizeof(int));
+// for(int i=0;i<3;i++){
+//     scanf("%d",p+i);
+// }
+// for(int i=0;i<3;i++){
+//     printf("%d ",*(p+i));
+// }
+// }
+
+// realloc
+// #include <stdio.h>
+// #include <stdlib.h>
+// int main(){
+//     int *p = (int *)malloc(3*sizeof(int));
+//     for(int i=0;i<3;i++){
+//         scanf("%d",p+i);
+//     }
+//     p = (int *)realloc(p, 5*sizeof(int));
+//     for(int i=3;i<5;i++){
+//         scanf("%d",p+i);
+//     }
+//     for(int i=0;i<5;i++){
+//         printf("%d ",*(p+i));
+//     }
+// }
+x

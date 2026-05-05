@@ -62,6 +62,27 @@ ek he button se on /off hoga toggle button  -->
 </body>
 </html> -->
 
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="inputField" placeholder="Type something...">
+    <script>
+        const inputField = document.getElementById("inputField");
+
+        inputField.addEventListener("keydown", function(event) {
+            console.log("Key pressed: " + event.key);
+        });
+    </script>
+</body>
+</html> -->
+
+
+<!-- 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -70,6 +91,21 @@ ek he button se on /off hoga toggle button  -->
     <title>Document</title>
 </head>
 <body>
-    
+    <div id="parent">
+        <button id="childBtn">Click Me</button>
+    </div>
+    <script>
+        const parentDiv = document.getElementById("parent");
+        const childButton = document.getElementById("childBtn");
+
+        parentDiv.addEventListener("click", function() {
+            console.log("Parent");
+        });
+
+        childButton.addEventListener("click", function(event) {
+            event.stopPropagation();
+            console.log("Child");
+        });
+        
 </body>
-</html>
+</html> -->
