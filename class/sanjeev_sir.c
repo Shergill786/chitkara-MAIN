@@ -184,7 +184,7 @@
 // }
 
 
-// function pointers 
+// function pointers is used to point to a function and call it through the pointer
 // #include <stdio.h>
 // int fun(int a,int b){
 //     return a+b;
@@ -232,4 +232,56 @@
 //         printf("%d ",*(p+i));
 //     }
 // }
-x
+
+
+// struction says combine mutliple type of this in a single file
+// struc is user defined data type 
+
+// #include <stdio.h>
+// struct student{
+//     char name[50];
+//     int age;
+//     float marks;
+// };
+// int main(){
+//     struct student o1={"jassi",20,90.5};
+//     struct student o2={.age=20,.marks=90.5,.name="jassi"};
+//     printf("%d",o1.age);
+//     printf("%d",o2.age);
+// }
+
+
+// struct s o3=o1; // copy of o1 in o3
+
+// #include <stdio.h>
+// struct student{
+//     char name[50];
+//     int age;
+//     float marks;
+// };
+// int main(){
+//     struct student o1;
+//     scanf("%d",&o1.age);
+//     printf("%d",o1.age);
+// }
+
+// array of struct
+
+// #include <stdio.h>
+//     struct student{
+//         char name[50];
+//         int age;
+//         float marks;
+//     };
+//     int main(){
+//     struct student o[3];
+    
+//     for (int i = 0; i < 3; i++) {
+//         printf("enter age %d: ", i + 1);
+//         scanf("%d", &o[i].age);
+//     }
+//     for (int i = 0; i < 3; i++) {
+//         printf("%d ", o[i].age);
+//     }
+// }
+

@@ -268,3 +268,6 @@
 
 
 // handling errors in promises is different from handling errors in the event loop because promises provide a more structured way to manage asynchronous operations and their associated errors. In the event loop, errors can be thrown and may not be caught if they occur in asynchronous code, leading to unhandled exceptions. In contrast, promises allow you to chain .then() and .catch() methods to handle both successful outcomes and errors in a more predictable manner, ensuring that errors are properly caught and handled without crashing the application.
+
+
+// a promise in java script is a object that represent a result of a syncronous process
