@@ -4167,23 +4167,19 @@
 //     int eng, hin, math;
 //     float percentage;
 // };
-// // Function to calculate percentage
 // float calPer(struct Student s) {
 //     return (s.eng + s.hin + s.math) / 3.0;
 // }
 
 // int main() {
 //     struct Student s[3];
-//     // Input
 //     for(int i = 0; i < 3; i++) {
 //         printf("Name of student %d: ", i+1);
 //         scanf("%s", s[i].name);
 //         printf("Enter marks in English, Hindi, Maths: ");
 //        scanf("%d %d %d", &s[i].eng, &s[i].hin, &s[i].math);
-//         // Calculate percentage using function
 //         s[i].percentage = calPer(s[i]);
 //     }
-//     // Sorting based on percentage (Descending)
 //     struct Student temp;
 //     for(int i = 0; i < 3; i++) {
 //         for(int j = i+1; j < 3; j++) {
@@ -4194,7 +4190,6 @@
 //             }
 //         }
 //     }
-//     // Display rank
 //     printf("\nRanks");
 //     for(int i = 0; i < 3; i++) {
 //         printf("Rank %d: %s (%.2f%%)\n", i+1, s[i].name, s[i].percentage);
@@ -4203,8 +4198,8 @@
 // }
 
 
-
 // cricket player name ,odi ,runs and find total runs using pointers of structure 
+
 #include <stdio.h>
 
 struct Cricketer {
@@ -4215,9 +4210,9 @@ struct Cricketer {
 };
 
 void calculateTotal(struct Cricketer *c) {
-    c->total = 0;
-    for(int i = 0; i < c->odis; i++) {
-        c->total = c->total + c->runs[i];
+    (*c).total = 0;
+    for(int i = 0; i < (*c).odis; i++) {
+        (*c).total = (*c).total + (*c).runs[i];
     }
 }
 int main() {
