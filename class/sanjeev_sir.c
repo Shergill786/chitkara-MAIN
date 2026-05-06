@@ -285,3 +285,43 @@
 //     }
 // }
 
+
+// passing struct to function
+// #include <stdio.h>
+// struct student{
+//     char name[50];
+//     int age;
+//     float marks;
+// };
+// void fun(struct student s){
+//     printf("%d",s.age);
+// }
+// int main(){
+//     struct student s1={"jassi",20,90.5};
+//     fun(s1);
+// }
+
+
+// struct meh 5 bche ke marks ka toptal print
+
+// #include <stdio.h>
+// struct student{
+//     float marks;
+// };
+// void sum(struct student s[],int n){
+//     float sum = 0;
+//     for (int i=0;i<n;i++){
+//         sum+=s[i].marks;
+//     }
+//     printf("Sum %.2f", sum);
+// }
+// int main(){
+//     struct student s1[5];
+//     for (int i=0;i<5;i++){
+//         printf("marks %d: ", i+1);
+//         scanf("%f",&s1[i].marks);
+//     }
+//     sum(s1,5);
+// }
+
+
