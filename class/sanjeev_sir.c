@@ -325,3 +325,61 @@
 // }
 
 
+#include <stdio.h>
+
+struct Student {
+    char name[50];
+    int marks[3];
+    float percentage;
+};
+
+int main() {
+
+    struct Student s[3], temp;
+    int sum;
+
+    // Input
+    for (int i = 0; i < 3; i++) {
+
+        sum = 0;
+
+        printf("\nEnter student name: ");
+        scanf("%s", s[i].name);
+
+        for (int j = 0; j < 3; j++) {
+
+            printf("Enter marks of subject %d: ", j + 1);
+            scanf("%d", &s[i].marks[j]);
+
+            sum += s[i].marks[j];
+        }
+
+        s[i].percentage = sum / 3.0;
+    }
+
+    // Sorting by percentage (highest first)
+    for (int i = 0; i < 3; i++) {
+
+        for (int j = i + 1; j < 3; j++) {
+
+            if (s[j].percentage > s[i].percentage) {
+
+                temp = s[i];
+                s[i] = s[j];
+                s[j] = temp;
+            }
+        }
+    }
+
+    // Display ranks
+    printf("\n--- Student Rankings ---\n");
+
+    for (int i = 0; i < 3; i++) {
+
+        printf("\nRank %d", i + 1);
+        printf("\nName: %s", s[i].name);
+        printf("\nPercentage: %.2f%%\n", s[i].percentage);
+    }
+
+    return 0;
+}

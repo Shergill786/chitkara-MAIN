@@ -4157,3 +4157,86 @@
 // }
 
 
+
+
+// struc student name marks of 3 sub and percentage using arry of structure and suing functions to calculate percentage and print it
+
+// #include <stdio.h>
+// struct Student {
+//     char name[50];
+//     int eng, hin, math;
+//     float percentage;
+// };
+// // Function to calculate percentage
+// float calPer(struct Student s) {
+//     return (s.eng + s.hin + s.math) / 3.0;
+// }
+
+// int main() {
+//     struct Student s[3];
+//     // Input
+//     for(int i = 0; i < 3; i++) {
+//         printf("Name of student %d: ", i+1);
+//         scanf("%s", s[i].name);
+//         printf("Enter marks in English, Hindi, Maths: ");
+//        scanf("%d %d %d", &s[i].eng, &s[i].hin, &s[i].math);
+//         // Calculate percentage using function
+//         s[i].percentage = calPer(s[i]);
+//     }
+//     // Sorting based on percentage (Descending)
+//     struct Student temp;
+//     for(int i = 0; i < 3; i++) {
+//         for(int j = i+1; j < 3; j++) {
+//             if(s[i].percentage < s[j].percentage) {
+//                 temp = s[i];
+//                 s[i] = s[j];
+//                 s[j] = temp;
+//             }
+//         }
+//     }
+//     // Display rank
+//     printf("\nRanks");
+//     for(int i = 0; i < 3; i++) {
+//         printf("Rank %d: %s (%.2f%%)\n", i+1, s[i].name, s[i].percentage);
+//     }
+//     return 0;
+// }
+
+
+
+// cricket player name ,odi ,runs and find total runs using pointers of structure 
+#include <stdio.h>
+
+struct Cricketer {
+    char name[50];
+    int odis;
+    int runs[100];
+    int total;
+};
+
+void calculateTotal(struct Cricketer *c) {
+    c->total = 0;
+    for(int i = 0; i < c->odis; i++) {
+        c->total = c->total + c->runs[i];
+    }
+}
+int main() {
+    struct Cricketer c;
+    printf("Enter cricketer name: ");
+    scanf(" %s", c.name);
+    printf("Enter number of ODIs played: ");
+    scanf("%d", &c.odis);
+    printf("Enter runs in each ODI:\n");
+    for(int i = 0; i < c.odis; i++) {
+        scanf("%d", &c.runs[i]);
+    }
+
+
+    calculateTotal(&c);
+
+    printf("\n--- Cricketer Details ---\n");
+    printf("Name: %s\n", c.name);
+    printf("Total Runs: %d\n", c.total);
+
+    return 0;
+}
