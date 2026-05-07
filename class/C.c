@@ -4200,38 +4200,225 @@
 
 // cricket player name ,odi ,runs and find total runs using pointers of structure 
 
-#include <stdio.h>
+// #include <stdio.h>
 
-struct Cricketer {
-    char name[50];
-    int odis;
-    int runs[100];
-    int total;
-};
+// struct Cricketer {
+//     char name[50];
+//     int odis;
+//     int runs[100];
+//     int total;
+// };
 
-void calculateTotal(struct Cricketer *c) {
-    (*c).total = 0;
-    for(int i = 0; i < (*c).odis; i++) {
-        (*c).total = (*c).total + (*c).runs[i];
-    }
-}
-int main() {
-    struct Cricketer c;
-    printf("Enter cricketer name: ");
-    scanf(" %s", c.name);
-    printf("Enter number of ODIs played: ");
-    scanf("%d", &c.odis);
-    printf("Enter runs in each ODI:\n");
-    for(int i = 0; i < c.odis; i++) {
-        scanf("%d", &c.runs[i]);
-    }
+// void calculateTotal(struct Cricketer *c) {
+//     (*c).total = 0;
+//     for(int i = 0; i < (*c).odis; i++) {
+//         (*c).total = (*c).total + (*c).runs[i];
+//     }
+// }
+// int main() {
+//     struct Cricketer c;
+//     printf("Enter cricketer name: ");
+//     scanf(" %s", c.name);
+//     printf("Enter number of ODIs played: ");
+//     scanf("%d", &c.odis);
+//     printf("Enter runs in each ODI:\n");
+//     for(int i = 0; i < c.odis; i++) {
+//         scanf("%d", &c.runs[i]);
+//     }
 
 
-    calculateTotal(&c);
+//     calculateTotal(&c);
 
-    printf("\n--- Cricketer Details ---\n");
-    printf("Name: %s\n", c.name);
-    printf("Total Runs: %d\n", c.total);
+//     printf("\n--- Cricketer Details ---\n");
+//     printf("Name: %s\n", c.name);
+//     printf("Total Runs: %d\n", c.total);
 
-    return 0;
-}
+//     return 0;
+// // 
+
+
+// Problem 20: Searching Employee Records Using Array of Structures
+// Title: Search for an Employee by ID
+// Define a structure Employee with name (string), employee ID (integer), and salary (float). Store details for 5 employees in an array of structures. Allow the user to enter an employee ID and search for the corresponding employee’s details i.e. Name and salary of that employee. If not found then print “Employee does not exist in the record”
+// Note: Structure of employee has been initialized in this program.
+// {"John", 1001, 50000},
+// {"Alice", 1002, 60000},
+// {"Bob", 1003, 55000},
+// {"David", 1004, 47000},
+// {"Eve", 1005, 52000}
+// Sample Test Cases
+// 1. Input:
+// 1002 // Enter Employee ID to search
+// Output:
+// Alice
+// 60000.00
+// 2. Input:
+// 1005
+// Output:
+// Employee does not exist in the record
+// Test Cases Table
+// Test Case
+// Searched ID
+// Expected Output
+// 1
+// 1002
+// Alice
+// 60000.00
+// 2
+// 2004
+// Employee does not exist in the record
+// 3
+// 1005
+// Eve
+// 52000.00
+// 4
+// 1001
+// John
+// 50000.00
+// 5
+// 5005
+// Employee does not exist in the record
+// Solution in C#include <stdio.h>
+
+// #include <stdio.h>
+// #include <string.h>
+// struct Employee {
+//     char name[50];
+//     int employeeID;
+//     float salary;
+// };
+
+// int main() {
+
+//     struct Employee employees[5] = {
+//         {"John", 1001, 50000},
+//         {"Alice", 1002, 60000},
+//         {"Bob", 1003, 55000},
+//         {"David", 1004, 47000},
+//         {"Eve", 1005, 52000}
+//     };
+
+//     int searchID;
+//     scanf("%d", &searchID);
+
+//     int found = 0;
+
+//     for (int i = 0; i < 5; i++) {
+
+//         if (employees[i].employeeID == searchID) {
+
+//             printf("%s\n", employees[i].name);
+//             printf("%.2f\n", employees[i].salary);
+
+//             found = 1;
+//             break;
+//         }
+//     }
+
+//     if (!found) {
+//         printf("Employee does not exist in the record");
+//     }
+
+//     return 0;
+// }
+
+
+// Problem 18: Array of Structures for Employee Records
+// Title: Managing Employee Records
+// Define a structure called Employee with fields for name (string), employee ID (integer), and salary (float). Use an array of structures to store details for 3 employees and display their details.
+// Sample Test Cases
+// 1. Input: 3
+// 3 // number of employee
+// John
+// 1001
+// 50000
+// Alice
+// 1002
+// 60000
+// Bob
+// 1003
+// 55000
+// Output:
+// Employee 1: Name = John, ID = 1001, Salary = 50000
+// Employee 2: Name = Alice, ID = 1002, Salary = 60000
+// Employee 3: Name = Bob, ID = 1003, Salary = 55000
+// Test Cases Table
+// Test Case
+// Input
+// Output
+// 1
+// 3
+// John, 1001, 50000
+// Alice, 1002, 60000
+// Bob, 1003, 55000
+// Employee 1: Name = John, ID = 1001, Salary = 50000
+// Employee 2: Name = Alice, ID = 1002, Salary = 60000
+// Employee 3: Name = Bob, ID = 1003, Salary = 55000
+// 2
+// 1
+// David, 2001, 40000
+// Employee 1: Name = David, ID = 2001, Salary = 40000
+// 3
+// 2
+// Alan, 3001, 48000
+// Sarah, 3002, 51000
+// Employee 1: Name = Alan, ID = 3001, Salary = 48000
+// Employee 2: Name = Sarah, ID = 3002, Salary = 51000
+// 4
+// 4
+// Mike, 4001, 60000
+// Tom, 4002, 55000
+// Eve, 2002, 45000
+// Mark, 2003, 52000
+// Employee 1: Name = Mike, ID = 4001, Salary = 60000
+// Employee 2: Name = Tom, ID = 4002, Salary = 55000
+// Employee 3: Name = Eve, ID = 2002, Salary = 45000
+// Employee 4: Name = Mark, ID = 2003, Salary = 52000
+// 5
+// 5
+// Chris, 3003, 53000
+// Jane, 5001, 45000
+// Eric, 5002, 47000
+// Paul, 5003, 52000
+// Lily, 4003, 58000
+// Employee 1: Name = Chris, ID = 3003, Salary = 53000
+// Employee 2: Name = Jane, ID = 5001, Salary = 45000
+// Employee 3: Name = Eric, ID = 5002, Salary = 47000
+// Employee 4: Name = Paul, ID = 5003, Salary = 52000
+// Employee 5: Name = Lily, ID = 4003, Salary = 58000
+// Solution in C
+
+// #include <stdio.h>
+
+// struct Employee
+// {
+//     char name[50];
+//     int employeeID;
+//     float salary;
+// };
+
+// int main()
+// {
+//     int n;
+//     scanf("%d", &n);   
+//     struct Employee employees[n];
+
+//     // Input employee details
+//     for (int i = 0; i < n; i++)
+//     {
+//         scanf("%s", employees[i].name);
+//         scanf("%d", &employees[i].employeeID);
+//         scanf("%f", &employees[i].salary);
+//     }
+
+//     // Display employee details
+//     for (int i = 0; i < n; i++)
+//     {
+//         printf("Employee %d: Name = %s, ID = %d, Salary = %.2f\n",
+//                i + 1,
+//                employees[i].name,
+//                employees[i].employeeID,
+//                employees[i].salary);
+//     }
+
+//     return 0;
