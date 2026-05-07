@@ -4422,3 +4422,75 @@
 //     }
 
 //     return 0;
+
+
+// #include <stdio.h>
+// int upperSum(int (*a)[10], int r, int c) {
+//     int sum = 0;
+//     for(int i = 0; i < r; i++) {
+//         for(int j = 0; j < c; j++) {
+//             if(i <= j) {   
+//                 sum += a[i][j];
+//             }
+//         }
+//     }
+//     return sum;
+// }
+// int lowerSum(int (*a)[10], int r, int c) {
+//     int sum = 0;
+//     for(int i = 0; i < r; i++) {
+//         for(int j = 0; j < c; j++) {
+
+//             if(i >= j) {  
+//                 sum += a[i][j];
+//             }
+//         }
+//     }
+//     return sum;
+// }
+// int main() {
+//     int a[10][10], r, c;
+//     printf("Enter rows and columns: ");
+//     scanf("%d %d", &r, &c);
+//     printf("Enter matrix elements:\n");
+//     for(int i = 0; i < r; i++) {
+//         for(int j = 0; j < c; j++) {
+//             scanf("%d", &a[i][j]);
+//         }
+//     }
+//     printf("\nUpper Triangle Sum = %d", upperSum(a, r, c));
+//     printf("\nLower Triangle Sum = %d", lowerSum(a, r, c));
+//     return 0;
+// }
+
+
+// series print starting no 26- even h to +1 krke agla agr odd h multiply by 3 and add1  and second time odd h to 3*odd+2 and even h to +2 krke agla
+
+// #include <stdio.h>
+// void printSeries(int *num, int terms)
+// {
+//     int oc = 1; 
+//     int ec = 1;  
+//     for(int i = 1; i <= terms; i++)
+//     {
+//         printf("%d ", *num);
+//         if(*num % 2 == 0){
+//             *num = *num + ec;
+//             ec++;
+//         }
+//         else{
+//             *num = (*num * 3) + oc;
+//             oc++;
+//         }
+//     }
+// }
+// int main()
+// {
+//     int n, terms;
+//     printf("Enter starting number: ");
+//     scanf("%d", &n);
+//     printf("Enter number of elements: ");
+//     scanf("%d", &terms);
+//     printSeries(&n, terms);
+//     return 0;
+// }

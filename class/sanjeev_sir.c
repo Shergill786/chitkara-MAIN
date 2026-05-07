@@ -325,61 +325,112 @@
 // }
 
 
-#include <stdio.h>
+// #include <stdio.h>
 
-struct Student {
-    char name[50];
-    int marks[3];
-    float percentage;
-};
+// struct Student {
+//     char name[50];
+//     int marks[3];
+//     float percentage;
+// };
 
-int main() {
+// int main() {
 
-    struct Student s[3], temp;
-    int sum;
+//     struct Student s[3], temp;
+//     int sum;
 
-    // Input
-    for (int i = 0; i < 3; i++) {
+//     // Input
+//     for (int i = 0; i < 3; i++) {
 
-        sum = 0;
+//         sum = 0;
 
-        printf("\nEnter student name: ");
-        scanf("%s", s[i].name);
+//         printf("\nEnter student name: ");
+//         scanf("%s", s[i].name);
+//         for (int j = 0; j < 3; j++) {
+//             printf("Enter marks of subject %d: ", j + 1);
+//             scanf("%d", &s[i].marks[j]);
+//            sum += s[i].marks[j];
+//         }
+//         s[i].percentage = sum / 3.0;
+//     }
+//     // Sorting by percentage (highest first)
+//     for (int i = 0; i < 3; i++) {
+//         for (int j = i + 1; j < 3; j++) {
+//             if (s[j].percentage > s[i].percentage) {
+//                 temp = s[i];
+//                 s[i] = s[j];
+//                 s[j] = temp;
+//             }
+//         }
+//     }
+//     // Display ranks
+//     printf("\n--- Student Rankings ---\n");
+//     for (int i = 0; i < 3; i++) {
+//         printf("\nRank %d", i + 1);
+//         printf("\nName: %s", s[i].name);
+//         printf("\nPercentage: %.2f%%\n", s[i].percentage);
+//     }
+//     return 0;
+// }
 
-        for (int j = 0; j < 3; j++) {
 
-            printf("Enter marks of subject %d: ", j + 1);
-            scanf("%d", &s[i].marks[j]);
+// #include <stdio.h>
+// struct Student {
+//     char name[50];
+//     int age;
+//     float marks;
+// };
+// union Students {
+//     char name[50];
+//     int age;
+//     float marks;
+// };
+// int main() {
+//     union Students o;
+//     printf("Enter name: ");
+//     scanf("%s", o.name);
+//     printf("Enter age: ");
+//     scanf("%d", &o.age);
+//     printf("Enter marks: ");
+//     scanf("%f", &o.marks);
 
-            sum += s[i].marks[j];
-        }
+//     struct Student o1;
+//     o1.age=20;
+//     o1.marks=90.5;
+//     strcpy(o1.name, "asd");
 
-        s[i].percentage = sum / 3.0;
-    }
+//     printf("Size of union Students: %lu bytes\n", sizeof(union Students));
+//     printf("Size of struct Student: %lu bytes\n", sizeof(struct Student));
+// }
 
-    // Sorting by percentage (highest first)
-    for (int i = 0; i < 3; i++) {
 
-        for (int j = i + 1; j < 3; j++) {
+// sizeof (struct student) // size of struct student
+// sizeof (union student) // size of union student
 
-            if (s[j].percentage > s[i].percentage) {
 
-                temp = s[i];
-                s[i] = s[j];
-                s[j] = temp;
-            }
-        }
-    }
+// #include <stdio.h>  
+// enum abc {red,green,blue};
+// int main(){
+//     enum abc color;
+//     color = blue;
+//     printf("%d",color);
+// }
 
-    // Display ranks
-    printf("\n--- Student Rankings ---\n");
 
-    for (int i = 0; i < 3; i++) {
+// use switch case
+// #include <stdio.h>
+// enum abc {red,green,blue};
+// int main(){
+//     enum abc color = green;
+//     switch(color){
+//         case red:
+//             printf("Red");
+//             break;
+//         case green:
+//             printf("Green");
+//             break;
+//         case blue:
+//             printf("Blue");
+//             break;
+//     }
+// }
 
-        printf("\nRank %d", i + 1);
-        printf("\nName: %s", s[i].name);
-        printf("\nPercentage: %.2f%%\n", s[i].percentage);
-    }
-
-    return 0;
-}

@@ -180,3 +180,34 @@ ek he button se on /off hoga toggle button  -->
     </script>
 </body>
 </html> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Loop Example</title>
+</head>
+<body>
+<h2>Event Loop with setTimeout and setInterval</h2>
+<button onclick="runExample()">Start</button>
+<p id="output"></p>
+<script>
+function runExample() {
+    document.getElementById("output").innerHTML = "Start<br>";
+    setTimeout(function() {
+        document.getElementById("output").innerHTML += "setTimeout Executed After 2 Seconds<br>";
+    }, 2000);
+    let count = 0;
+    let interval = setInterval(function() {
+        count++;
+        document.getElementById("output").innerHTML += "setInterval Running : " + count + "<br>";
+        if(count == 3) {
+            clearInterval(interval);
+        }
+    }, 2000);
+    document.getElementById("output").innerHTML += "End<br>";
+}
+
+</script>
+
+</body>
+</html>
