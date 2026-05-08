@@ -784,3 +784,21 @@ int main() {
 // }
 
 
+// armstrong number
+#include <stdio.h>
+int main(){
+    int num=153;
+    int temp=num;
+    int sum=0;
+    while(temp>0){
+        int digit=temp%10;
+        sum+=digit*digit*digit;
+        temp=temp/10;
+    }
+    if (sum==num){
+        printf("Armstrong number");
+    }
+    else{
+        printf("Not an Armstrong number");
+    }
+}

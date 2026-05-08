@@ -419,7 +419,8 @@
 // use switch case
 // #include <stdio.h>
 // enum abc {red,green,blue};
-// int main(){
+// typedef int myInt;
+// myInt main(){
 //     enum abc color = green;
 //     switch(color){
 //         case red:
@@ -433,4 +434,121 @@
 //             break;
 //     }
 // }
+
+
+//  structure bnao by using typedef
+// #include <stdio.h>
+// typedef struct {
+//     char name[50];
+//     int age;
+//     float marks;
+// } student;
+// int main() {
+//     student s1;
+//     printf("Enter name: ");
+//     scanf("%s", s1.name);
+//     printf("Enter age: ");
+//     scanf("%d", &s1.age);
+//     printf("Enter marks: ");
+//     scanf("%f", &s1.marks);
+
+//     printf("\nName: %s", s1.name);
+//     printf("\nAge: %d", s1.age);
+//     printf("\nMarks: %.2f\n", s1.marks);
+
+//     return 0;
+// }
+
+// by using array of pointers
+// #include <stdio.h>
+// struct student {
+//     char name[50];
+//     int Rollno;
+//     float marks;
+// };
+// int main() {
+//     struct student s1, s2, s3, s4, s5;
+//     struct student *ptr[5] = {&s1, &s2, &s3, &s4, &s5};
+
+//     for (int i = 0; i < 2; i++) {
+//         printf("Enter name: ");
+//         scanf("%s", (*(ptr[i])).name);
+//         printf("Enter Roll no: ");
+//         scanf("%d", &(*(ptr[i])).Rollno);
+//         printf("Enter marks: ");
+//         scanf("%f", &(*(ptr[i])).marks);
+//     }
+
+//     for (int i = 0; i < 2; i++) {
+//         printf("\nName: %s", (*(ptr[i])).name);
+//         printf("\nRollno: %d", (*(ptr[i])).Rollno);
+//         printf("\nMarks: %.2f\n", (*(ptr[i])).marks);
+//     }
+    
+//     struct student *temp;
+//     for (int i = 0; i < 2; i++) {
+//         for (int j = i + 1; j < 2; j++) {
+//             if ((*(ptr[j])).marks > (*(ptr[i])).marks) {
+//                 temp = ptr[i];
+//                 ptr[i] = ptr[j];
+//                 ptr[j] = temp;
+//             }
+//         }
+//     }
+//     for (int i = 0; i < 2; i++) {
+//         printf("\nRank %d", i + 1);
+//         printf("\nName: %s", (*(ptr[i])).name);
+//         printf("\nRollno: %d", (*(ptr[i])).Rollno);
+//         printf("\nMarks: %.2f\n", (*(ptr[i])).marks);
+//     }
+
+//     return 0;
+// }
+
+
+// using array of struct and function
+#include <stdio.h>
+struct student {
+    char name[50];
+    int Rollno;
+    float marks;
+};
+void input(struct student s[], int n) {
+    for (int i = 0; i < n; i++) {
+        printf("Enter name: ");
+        scanf("%s", s[i].name);
+        printf("Enter Roll no: ");
+        scanf("%d", &s[i].Rollno);
+        printf("Enter marks: ");
+        scanf("%f", &s[i].marks);
+    }
+}
+void display(struct student s[], int n) {
+    for (int i = 0; i < n; i++) {
+        printf("\nName: %s", s[i].name);
+        printf("\nRollno: %d", s[i].Rollno);
+        printf("\nMarks: %.2f\n", s[i].marks);
+    }
+}
+void sort(struct student s[], int n) {
+    struct student temp;
+    for (int i = 0; i < n; i++) {
+        for (int j = i + 1; j < n; j++) {
+            if (s[j].marks > s[i].marks) {
+                temp = s[i];
+                s[i] = s[j];
+                s[j] = temp;
+            }
+        }
+    }
+}
+int main() {
+    struct student s[5];
+    int n = 5;
+    input(s, n);
+    display(s, n);
+    sort(s, n);
+    display(s, n);
+    return 0;
+}
 
