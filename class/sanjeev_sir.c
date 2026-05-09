@@ -629,3 +629,30 @@
 // students ke name add krne ke liye array  display krne ke liye bhi pointer and marks prints max marks wale ka name print 
 // search by roll no only by using pointers in array of struct
 
+// #include <stdio.h>
+// struct student {
+//     char name[50];
+//     int Rollno;
+//     float marks;
+// };
+// int main() {
+//     struct student s[5];
+//     for (int i = 0; i < 5; i++) {
+//         printf("Enter name: ");
+//         scanf("%s", s[i].name);
+//         printf("Enter Roll no: ");
+//         scanf("%d", &s[i].Rollno);
+//         printf("Enter marks: ");
+//         scanf("%f", &s[i].marks);
+//     }
+//     struct student *ptr = s;
+//     for (int i = 0; i < 5; i++) {
+//         printf("\nName: %s", ptr->name);
+//         printf("\nRollno: %d", ptr->Rollno);
+//         printf("\nMarks: %.2f\n", ptr->marks);
+//         ptr++;
+//     }
+//     return 0;
+// }
+
+
