@@ -507,48 +507,125 @@
 
 
 // using array of struct and function
-#include <stdio.h>
-struct student {
-    char name[50];
-    int Rollno;
-    float marks;
-};
-void input(struct student s[], int n) {
-    for (int i = 0; i < n; i++) {
-        printf("Enter name: ");
-        scanf("%s", s[i].name);
-        printf("Enter Roll no: ");
-        scanf("%d", &s[i].Rollno);
-        printf("Enter marks: ");
-        scanf("%f", &s[i].marks);
-    }
-}
-void display(struct student s[], int n) {
-    for (int i = 0; i < n; i++) {
-        printf("\nName: %s", s[i].name);
-        printf("\nRollno: %d", s[i].Rollno);
-        printf("\nMarks: %.2f\n", s[i].marks);
-    }
-}
-void sort(struct student s[], int n) {
-    struct student temp;
-    for (int i = 0; i < n; i++) {
-        for (int j = i + 1; j < n; j++) {
-            if (s[j].marks > s[i].marks) {
-                temp = s[i];
-                s[i] = s[j];
-                s[j] = temp;
-            }
-        }
-    }
-}
-int main() {
-    struct student s[5];
-    int n = 5;
-    input(s, n);
-    display(s, n);
-    sort(s, n);
-    display(s, n);
-    return 0;
-}
+// #include <stdio.h>
+// struct student {
+//     char name[50];
+//     int Rollno;
+//     float marks;
+// };
+// void input(struct student s[], int n) {
+//     for (int i = 0; i < n; i++) {
+//         printf("Enter name: ");
+//         scanf("%s", s[i].name);
+//         printf("Enter Roll no: ");
+//         scanf("%d", &s[i].Rollno);
+//         printf("Enter marks: ");
+//         scanf("%f", &s[i].marks);
+//     }
+// }
+// void display(struct student s[], int n) {
+//     for (int i = 0; i < n; i++) {
+//         printf("\nName: %s", s[i].name);
+//         printf("\nRollno: %d", s[i].Rollno);
+//         printf("\nMarks: %.2f\n", s[i].marks);
+//     }
+// }
+// void sort(struct student s[], int n) {
+//     struct student temp;
+//     for (int i = 0; i < n; i++) {
+//         for (int j = i + 1; j < n; j++) {
+//             if (s[j].marks > s[i].marks) {
+//                 temp = s[i];
+//                 s[i] = s[j];
+//                 s[j] = temp;
+//             }
+//         }
+//     }
+// }
+// int main() {
+//     struct student s[5];
+//     int n = 5;
+//     input(s, n);
+//     display(s, n);
+//     sort(s, n);
+//     display(s, n);
+//     return 0;
+// }
+
+//  array se largeest element find krna h without using index 
+// #include <stdio.h>
+// int main(){
+//     int arr[5]={1,2,3,4,5};
+//     int *p =arr;
+//     int max = *p;
+//     for (int i=1;i<=5;i++){
+//         if (*p>max){
+//             max = *p;
+//         }
+//            p++;
+//     }
+//     printf("%d", max);
+// }
+
+// *(p+i)+j
+//  3x3 matrix isme se pointer ka use krke column ka sum find krna h without isng arr[i][j]
+// #include <stdio.h>
+// int main(){
+//     int sum=0;
+//     int arr[3][3]={{1,2,3},
+//          {4,5,6},
+//          {7,8,9}};
+//     int *p = &arr[0][0];
+//     for (int j=0;j<3;j++){
+//         for (int i=0;i<3;i++){
+//             sum += *(p + i)+ j;
+//         }
+//         printf("%d\n", sum);
+//     }
+// }
+
+// string reverse using pointers without using strrev function 
+// #include <stdio.h>
+// #include <string.h>
+// int main(){
+// char str[] = "hello";
+// int len = strlen(str);
+// char *p1 = str;
+// char *p2 = str + len - 1;
+// for (int i = 0; i < len / 2; i++) {
+//     char temp = *p1;
+//     *p1 = *p2;
+//     *p2 = temp;
+//     p1++;
+//     p2--;
+// }
+// printf("%s", str);
+// }
+
+
+// arr h 5 element vo strings h pointers se print aur sbse lamba string find krna h and print 
+// #include <stdio.h>
+// #include <string.h>
+// int main() {
+//     char arr[5][20] = {"hello", "hi", "bye", "seeyou", "nice"};
+//     int max = 0;
+//     char *longest = arr[0];
+//     for (int i = 0; i < 5; i++) {
+//         if (strlen(arr[i]) > max) {
+//             max = strlen(arr[i]);
+//             longest = arr[i];
+//         }
+//     }
+//     printf("%s", longest);
+// }
+
+
+// vowels, space count by using pointers 
+
+// convert uppercase to lowercase using pointers
+
+// 2x3 array 11,12,13,14,15,16 elements print ,address , transpose of matrix using pointers
+
+// students ke name add krne ke liye array  display krne ke liye bhi pointer and marks prints max marks wale ka name print 
+// search by roll no only by using pointers in array of struct
 

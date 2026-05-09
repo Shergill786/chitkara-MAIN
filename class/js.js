@@ -267,7 +267,7 @@
 // let fruits = ["Apple","Banana","Mango"];
 // console.log(fruits.join(", "));
 
-// let nums = [1,2,3,4]
+// let nums = [1,2,3,4
 // nums.reverse();
 // console.log(nums);
 
@@ -279,8 +279,8 @@
 // let result = nums.map(n => n*2);
 // console.log(result);
 
-// let nums = [1,2,3,4,5];
-// let result = nums.filter(n => n > 2);
+// let nums = [508, 1200, 1500, 1180, 700, 1300];
+// let result = nums.filter(n => n >=1000);
 // console.log(result);
 
 // let nums = [1,2,3,4];
