@@ -814,15 +814,14 @@
 // /* Q12.1: Basic closure */
 // function s12_easy_1() {
 //     console.log("\n=== Q12.1: Basic Closure ===");
-//     function outer(x) {
-//         return function inner(y) {
-//             return x + y;
-//         };
-//     }
-//     let add5 = outer(5);
-//     console.log("add5(10) =", add5(10));
-//     console.log("add5(15) =", add5(15));
-// }
+    // function outer(x) {
+    //     return function inner(y) {
+    //         return x + y;
+    //     };
+    // }
+    // let add5 = outer(5);
+    // console.log("add5(10) =", add5(10));
+    // console.log("add5(15) =", add5(15));
 
 // /* Q12.2: Closure with multiple levels */
 // function s12_easy_2() {
@@ -836,7 +835,7 @@
 //     }
 //     let result = outer(1)(2)(3);
 //     console.log("outer(1)(2)(3) =", result);
-// }
+// //}
 
 // /* Q12.3: Closure in loop */
 // function s12_medium_3() {

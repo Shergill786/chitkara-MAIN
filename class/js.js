@@ -410,15 +410,24 @@
 //     return biggest;
 // }
 // console.log(biggest([1,2,3,4]))
-
 // const arr=[1,2,3];
 // arr[6]=7;
 // console.log(typeof arr);
-
 
 // loops example 
 // for (let i=0;i<5;i++){
 //     console.log(i);
 // }
 
-
+let p = new Promise((resolve, reject) => {
+    if (false) {
+        resolve("Success!");
+    } else {
+        reject("Something failed!");
+    }
+});
+p.then(result => {
+    console.log(result);
+}).catch(err => {
+    console.log(err);
+});

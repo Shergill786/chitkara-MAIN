@@ -4494,3 +4494,186 @@
 //     printSeries(&n, terms);
 //     return 0;
 // }
+
+
+// // 5 Marks Questions
+// 1. Write a program to find the largest element in an array using functions.
+// 2. Write a function to count even and odd numbers in an array.
+// 3. Write a program to calculate the average of array elements using pointers upto 2 decimal places.
+// 4. Write a function to reverse an array using pointers.
+// 5. Write a program to search an element in an array using linear search.
+// 6. Write a function to find the sum of array elements using pointer arithmetic.
+// 7. Write a program to rotate array elements left by one position.
+// 8. Write a function to count positive and negative numbers in an array.
+// 9. Write a program to print array elements using pointers only.
+// 10. Write a function to swap two numbers using call by reference.
+
+// #include <stdio.h>
+// int largest(int *arr, int t) {
+//     int max = *arr;
+//     for (int i = 1; i < t; i++) {
+//         if (*(arr + i) > max) {
+//             max = *(arr + i);
+//         }
+//     }
+//     return max;
+// }
+// int main() {
+//     int arr[100], t;
+//     printf("Enter number of elements: ");
+//     scanf("%d", &t);
+//     printf("Enter %d elements:\n", t);
+//     for (int i = 0; i < t; i++) {
+//         scanf("%d", &arr[i]);
+//     }
+//     int max = largest(arr, t);
+//     printf("Largest element: %d\n", max);
+//     return 0;
+// }
+
+// #include <stdio.h>
+// void countEvenOdd(int *arr, int t, int *evenCount, int *oddCount) {
+//     *evenCount = 0;
+//     *oddCount = 0;
+//     for (int i = 0; i < t; i++) {
+//         if (*(arr + i) % 2 == 0) {
+//             (*evenCount)++;
+//         } else {
+//             (*oddCount)++;
+//         }
+//     }
+// }
+
+// #include <stdio.h>
+// void avg(int *arr, int t, float *average) {
+//     int sum = 0;
+//     for (int i = 0; i < t; i++) {
+//         sum += *(arr + i);
+//     }
+//     *average = (float)sum / t;
+//     printf("Average: %.2f\n", *average);
+// }
+
+
+// #include <stdio.h>
+// void reverse(int *arr, int t) {
+//     for (int i = 0; i < t / 2; i++) {
+//         int temp = *(arr + i);
+//         *(arr + i) = *(arr + t - 1 - i);
+//         *(arr + t - 1 - i) = temp;
+//     }
+// }
+
+// #include <stdio.h>
+// void linearSearch(int *arr, int t, int key) {
+//     for (int i = 0; i < t; i++) {
+//         if (*(arr + i) == key) {
+//             printf("Element found at index: %d\n", i);
+//             return;
+//         }
+//     }
+//     printf("Element not found in the array.\n");
+// }
+
+
+// #include <stdio.h>
+// void posNeg(int *arr, int t, int *posCount, int *negCount) {
+//     *posCount = 0;
+//     *negCount = 0;
+//     for (int i = 0; i < t; i++) {
+//         if (*(arr + i) > 0) {
+//             (*posCount)++;
+//         } else if (*(arr + i) < 0) {
+//             (*negCount)++;
+//         }
+//     }
+// }
+
+
+// #include <stdio.h>
+// void swap(int *a, int *b) {
+//     int temp = *a;
+//     *a = *b;
+//     *b = temp;
+// }
+
+
+// 11. Write a program to calculate string length using strlen().
+// 12. Write a program to reverse a string using pointers.
+// 13. Write a function to count vowels and consonants in a string.
+// 14. Write a program to check whether a string is palindrome or not.
+// 15. Write a function to copy one string into another
+// 16. Write a program to concatenate two strings without using strcat().
+// 17. Write a function to count spaces and words in a sentence.
+// 18. Write a program to find frequency of a character in a string.
+// 19. Write a function to compare two strings without using strcmp().
+// 20. Write a program to convert lowercase letters into uppercase.
+
+// #include <stdio.h>
+// void strlen(char *str) {
+//     int length = 0;
+//     while (*str != '\0') {
+//         length++;
+//         str++;
+//     }
+//     printf("Length of the string: %d\n", length);
+// }
+
+// #include <stdio.h>
+// void reverseString(char *str) {
+//     char *start = str;
+//     char *end = str;
+//     while (*end != '\0') {
+//         end++;
+//         }   
+//     end--;
+//     while (start < end) {   
+//         char temp = *start;
+//         *start = *end;
+//         *end = temp;
+//         start++;
+//         end--;
+//     }
+// }
+
+// #include <stdio.h>
+// void countVowelsConsonants(char *str, int *vowelCount, int *consonantCount) {
+//     *vowelCount = 0;
+//     *consonantCount = 0;
+//     while (*str != '\0') {
+//         char ch = *str;
+//         if ((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z')) {
+//             if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u' ||
+//                 ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U') {
+//                 (*vowelCount)++;
+//             } else {
+//                 (*consonantCount)++;
+//             }
+//         }
+//         str++;
+//     }
+// }
+
+#include <stdio.h>
+void palindrome(char *str) {
+    char *start = str;
+    char *end = str;
+    while (*end != '\0') {
+        end++;
+    }
+    end--;
+    int isPalindrome = 1;
+    while (start < end) {
+        if (*start != *end) {
+            isPalindrome = 0;
+            break;
+        }
+        start++;
+        end--;
+    }
+    if (isPalindrome) {
+        printf("The string is a palindrome.\n");
+    } else {
+        printf("The string is not a palindrome.\n");
+    }
+}

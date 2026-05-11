@@ -253,3 +253,200 @@
 // console.log(isPalindrome([1,2,3,2,1],5));
 
 
+
+// Function Name: squarePattern(n)
+// Input: 4
+// Expected Pattern Output:
+// * * * *
+// * * * *
+// * * * *
+// * * * *
+
+// function squarePattern(n){
+//     for (let i=0;i<n;i++){
+//         let row="";
+//         for (let j=0;j<n;j++){
+//             row+="* ";
+//         }
+//         console.log(row.trim());
+//     }
+// }
+// squarePattern(4);
+
+
+// function pattern(n){
+//     for (let i=0;i<n;i++){
+//         let row="";
+//         for (let j=n;j>i;j--){
+//             row+="* ";
+//         }
+//         console.log(row.trim());
+//     }
+// }
+// pattern(4);\
+
+
+// daiamond pattern
+// function diamondPattern(n){
+//     for (let i=0;i<n;i++){
+//         let row="";
+//         for (let j=0;j<n-i-1;j++){
+//             row+=" ";
+//         }
+//         for (let k=0;k<2*i+1;k++){
+//             row+="*";
+//         }
+//         console.log(row);
+//     }
+//     for (let i=n-2;i>=0;i--){
+//         let row="";
+//         for (let j=0;j<n-i-1;j++){
+//             row+=" ";
+//         }
+//         for (let k=0;k<2*i+1;k++){
+//             row+="*";
+//         }
+//         console.log(row);
+//     }
+    // }
+// diamondPattern(4);  
+
+
+//  zero    pattern
+// function zeroPattern(n){
+//     for (let i=0;i<n;i++){
+//         let row="";
+//         for (let j=0;j<n;j++){
+//             if (i==0 || i==n-1 || j==0 || j==n-1){
+//                 row+="0 ";
+//             }
+//             else{
+//                 row+="  ";
+//             }
+
+//         }
+//         console.log(row.trim());
+//     }
+// }
+// zeroPattern(5);
+
+// all type of series like fibonacci, prime, armstrong, etc. can be generated using functions and loops.
+// function fibonacci(n){
+//     let a=0;
+//     let b=1;
+//     let series=[];
+//     for (let i=0;i<n;i++){
+//         series.push(a);
+//         let temp=a;
+//         a=b;
+//         b=temp+b;
+//     }
+//     return series;
+// }
+// console.log(fibonacci(10));
+
+// function armstrong(n){
+//     let sum=0;
+//     let temp=n;
+//     while (temp>0){
+//         let digit=temp%10;
+//         sum+=digit**3;
+//         temp=Math.floor(temp/10);
+//     }
+//     if (sum==n){
+//         return "Armstrong Number";
+//     }
+//     else{
+//         return "Not an Armstrong Number";
+//     }
+// }
+// console.log(armstrong(153));
+
+
+// function prime(n){
+//     let primes=[];
+//     for (let i=2;i<=n;i++){
+
+//         let isPrime=true;
+//         for (let j=2;j<=Math.sqrt(i);j++){
+//             if (i%j==0){
+//                 isPrime=false;
+//                 break;
+//             }
+//         }
+
+//         if (isPrime){
+//             primes.push(i);
+//         }
+//     }
+//     return primes;
+
+// }
+// console.log(prime(20));
+
+
+// find the type of a variable in arrays using typeof operator
+// function variableType(arr){
+//     let types=[];
+//     for (let i=0;i<arr.length;i++){
+//         types.push(typeof arr[i]);
+//     }
+//     return types;
+// }
+// console.log(variableType([1, "hello", true, null, undefined, {name: "Alice"}, [1,2,3]]));
+
+
+// find the no of items in stock in arrays 
+// function countStock(arr){
+//     let stockCount=[];
+//     for (let i=0;i<arr.length;i++){
+//         let item=arr[i];
+//         if (stockCount[item]){
+//             stockCount[item]++;
+//         }
+//         else{
+//             stockCount[item]=1;
+//         }
+//     }
+//     return stockCount;
+// }
+// console.log(countStock(["apple", "banana", "apple", "orange", "banana", "apple"]));
+
+
+// arr=[1,2,3,4,5]; 
+// 1+2 then 1+2-3 then 1+2-3+4 then 1+2-3+4-5
+// function alternatingSum(arr){
+//     let sum=0;
+//     for (let i=0;i<arr.length;i++){
+//         if (i<2){
+//             sum+=arr[i];
+//         }
+//         else if (i%2==0){
+//             sum-=arr[i];
+//         }
+//         else{
+//             sum+=arr[i];
+//         }   
+//     }
+//     return sum;
+
+// }
+// console.log(alternatingSum([1,2,3,4,5]));
+
+
+// find final price after aplying discount on every element above 100 in array
+// function finalPrice(arr, discountPercent) {
+//     let total = 0;
+
+//     for (let i = 0; i < arr.length; i++) {
+//         if (arr[i] > 100) {
+//             let discountedPrice = arr[i] - (arr[i] * discountPercent / 100);
+//             total += discountedPrice;
+//         } else {
+//             total += arr[i];
+//         }
+//     }
+//     return total;
+// }
+// let prices = [50, 120, 200, 80, 150];
+// console.log(finalPrice(prices, 10));

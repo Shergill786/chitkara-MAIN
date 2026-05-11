@@ -271,3 +271,68 @@
 
 
 // a promise in java script is a object that represent a result of a syncronous process
+
+
+// const arr=[1,2,3,4,5];
+// let odd = 0;
+// let even = 0;
+
+// function countOddEven(arr) {
+//     for (let i = 0; i < arr.length; i++) {
+//         if (arr[i] % 2 === 0) {
+//             even++;
+//         }
+//         else {
+//             odd++;
+//         }
+//     }
+//     console.log("Odd count: " + odd);
+//     console.log("Even count: " + even);
+// }
+
+// countOddEven(arr);
+// let odd = 0;
+// let even = 0;
+
+// for (n in arr) {
+//     if (arr[n] % 2 === 0) {
+//         even++;
+//     }
+//     else {
+//         odd++;
+//     }
+// }
+// console.log("Odd count: " + odd);
+// console.log("Even count: " + even);
+
+
+//  power of a number 
+// function power(base, exponent) {
+//     let result = 1;
+//     for (let i = 0; i < exponent; i++) {
+//         result *= base;
+//     }
+//     return result;
+// }
+// console.log(power(2, 3)); // Output: 8
+
+//  pwer of a number simple by using math.pow() method
+// function power(base, exponent) {    
+//     return Math.pow(base, exponent);
+// }
+// console.log(power(2, 3)); // Output: 8
+
+// function s10_easy_1() {
+//     console.log("\n=== Q10.1: Lexical 'this' - Regular vs Arrow ===");
+    // let obj = {
+    //     name: "Test Object",
+    //     regularFunc: function() {
+    //         console.log("Regular function - this.name:", obj.name);
+    //     },
+    //     arrowFunc: () => {
+    //         console.log("Arrow function - this is global context");
+    //     }
+    // };
+    // obj.regularFunc();
+    // obj.arrowFunc();
+

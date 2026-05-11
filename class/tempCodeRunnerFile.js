@@ -1,10 +1,10 @@
+const obj = {
+  name: 'John',
+  age: 30,
+  city: 'New York'
+};
+const jsonString = JSON.stringify(obj);
+console.log(jsonString);
+const parsedObj = JSON.parse(jsonString);
+console.log(parsedObj.name);
 
-    else if (units<=200){
-        bill=100*5+(units-100)*7;
-    }
-    else{
-        bill=100*5+100*7+(units-200)*10;
-    }
-    return bill;
-}
-console.log(calculateBill(250));
