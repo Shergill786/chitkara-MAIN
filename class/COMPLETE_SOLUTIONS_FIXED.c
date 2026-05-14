@@ -793,8 +793,8 @@
 
 // /* Q10.6: Tower of Hanoi logic. */
 // void s10_hard_6() {
-//     printf("\n=== Q10.6: Tower of Hanoi (3 disks) ===\n");
-//     hanoi(3, 'A', 'C', 'B');
+    // printf("\n=== Q10.6: Tower of Hanoi (3 disks) ===\n");
+    // hanoi(3, 'A', 'C', 'B');
 // }
 
 // // ═══════════════════════════════════════════════════════════════════════════

@@ -1568,3 +1568,142 @@ void section1_hard_9_inventory() {
     
 //     return 0;
 // }
+
+
+// #include <stdio.h>
+
+// int main() {
+//     for (int i = 0; i < 5; i++) {
+//         printf("%d:", i);
+//     }
+// }
+
+
+// reverse of array using pointers 
+// #include <stdio.h>
+
+// void reverseArray(int *arr, int size) {
+//     int *start = arr;
+//     int *end = arr + size - 1;
+    
+//     while (start < end) {
+//         // Swap elements
+//         int temp = *start;
+//         *start = *end;
+//         *end = temp;
+//         // Move pointers
+//         start++;
+//         end--;
+//     }
+// }
+
+// int main() {
+//     int arr[] = {1, 2, 3, 4, 5};
+//     int size = sizeof(arr) / sizeof(arr[0]);
+    
+//     printf("Original array: ");
+//     for (int i = 0; i < size; i++) {
+//         printf("%d ", arr[i]);
+//     }
+    
+//     reverseArray(arr, size);
+    
+//     printf("\nReversed array: ");
+//     for (int i = 0; i < size; i++) {
+//         printf("%d ", arr[i]);
+//     }
+    
+//     return 0;
+// }
+
+
+
+// find minimum and maximum and sum using pointers
+// #include <stdio.h>
+
+// void findMinMaxSum(int *arr, int size, int *min, int *max, int *sum) {
+//     *min = *arr;
+//     *max = *arr;
+//     *sum = 0;
+
+//     for (int i = 0; i < size; i++) {
+//         *sum += arr[i];
+//         if (arr[i] < *min) {
+//             *min = arr[i];
+//         }
+//         if (arr[i] > *max) {
+//             *max = arr[i];
+//         }
+//     }
+// }
+
+// int main() {
+//     int arr[] = {1, 2, 3, 4, 5};
+//     int size = sizeof(arr) / sizeof(arr[0]);
+//     int min, max, sum;
+
+//     findMinMaxSum(arr, size, &min, &max, &sum);
+
+//     printf("Minimum: %d\n", min);
+//     printf("Maximum: %d\n", max);
+//     printf("Sum: %d\n", sum);
+
+//     return 0;
+// }
+
+
+// create a struct in which we have name and marks stored and we have to find highest and lowest marks from a specified marks of a student 
+// #include <stdio.h>
+// #include <string.h>
+
+// struct Student {
+//     char name[100];
+//     int marks;
+// };
+
+// int main() {
+//     struct Student students[5] = {
+//         {"Alice", 85},
+//         {"Bob", 92},
+//         {"Charlie", 78},
+//         {"David", 96},
+//         {"Eve", 88}
+//     };
+
+//     int size = sizeof(students) / sizeof(students[0]);
+//     int highest = students[0].marks;
+//     int lowest = students[0].marks;
+
+//     for (int i = 0; i < size; i++) {
+//         if (students[i].marks > highest) {
+//             highest = students[i].marks;
+//         }
+//         if (students[i].marks < lowest) {
+//             lowest = students[i].marks;
+//         }
+//     }
+
+//     printf("Highest marks: %d\n", highest);
+//     printf("Lowest marks: %d\n", lowest);
+
+//     return 0;
+// }
+
+
+
+void reverseArray(int *a, int size)
+{
+    int i = 0;
+    int j = size - 1;
+    int temp;
+
+    while(i < j)
+    {
+        temp = a[i];
+        a[i] = a[j];
+        a[j] = temp;
+
+        i++;
+        j--;
+    }
+}

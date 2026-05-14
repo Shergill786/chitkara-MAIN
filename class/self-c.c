@@ -82,7 +82,6 @@
 //         printf("Digit");
 //     else
 //         printf("Special character");
-
 //     return 0;
 // }
 
@@ -306,6 +305,7 @@
 //     return 0;
 // }
 
+
 // Q4: Pointer to find absolute value
 // #include <stdio.h>
 // void absoluteValue(int *num) {
@@ -404,6 +404,7 @@
 //     return 0;
 // }
 
+
 // Q10: Sum of digits using pointer (input as pointer)
 // #include <stdio.h>
 // int sumOfDigits(int *num) {
@@ -422,6 +423,7 @@
 //     printf("Sum of digits: %d\n", sumOfDigits(ptr));
 //     return 0;
 // }
+
 
 // Q11: Find factorial using pointer
 // #include <stdio.h>
@@ -560,26 +562,26 @@
 // }
 
 // Q18: Count vowels in string using pointer
-#include <stdio.h>
-int countVowels(char *str) {
-    int count = 0;
-    while (*str != '\0') {
-        if (*str == 'a' || *str == 'e' || *str == 'i' || 
-            *str == 'o' || *str == 'u' ||
-            *str == 'A' || *str == 'E' || *str == 'I' || 
-            *str == 'O' || *str == 'U') {
-            count++;
-        }
-        str++;
-    }
-    return count;
-}
-int main() {
-    char str[] = "Hello World";
-    printf("String: %s\n", str);
-    printf("Vowel count: %d\n", countVowels(str));
-    return 0;
-}
+// #include <stdio.h>
+// int countVowels(char *str) {
+//     int count = 0;
+//     while (*str != '\0') {
+//         if (*str == 'a' || *str == 'e' || *str == 'i' || 
+//             *str == 'o' || *str == 'u' ||
+//             *str == 'A' || *str == 'E' || *str == 'I' || 
+//             *str == 'O' || *str == 'U') {
+//             count++;
+//         }
+//         str++;
+//     }
+//     return count;
+// }
+// int main() {
+//     char str[] = "Hello World";
+//     printf("String: %s\n", str);
+//     printf("Vowel count: %d\n", countVowels(str));
+//     return 0;
+// }
 
 // Q19: Check if two strings are equal using pointers
 // #include <stdio.h>
@@ -785,20 +787,20 @@ int main() {
 
 
 // armstrong number
-#include <stdio.h>
-int main(){
-    int num=153;
-    int temp=num;
-    int sum=0;
-    while(temp>0){
-        int digit=temp%10;
-        sum+=digit*digit*digit;
-        temp=temp/10;
-    }
-    if (sum==num){
-        printf("Armstrong number");
-    }
-    else{
-        printf("Not an Armstrong number");
-    }
-}
+// #include <stdio.h>
+// int main(){
+//     int num=153;
+//     int temp=num;
+//     int sum=0;
+//     while(temp>0){
+//         int digit=temp%10;
+//         sum+=digit*digit*digit;
+//         temp=temp/10;
+//     }
+//     if (sum==num){
+//         printf("Armstrong number");
+//     }
+//     else{
+//         printf("Not an Armstrong number");
+//     }
+// }

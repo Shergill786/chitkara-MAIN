@@ -1100,4 +1100,19 @@
 //     return 0;
 // }
 
-  
+
+// assigning value to array using function
+#include <stdio.h>
+
+int main() {
+
+    char str[] = "hello";
+
+    char arr[5];
+
+    for(int i = 0; i < 5; i++) {
+        arr[i] = str[i];
+    }
+
+    return 0;
+}
