@@ -4930,2937 +4930,2937 @@ int main() {
 }
 
 
-Problem Statement 2
-Rahul wants to find the maximum element using pointers.
-Write a program that:
-● Reads size n
-● Reads n integers
-● Uses pointers to find maximum
-● Prints the maximum
-Sample Test Case 1
-Input:
-5
-1 9 3 4 5
-Output:
-9
-Sample Test Case 2
-Input: 
-3
--1 -5 -2
-Output:
--1
-Hidden Test Cases
-Test Case | Input | Output
-Hidden 1 | 1 → 7 | 7
-Hidden 2 | 2 → 2 8 | 8
-Hidden 3 | 4 → 3 3 3 3 | 3
-Hidden 4 | 3 → 0 -1 -2 | 0
-Hidden 5 | 5 → 1 2 10 4 5 | 10
-Solution:
-#include <stdio.h>
-
-int max(int *arr, int n) {
-    int m = *arr;
-    for (int i = 1; i < n; i++) {
-        if (*(arr + i) > m)
-            m = *(arr + i);
-    }
-    return m;
-}
-
-int main() {
-    int n;
-    scanf("%d", &n);
-
-    int arr[n];
-    for (int i = 0; i < n; i++) {
-        scanf("%d", &arr[i]);
-    }
-
-    printf("%d", max(arr, n));
-    return 0;
-}
-________________________________________
-Problem Statement 3
-Simran wants to reverse an array using pointers.
-Write a program that:
-● Reads size n
-● Reads n integers
-● Uses pointers to reverse array
-● Prints reversed array
-Sample Test Case 1
-Input:
-5
-1 2 3 4 5
-Output:
-5 4 3 2 1
-Sample Test Case 2
-Input:
-3
-10 20 30
-Output:
-30 20 10
-Hidden Test Cases
-Test Case | Input | Output
-Hidden 1 | 1 → 5 | 5
-Hidden 2 | 2 → 1 2 | 2 1
-Hidden 3 | 4 → 2 2 2 2 | 2 2 2 2
-Hidden 4 | 3 → 0 1 0 | 0 1 0
-Hidden 5 | 5 → 1 3 5 7 9 | 9 7 5 3 1
-Solution:c
-#include <stdio.h>
-
-void reverse(int *arr, int n) {
-    int *start = arr;
-    int *end = arr + n - 1;
-    while (start < end) {
-        int temp = *start;
-        *start = *end;
-        *end = temp;
-        start++;
-        end--;
-    }
-}
-
-int main() {
-    int n;
-    scanf("%d", &n);
-
-    int arr[n];
-    for (int i = 0; i < n; i++)
-        scanf("%d", &arr[i]);
-
-    reverse(arr, n);
-
-    for (int i = 0; i < n; i++)
-        printf("%d ", arr[i]);
-
-    return 0;
-}
-________________________________________
-Problem Statement 4
-Aman wants to count even numbers using pointers.
-Write a program that:
-● Reads size n
-● Reads n integers
-● Uses pointers to count even numbers
-● Prints the count
-Sample Test Case 1
-Input:
-5
-1 2 3 4 5
-Output:
-2
-Sample Test Case 2
-Input:
-4
-2 4 6 8
-Output:
-4
-Hidden Test Cases
-Test Case | Input | Output
-Hidden 1 | 1 → 1 | 0
-Hidden 2 | 2 → 2 3 | 1
-Hidden 3 | 3 → 2 2 2 | 3
-Hidden 4 | 3 → 1 3 5 | 0
-Hidden 5 | 5 → 0 1 2 3 4 | 3
-Solution:
-#include <stdio.h>
-
-int countEven(int *arr, int n) {
-    int c = 0;
-    for (int i = 0; i < n; i++) {
-        if (*(arr + i) % 2 == 0)
-            c++;
-    }
-    return c;
-}
-
-int main() {
-    int n;
-    scanf("%d", &n);
-
-    int arr[n];
-    for (int i = 0; i < n; i++)
-        scanf("%d", &arr[i]);
-
-    printf("%d", countEven(arr, n));
-    return 0;
-}
-________________________________________
-Problem Statement 5
-Ravi wants to copy one array to another using pointers.
-Write a program that:
-● Reads size n
-● Reads n integers
-● Uses pointers to copy elements
-● Prints new array
-Sample Test Case 1
-Input:
-3
-1 2 3
-Output:
-1 2 3
-Sample Test Case 2
-Input:
-4
-5 6 7 8
-Output:
-5 6 7 8
-Hidden Test Cases
-Test Case | Input | Output
-Hidden 1 | 1 → 9 | 9
-Hidden 2 | 2 → 1 1 | 1 1
-Hidden 3 | 3 → 2 3 4 | 2 3 4
-Hidden 4 | 3 → 0 0 0 | 0 0 0
-Hidden 5 | 5 → 1 2 3 4 5 | 1 2 3 4 5
-Solution:
-#include <stdio.h>
-
-void copy(int *src, int *dest, int n) {
-    for (int i = 0; i < n; i++) {
-        *(dest + i) = *(src + i);
-    }
-}
-
-int main() {
-    int n;
-    scanf("%d", &n);
-
-    int a[n], b[n];
-
-    for (int i = 0; i < n; i++)
-        scanf("%d", &a[i]);
-
-    copy(a, b, n);
-
-    for (int i = 0; i < n; i++)
-        printf("%d ", b[i]);
-
-    return 0;
-}
-
-Problem Statement 7
-Neha wants to find the minimum element using pointers.
-Write a program that:
-● Reads size n
-● Reads n integers
-● Uses pointers to find minimum
-● Prints the minimum
-Sample Test Case 1
-Input:
-5
-1 9 3 4 5
-Output:
-1
-Sample Test Case 2
-Input:
-3
--1 -5 -2
-Output:
--5
-Hidden Test Cases
-Test Case | Input | Output
-Hidden 1 | 1 → 7 | 7
-Hidden 2 | 2 → 2 8 | 2
-Hidden 3 | 4 → 3 3 3 3 | 3
-Hidden 4 | 3 → 0 -1 -2 | -2
-Hidden 5 | 5 → 1 2 10 4 5 | 1
-Solution:
-#include <stdio.h>
-
-int min(int *arr, int n) {
-    int m = *arr;
-    for (int i = 1; i < n; i++) {
-        if (*(arr + i) < m)
-            m = *(arr + i);
-    }
-    return m;
-}
-
-int main() {
-    int n;
-    scanf("%d", &n);
-
-    int arr[n];
-    for (int i = 0; i < n; i++)
-        scanf("%d", &arr[i]);
-
-    printf("%d", min(arr, n));
-    return 0;
-}
-________________________________________
-Problem Statement 8
-Arjun wants to search for an element using pointers.
-Write a program that:
-● Reads size n
-● Reads n integers
-● Reads element x
-● Uses pointers to search x
-● Prints index (0-based) or -1
-Sample Test Case 1
-Input:
-5
-1 2 3 4 5
-3
-Output:
-2
-Sample Test Case 2
-Input:
-3
-10 20 30
-40
-Output:
--1
-Hidden Test Cases
-Test Case | Input | Output
-Hidden 1 | 1 → 5 → 5 | 0
-Hidden 2 | 2 → 1 2 → 2 | 1
-Hidden 3 | 3 → 3 3 3 → 3 | 0
-Hidden 4 | 3 → 0 1 2 → 5 | -1
-Hidden 5 | 5 → 1 2 3 4 5 → 1 | 0
-Solution:
-#include <stdio.h>
-
-int search(int *arr, int n, int x) {
-    for (int i = 0; i < n; i++) {
-        if (*(arr + i) == x)
-            return i;
-    }
-    return -1;
-}
-
-int main() {
-    int n, x;
-    scanf("%d", &n);
-
-    int arr[n];
-    for (int i = 0; i < n; i++)
-        scanf("%d", &arr[i]);
-
-    scanf("%d", &x);
-
-    printf("%d", search(arr, n, x));
-    return 0;
-}
-________________________________________
-Problem Statement 9
-Karan wants to count odd numbers using pointers.
-Write a program that:
-● Reads size n
-● Reads n integers
-● Uses pointers to count odd numbers
-● Prints the count
-Sample Test Case 1
-Input:
-5
-1 2 3 4 5
-Output:
-3
-Sample Test Case 2
-Input:
-4
-2 4 6 8
-Output:
-0
-Hidden Test Cases
-Test Case | Input | Output
-Hidden 1 | 1 → 1 | 1
-Hidden 2 | 2 → 1 2 | 1
-Hidden 3 | 3 → 3 3 3 | 3
-Hidden 4 | 3 → 0 0 0 | 0
-Hidden 5 | 5 → 1 2 3 4 5 | 3
-Solution:
-#include <stdio.h>
-
-int countOdd(int *arr, int n) {
-    int c = 0;
-    for (int i = 0; i < n; i++) {
-        if (*(arr + i) % 2 != 0)
-            c++;
-    }
-    return c;
-}
-
-int main() {
-    int n;
-    scanf("%d", &n);
-
-    int arr[n];
-    for (int i = 0; i < n; i++)
-        scanf("%d", &arr[i]);
-
-    printf("%d", countOdd(arr, n));
-    return 0;
-}
-________________________________________
-Problem Statement 10
-Priya wants to multiply all elements using pointers.
-Write a program that:
-● Reads size n
-● Reads n integers
-● Uses pointers to calculate product
-● Prints the product
-Sample Test Case 1
-Input:
-5
-1 2 3 4 5
-Output:
-120
-Sample Test Case 2
-Input:
-3
-2 3 4
-Output:
-24
-Hidden Test Cases
-Test Case | Input | Output
-Hidden 1 | 1 → 5 | 5
-Hidden 2 | 2 → 1 2 | 2
-Hidden 3 | 3 → 2 2 2 | 8
-Hidden 4 | 3 → 1 1 1 | 1
-Hidden 5 | 4 → 2 3 1 1 | 6
-Solution:
-#include <stdio.h>
-
-int product(int *arr, int n) {
-    int p = 1;
-    for (int i = 0; i < n; i++) {
-        p *= *(arr + i);
-    }
-    return p;
-}
-
-int main() {
-    int n;
-    scanf("%d", &n);
-
-    int arr[n];
-    for (int i = 0; i < n; i++)
-        scanf("%d", &arr[i]);
-
-    printf("%d", product(arr, n));
-    return 0;
-}
-________________________________________
-Problem Statement 11
-Amit wants to swap first and last element using pointers.
-Write a program that:
-● Reads size n
-● Reads n integers
-● Uses pointers to swap first and last
-● Prints updated array
-Sample Test Case 1
-Input:
-5
-1 2 3 4 5
-Output:
-5 2 3 4 1
-Sample Test Case 2
-Input:
-3
-10 20 30
-Output:
-30 20 10
-Hidden Test Cases
-Test Case | Input | Output
-Hidden 1 | 1 → 5 | 5
-Hidden 2 | 2 → 1 2 | 2 1
-Hidden 3 | 3 → 2 2 2 | 2 2 2
-Hidden 4 | 3 → 0 1 2 | 2 1 0
-Hidden 5 | 4 → 1 2 3 4 | 4 2 3 1
-Solution:
-#include <stdio.h>
-
-void swap(int *arr, int n) {
-    int temp = *arr;
-    *arr = *(arr + n - 1);
-    *(arr + n - 1) = temp;
-}
-
-int main() {
-    int n;
-    scanf("%d", &n);
-
-    int arr[n];
-    for (int i = 0; i < n; i++)
-        scanf("%d", &arr[i]);
-
-    swap(arr, n);
-
-    for (int i = 0; i < n; i++)
-        printf("%d ", arr[i]);
-
-    return 0;
-}
-________________________________________
-Problem Statement 12
-Sneha wants to print array in reverse using pointers only (no indexing).
-Write a program that:
-● Reads size n
-● Reads n integers
-● Uses pointer traversal
-● Prints elements in reverse
-Sample Test Case 1
-Input:
-5
-1 2 3 4 5
-Output:
-5 4 3 2 1
-Sample Test Case 2
-Input:
-3
-10 20 30
-Output:
-30 20 10
-Hidden Test Cases
-Test Case | Input | Output
-Hidden 1 | 1 → 5 | 5
-Hidden 2 | 2 → 1 2 | 2 1
-Hidden 3 | 3 → 2 2 2 | 2 2 2
-Hidden 4 | 3 → 0 1 0 | 0 1 0
-Hidden 5 | 5 → 1 2 3 4 5 | 5 4 3 2 1
-Solution:
-#include <stdio.h>
-
-int main() {
-    int n;
-    scanf("%d", &n);
-
-    int arr[n];
-    for (int i = 0; i < n; i++)
-        scanf("%d", &arr[i]);
-
-    int *ptr = arr + n - 1;
-    for (int i = 0; i < n; i++) {
-        printf("%d ", *(ptr - i));
-    }
-
-    return 0;
-}
-________________________________________
-Problem Statement 13
-Rohit wants to sum only positive numbers using pointers.
-Write a program that:
-● Reads size n
-● Reads n integers
-● Uses pointers to sum positives
-● Prints the sum
-Sample Test Case 1
-Input:
-5
-1 -2 3 -4 5
-Output:
-9
-Sample Test Case 2
-Input:
-3
--1 -2 -3
-Output:
-0
-Hidden Test Cases
-Test Case | Input | Output
-Hidden 1 | 1 → 5 | 5
-Hidden 2 | 2 → -1 1 | 1
-Hidden 3 | 3 → 2 2 2 | 6
-Hidden 4 | 3 → 0 0 0 | 0
-Hidden 5 | 5 → 1 1 -1 -1 1 | 3
-Solution:
-#include <stdio.h>
-
-int sumPos(int *arr, int n) {
-    int s = 0;
-    for (int i = 0; i < n; i++) {
-        if (*(arr + i) > 0)
-            s += *(arr + i);
-    }
-    return s;
-}
-
-int main() {
-    int n;
-    scanf("%d", &n);
-
-    int arr[n];
-    for (int i = 0; i < n; i++)
-        scanf("%d", &arr[i]);
-
-    printf("%d", sumPos(arr, n));
-    return 0;
-}
-________________________________________
-Problem Statement 14
-Meena wants to count elements greater than a given value using pointers.
-Write a program that:
-● Reads size n
-● Reads n integers
-● Reads value x
-● Uses pointers to count elements > x
-● Prints count
-Sample Test Case 1
-Input:
-5
-1 2 3 4 5
-3
-Output:
-2
-Sample Test Case 2
-Input:
-4
-5 6 7 8
-6
-Output:
-2
-Hidden Test Cases
-Test Case | Input | Output
-Hidden 1 | 1 → 5 → 3 | 1
-Hidden 2 | 2 → 1 2 → 2 | 0
-Hidden 3 | 3 → 3 3 3 → 2 | 0
-Hidden 4 | 3 → 0 1 2 → 1 | 1
-Hidden 5 | 5 → 1 2 3 4 5 → 4 | 1
-Solution:
-#include <stdio.h>
-
-int countGreater(int *arr, int n, int x) {
-    int c = 0;
-    for (int i = 0; i < n; i++) {
-        if (*(arr + i) > x)
-            c++;
-    }
-    return c;
-}
-
-int main() {
-    int n, x;
-    scanf("%d", &n);
-
-    int arr[n];
-    for (int i = 0; i < n; i++)
-        scanf("%d", &arr[i]);
-
-    scanf("%d", &x);
-
-    printf("%d", countGreater(arr, n, x));
-    return 0;
-}
-________________________________________
-Problem Statement 15
-Vikas wants to check if array is palindrome using pointers.
-Write a program that:
-● Reads size n
-● Reads n integers
-● Uses pointers to check palindrome
-● Prints 1 if yes, else 0
-Sample Test Case 1
-Input:
-5
-1 2 3 2 1
-Output:
-1
-Sample Test Case 2
-Input:
-3
-1 2 3
-Output:
-0
-Hidden Test Cases
-Test Case | Input | Output
-Hidden 1 | 1 → 5 | 1
-Hidden 2 | 2 → 1 1 | 1
-Hidden 3 | 3 → 2 2 2 | 1
-Hidden 4 | 3 → 0 1 0 | 1
-Hidden 5 | 5 → 1 2 3 4 5 | 0
-Solution:
-#include <stdio.h>
-
-int isPalindrome(int *arr, int n) {
-    int *start = arr;
-    int *end = arr + n - 1;
-
-    while (start < end) {
-        if (*start != *end)
-            return 0;
-        start++;
-        end--;
-    }
-    return 1;
-}
-
-int main() {
-    int n;
-    scanf("%d", &n);
-
-    int arr[n];
-    for (int i = 0; i < n; i++)
-        scanf("%d", &arr[i]);
-
-    printf("%d", isPalindrome(arr, n));
-    return 0;
-}
-
-Riya wants to find minimum using function.
-Write a program that:
-● Reads two integers
-● Uses a function with pointers
-● Returns minimum
-Sample Test Case 1
-Input:
-8 12
-Output:
-8
-Sample Test Case 2
-Input:
--5 -2
-Output:
--5
-Hidden Test Cases
-Test Case | Input | Output
-Hidden 1 | 0 0 | 0
-Hidden 2 | 1 9 | 1
-Hidden 3 | -10 10 | -10
-Hidden 4 | 100 99 | 99
-Hidden 5 | -1 -9 | -9
-Solution:
-#include <stdio.h>
-
-int min(int *a, int *b) {
-    return (*a < *b) ? *a : *b;
-}
-
-int main() {
-    int a, b;
-    scanf("%d %d", &a, &b);
-
-    printf("%d", min(&a, &b));
-
-    return 0;
-}
-________________________________________
-Problem Statement 17
-Aman wants to calculate sum using function.
-Write a program that:
-● Reads two integers
-● Uses a function with pointers
-● Returns sum
-Sample Test Case 1
-Input:
-5 7
-Output:
-12
-Sample Test Case 2
-Input:
--3 3
-Output:
-0
-Hidden Test Cases
-Test Case | Input | Output
-Hidden 1 | 0 0 | 0
-Hidden 2 | 1 9 | 10
-Hidden 3 | -10 10 | 0
-Hidden 4 | 100 99 | 199
-Hidden 5 | -1 -9 | -10
-Solution:
-#include <stdio.h>
-
-int sum(int *a, int *b) {
-    return *a + *b;
-}
-
-int main() {
-    int a, b;
-    scanf("%d %d", &a, &b);
-
-    printf("%d", sum(&a, &b));
-
-    return 0;
-}
-________________________________________
-Problem Statement 18
-Rahul wants to calculate product using function.
-Write a program that:
-● Reads two integers
-● Uses a function with pointers
-● Returns product
-Sample Test Case 1
-Input:
-5 7
-Output:
-35
-Sample Test Case 2
-Input:
--3 3
-Output:
--9
-Hidden Test Cases
-Test Case | Input | Output
-Hidden 1 | 0 5 | 0
-Hidden 2 | 1 9 | 9
-Hidden 3 | -10 10 | -100
-Hidden 4 | 100 0 | 0
-Hidden 5 | -1 -9 | 9
-Solution:
-#include <stdio.h>
-
-int product(int *a, int *b) {
-    return (*a) * (*b);
-}
-
-int main() {
-    int a, b;
-    scanf("%d %d", &a, &b);
-
-    printf("%d", product(&a, &b));
-
-    return 0;
-}
-________________________________________
-Problem Statement 19
-Neha wants to swap two numbers using function.
-Write a program that:
-● Reads two integers
-● Uses a function with pointers
-● Swaps values
-● Prints swapped values
-Sample Test Case 1
-Input:
-5 7
-Output:
-7 5
-Sample Test Case 2
-Input:
--3 3
-Output:
-3 -3
-Hidden Test Cases
-Test Case | Input | Output
-Hidden 1 | 0 0 | 0 0
-Hidden 2 | 1 9 | 9 1
-Hidden 3 | -10 10 | 10 -10
-Hidden 4 | 100 99 | 99 100
-Hidden 5 | -1 -9 | -9 -1
-Solution:
-#include <stdio.h>
-
-void swap(int *a, int *b) {
-    int temp = *a;
-    *a = *b;
-    *b = temp;
-}
-
-int main() {
-    int a, b;
-    scanf("%d %d", &a, &b);
-
-    swap(&a, &b);
-
-    printf("%d %d", a, b);
-
-    return 0;
-}
-________________________________________
-Problem Statement 20
-Arjun wants to check if a number is even using function.
-Write a program that:
-● Reads an integer
-● Uses a function with pointer
-● Returns 1 if even else 0
-Sample Test Case 1
-Input:
-4
-Output:
-1
-Sample Test Case 2
-Input:
-7
-Output:
-0
-Hidden Test Cases
-Test Case | Input | Output
-Hidden 1 | 0 | 1
-Hidden 2 | 1 | 0
-Hidden 3 | 2 | 1
-Hidden 4 | -2 | 1
-Hidden 5 | -3 | 0
-Solution:
-#include <stdio.h>
-
-int isEven(int *a) {
-    return (*a % 2 == 0);
-}
-
-int main() {
-    int a;
-    scanf("%d", &a);
-
-    printf("%d", isEven(&a));
-
-    return 0;
-}
-________________________________________
-Problem Statement 21
-Simran wants to find square using function.
-Write a program that:
-● Reads an integer
-● Uses a function with pointer
-● Returns square
-Sample Test Case 1
-Input:
-5
-Output:
-25
-Sample Test Case 2
-Input:
--4
-Output:
-16
-Hidden Test Cases
-Test Case | Input | Output
-Hidden 1 | 0 | 0
-Hidden 2 | 1 | 1
-Hidden 3 | 2 | 4
-Hidden 4 | -3 | 9
-Hidden 5 | 10 | 100
-Solution:
-#include <stdio.h>
-
-int square(int *a) {
-    return (*a) * (*a);
-}
-
-int main() {
-    int a;
-    scanf("%d", &a);
-
-    printf("%d", square(&a));
-
-    return 0;
-}
-________________________________________
-Problem Statement 22
-Karan wants to find absolute value using function.
-Write a program that:
-● Reads an integer
-● Uses a function with pointer
-● Returns absolute value
-Sample Test Case 1
-Input:
-5
-Output:
-5
-Sample Test Case 2
-Input:
--4
-Output:
-4
-Hidden Test Cases
-Test Case | Input | Output
-Hidden 1 | 0 | 0
-Hidden 2 | 1 | 1
-Hidden 3 | -2 | 2
-Hidden 4 | -10 | 10
-Hidden 5 | 9 | 9
-Solution:
-#include <stdio.h>
-
-int absVal(int *a) {
-    return (*a < 0) ? -(*a) : *a;
-}
-
-int main() {
-    int a;
-    scanf("%d", &a);
-
-    printf("%d", absVal(&a));
-
-    return 0;
-}
-________________________________________
-Problem Statement 23
-Ravi wants to find greater of three numbers using function.
-Write a program that:
-● Reads three integers
-● Uses a function with pointers
-● Returns maximum
-Sample Test Case 1
-Input:
-1 2 3
-Output:
-3
-Sample Test Case 2
-Input:
--1 -2 -3
-Output:
--1
-Hidden Test Cases
-Test Case | Input | Output
-Hidden 1 | 0 0 0 | 0
-Hidden 2 | 1 9 3 | 9
-Hidden 3 | -10 10 5 | 10
-Hidden 4 | 100 99 98 | 100
-Hidden 5 | -1 -9 -5 | -1
-Solution:
-#include <stdio.h>
-
-int max3(int *a, int *b, int *c) {
-    int m = *a;
-    if (*b > m) m = *b;
-    if (*c > m) m = *c;
-    return m;
-}
-
-int main() {
-    int a, b, c;
-    scanf("%d %d %d", &a, &b, &c);
-
-    printf("%d", max3(&a, &b, &c));
-
-    return 0;
-}
-________________________________________
-Problem Statement 24
-Priya wants to find factorial using function.
-Write a program that:
-● Reads an integer
-● Uses a function with pointer
-● Returns factorial
-Sample Test Case 1
-Input:
-5
-Output:
-120
-Sample Test Case 2
-Input:
-3
-Output:
-6
-Hidden Test Cases
-Test Case | Input | Output
-Hidden 1 | 0 | 1
-Hidden 2 | 1 | 1
-Hidden 3 | 2 | 2
-Hidden 4 | 4 | 24
-Hidden 5 | 6 | 720
-Solution:
-#include <stdio.h>
-
-int fact(int *n) {
-    int f = 1;
-    for (int i = 1; i <= *n; i++)
-        f *= i;
-    return f;
-}
-
-int main() {
-    int n;
-    scanf("%d", &n);
-
-    printf("%d", fact(&n));
-
-    return 0;
-}
-________________________________________
-Problem Statement 25
-Amit wants to check if number is positive using function.
-Write a program that:
-● Reads an integer
-● Uses a function with pointer
-● Returns 1 if positive else 0
-Sample Test Case 1
-Input:
-5
-Output:
-1
-Sample Test Case 2
-Input:
--3
-Output:
-0
-Hidden Test Cases
-Test Case | Input | Output
-Hidden 1 | 0 | 0
-Hidden 2 | 1 | 1
-Hidden 3 | -1 | 0
-Hidden 4 | 10 | 1
-Hidden 5 | -10 | 0
-Solution:
-#include <stdio.h>
-
-int isPositive(int *a) {
-    return (*a > 0);
-}
-
-int main() {
-    int a;
-    scanf("%d", &a);
-
-    printf("%d", isPositive(&a));
-
-    return 0;
-}
-
-
-Problem Statement 26
-Aman wants to find factorial using recursion
-Write a program that:
-● Reads an integer
-● Uses recursion to find factorial
-● Prints the result
-Sample Test Case 1
-Input:
-5
-Output:
-120
-Sample Test Case 2
-Input:
-3
-Output:
-6
-Hidden Test Cases
-Test Case | Input | Output
-Hidden 1 | 0 | 1
-Hidden 2 | 1 | 1
-Hidden 3 | 2 | 2
-Hidden 4 | 4 | 24
-Hidden 5 | 6 | 720
-Solution:
-#include <stdio.h>
-
-int fact(int n) {
-    if (n == 0)
-        return 1;
-    return n * fact(n - 1);
-}
-
-int main() {
-    int n;
-    scanf("%d", &n);
-
-    printf("%d", fact(n));
-
-    return 0;
-}
-________________________________________
-Problem Statement 27
-Rahul wants to find sum of digits using recursion
-Write a program that:
-● Reads an integer
-● Uses recursion to find sum of digits
-● Prints the result
-Sample Test Case 1
-Input:
-1234
-Output:
-10
-Sample Test Case 2
-Input:
-900
-Output:
-9
-Hidden Test Cases
-Test Case | Input | Output
-Hidden 1 | 0 | 0
-Hidden 2 | 5 | 5
-Hidden 3 | 100 | 1
-Hidden 4 | 111 | 3
-Hidden 5 | 456 | 15
-Solution:
-#include <stdio.h>
-
-int sumDigits(int n) {
-    if (n == 0)
-        return 0;
-    return (n % 10) + sumDigits(n / 10);
-}
-
-int main() {
-    int n;
-    scanf("%d", &n);
-
-    printf("%d", sumDigits(n));
-
-    return 0;
-}
-________________________________________
-Problem Statement 28
-Neha wants to check if a number is palindrome using recursion
-Write a program that:
-● Reads an integer
-● Uses recursion
-● Prints 1 if palindrome else 0
-Sample Test Case 1
-Input:
-121
-Output:
-1
-Sample Test Case 2
-Input:
-123
-Output:
-0
-Hidden Test Cases
-Test Case | Input | Output
-Hidden 1 | 0 | 1
-Hidden 2 | 5 | 1
-Hidden 3 | 100 | 0
-Hidden 4 | 111 | 1
-Hidden 5 | 456 | 0
-Solution:
-#include <stdio.h>
-
-int reverse(int n, int rev) {
-    if (n == 0)
-        return rev;
-    return reverse(n / 10, rev * 10 + n % 10);
-}
-
-int main() {
-    int n;
-    scanf("%d", &n);
-
-    if (n == reverse(n, 0))
-        printf("1");
-    else
-        printf("0");
-
-    return 0;
-}
-________________________________________
-Problem Statement 29
-Arjun wants to find power using recursion
-Write a program that:
-● Reads two integers (base and exponent)
-● Uses recursion
-● Prints result
-Sample Test Case 1
-Input:
-2 3
-Output:
-8
-Sample Test Case 2
-Input:
-5 0
-Output:
-1
-Hidden Test Cases
-Test Case | Input | Output
-Hidden 1 | 3 2 | 9
-Hidden 2 | 2 5 | 32
-Hidden 3 | 10 1 | 10
-Hidden 4 | 7 0 | 1
-Hidden 5 | 1 100 | 1
-Solution:
-#include <stdio.h>
-
-int power(int a, int b) {
-    if (b == 0)
-        return 1;
-    return a * power(a, b - 1);
-}
-
-int main() {
-    int a, b;
-    scanf("%d %d", &a, &b);
-
-    printf("%d", power(a, b));
-
-    return 0;
-}
-________________________________________
-Problem Statement 30
-Simran wants to find Fibonacci using recursion
-Write a program that:
-● Reads an integer n
-● Uses recursion
-● Prints nth Fibonacci number
-Sample Test Case 1
-Input:
-5
-Output:
-5
-Sample Test Case 2
-Input:
-6
-Output:
-8
-Hidden Test Cases
-Test Case | Input | Output
-Hidden 1 | 0 | 0
-Hidden 2 | 1 | 1
-Hidden 3 | 2 | 1
-Hidden 4 | 3 | 2
-Hidden 5 | 7 | 13
-Solution:
-#include <stdio.h>
-
-int fib(int n) {
-    if (n <= 1)
-        return n;
-    return fib(n - 1) + fib(n - 2);
-}
-
-int main() {
-    int n;
-    scanf("%d", &n);
-
-    printf("%d", fib(n));
-
-    return 0;
-}
-________________________________________
-Problem Statement 31
-Karan wants to count digits using recursion
-Write a program that:
-● Reads an integer
-● Uses recursion
-● Prints number of digits
-Sample Test Case 1
-Input:
-1234
-Output:
-4
-Sample Test Case 2
-Input:
-9
-Output:
-1
-Hidden Test Cases
-Test Case | Input | Output
-Hidden 1 | 0 | 1
-Hidden 2 | 5 | 1
-Hidden 3 | 100 | 3
-Hidden 4 | 111 | 3
-Hidden 5 | 45678 | 5
-Solution:
-#include <stdio.h>
-
-int count(int n) {
-    if (n == 0)
-        return 0;
-    return 1 + count(n / 10);
-}
-
-int main() {
-    int n;
-    scanf("%d", &n);
-
-    if (n == 0)
-        printf("1");
-    else
-        printf("%d", count(n));
-
-    return 0;
-}
-________________________________________
-Problem Statement 32
-Ravi wants to find sum of first n natural numbers using recursion
-Write a program that:
-● Reads an integer n
-● Uses recursion
-● Prints sum
-Sample Test Case 1
-Input:
-5
-Output:
-15
-Sample Test Case 2
-Input:
-3
-Output:
-6
-Hidden Test Cases
-Test Case | Input | Output
-Hidden 1 | 0 | 0
-Hidden 2 | 1 | 1
-Hidden 3 | 2 | 3
-Hidden 4 | 4 | 10
-Hidden 5 | 6 | 21
-Solution:
-#include <stdio.h>
-
-int sum(int n) {
-    if (n == 0)
-        return 0;
-    return n + sum(n - 1);
-}
-
-int main() {
-    int n;
-    scanf("%d", &n);
-
-    printf("%d", sum(n));
-
-    return 0;
-}
-________________________________________
-Problem Statement 33
-Priya wants to check even or odd using recursion
-Write a program that:
-● Reads an integer
-● Uses recursion
-● Prints 1 if even else 0
-Sample Test Case 1
-Input:
-4
-Output:
-1
-Sample Test Case 2
-Input:
-7
-Output:
-0
-Hidden Test Cases
-Test Case | Input | Output
-Hidden 1 | 0 | 1
-Hidden 2 | 1 | 0
-Hidden 3 | 2 | 1
-Hidden 4 | 3 | 0
-Hidden 5 | 10 | 1
-Solution:
-#include <stdio.h>
-
-int isEven(int n) {
-    if (n == 0)
-        return 1;
-    if (n == 1)
-        return 0;
-    return isEven(n - 2);
-}
-
-int main() {
-    int n;
-    scanf("%d", &n);
-
-    printf("%d", isEven(n));
-
-    return 0;
-}
-________________________________________
-Problem Statement 34
-Amit wants to find GCD using recursion
-Write a program that:
-● Reads two integers
-● Uses recursion
-● Prints GCD
-Sample Test Case 1
-Input:
-12 18
-Output:
-6
-Sample Test Case 2
-Input:
-5 7
-Output:
-1
-Hidden Test Cases
-Test Case | Input | Output
-Hidden 1 | 0 5 | 5
-Hidden 2 | 10 0 | 10
-Hidden 3 | 8 4 | 4
-Hidden 4 | 9 6 | 3
-Hidden 5 | 15 5 | 5
-Solution:
-#include <stdio.h>
-
-int gcd(int a, int b) {
-    if (b == 0)
-        return a;
-    return gcd(b, a % b);
-}
-
-int main() {
-    int a, b;
-    scanf("%d %d", &a, &b);
-
-    printf("%d", gcd(a, b));
-
-    return 0;
-}
-________________________________________
-Problem Statement 35
-Vikas wants to print numbers from 1 to n using recursion
-Write a program that:
-● Reads an integer
-● Uses recursion
-● Prints numbers from 1 to n
-Sample Test Case 1
-Input:
-5
-Output:
-1 2 3 4 5
-Sample Test Case 2
-Input:
-3
-Output:
-1 2 3
-Hidden Test Cases
-Test Case | Input | Output
-Hidden 1 | 1 | 1
-Hidden 2 | 2 | 1 2
-Hidden 3 | 4 | 1 2 3 4
-Hidden 4 | 0 |
-Hidden 5 | 6 | 1 2 3 4 5 6
-Solution:
-#include <stdio.h>
-
-void print(int n) {
-    if (n == 0)
-        return;
-    print(n - 1);
-    printf("%d ", n);
-}
-
-int main() {
-    int n;
-    scanf("%d", &n);
-
-    print(n);
-
-    return 0;
-}
-
-
-
-
-
-Problem Statement 36
-Aman wants to store and display student details using structure
-Write a program that:
-● Defines a structure with name and marks
-● Reads values
-● Prints details
-Sample Test Case 1
-Input:
-Aman 90
-Output:
-Aman 90
-Sample Test Case 2
-Input:
-Riya 85
-Output:
-Riya 85
-Hidden Test Cases
-Test Case | Input | Output
-Hidden 1 | A 50 | A 50
-Hidden 2 | B 60 | B 60
-Hidden 3 | C 70 | C 70
-Hidden 4 | D 80 | D 80
-Hidden 5 | E 90 | E 90
-Solution:
-#include <stdio.h>
-
-struct Student {
-    char name[50];
-    int marks;
-};
-
-int main() {
-    struct Student s;
-    scanf("%s %d", s.name, &s.marks);
-    printf("%s %d", s.name, s.marks);
-    return 0;
-}
-________________________________________
-Problem Statement 37
-Riya wants to add two complex numbers using structure
-Write a program that:
-● Defines a structure
-● Reads two complex numbers
-● Adds them
-● Prints result
-Sample Test Case 1
-Input:
-1 2
-3 4
-Output:
-4 6
-Sample Test Case 2
-Input:
-5 6
-1 2
-Output:
-6 8
-Hidden Test Cases
-Test Case | Input | Output
-Hidden 1 | 0 0 → 0 0 | 0 0
-Hidden 2 | 1 1 → 1 1 | 2 2
-Hidden 3 | 2 3 → 3 4 | 5 7
-Hidden 4 | -1 2 → 1 -2 | 0 0
-Hidden 5 | 5 5 → 5 5 | 10 10
-Solution:
-#include <stdio.h>
-
-struct Complex {
-    int real, imag;
-};
-
-int main() {
-    struct Complex a, b, c;
-    scanf("%d %d", &a.real, &a.imag);
-    scanf("%d %d", &b.real, &b.imag);
-
-    c.real = a.real + b.real;
-    c.imag = a.imag + b.imag;
-
-    printf("%d %d", c.real, c.imag);
-    return 0;
-}
-________________________________________
-Problem Statement 38
-Rahul wants to find highest marks among 3 students
-Write a program that:
-● Uses structure
-● Reads 3 students marks
-● Prints highest marks
-Sample Test Case 1
-Input:
-10 20 30
-Output:
-30
-Sample Test Case 2
-Input:
-5 15 10
-Output:
-15
-Hidden Test Cases
-Test Case | Input | Output
-Hidden 1 | 1 1 1 | 1
-Hidden 2 | 2 3 1 | 3
-Hidden 3 | 5 4 6 | 6
-Hidden 4 | 9 8 7 | 9
-Hidden 5 | 0 0 0 | 0
-Solution:
-#include <stdio.h>
-
-struct Student {
-    int marks;
-};
-
-int main() {
-    struct Student s[3];
-    for(int i=0;i<3;i++)
-        scanf("%d",&s[i].marks);
-
-    int max = s[0].marks;
-    for(int i=1;i<3;i++)
-        if(s[i].marks > max)
-            max = s[i].marks;
-
-    printf("%d", max);
-    return 0;
-}
-________________________________________
-Problem Statement 39
-Neha wants to calculate total marks using structure
-Write a program that:
-● Uses structure
-● Reads marks of 3 subjects
-● Prints total
-Sample Test Case 1
-Input:
-10 20 30
-Output:
-60
-Sample Test Case 2
-Input:
-5 5 5
-Output:
-15
-Hidden Test Cases
-Test Case | Input | Output
-Hidden 1 | 1 1 1 | 3
-Hidden 2 | 2 3 4 | 9
-Hidden 3 | 0 0 0 | 0
-Hidden 4 | 10 10 10 | 30
-Hidden 5 | 7 8 9 | 24
-Solution:
-#include <stdio.h>
-
-struct Marks {
-    int a,b,c;
-};
-
-int main() {
-    struct Marks m;
-    scanf("%d %d %d",&m.a,&m.b,&m.c);
-
-    printf("%d", m.a + m.b + m.c);
-    return 0;
-}
-________________________________________
-Problem Statement 40
-Arjun wants to swap two structures
-Write a program that:
-● Uses structure
-● Reads two integers
-● Swaps using structure
-● Prints result
-Sample Test Case 1
-Input:
-5 7
-Output:
-7 5
-Sample Test Case 2
-Input:
-1 2
-Output:
-2 1
-Hidden Test Cases
-Test Case | Input | Output
-Hidden 1 | 0 0 | 0 0
-Hidden 2 | 9 1 | 1 9
-Hidden 3 | -1 1 | 1 -1
-Hidden 4 | 3 4 | 4 3
-Hidden 5 | 10 20 | 20 10
-Solution:
-#include <stdio.h>
-
-struct Num {
-    int x;
-};
-
-int main() {
-    struct Num a,b,temp;
-    scanf("%d %d",&a.x,&b.x);
-
-    temp = a;
-    a = b;
-    b = temp;
-
-    printf("%d %d", a.x, b.x);
-    return 0;
-}
-________________________________________
-Problem Statement 41
-Simran wants to store employee details and print salary
-Write a program that:
-● Uses structure
-● Reads name and salary
-● Prints salary
-Sample Test Case 1
-Input:
-Aman 5000
-Output:
-5000
-Sample Test Case 2
-Input:
-Riya 7000
-Output:
-7000
-Hidden Test Cases
-Test Case | Input | Output
-Hidden 1 | A 1000 | 1000
-Hidden 2 | B 2000 | 2000
-Hidden 3 | C 3000 | 3000
-Hidden 4 | D 4000 | 4000
-Hidden 5 | E 5000 | 5000
-Solution:
-#include <stdio.h>
-
-struct Emp {
-    char name[50];
-    int salary;
-};
-
-int main() {
-    struct Emp e;
-    scanf("%s %d", e.name, &e.salary);
-
-    printf("%d", e.salary);
-    return 0;
-}
-________________________________________
-Problem Statement 42
-Karan wants to demonstrate union storing integer and float
-Write a program that:
-● Uses union
-● Reads integer and float
-● Prints both
-Sample Test Case 1
-Input:
-5 2.5
-Output:
-5 2.5
-Sample Test Case 2
-Input:
-10 3.5
-Output:
-10 3.5
-Hidden Test Cases
-Test Case | Input | Output
-Hidden 1 | 1 1.1 | 1 1.1
-Hidden 2 | 2 2.2 | 2 2.2
-Hidden 3 | 3 3.3 | 3 3.3
-Hidden 4 | 4 4.4 | 4 4.4
-Hidden 5 | 5 5.5 | 5 5.5
-Solution:
-#include <stdio.h>
-
-union Data {
-    int i;
-    float f;
-};
-
-int main() {
-    union Data d;
-
-    scanf("%d", &d.i);
-    printf("%d ", d.i);
-
-    scanf("%f", &d.f);
-    printf("%.1f", d.f);
-
-    return 0;
-}
-________________________________________
-Problem Statement 43
-Ravi wants to find average using structure
-Write a program that:
-● Uses structure
-● Reads 3 marks
-● Prints average
-Sample Test Case 1
-Input:
-10 20 30
-Output:
-20
-Sample Test Case 2
-Input:
-5 5 5
-Output:
-5
-Hidden Test Cases
-Test Case | Input | Output
-Hidden 1 | 1 1 1 | 1
-Hidden 2 | 2 3 4 | 3
-Hidden 3 | 0 0 0 | 0
-Hidden 4 | 10 10 10 | 10
-Hidden 5 | 7 8 9 | 8
-Solution:
-#include <stdio.h>
-
-struct Marks {
-    int a,b,c;
-};
-
-int main() {
-    struct Marks m;
-    scanf("%d %d %d",&m.a,&m.b,&m.c);
-
-    printf("%d", (m.a + m.b + m.c)/3);
-    return 0;
-}
-________________________________________
-Problem Statement 44
-Priya wants to display structure using pointer
-Write a program that:
-● Uses structure
-● Uses pointer to structure
-● Prints data
-Sample Test Case 1
-Input:
-Aman 90
-Output:
-Aman 90
-Sample Test Case 2
-Input:
-Riya 85
-Output:
-Riya 85
-Hidden Test Cases
-Test Case | Input | Output
-Hidden 1 | A 50 | A 50
-Hidden 2 | B 60 | B 60
-Hidden 3 | C 70 | C 70
-Hidden 4 | D 80 | D 80
-Hidden 5 | E 90 | E 90
-Solution:
-#include <stdio.h>
-
-struct Student {
-    char name[50];
-    int marks;
-};
-
-int main() {
-    struct Student s;
-    struct Student *ptr = &s;
-
-    scanf("%s %d", ptr->name, &ptr->marks);
-    printf("%s %d", ptr->name, ptr->marks);
-
-    return 0;
-}
-________________________________________
-Problem Statement 45
-Amit wants to compare two structures
-Write a program that:
-● Uses structure
-● Reads two values
-● Prints 1 if equal else 0
-Sample Test Case 1
-Input:
-5 5
-Output:
-1
-Sample Test Case 2
-Input:
-5 6
-Output:
-0
-Hidden Test Cases
-Test Case | Input | Output
-Hidden 1 | 0 0 | 1
-Hidden 2 | 1 2 | 0
-Hidden 3 | 3 3 | 1
-Hidden 4 | 4 5 | 0
-Hidden 5 | 10 10 | 1
-Solution:
-#include <stdio.h>
-
-struct Num {
-    int x;
-};
-
-int main() {
-    struct Num a,b;
-    scanf("%d %d",&a.x,&b.x);
-
-    if(a.x == b.x)
-        printf("1");
-    else
-        printf("0");
-
-    return 0;
-}
-
-
-Problem Statement 46
-Aman wants to understand memory sharing in union using pointer
-Write a program that:
-● Uses a union with int and float
-● Assigns value to int
-● Accesses float using pointer
-● Prints float value
-Sample Test Case 1
-Input:
-5
-Output:
-(garbage/implementation dependent)
-Sample Test Case 2
-Input:
-10
-Output:
-(garbage/implementation dependent)
-Hidden Test Cases
-Test Case | Input | Output
-Hidden 1 | 1 | undefined
-Hidden 2 | 2 | undefined
-Hidden 3 | 100 | undefined
-Hidden 4 | -1 | undefined
-Hidden 5 | 0 | undefined
-Solution:
-#include <stdio.h>
-
-union Data {
-    int i;
-    float f;
-};
-
-int main() {
-    union Data d;
-    scanf("%d", &d.i);
-
-    float *ptr = (float*)&d;
-    printf("%f", *ptr);
-
-    return 0;
-}
-________________________________________
-Problem Statement 47
-Riya wants to modify structure using pointer to pointer
-Write a program that:
-● Uses structure with integer
-● Uses pointer to pointer
-● Modifies value
-● Prints updated value
-Sample Test Case 1
-Input:
-5
-Output:
-10
-Sample Test Case 2
-Input:
-3
-Output:
-6
-Hidden Test Cases
-Test Case | Input | Output
-Hidden 1 | 1 | 2
-Hidden 2 | 2 | 4
-Hidden 3 | 10 | 20
-Hidden 4 | -1 | -2
-Hidden 5 | 0 | 0
-Solution:
-#include <stdio.h>
-
-struct Num {
-    int x;
-};
-
-void modify(struct Num **p) {
-    (**p).x *= 2;
-}
-
-int main() {
-    struct Num n;
-    scanf("%d", &n.x);
-
-    struct Num *ptr = &n;
-    modify(&ptr);
-
-    printf("%d", n.x);
-    return 0;
-}
-________________________________________
-Problem Statement 48
-Rahul wants to observe union overwrite behavior
-Write a program that:
-● Uses union with int and char array
-● Assigns integer
-● Prints char array
-Sample Test Case 1
-Input:
-16909060
-Output:
-(binary dependent characters)
-Sample Test Case 2
-Input:
-1
-Output:
-(binary dependent characters)
-Hidden Test Cases
-Test Case | Input | Output
-Hidden 1 | 256 | undefined
-Hidden 2 | 512 | undefined
-Hidden 3 | 1024 | undefined
-Hidden 4 | -1 | undefined
-Hidden 5 | 0 | undefined
-Solution:
-#include <stdio.h>
-
-union Data {
-    int i;
-    char c[4];
-};
-
-int main() {
-    union Data d;
-    scanf("%d", &d.i);
-
-    for (int i = 0; i < 4; i++)
-        printf("%d ", d.c[i]);
-
-    return 0;
-}
-________________________________________
-Problem Statement 49
-Neha wants to swap two structures using pointer arithmetic
-Write a program that:
-● Uses array of structures
-● Uses pointer arithmetic
-● Swaps first and last
-● Prints result
-Sample Test Case 1
-Input:
-1 2 3
-Output:
-3 2 1
-Sample Test Case 2
-Input:
-5 6 7
-Output:
-7 6 5
-Hidden Test Cases
-Test Case | Input | Output
-Hidden 1 | 1 1 1 | 1 1 1
-Hidden 2 | 2 3 4 | 4 3 2
-Hidden 3 | 0 1 2 | 2 1 0
-Hidden 4 | -1 0 1 | 1 0 -1
-Hidden 5 | 9 8 7 | 7 8 9
-Solution:
-#include <stdio.h>
-
-struct Num {
-    int x;
-};
-
-int main() {
-    struct Num a[3];
-    for (int i = 0; i < 3; i++)
-        scanf("%d", &a[i].x);
-
-    struct Num *p = a;
-    struct Num temp = *p;
-    *p = *(p + 2);
-    *(p + 2) = temp;
-
-    for (int i = 0; i < 3; i++)
-        printf("%d ", a[i].x);
-
-    return 0;
-}
-________________________________________
-Problem Statement 50
-Arjun wants to pass union inside structure
-Write a program that:
-● Uses structure containing union
-● Assigns values
-● Prints correct member
-Sample Test Case 1
-Input:
-1 10
-Output:
-10
-Sample Test Case 2
-Input:
-2 5.5
-Output:
-5.5
-Hidden Test Cases
-Test Case | Input | Output
-Hidden 1 | 1 100 | 100
-Hidden 2 | 2 2.2 | 2.2
-Hidden 3 | 1 0 | 0
-Hidden 4 | 2 0.0 | 0.0
-Hidden 5 | 1 -5 | -5
-Solution:
-#include <stdio.h>
-
-union Data {
-    int i;
-    float f;
-};
-
-struct Wrapper {
-    int type;
-    union Data d;
-};
-
-int main() {
-    struct Wrapper w;
-    scanf("%d", &w.type);
-
-    if (w.type == 1) {
-        scanf("%d", &w.d.i);
-        printf("%d", w.d.i);
-    } else {
-        scanf("%f", &w.d.f);
-        printf("%.1f", w.d.f);
-    }
-
-    return 0;
-}
-________________________________________
-Problem Statement 51
-Simran wants to use pointer to union
-Write a program that:
-● Uses union
-● Uses pointer to union
-● Assigns and prints value
-Sample Test Case 1
-Input:
-5
-Output:
-5
-Sample Test Case 2
-Input:
-10
-Output:
-10
-Hidden Test Cases
-Test Case | Input | Output
-Hidden 1 | 1 | 1
-Hidden 2 | 2 | 2
-Hidden 3 | 3 | 3
-Hidden 4 | 4 | 4
-Hidden 5 | 0 | 0
-Solution:
-#include <stdio.h>
-
-union Data {
-    int x;
-};
-
-int main() {
-    union Data d;
-    union Data *ptr = &d;
-
-    scanf("%d", &ptr->x);
-    printf("%d", ptr->x);
-
-    return 0;
-}
-________________________________________
-Problem Statement 52
-Karan wants to demonstrate structure padding
-Write a program that:
-● Uses structure with char and int
-● Prints size of structure
-Sample Test Case 1
-Input:
-(no input)
-Output:
-(implementation dependent)
-Sample Test Case 2
-Input:
-(no input)
-Output:
-(implementation dependent)
-Hidden Test Cases
-Test Case | Input | Output
-Hidden 1 | - | depends
-Hidden 2 | - | depends
-Hidden 3 | - | depends
-Hidden 4 | - | depends
-Hidden 5 | - | depends
-Solution:
-#include <stdio.h>
-
-struct Data {
-    char c;
-    int i;
-};
-
-int main() {
-    printf("%lu", sizeof(struct Data));
-    return 0;
-}
-________________________________________
-Problem Statement 53
-Ravi wants to access structure array using pointer
-Write a program that:
-● Uses array of structures
-● Uses pointer
-● Prints elements
-Sample Test Case 1
-Input:
-1 2 3
-Output:
-1 2 3
-Sample Test Case 2
-Input:
-4 5 6
-Output:
-4 5 6
-Hidden Test Cases
-Test Case | Input | Output
-Hidden 1 | 1 1 1 | 1 1 1
-Hidden 2 | 2 3 4 | 2 3 4
-Hidden 3 | 0 0 0 | 0 0 0
-Hidden 4 | -1 -2 -3 | -1 -2 -3
-Hidden 5 | 9 8 7 | 9 8 7
-Solution:
-#include <stdio.h>
-
-struct Num {
-    int x;
-};
-
-int main() {
-    struct Num a[3];
-    struct Num *p = a;
-
-    for (int i = 0; i < 3; i++)
-        scanf("%d", &(p + i)->x);
-
-    for (int i = 0; i < 3; i++)
-        printf("%d ", (p + i)->x);
-
-    return 0;
-}
-________________________________________
-Problem Statement 54
-Priya wants to mix pointer casting with structure
-Write a program that:
-● Uses structure
-● Casts pointer to int pointer
-● Prints first member
-Sample Test Case 1
-Input:
-5
-Output:
-5
-Sample Test Case 2
-Input:
-10
-Output:
-10
-Hidden Test Cases
-Test Case | Input | Output
-Hidden 1 | 1 | 1
-Hidden 2 | 2 | 2
-Hidden 3 | 3 | 3
-Hidden 4 | 4 | 4
-Hidden 5 | 0 | 0
-Solution:
-#include <stdio.h>
-
-struct Data {
-    int x;
-};
-
-int main() {
-    struct Data d;
-    scanf("%d", &d.x);
-
-    int *ptr = (int*)&d;
-    printf("%d", *ptr);
-
-    return 0;
-}
-________________________________________
-Problem Statement 55
-Amit wants to demonstrate union size
-Write a program that:
-● Uses union
-● Prints size
-Sample Test Case 1
-Input:
-(no input)
-Output:
-(max member size)
-Sample Test Case 2
-Input:
-(no input)
-Output:
-(max member size)
-Hidden Test Cases
-Test Case | Input | Output
-Hidden 1 | - | depends
-Hidden 2 | - | depends
-Hidden 3 | - | depends
-Hidden 4 | - | depends
-Hidden 5 | - | depends
-Solution:
-#include <stdio.h>
-
-union Data {
-    int i;
-    float f;
-    char c;
-};
-
-int main() {
-    printf("%lu", sizeof(union Data));
-    return 0;
-}
-
-
-Problem Statement 56
-Aman wants to print enum values
-Write a program that:
-● Defines an enum with 3 values
-● Prints all values
-Sample Test Case 1
-Input:
-(no input)
-Output:
-0 1 2
-Sample Test Case 2
-Input:
-(no input)
-Output:
-0 1 2
-Hidden Test Cases
-Test Case | Input | Output
-Hidden 1 | - | 0 1 2
-Hidden 2 | - | 0 1 2
-Hidden 3 | - | 0 1 2
-Hidden 4 | - | 0 1 2
-Hidden 5 | - | 0 1 2
-Solution:
-#include <stdio.h>
-
-enum Day {MON, TUE, WED};
-
-int main() {
-    printf("%d %d %d", MON, TUE, WED);
-    return 0;
-}
-________________________________________
-Problem Statement 57
-Riya wants to assign custom values in enum
-Write a program that:
-● Defines enum with custom values
-● Prints them
-Sample Test Case 1
-Input:
-(no input)
-Output:
-10 20 21
-Sample Test Case 2
-Input:
-(no input)
-Output:
-10 20 21
-Hidden Test Cases
-Test Case | Input | Output
-Hidden 1 | - | 10 20 21
-Hidden 2 | - | 10 20 21
-Hidden 3 | - | 10 20 21
-Hidden 4 | - | 10 20 21
-Hidden 5 | - | 10 20 21
-Solution:
-#include <stdio.h>
-
-enum Num {A=10, B=20, C};
-
-int main() {
-    printf("%d %d %d", A, B, C);
-    return 0;
-}
-________________________________________
-Problem Statement 58
-Rahul wants to use enum in switch case
-Write a program that:
-● Uses enum
-● Takes integer input
-● Prints corresponding value
-Sample Test Case 1
-Input:
-0
-Output:
-MON
-Sample Test Case 2
-Input:
-1
-Output:
-TUE
-Hidden Test Cases
-Test Case | Input | Output
-Hidden 1 | 2 | WED
-Hidden 2 | 3 | INVALID
-Hidden 3 | 0 | MON
-Hidden 4 | 1 | TUE
-Hidden 5 | 5 | INVALID
-Solution:
-#include <stdio.h>
-
-enum Day {MON, TUE, WED};
-
-int main() {
-    int n;
-    scanf("%d", &n);
-
-    switch(n) {
-        case MON: printf("MON"); break;
-        case TUE: printf("TUE"); break;
-        case WED: printf("WED"); break;
-        default: printf("INVALID");
-    }
-
-    return 0;
-}
-________________________________________
-Problem Statement 59
-Neha wants to find size of enum
-Write a program that:
-● Uses enum
-● Prints its size
-Sample Test Case 1
-Input:
-(no input)
-Output:
-(implementation dependent)
-Sample Test Case 2
-Input:
-(no input)
-Output:
-(implementation dependent)
-Hidden Test Cases
-Test Case | Input | Output
-Hidden 1 | - | depends
-Hidden 2 | - | depends
-Hidden 3 | - | depends
-Hidden 4 | - | depends
-Hidden 5 | - | depends
-Solution:
-#include <stdio.h>
-
-enum Test {A, B, C};
-
-int main() {
-    printf("%lu", sizeof(enum Test));
-    return 0;
-}
-________________________________________
-Problem Statement 60
-Karan wants to use enum variable
-Write a program that:
-● Uses enum variable
-● Assigns value
-● Prints value
-Sample Test Case 1
-Input:
-(no input)
-Output:
-1
-Sample Test Case 2
-Input:
-(no input)
-Output:
-1
-Hidden Test Cases
-Test Case | Input | Output
-Hidden 1 | - | 1
-Hidden 2 | - | 1
-Hidden 3 | - | 1
-Hidden 4 | - | 1
-Hidden 5 | - | 1
-Solution:
-#include <stdio.h>
-
-enum Day {MON, TUE, WED};
-
-int main() {
-    enum Day d = TUE;
-    printf("%d", d);
-    return 0;
-}
-
-
-
-Problem Statement 61
-Aman wants to understand auto storage class
-Write a program that:
-● Uses auto variable
-● Prints value
-Sample Test Case 1
-Input:
-5
-Output:
-5
-Sample Test Case 2
-Input:
-10
-Output:
-10
-Hidden Test Cases
-Test Case | Input | Output
-Hidden 1 | 1 | 1
-Hidden 2 | 2 | 2
-Hidden 3 | 3 | 3
-Hidden 4 | 4 | 4
-Hidden 5 | 0 | 0
-Solution:
-#include <stdio.h>
-
-int main() {
-    auto int x;
-    scanf("%d", &x);
-    printf("%d", x);
-    return 0;
-}
-________________________________________
-Problem Statement 62
-Riya wants to understand static variable behavior
-Write a program that:
-● Uses static variable
-● Calls function twice
-● Prints values
-Sample Test Case 1
-Input:
-(no input)
-Output:
-1 2
-Sample Test Case 2
-Input:
-(no input)
-Output:
-1 2
-Hidden Test Cases
-Test Case | Input | Output
-Hidden 1 | - | 1 2
-Hidden 2 | - | 1 2
-Hidden 3 | - | 1 2
-Hidden 4 | - | 1 2
-Hidden 5 | - | 1 2
-Solution:
-#include <stdio.h>
-
-void func() {
-    static int x = 0;
-    x++;
-    printf("%d ", x);
-}
-
-int main() {
-    func();
-    func();
-    return 0;
-}
-________________________________________
-Problem Statement 63
-Rahul wants to use register variable
-Write a program that:
-● Uses register variable
-● Prints value
-Sample Test Case 1
-Input:
-5
-Output:
-5
-Sample Test Case 2
-Input:
-10
-Output:
-10
-Hidden Test Cases
-Test Case | Input | Output
-Hidden 1 | 1 | 1
-Hidden 2 | 2 | 2
-Hidden 3 | 3 | 3
-Hidden 4 | 4 | 4
-Hidden 5 | 0 | 0
-Solution:
-#include <stdio.h>
-
-int main() {
-    register int x;
-    scanf("%d", &x);
-    printf("%d", x);
-    return 0;
-}
-________________________________________
-Problem Statement 64
-Neha wants to demonstrate extern variable
-Write a program that:
-● Uses extern variable
-● Prints value
-Sample Test Case 1
-Input:
-(no input)
-Output:
-10
-Sample Test Case 2
-Input:
-(no input)
-Output:
-10
-Hidden Test Cases
-Test Case | Input | Output
-Hidden 1 | - | 10
-Hidden 2 | - | 10
-Hidden 3 | - | 10
-Hidden 4 | - | 10
-Hidden 5 | - | 10
-Solution:
-#include <stdio.h>
-
-int x = 10;
-
-int main() {
-    extern int x;
-    printf("%d", x);
-    return 0;
-}
-________________________________________
-Problem Statement 65
-Karan wants to compare static and auto variables
-Write a program that:
-● Uses static and auto
-● Calls function twice
-● Prints values
-Sample Test Case 1
-Input:
-(no input)
-Output:
-1 1
-2 1
-Sample Test Case 2
-Input:
-(no input)
-Output:
-1 1
-2 1
-Hidden Test Cases
-Test Case | Input | Output
-Hidden 1 | - | same
-Hidden 2 | - | same
-Hidden 3 | - | same
-Hidden 4 | - | same
-Hidden 5 | - | same
-Solution:
-#include <stdio.h>
-
-void func() {
-    static int s = 0;
-    auto int a = 0;
-
-    s++;
-    a++;
-
-    printf("%d %d\n", s, a);
-}
-
-int main() {
-    func();
-    func();
-    return 0;
-}
-Aman wants to allocate memory for n integers using malloc
-Write a program that:
-● Reads size n
-● Allocates memory using malloc
-● Reads n integers
-● Prints them
-Sample Test Case 1
-Input:
-3
-1 2 3
-Output:
-1 2 3
-Sample Test Case 2
-Input:
-4
-5 6 7 8
-Output:
-5 6 7 8
-Hidden Test Cases
-Test Case | Input | Output
-Hidden 1 | 1 → 5 | 5
-Hidden 2 | 2 → 1 2 | 1 2
-Hidden 3 | 3 → 3 3 3 | 3 3 3
-Hidden 4 | 3 → 0 0 0 | 0 0 0
-Hidden 5 | 5 → 1 2 3 4 5 | 1 2 3 4 5
-Solution:
-#include <stdio.h>
-#include <stdlib.h>
-
-int main() {
-    int n;
-    scanf("%d", &n);
-
-    int *arr = (int*)malloc(n * sizeof(int));
-
-    for (int i = 0; i < n; i++)
-        scanf("%d", &arr[i]);
-
-    for (int i = 0; i < n; i++)
-        printf("%d ", arr[i]);
-
-    free(arr);
-    return 0;
-}
-________________________________________
-Problem Statement 66
-Riya wants to find sum using calloc
-Write a program that:
-● Reads size n
-● Allocates memory using calloc
-● Reads n integers
-● Prints sum
-Sample Test Case 1
-Input:
-3
-1 2 3
-Output:
-6
-Sample Test Case 2
-Input:
-4
-5 5 5 5
-Output:
-20
-Hidden Test Cases
-Test Case | Input | Output
-Hidden 1 | 1 → 5 | 5
-Hidden 2 | 2 → 1 2 | 3
-Hidden 3 | 3 → 3 3 3 | 9
-Hidden 4 | 3 → 0 0 0 | 0
-Hidden 5 | 5 → 1 1 1 1 1 | 5
-Solution:
-#include <stdio.h>
-#include <stdlib.h>
-
-int main() {
-    int n, sum = 0;
-    scanf("%d", &n);
-
-    int *arr = (int*)calloc(n, sizeof(int));
-
-    for (int i = 0; i < n; i++) {
-        scanf("%d", &arr[i]);
-        sum += arr[i];
-    }
-
-    printf("%d", sum);
-
-    free(arr);
-    return 0;
-}
-________________________________________
-Problem Statement 67
-Rahul wants to resize array using realloc
-Write a program that:
-● Reads initial size n
-● Allocates memory
-● Reads n elements
-● Reads new size m
-● Resizes array using realloc
-● Reads additional elements
-● Prints all elements
-Sample Test Case 1
-Input:
-2
-1 2
-4
-3 4
-Output:
-1 2 3 4
-Sample Test Case 2
-Input:
-3
-5 6 7
-5
-8 9
-Output:
-5 6 7 8 9
-Hidden Test Cases
-Test Case | Input | Output
-Hidden 1 | 1 → 5 → 2 → 6 | 5 6
-Hidden 2 | 2 → 1 2 → 3 → 3 | 1 2 3
-Hidden 3 | 3 → 3 3 3 → 5 → 1 1 | 3 3 3 1 1
-Hidden 4 | 2 → 0 0 → 4 → 0 0 | 0 0 0 0
-Hidden 5 | 1 → 1 → 1 | 1
-Solution:
-#include <stdio.h>
-#include <stdlib.h>
-
-int main() {
-    int n, m;
-    scanf("%d", &n);
-
-    int *arr = (int*)malloc(n * sizeof(int));
-
-    for (int i = 0; i < n; i++)
-        scanf("%d", &arr[i]);
-
-    scanf("%d", &m);
-
-    arr = (int*)realloc(arr, m * sizeof(int));
-
-    for (int i = n; i < m; i++)
-        scanf("%d", &arr[i]);
-
-    for (int i = 0; i < m; i++)
-        printf("%d ", arr[i]);
-
-    free(arr);
-    return 0;
-}
-________________________________________
-Problem Statement 68
-Neha wants to find maximum using dynamic array
-Write a program that:
-● Reads size n
-● Uses malloc
-● Reads n integers
-● Finds maximum
-● Prints result
-Sample Test Case 1
-Input:
-3
-1 5 2
-Output:
-5
-Sample Test Case 2
-Input:
-4
--1 -2 -3 -4
-Output:
--1
-Hidden Test Cases
-Test Case | Input | Output
-Hidden 1 | 1 → 5 | 5
-Hidden 2 | 2 → 1 2 | 2
-Hidden 3 | 3 → 3 3 3 | 3
-Hidden 4 | 3 → 0 -1 -2 | 0
-Hidden 5 | 5 → 1 2 10 4 5 | 10
-Solution:
-#include <stdio.h>
-#include <stdlib.h>
-
-int main() {
-    int n;
-    scanf("%d", &n);
-
-    int *arr = (int*)malloc(n * sizeof(int));
-
-    for (int i = 0; i < n; i++)
-        scanf("%d", &arr[i]);
-
-    int max = arr[0];
-    for (int i = 1; i < n; i++)
-        if (arr[i] > max)
-            max = arr[i];
-
-    printf("%d", max);
-
-    free(arr);
-    return 0;
-}
-________________________________________
-Problem Statement 69
-Karan wants to reverse array using dynamic memory
-Write a program that:
-● Reads size n
-● Allocates memory
-● Reads elements
-● Reverses array
-● Prints result
-Sample Test Case 1
-Input:
-3
-1 2 3
-Output:
-3 2 1
-Sample Test Case 2
-Input:
-4
-5 6 7 8
-Output:
-8 7 6 5
-Hidden Test Cases
-Test Case | Input | Output
-Hidden 1 | 1 → 5 | 5
-Hidden 2 | 2 → 1 2 | 2 1
-Hidden 3 | 3 → 3 3 3 | 3 3 3
-Hidden 4 | 3 → 0 1 0 | 0 1 0
-Hidden 5 | 5 → 1 2 3 4 5 | 5 4 3 2 1
-Solution:
-#include <stdio.h>
-#include <stdlib.h>
-
-int main() {
-    int n;
-    scanf("%d", &n);
-
-    int *arr = (int*)malloc(n * sizeof(int));
-
-    for (int i = 0; i < n; i++)
-        scanf("%d", &arr[i]);
-
-    for (int i = 0; i < n/2; i++) {
-        int temp = arr[i];
-        arr[i] = arr[n - i - 1];
-        arr[n - i - 1] = temp;
-    }
-
-    for (int i = 0; i < n; i++)
-        printf("%d ", arr[i]);
-
-    free(arr);
-    return 0;
-}
+// Problem Statement 2
+// Rahul wants to find the maximum element using pointers.
+// Write a program that:
+// ● Reads size n
+// ● Reads n integers
+// ● Uses pointers to find maximum
+// ● Prints the maximum
+// Sample Test Case 1
+// Input:
+// 5
+// 1 9 3 4 5
+// Output:
+// 9
+// Sample Test Case 2
+// Input: 
+// 3
+// -1 -5 -2
+// Output:
+// -1
+// Hidden Test Cases
+// Test Case | Input | Output
+// Hidden 1 | 1 → 7 | 7
+// Hidden 2 | 2 → 2 8 | 8
+// Hidden 3 | 4 → 3 3 3 3 | 3
+// Hidden 4 | 3 → 0 -1 -2 | 0
+// Hidden 5 | 5 → 1 2 10 4 5 | 10
+// Solution:
+// #include <stdio.h>
+
+// int max(int *arr, int n) {
+//     int m = *arr;
+//     for (int i = 1; i < n; i++) {
+//         if (*(arr + i) > m)
+//             m = *(arr + i);
+//     }
+//     return m;
+// }
+
+// int main() {
+//     int n;
+//     scanf("%d", &n);
+
+//     int arr[n];
+//     for (int i = 0; i < n; i++) {
+//         scanf("%d", &arr[i]);
+//     }
+
+//     printf("%d", max(arr, n));
+//     return 0;
+// }
+// ________________________________________
+// Problem Statement 3
+// Simran wants to reverse an array using pointers.
+// Write a program that:
+// ● Reads size n
+// ● Reads n integers
+// ● Uses pointers to reverse array
+// ● Prints reversed array
+// Sample Test Case 1
+// Input:
+// 5
+// 1 2 3 4 5
+// Output:
+// 5 4 3 2 1
+// Sample Test Case 2
+// Input:
+// 3
+// 10 20 30
+// Output:
+// 30 20 10
+// Hidden Test Cases
+// Test Case | Input | Output
+// Hidden 1 | 1 → 5 | 5
+// Hidden 2 | 2 → 1 2 | 2 1
+// Hidden 3 | 4 → 2 2 2 2 | 2 2 2 2
+// Hidden 4 | 3 → 0 1 0 | 0 1 0
+// Hidden 5 | 5 → 1 3 5 7 9 | 9 7 5 3 1
+// Solution:c
+// #include <stdio.h>
+
+// void reverse(int *arr, int n) {
+//     int *start = arr;
+//     int *end = arr + n - 1;
+//     while (start < end) {
+//         int temp = *start;
+//         *start = *end;
+//         *end = temp;
+//         start++;
+//         end--;
+//     }
+// }
+
+// int main() {
+//     int n;
+//     scanf("%d", &n);
+
+//     int arr[n];
+//     for (int i = 0; i < n; i++)
+//         scanf("%d", &arr[i]);
+
+//     reverse(arr, n);
+
+//     for (int i = 0; i < n; i++)
+//         printf("%d ", arr[i]);
+
+//     return 0;
+// }
+// ________________________________________
+// Problem Statement 4
+// Aman wants to count even numbers using pointers.
+// Write a program that:
+// ● Reads size n
+// ● Reads n integers
+// ● Uses pointers to count even numbers
+// ● Prints the count
+// Sample Test Case 1
+// Input:
+// 5
+// 1 2 3 4 5
+// Output:
+// 2
+// Sample Test Case 2
+// Input:
+// 4
+// 2 4 6 8
+// Output:
+// 4
+// Hidden Test Cases
+// Test Case | Input | Output
+// Hidden 1 | 1 → 1 | 0
+// Hidden 2 | 2 → 2 3 | 1
+// Hidden 3 | 3 → 2 2 2 | 3
+// Hidden 4 | 3 → 1 3 5 | 0
+// Hidden 5 | 5 → 0 1 2 3 4 | 3
+// Solution:
+// #include <stdio.h>
+
+// int countEven(int *arr, int n) {
+//     int c = 0;
+//     for (int i = 0; i < n; i++) {
+//         if (*(arr + i) % 2 == 0)
+//             c++;
+//     }
+//     return c;
+// }
+
+// int main() {
+//     int n;
+//     scanf("%d", &n);
+
+//     int arr[n];
+//     for (int i = 0; i < n; i++)
+//         scanf("%d", &arr[i]);
+
+//     printf("%d", countEven(arr, n));
+//     return 0;
+// }
+// ________________________________________
+// Problem Statement 5
+// Ravi wants to copy one array to another using pointers.
+// Write a program that:
+// ● Reads size n
+// ● Reads n integers
+// ● Uses pointers to copy elements
+// ● Prints new array
+// Sample Test Case 1
+// Input:
+// 3
+// 1 2 3
+// Output:
+// 1 2 3
+// Sample Test Case 2
+// Input:
+// 4
+// 5 6 7 8
+// Output:
+// 5 6 7 8
+// Hidden Test Cases
+// Test Case | Input | Output
+// Hidden 1 | 1 → 9 | 9
+// Hidden 2 | 2 → 1 1 | 1 1
+// Hidden 3 | 3 → 2 3 4 | 2 3 4
+// Hidden 4 | 3 → 0 0 0 | 0 0 0
+// Hidden 5 | 5 → 1 2 3 4 5 | 1 2 3 4 5
+// Solution:
+// #include <stdio.h>
+
+// void copy(int *src, int *dest, int n) {
+//     for (int i = 0; i < n; i++) {
+//         *(dest + i) = *(src + i);
+//     }
+// }
+
+// int main() {
+//     int n;
+//     scanf("%d", &n);
+
+//     int a[n], b[n];
+
+//     for (int i = 0; i < n; i++)
+//         scanf("%d", &a[i]);
+
+//     copy(a, b, n);
+
+//     for (int i = 0; i < n; i++)
+//         printf("%d ", b[i]);
+
+//     return 0;
+// }
+
+// Problem Statement 7
+// Neha wants to find the minimum element using pointers.
+// Write a program that:
+// ● Reads size n
+// ● Reads n integers
+// ● Uses pointers to find minimum
+// ● Prints the minimum
+// Sample Test Case 1
+// Input:
+// 5
+// 1 9 3 4 5
+// Output:
+// 1
+// Sample Test Case 2
+// Input:
+// 3
+// -1 -5 -2
+// Output:
+// -5
+// Hidden Test Cases
+// Test Case | Input | Output
+// Hidden 1 | 1 → 7 | 7
+// Hidden 2 | 2 → 2 8 | 2
+// Hidden 3 | 4 → 3 3 3 3 | 3
+// Hidden 4 | 3 → 0 -1 -2 | -2
+// Hidden 5 | 5 → 1 2 10 4 5 | 1
+// Solution:
+// #include <stdio.h>
+
+// int min(int *arr, int n) {
+//     int m = *arr;
+//     for (int i = 1; i < n; i++) {
+//         if (*(arr + i) < m)
+//             m = *(arr + i);
+//     }
+//     return m;
+// }
+
+// int main() {
+//     int n;
+//     scanf("%d", &n);
+
+//     int arr[n];
+//     for (int i = 0; i < n; i++)
+//         scanf("%d", &arr[i]);
+
+//     printf("%d", min(arr, n));
+//     return 0;
+// }
+// ________________________________________
+// Problem Statement 8
+// Arjun wants to search for an element using pointers.
+// Write a program that:
+// ● Reads size n
+// ● Reads n integers
+// ● Reads element x
+// ● Uses pointers to search x
+// ● Prints index (0-based) or -1
+// Sample Test Case 1
+// Input:
+// 5
+// 1 2 3 4 5
+// 3
+// Output:
+// 2
+// Sample Test Case 2
+// Input:
+// 3
+// 10 20 30
+// 40
+// Output:
+// -1
+// Hidden Test Cases
+// Test Case | Input | Output
+// Hidden 1 | 1 → 5 → 5 | 0
+// Hidden 2 | 2 → 1 2 → 2 | 1
+// Hidden 3 | 3 → 3 3 3 → 3 | 0
+// Hidden 4 | 3 → 0 1 2 → 5 | -1
+// Hidden 5 | 5 → 1 2 3 4 5 → 1 | 0
+// Solution:
+// #include <stdio.h>
+
+// int search(int *arr, int n, int x) {
+//     for (int i = 0; i < n; i++) {
+//         if (*(arr + i) == x)
+//             return i;
+//     }
+//     return -1;
+// }
+
+// int main() {
+//     int n, x;
+//     scanf("%d", &n);
+
+//     int arr[n];
+//     for (int i = 0; i < n; i++)
+//         scanf("%d", &arr[i]);
+
+//     scanf("%d", &x);
+
+//     printf("%d", search(arr, n, x));
+//     return 0;
+// }
+// ________________________________________
+// Problem Statement 9
+// Karan wants to count odd numbers using pointers.
+// Write a program that:
+// ● Reads size n
+// ● Reads n integers
+// ● Uses pointers to count odd numbers
+// ● Prints the count
+// Sample Test Case 1
+// Input:
+// 5
+// 1 2 3 4 5
+// Output:
+// 3
+// Sample Test Case 2
+// Input:
+// 4
+// 2 4 6 8
+// Output:
+// 0
+// Hidden Test Cases
+// Test Case | Input | Output
+// Hidden 1 | 1 → 1 | 1
+// Hidden 2 | 2 → 1 2 | 1
+// Hidden 3 | 3 → 3 3 3 | 3
+// Hidden 4 | 3 → 0 0 0 | 0
+// Hidden 5 | 5 → 1 2 3 4 5 | 3
+// Solution:
+// #include <stdio.h>
+
+// int countOdd(int *arr, int n) {
+//     int c = 0;
+//     for (int i = 0; i < n; i++) {
+//         if (*(arr + i) % 2 != 0)
+//             c++;
+//     }
+//     return c;
+// }
+
+// int main() {
+//     int n;
+//     scanf("%d", &n);
+
+//     int arr[n];
+//     for (int i = 0; i < n; i++)
+//         scanf("%d", &arr[i]);
+
+//     printf("%d", countOdd(arr, n));
+//     return 0;
+// }
+// ________________________________________
+// Problem Statement 10
+// Priya wants to multiply all elements using pointers.
+// Write a program that:
+// ● Reads size n
+// ● Reads n integers
+// ● Uses pointers to calculate product
+// ● Prints the product
+// Sample Test Case 1
+// Input:
+// 5
+// 1 2 3 4 5
+// Output:
+// 120
+// Sample Test Case 2
+// Input:
+// 3
+// 2 3 4
+// Output:
+// 24
+// Hidden Test Cases
+// Test Case | Input | Output
+// Hidden 1 | 1 → 5 | 5
+// Hidden 2 | 2 → 1 2 | 2
+// Hidden 3 | 3 → 2 2 2 | 8
+// Hidden 4 | 3 → 1 1 1 | 1
+// Hidden 5 | 4 → 2 3 1 1 | 6
+// Solution:
+// #include <stdio.h>
+
+// int product(int *arr, int n) {
+//     int p = 1;
+//     for (int i = 0; i < n; i++) {
+//         p *= *(arr + i);
+//     }
+//     return p;
+// }
+
+// int main() {
+//     int n;
+//     scanf("%d", &n);
+
+//     int arr[n];
+//     for (int i = 0; i < n; i++)
+//         scanf("%d", &arr[i]);
+
+//     printf("%d", product(arr, n));
+//     return 0;
+// }
+// ________________________________________
+// Problem Statement 11
+// Amit wants to swap first and last element using pointers.
+// Write a program that:
+// ● Reads size n
+// ● Reads n integers
+// ● Uses pointers to swap first and last
+// ● Prints updated array
+// Sample Test Case 1
+// Input:
+// 5
+// 1 2 3 4 5
+// Output:
+// 5 2 3 4 1
+// Sample Test Case 2
+// Input:
+// 3
+// 10 20 30
+// Output:
+// 30 20 10
+// Hidden Test Cases
+// Test Case | Input | Output
+// Hidden 1 | 1 → 5 | 5
+// Hidden 2 | 2 → 1 2 | 2 1
+// Hidden 3 | 3 → 2 2 2 | 2 2 2
+// Hidden 4 | 3 → 0 1 2 | 2 1 0
+// Hidden 5 | 4 → 1 2 3 4 | 4 2 3 1
+// Solution:
+// #include <stdio.h>
+
+// void swap(int *arr, int n) {
+//     int temp = *arr;
+//     *arr = *(arr + n - 1);
+//     *(arr + n - 1) = temp;
+// }
+
+// int main() {
+//     int n;
+//     scanf("%d", &n);
+
+//     int arr[n];
+//     for (int i = 0; i < n; i++)
+//         scanf("%d", &arr[i]);
+
+//     swap(arr, n);
+
+//     for (int i = 0; i < n; i++)
+//         printf("%d ", arr[i]);
+
+//     return 0;
+// }
+// ________________________________________
+// Problem Statement 12
+// Sneha wants to print array in reverse using pointers only (no indexing).
+// Write a program that:
+// ● Reads size n
+// ● Reads n integers
+// ● Uses pointer traversal
+// ● Prints elements in reverse
+// Sample Test Case 1
+// Input:
+// 5
+// 1 2 3 4 5
+// Output:
+// 5 4 3 2 1
+// Sample Test Case 2
+// Input:
+// 3
+// 10 20 30
+// Output:
+// 30 20 10
+// Hidden Test Cases
+// Test Case | Input | Output
+// Hidden 1 | 1 → 5 | 5
+// Hidden 2 | 2 → 1 2 | 2 1
+// Hidden 3 | 3 → 2 2 2 | 2 2 2
+// Hidden 4 | 3 → 0 1 0 | 0 1 0
+// Hidden 5 | 5 → 1 2 3 4 5 | 5 4 3 2 1
+// Solution:
+// #include <stdio.h>
+
+// int main() {
+//     int n;
+//     scanf("%d", &n);
+
+//     int arr[n];
+//     for (int i = 0; i < n; i++)
+//         scanf("%d", &arr[i]);
+
+//     int *ptr = arr + n - 1;
+//     for (int i = 0; i < n; i++) {
+//         printf("%d ", *(ptr - i));
+//     }
+
+//     return 0;
+// }
+// ________________________________________
+// Problem Statement 13
+// Rohit wants to sum only positive numbers using pointers.
+// Write a program that:
+// ● Reads size n
+// ● Reads n integers
+// ● Uses pointers to sum positives
+// ● Prints the sum
+// Sample Test Case 1
+// Input:
+// 5
+// 1 -2 3 -4 5
+// Output:
+// 9
+// Sample Test Case 2
+// Input:
+// 3
+// -1 -2 -3
+// Output:
+// 0
+// Hidden Test Cases
+// Test Case | Input | Output
+// Hidden 1 | 1 → 5 | 5
+// Hidden 2 | 2 → -1 1 | 1
+// Hidden 3 | 3 → 2 2 2 | 6
+// Hidden 4 | 3 → 0 0 0 | 0
+// Hidden 5 | 5 → 1 1 -1 -1 1 | 3
+// Solution:
+// #include <stdio.h>
+
+// int sumPos(int *arr, int n) {
+//     int s = 0;
+//     for (int i = 0; i < n; i++) {
+//         if (*(arr + i) > 0)
+//             s += *(arr + i);
+//     }
+//     return s;
+// }
+
+// int main() {
+//     int n;
+//     scanf("%d", &n);
+
+//     int arr[n];
+//     for (int i = 0; i < n; i++)
+//         scanf("%d", &arr[i]);
+
+//     printf("%d", sumPos(arr, n));
+//     return 0;
+// }
+// ________________________________________
+// Problem Statement 14
+// Meena wants to count elements greater than a given value using pointers.
+// Write a program that:
+// ● Reads size n
+// ● Reads n integers
+// ● Reads value x
+// ● Uses pointers to count elements > x
+// ● Prints count
+// Sample Test Case 1
+// Input:
+// 5
+// 1 2 3 4 5
+// 3
+// Output:
+// 2
+// Sample Test Case 2
+// Input:
+// 4
+// 5 6 7 8
+// 6
+// Output:
+// 2
+// Hidden Test Cases
+// Test Case | Input | Output
+// Hidden 1 | 1 → 5 → 3 | 1
+// Hidden 2 | 2 → 1 2 → 2 | 0
+// Hidden 3 | 3 → 3 3 3 → 2 | 0
+// Hidden 4 | 3 → 0 1 2 → 1 | 1
+// Hidden 5 | 5 → 1 2 3 4 5 → 4 | 1
+// Solution:
+// #include <stdio.h>
+
+// int countGreater(int *arr, int n, int x) {
+//     int c = 0;
+//     for (int i = 0; i < n; i++) {
+//         if (*(arr + i) > x)
+//             c++;
+//     }
+//     return c;
+// }
+
+// int main() {
+//     int n, x;
+//     scanf("%d", &n);
+
+//     int arr[n];
+//     for (int i = 0; i < n; i++)
+//         scanf("%d", &arr[i]);
+
+//     scanf("%d", &x);
+
+//     printf("%d", countGreater(arr, n, x));
+//     return 0;
+// }
+// ________________________________________
+// Problem Statement 15
+// Vikas wants to check if array is palindrome using pointers.
+// Write a program that:
+// ● Reads size n
+// ● Reads n integers
+// ● Uses pointers to check palindrome
+// ● Prints 1 if yes, else 0
+// Sample Test Case 1
+// Input:
+// 5
+// 1 2 3 2 1
+// Output:
+// 1
+// Sample Test Case 2
+// Input:
+// 3
+// 1 2 3
+// Output:
+// 0
+// Hidden Test Cases
+// Test Case | Input | Output
+// Hidden 1 | 1 → 5 | 1
+// Hidden 2 | 2 → 1 1 | 1
+// Hidden 3 | 3 → 2 2 2 | 1
+// Hidden 4 | 3 → 0 1 0 | 1
+// Hidden 5 | 5 → 1 2 3 4 5 | 0
+// Solution:
+// #include <stdio.h>
+
+// int isPalindrome(int *arr, int n) {
+//     int *start = arr;
+//     int *end = arr + n - 1;
+
+//     while (start < end) {
+//         if (*start != *end)
+//             return 0;
+//         start++;
+//         end--;
+//     }
+//     return 1;
+// }
+
+// int main() {
+//     int n;
+//     scanf("%d", &n);
+
+//     int arr[n];
+//     for (int i = 0; i < n; i++)
+//         scanf("%d", &arr[i]);
+
+//     printf("%d", isPalindrome(arr, n));
+//     return 0;
+// }
+
+// Riya wants to find minimum using function.
+// Write a program that:
+// ● Reads two integers
+// ● Uses a function with pointers
+// ● Returns minimum
+// Sample Test Case 1
+// Input:
+// 8 12
+// Output:
+// 8
+// Sample Test Case 2
+// Input:
+// -5 -2
+// Output:
+// -5
+// Hidden Test Cases
+// Test Case | Input | Output
+// Hidden 1 | 0 0 | 0
+// Hidden 2 | 1 9 | 1
+// Hidden 3 | -10 10 | -10
+// Hidden 4 | 100 99 | 99
+// Hidden 5 | -1 -9 | -9
+// Solution:
+// #include <stdio.h>
+
+// int min(int *a, int *b) {
+//     return (*a < *b) ? *a : *b;
+// }
+
+// int main() {
+//     int a, b;
+//     scanf("%d %d", &a, &b);
+
+//     printf("%d", min(&a, &b));
+
+//     return 0;
+// }
+// ________________________________________
+// Problem Statement 17
+// Aman wants to calculate sum using function.
+// Write a program that:
+// ● Reads two integers
+// ● Uses a function with pointers
+// ● Returns sum
+// Sample Test Case 1
+// Input:
+// 5 7
+// Output:
+// 12
+// Sample Test Case 2
+// Input:
+// -3 3
+// Output:
+// 0
+// Hidden Test Cases
+// Test Case | Input | Output
+// Hidden 1 | 0 0 | 0
+// Hidden 2 | 1 9 | 10
+// Hidden 3 | -10 10 | 0
+// Hidden 4 | 100 99 | 199
+// Hidden 5 | -1 -9 | -10
+// Solution:
+// #include <stdio.h>
+
+// int sum(int *a, int *b) {
+//     return *a + *b;
+// }
+
+// int main() {
+//     int a, b;
+//     scanf("%d %d", &a, &b);
+
+//     printf("%d", sum(&a, &b));
+
+//     return 0;
+// }
+// ________________________________________
+// Problem Statement 18
+// Rahul wants to calculate product using function.
+// Write a program that:
+// ● Reads two integers
+// ● Uses a function with pointers
+// ● Returns product
+// Sample Test Case 1
+// Input:
+// 5 7
+// Output:
+// 35
+// Sample Test Case 2
+// Input:
+// -3 3
+// Output:
+// -9
+// Hidden Test Cases
+// Test Case | Input | Output
+// Hidden 1 | 0 5 | 0
+// Hidden 2 | 1 9 | 9
+// Hidden 3 | -10 10 | -100
+// Hidden 4 | 100 0 | 0
+// Hidden 5 | -1 -9 | 9
+// Solution:
+// #include <stdio.h>
+
+// int product(int *a, int *b) {
+//     return (*a) * (*b);
+// }
+
+// int main() {
+//     int a, b;
+//     scanf("%d %d", &a, &b);
+
+//     printf("%d", product(&a, &b));
+
+//     return 0;
+// }
+// ________________________________________
+// Problem Statement 19
+// Neha wants to swap two numbers using function.
+// Write a program that:
+// ● Reads two integers
+// ● Uses a function with pointers
+// ● Swaps values
+// ● Prints swapped values
+// Sample Test Case 1
+// Input:
+// 5 7
+// Output:
+// 7 5
+// Sample Test Case 2
+// Input:
+// -3 3
+// Output:
+// 3 -3
+// Hidden Test Cases
+// Test Case | Input | Output
+// Hidden 1 | 0 0 | 0 0
+// Hidden 2 | 1 9 | 9 1
+// Hidden 3 | -10 10 | 10 -10
+// Hidden 4 | 100 99 | 99 100
+// Hidden 5 | -1 -9 | -9 -1
+// Solution:
+// #include <stdio.h>
+
+// void swap(int *a, int *b) {
+//     int temp = *a;
+//     *a = *b;
+//     *b = temp;
+// }
+
+// int main() {
+//     int a, b;
+//     scanf("%d %d", &a, &b);
+
+//     swap(&a, &b);
+
+//     printf("%d %d", a, b);
+
+//     return 0;
+// }
+// ________________________________________
+// Problem Statement 20
+// Arjun wants to check if a number is even using function.
+// Write a program that:
+// ● Reads an integer
+// ● Uses a function with pointer
+// ● Returns 1 if even else 0
+// Sample Test Case 1
+// Input:
+// 4
+// Output:
+// 1
+// Sample Test Case 2
+// Input:
+// 7
+// Output:
+// 0
+// Hidden Test Cases
+// Test Case | Input | Output
+// Hidden 1 | 0 | 1
+// Hidden 2 | 1 | 0
+// Hidden 3 | 2 | 1
+// Hidden 4 | -2 | 1
+// Hidden 5 | -3 | 0
+// Solution:
+// #include <stdio.h>
+
+// int isEven(int *a) {
+//     return (*a % 2 == 0);
+// }
+
+// int main() {
+//     int a;
+//     scanf("%d", &a);
+
+//     printf("%d", isEven(&a));
+
+//     return 0;
+// }
+// ________________________________________
+// Problem Statement 21
+// Simran wants to find square using function.
+// Write a program that:
+// ● Reads an integer
+// ● Uses a function with pointer
+// ● Returns square
+// Sample Test Case 1
+// Input:
+// 5
+// Output:
+// 25
+// Sample Test Case 2
+// Input:
+// -4
+// Output:
+// 16
+// Hidden Test Cases
+// Test Case | Input | Output
+// Hidden 1 | 0 | 0
+// Hidden 2 | 1 | 1
+// Hidden 3 | 2 | 4
+// Hidden 4 | -3 | 9
+// Hidden 5 | 10 | 100
+// Solution:
+// #include <stdio.h>
+
+// int square(int *a) {
+//     return (*a) * (*a);
+// }
+
+// int main() {
+//     int a;
+//     scanf("%d", &a);
+
+//     printf("%d", square(&a));
+
+//     return 0;
+// }
+// ________________________________________
+// Problem Statement 22
+// Karan wants to find absolute value using function.
+// Write a program that:
+// ● Reads an integer
+// ● Uses a function with pointer
+// ● Returns absolute value
+// Sample Test Case 1
+// Input:
+// 5
+// Output:
+// 5
+// Sample Test Case 2
+// Input:
+// -4
+// Output:
+// 4
+// Hidden Test Cases
+// Test Case | Input | Output
+// Hidden 1 | 0 | 0
+// Hidden 2 | 1 | 1
+// Hidden 3 | -2 | 2
+// Hidden 4 | -10 | 10
+// Hidden 5 | 9 | 9
+// Solution:
+// #include <stdio.h>
+
+// int absVal(int *a) {
+//     return (*a < 0) ? -(*a) : *a;
+// }
+
+// int main() {
+//     int a;
+//     scanf("%d", &a);
+
+//     printf("%d", absVal(&a));
+
+//     return 0;
+// }
+// ________________________________________
+// Problem Statement 23
+// Ravi wants to find greater of three numbers using function.
+// Write a program that:
+// ● Reads three integers
+// ● Uses a function with pointers
+// ● Returns maximum
+// Sample Test Case 1
+// Input:
+// 1 2 3
+// Output:
+// 3
+// Sample Test Case 2
+// Input:
+// -1 -2 -3
+// Output:
+// -1
+// Hidden Test Cases
+// Test Case | Input | Output
+// Hidden 1 | 0 0 0 | 0
+// Hidden 2 | 1 9 3 | 9
+// Hidden 3 | -10 10 5 | 10
+// Hidden 4 | 100 99 98 | 100
+// Hidden 5 | -1 -9 -5 | -1
+// Solution:
+// #include <stdio.h>
+
+// int max3(int *a, int *b, int *c) {
+//     int m = *a;
+//     if (*b > m) m = *b;
+//     if (*c > m) m = *c;
+//     return m;
+// }
+
+// int main() {
+//     int a, b, c;
+//     scanf("%d %d %d", &a, &b, &c);
+
+//     printf("%d", max3(&a, &b, &c));
+
+//     return 0;
+// }
+// ________________________________________
+// Problem Statement 24
+// Priya wants to find factorial using function.
+// Write a program that:
+// ● Reads an integer
+// ● Uses a function with pointer
+// ● Returns factorial
+// Sample Test Case 1
+// Input:
+// 5
+// Output:
+// 120
+// Sample Test Case 2
+// Input:
+// 3
+// Output:
+// 6
+// Hidden Test Cases
+// Test Case | Input | Output
+// Hidden 1 | 0 | 1
+// Hidden 2 | 1 | 1
+// Hidden 3 | 2 | 2
+// Hidden 4 | 4 | 24
+// Hidden 5 | 6 | 720
+// Solution:
+// #include <stdio.h>
+
+// int fact(int *n) {
+//     int f = 1;
+//     for (int i = 1; i <= *n; i++)
+//         f *= i;
+//     return f;
+// }
+
+// int main() {
+//     int n;
+//     scanf("%d", &n);
+
+//     printf("%d", fact(&n));
+
+//     return 0;
+// }
+// ________________________________________
+// Problem Statement 25
+// Amit wants to check if number is positive using function.
+// Write a program that:
+// ● Reads an integer
+// ● Uses a function with pointer
+// ● Returns 1 if positive else 0
+// Sample Test Case 1
+// Input:
+// 5
+// Output:
+// 1
+// Sample Test Case 2
+// Input:
+// -3
+// Output:
+// 0
+// Hidden Test Cases
+// Test Case | Input | Output
+// Hidden 1 | 0 | 0
+// Hidden 2 | 1 | 1
+// Hidden 3 | -1 | 0
+// Hidden 4 | 10 | 1
+// Hidden 5 | -10 | 0
+// Solution:
+// #include <stdio.h>
+
+// int isPositive(int *a) {
+//     return (*a > 0);
+// }
+
+// int main() {
+//     int a;
+//     scanf("%d", &a);
+
+//     printf("%d", isPositive(&a));
+
+//     return 0;
+// }
+
+
+// Problem Statement 26
+// Aman wants to find factorial using recursion
+// Write a program that:
+// ● Reads an integer
+// ● Uses recursion to find factorial
+// ● Prints the result
+// Sample Test Case 1
+// Input:
+// 5
+// Output:
+// 120
+// Sample Test Case 2
+// Input:
+// 3
+// Output:
+// 6
+// Hidden Test Cases
+// Test Case | Input | Output
+// Hidden 1 | 0 | 1
+// Hidden 2 | 1 | 1
+// Hidden 3 | 2 | 2
+// Hidden 4 | 4 | 24
+// Hidden 5 | 6 | 720
+// Solution:
+// #include <stdio.h>
+
+// int fact(int n) {
+//     if (n == 0)
+//         return 1;
+//     return n * fact(n - 1);
+// }
+
+// int main() {
+//     int n;
+//     scanf("%d", &n);
+
+//     printf("%d", fact(n));
+
+//     return 0;
+// }
+// ________________________________________
+// Problem Statement 27
+// Rahul wants to find sum of digits using recursion
+// Write a program that:
+// ● Reads an integer
+// ● Uses recursion to find sum of digits
+// ● Prints the result
+// Sample Test Case 1
+// Input:
+// 1234
+// Output:
+// 10
+// Sample Test Case 2
+// Input:
+// 900
+// Output:
+// 9
+// Hidden Test Cases
+// Test Case | Input | Output
+// Hidden 1 | 0 | 0
+// Hidden 2 | 5 | 5
+// Hidden 3 | 100 | 1
+// Hidden 4 | 111 | 3
+// Hidden 5 | 456 | 15
+// Solution:
+// #include <stdio.h>
+
+// int sumDigits(int n) {
+//     if (n == 0)
+//         return 0;
+//     return (n % 10) + sumDigits(n / 10);
+// }
+
+// int main() {
+//     int n;
+//     scanf("%d", &n);
+
+//     printf("%d", sumDigits(n));
+
+//     return 0;
+// }
+// ________________________________________
+// Problem Statement 28
+// Neha wants to check if a number is palindrome using recursion
+// Write a program that:
+// ● Reads an integer
+// ● Uses recursion
+// ● Prints 1 if palindrome else 0
+// Sample Test Case 1
+// Input:
+// 121
+// Output:
+// 1
+// Sample Test Case 2
+// Input:
+// 123
+// Output:
+// 0
+// Hidden Test Cases
+// Test Case | Input | Output
+// Hidden 1 | 0 | 1
+// Hidden 2 | 5 | 1
+// Hidden 3 | 100 | 0
+// Hidden 4 | 111 | 1
+// Hidden 5 | 456 | 0
+// Solution:
+// #include <stdio.h>
+
+// int reverse(int n, int rev) {
+//     if (n == 0)
+//         return rev;
+//     return reverse(n / 10, rev * 10 + n % 10);
+// }
+
+// int main() {
+//     int n;
+//     scanf("%d", &n);
+
+//     if (n == reverse(n, 0))
+//         printf("1");
+//     else
+//         printf("0");
+
+//     return 0;
+// }
+// ________________________________________
+// Problem Statement 29
+// Arjun wants to find power using recursion
+// Write a program that:
+// ● Reads two integers (base and exponent)
+// ● Uses recursion
+// ● Prints result
+// Sample Test Case 1
+// Input:
+// 2 3
+// Output:
+// 8
+// Sample Test Case 2
+// Input:
+// 5 0
+// Output:
+// 1
+// Hidden Test Cases
+// Test Case | Input | Output
+// Hidden 1 | 3 2 | 9
+// Hidden 2 | 2 5 | 32
+// Hidden 3 | 10 1 | 10
+// Hidden 4 | 7 0 | 1
+// Hidden 5 | 1 100 | 1
+// Solution:
+// #include <stdio.h>
+
+// int power(int a, int b) {
+//     if (b == 0)
+//         return 1;
+//     return a * power(a, b - 1);
+// }
+
+// int main() {
+//     int a, b;
+//     scanf("%d %d", &a, &b);
+
+//     printf("%d", power(a, b));
+
+//     return 0;
+// }
+// ________________________________________
+// Problem Statement 30
+// Simran wants to find Fibonacci using recursion
+// Write a program that:
+// ● Reads an integer n
+// ● Uses recursion
+// ● Prints nth Fibonacci number
+// Sample Test Case 1
+// Input:
+// 5
+// Output:
+// 5
+// Sample Test Case 2
+// Input:
+// 6
+// Output:
+// 8
+// Hidden Test Cases
+// Test Case | Input | Output
+// Hidden 1 | 0 | 0
+// Hidden 2 | 1 | 1
+// Hidden 3 | 2 | 1
+// Hidden 4 | 3 | 2
+// Hidden 5 | 7 | 13
+// Solution:
+// #include <stdio.h>
+
+// int fib(int n) {
+//     if (n <= 1)
+//         return n;
+//     return fib(n - 1) + fib(n - 2);
+// }
+
+// int main() {
+//     int n;
+//     scanf("%d", &n);
+
+//     printf("%d", fib(n));
+
+//     return 0;
+// }
+// ________________________________________
+// Problem Statement 31
+// Karan wants to count digits using recursion
+// Write a program that:
+// ● Reads an integer
+// ● Uses recursion
+// ● Prints number of digits
+// Sample Test Case 1
+// Input:
+// 1234
+// Output:
+// 4
+// Sample Test Case 2
+// Input:
+// 9
+// Output:
+// 1
+// Hidden Test Cases
+// Test Case | Input | Output
+// Hidden 1 | 0 | 1
+// Hidden 2 | 5 | 1
+// Hidden 3 | 100 | 3
+// Hidden 4 | 111 | 3
+// Hidden 5 | 45678 | 5
+// Solution:
+// #include <stdio.h>
+
+// int count(int n) {
+//     if (n == 0)
+//         return 0;
+//     return 1 + count(n / 10);
+// }
+
+// int main() {
+//     int n;
+//     scanf("%d", &n);
+
+//     if (n == 0)
+//         printf("1");
+//     else
+//         printf("%d", count(n));
+
+//     return 0;
+// }
+// ________________________________________
+// Problem Statement 32
+// Ravi wants to find sum of first n natural numbers using recursion
+// Write a program that:
+// ● Reads an integer n
+// ● Uses recursion
+// ● Prints sum
+// Sample Test Case 1
+// Input:
+// 5
+// Output:
+// 15
+// Sample Test Case 2
+// Input:
+// 3
+// Output:
+// 6
+// Hidden Test Cases
+// Test Case | Input | Output
+// Hidden 1 | 0 | 0
+// Hidden 2 | 1 | 1
+// Hidden 3 | 2 | 3
+// Hidden 4 | 4 | 10
+// Hidden 5 | 6 | 21
+// Solution:
+// #include <stdio.h>
+
+// int sum(int n) {
+//     if (n == 0)
+//         return 0;
+//     return n + sum(n - 1);
+// }
+
+// int main() {
+//     int n;
+//     scanf("%d", &n);
+
+//     printf("%d", sum(n));
+
+//     return 0;
+// }
+// ________________________________________
+// Problem Statement 33
+// Priya wants to check even or odd using recursion
+// Write a program that:
+// ● Reads an integer
+// ● Uses recursion
+// ● Prints 1 if even else 0
+// Sample Test Case 1
+// Input:
+// 4
+// Output:
+// 1
+// Sample Test Case 2
+// Input:
+// 7
+// Output:
+// 0
+// Hidden Test Cases
+// Test Case | Input | Output
+// Hidden 1 | 0 | 1
+// Hidden 2 | 1 | 0
+// Hidden 3 | 2 | 1
+// Hidden 4 | 3 | 0
+// Hidden 5 | 10 | 1
+// Solution:
+// #include <stdio.h>
+
+// int isEven(int n) {
+//     if (n == 0)
+//         return 1;
+//     if (n == 1)
+//         return 0;
+//     return isEven(n - 2);
+// }
+
+// int main() {
+//     int n;
+//     scanf("%d", &n);
+
+//     printf("%d", isEven(n));
+
+//     return 0;
+// }
+// ________________________________________
+// Problem Statement 34
+// Amit wants to find GCD using recursion
+// Write a program that:
+// ● Reads two integers
+// ● Uses recursion
+// ● Prints GCD
+// Sample Test Case 1
+// Input:
+// 12 18
+// Output:
+// 6
+// Sample Test Case 2
+// Input:
+// 5 7
+// Output:
+// 1
+// Hidden Test Cases
+// Test Case | Input | Output
+// Hidden 1 | 0 5 | 5
+// Hidden 2 | 10 0 | 10
+// Hidden 3 | 8 4 | 4
+// Hidden 4 | 9 6 | 3
+// Hidden 5 | 15 5 | 5
+// Solution:
+// #include <stdio.h>
+
+// int gcd(int a, int b) {
+//     if (b == 0)
+//         return a;
+//     return gcd(b, a % b);
+// }
+
+// int main() {
+//     int a, b;
+//     scanf("%d %d", &a, &b);
+
+//     printf("%d", gcd(a, b));
+
+//     return 0;
+// }
+// ________________________________________
+// Problem Statement 35
+// Vikas wants to print numbers from 1 to n using recursion
+// Write a program that:
+// ● Reads an integer
+// ● Uses recursion
+// ● Prints numbers from 1 to n
+// Sample Test Case 1
+// Input:
+// 5
+// Output:
+// 1 2 3 4 5
+// Sample Test Case 2
+// Input:
+// 3
+// Output:
+// 1 2 3
+// Hidden Test Cases
+// Test Case | Input | Output
+// Hidden 1 | 1 | 1
+// Hidden 2 | 2 | 1 2
+// Hidden 3 | 4 | 1 2 3 4
+// Hidden 4 | 0 |
+// Hidden 5 | 6 | 1 2 3 4 5 6
+// Solution:
+// #include <stdio.h>
+
+// void print(int n) {
+//     if (n == 0)
+//         return;
+//     print(n - 1);
+//     printf("%d ", n);
+// }
+
+// int main() {
+//     int n;
+//     scanf("%d", &n);
+
+//     print(n);
+
+//     return 0;
+// }
+
+
+
+
+
+// Problem Statement 36
+// Aman wants to store and display student details using structure
+// Write a program that:
+// ● Defines a structure with name and marks
+// ● Reads values
+// ● Prints details
+// Sample Test Case 1
+// Input:
+// Aman 90
+// Output:
+// Aman 90
+// Sample Test Case 2
+// Input:
+// Riya 85
+// Output:
+// Riya 85
+// Hidden Test Cases
+// Test Case | Input | Output
+// Hidden 1 | A 50 | A 50
+// Hidden 2 | B 60 | B 60
+// Hidden 3 | C 70 | C 70
+// Hidden 4 | D 80 | D 80
+// Hidden 5 | E 90 | E 90
+// Solution:
+// #include <stdio.h>
+
+// struct Student {
+//     char name[50];
+//     int marks;
+// };
+
+// int main() {
+//     struct Student s;
+//     scanf("%s %d", s.name, &s.marks);
+//     printf("%s %d", s.name, s.marks);
+//     return 0;
+// }
+// ________________________________________
+// Problem Statement 37
+// Riya wants to add two complex numbers using structure
+// Write a program that:
+// ● Defines a structure
+// ● Reads two complex numbers
+// ● Adds them
+// ● Prints result
+// Sample Test Case 1
+// Input:
+// 1 2
+// 3 4
+// Output:
+// 4 6
+// Sample Test Case 2
+// Input:
+// 5 6
+// 1 2
+// Output:
+// 6 8
+// Hidden Test Cases
+// Test Case | Input | Output
+// Hidden 1 | 0 0 → 0 0 | 0 0
+// Hidden 2 | 1 1 → 1 1 | 2 2
+// Hidden 3 | 2 3 → 3 4 | 5 7
+// Hidden 4 | -1 2 → 1 -2 | 0 0
+// Hidden 5 | 5 5 → 5 5 | 10 10
+// Solution:
+// #include <stdio.h>
+
+// struct Complex {
+//     int real, imag;
+// };
+
+// int main() {
+//     struct Complex a, b, c;
+//     scanf("%d %d", &a.real, &a.imag);
+//     scanf("%d %d", &b.real, &b.imag);
+
+//     c.real = a.real + b.real;
+//     c.imag = a.imag + b.imag;
+
+//     printf("%d %d", c.real, c.imag);
+//     return 0;
+// }
+// ________________________________________
+// Problem Statement 38
+// Rahul wants to find highest marks among 3 students
+// Write a program that:
+// ● Uses structure
+// ● Reads 3 students marks
+// ● Prints highest marks
+// Sample Test Case 1
+// Input:
+// 10 20 30
+// Output:
+// 30
+// Sample Test Case 2
+// Input:
+// 5 15 10
+// Output:
+// 15
+// Hidden Test Cases
+// Test Case | Input | Output
+// Hidden 1 | 1 1 1 | 1
+// Hidden 2 | 2 3 1 | 3
+// Hidden 3 | 5 4 6 | 6
+// Hidden 4 | 9 8 7 | 9
+// Hidden 5 | 0 0 0 | 0
+// Solution:
+// #include <stdio.h>
+
+// struct Student {
+//     int marks;
+// };
+
+// int main() {
+//     struct Student s[3];
+//     for(int i=0;i<3;i++)
+//         scanf("%d",&s[i].marks);
+
+//     int max = s[0].marks;
+//     for(int i=1;i<3;i++)
+//         if(s[i].marks > max)
+//             max = s[i].marks;
+
+//     printf("%d", max);
+//     return 0;
+// }
+// ________________________________________
+// Problem Statement 39
+// Neha wants to calculate total marks using structure
+// Write a program that:
+// ● Uses structure
+// ● Reads marks of 3 subjects
+// ● Prints total
+// Sample Test Case 1
+// Input:
+// 10 20 30
+// Output:
+// 60
+// Sample Test Case 2
+// Input:
+// 5 5 5
+// Output:
+// 15
+// Hidden Test Cases
+// Test Case | Input | Output
+// Hidden 1 | 1 1 1 | 3
+// Hidden 2 | 2 3 4 | 9
+// Hidden 3 | 0 0 0 | 0
+// Hidden 4 | 10 10 10 | 30
+// Hidden 5 | 7 8 9 | 24
+// Solution:
+// #include <stdio.h>
+
+// struct Marks {
+//     int a,b,c;
+// };
+
+// int main() {
+//     struct Marks m;
+//     scanf("%d %d %d",&m.a,&m.b,&m.c);
+
+//     printf("%d", m.a + m.b + m.c);
+//     return 0;
+// }
+// ________________________________________
+// Problem Statement 40
+// Arjun wants to swap two structures
+// Write a program that:
+// ● Uses structure
+// ● Reads two integers
+// ● Swaps using structure
+// ● Prints result
+// Sample Test Case 1
+// Input:
+// 5 7
+// Output:
+// 7 5
+// Sample Test Case 2
+// Input:
+// 1 2
+// Output:
+// 2 1
+// Hidden Test Cases
+// Test Case | Input | Output
+// Hidden 1 | 0 0 | 0 0
+// Hidden 2 | 9 1 | 1 9
+// Hidden 3 | -1 1 | 1 -1
+// Hidden 4 | 3 4 | 4 3
+// Hidden 5 | 10 20 | 20 10
+// Solution:
+// #include <stdio.h>
+
+// struct Num {
+//     int x;
+// };
+
+// int main() {
+//     struct Num a,b,temp;
+//     scanf("%d %d",&a.x,&b.x);
+
+//     temp = a;
+//     a = b;
+//     b = temp;
+
+//     printf("%d %d", a.x, b.x);
+//     return 0;
+// }
+// ________________________________________
+// Problem Statement 41
+// Simran wants to store employee details and print salary
+// Write a program that:
+// ● Uses structure
+// ● Reads name and salary
+// ● Prints salary
+// Sample Test Case 1
+// Input:
+// Aman 5000
+// Output:
+// 5000
+// Sample Test Case 2
+// Input:
+// Riya 7000
+// Output:
+// 7000
+// Hidden Test Cases
+// Test Case | Input | Output
+// Hidden 1 | A 1000 | 1000
+// Hidden 2 | B 2000 | 2000
+// Hidden 3 | C 3000 | 3000
+// Hidden 4 | D 4000 | 4000
+// Hidden 5 | E 5000 | 5000
+// Solution:
+// #include <stdio.h>
+
+// struct Emp {
+//     char name[50];
+//     int salary;
+// };
+
+// int main() {
+//     struct Emp e;
+//     scanf("%s %d", e.name, &e.salary);
+
+//     printf("%d", e.salary);
+//     return 0;
+// }
+// ________________________________________
+// Problem Statement 42
+// Karan wants to demonstrate union storing integer and float
+// Write a program that:
+// ● Uses union
+// ● Reads integer and float
+// ● Prints both
+// Sample Test Case 1
+// Input:
+// 5 2.5
+// Output:
+// 5 2.5
+// Sample Test Case 2
+// Input:
+// 10 3.5
+// Output:
+// 10 3.5
+// Hidden Test Cases
+// Test Case | Input | Output
+// Hidden 1 | 1 1.1 | 1 1.1
+// Hidden 2 | 2 2.2 | 2 2.2
+// Hidden 3 | 3 3.3 | 3 3.3
+// Hidden 4 | 4 4.4 | 4 4.4
+// Hidden 5 | 5 5.5 | 5 5.5
+// Solution:
+// #include <stdio.h>
+
+// union Data {
+//     int i;
+//     float f;
+// };
+
+// int main() {
+//     union Data d;
+
+//     scanf("%d", &d.i);
+//     printf("%d ", d.i);
+
+//     scanf("%f", &d.f);
+//     printf("%.1f", d.f);
+
+//     return 0;
+// }
+// ________________________________________
+// Problem Statement 43
+// Ravi wants to find average using structure
+// Write a program that:
+// ● Uses structure
+// ● Reads 3 marks
+// ● Prints average
+// Sample Test Case 1
+// Input:
+// 10 20 30
+// Output:
+// 20
+// Sample Test Case 2
+// Input:
+// 5 5 5
+// Output:
+// 5
+// Hidden Test Cases
+// Test Case | Input | Output
+// Hidden 1 | 1 1 1 | 1
+// Hidden 2 | 2 3 4 | 3
+// Hidden 3 | 0 0 0 | 0
+// Hidden 4 | 10 10 10 | 10
+// Hidden 5 | 7 8 9 | 8
+// Solution:
+// #include <stdio.h>
+
+// struct Marks {
+//     int a,b,c;
+// };
+
+// int main() {
+//     struct Marks m;
+//     scanf("%d %d %d",&m.a,&m.b,&m.c);
+
+//     printf("%d", (m.a + m.b + m.c)/3);
+//     return 0;
+// }
+// ________________________________________
+// Problem Statement 44
+// Priya wants to display structure using pointer
+// Write a program that:
+// ● Uses structure
+// ● Uses pointer to structure
+// ● Prints data
+// Sample Test Case 1
+// Input:
+// Aman 90
+// Output:
+// Aman 90
+// Sample Test Case 2
+// Input:
+// Riya 85
+// Output:
+// Riya 85
+// Hidden Test Cases
+// Test Case | Input | Output
+// Hidden 1 | A 50 | A 50
+// Hidden 2 | B 60 | B 60
+// Hidden 3 | C 70 | C 70
+// Hidden 4 | D 80 | D 80
+// Hidden 5 | E 90 | E 90
+// Solution:
+// #include <stdio.h>
+
+// struct Student {
+//     char name[50];
+//     int marks;
+// };
+
+// int main() {
+//     struct Student s;
+//     struct Student *ptr = &s;
+
+//     scanf("%s %d", ptr->name, &ptr->marks);
+//     printf("%s %d", ptr->name, ptr->marks);
+
+//     return 0;
+// }
+// ________________________________________
+// Problem Statement 45
+// Amit wants to compare two structures
+// Write a program that:
+// ● Uses structure
+// ● Reads two values
+// ● Prints 1 if equal else 0
+// Sample Test Case 1
+// Input:
+// 5 5
+// Output:
+// 1
+// Sample Test Case 2
+// Input:
+// 5 6
+// Output:
+// 0
+// Hidden Test Cases
+// Test Case | Input | Output
+// Hidden 1 | 0 0 | 1
+// Hidden 2 | 1 2 | 0
+// Hidden 3 | 3 3 | 1
+// Hidden 4 | 4 5 | 0
+// Hidden 5 | 10 10 | 1
+// Solution:
+// #include <stdio.h>
+
+// struct Num {
+//     int x;
+// };
+
+// int main() {
+//     struct Num a,b;
+//     scanf("%d %d",&a.x,&b.x);
+
+//     if(a.x == b.x)
+//         printf("1");
+//     else
+//         printf("0");
+
+//     return 0;
+// }
+
+
+// Problem Statement 46
+// Aman wants to understand memory sharing in union using pointer
+// Write a program that:
+// ● Uses a union with int and float
+// ● Assigns value to int
+// ● Accesses float using pointer
+// ● Prints float value
+// Sample Test Case 1
+// Input:
+// 5
+// Output:
+// (garbage/implementation dependent)
+// Sample Test Case 2
+// Input:
+// 10
+// Output:
+// (garbage/implementation dependent)
+// Hidden Test Cases
+// Test Case | Input | Output
+// Hidden 1 | 1 | undefined
+// Hidden 2 | 2 | undefined
+// Hidden 3 | 100 | undefined
+// Hidden 4 | -1 | undefined
+// Hidden 5 | 0 | undefined
+// Solution:
+// #include <stdio.h>
+
+// union Data {
+//     int i;
+//     float f;
+// };
+
+// int main() {
+//     union Data d;
+//     scanf("%d", &d.i);
+
+//     float *ptr = (float*)&d;
+//     printf("%f", *ptr);
+
+//     return 0;
+// }
+// ________________________________________
+// Problem Statement 47
+// Riya wants to modify structure using pointer to pointer
+// Write a program that:
+// ● Uses structure with integer
+// ● Uses pointer to pointer
+// ● Modifies value
+// ● Prints updated value
+// Sample Test Case 1
+// Input:
+// 5
+// Output:
+// 10
+// Sample Test Case 2
+// Input:
+// 3
+// Output:
+// 6
+// Hidden Test Cases
+// Test Case | Input | Output
+// Hidden 1 | 1 | 2
+// Hidden 2 | 2 | 4
+// Hidden 3 | 10 | 20
+// Hidden 4 | -1 | -2
+// Hidden 5 | 0 | 0
+// Solution:
+// #include <stdio.h>
+
+// struct Num {
+//     int x;
+// };
+
+// void modify(struct Num **p) {
+//     (**p).x *= 2;
+// }
+
+// int main() {
+//     struct Num n;
+//     scanf("%d", &n.x);
+
+//     struct Num *ptr = &n;
+//     modify(&ptr);
+
+//     printf("%d", n.x);
+//     return 0;
+// }
+// ________________________________________
+// Problem Statement 48
+// Rahul wants to observe union overwrite behavior
+// Write a program that:
+// ● Uses union with int and char array
+// ● Assigns integer
+// ● Prints char array
+// Sample Test Case 1
+// Input:
+// 16909060
+// Output:
+// (binary dependent characters)
+// Sample Test Case 2
+// Input:
+// 1
+// Output:
+// (binary dependent characters)
+// Hidden Test Cases
+// Test Case | Input | Output
+// Hidden 1 | 256 | undefined
+// Hidden 2 | 512 | undefined
+// Hidden 3 | 1024 | undefined
+// Hidden 4 | -1 | undefined
+// Hidden 5 | 0 | undefined
+// Solution:
+// #include <stdio.h>
+
+// union Data {
+//     int i;
+//     char c[4];
+// };
+
+// int main() {
+//     union Data d;
+//     scanf("%d", &d.i);
+
+//     for (int i = 0; i < 4; i++)
+//         printf("%d ", d.c[i]);
+
+//     return 0;
+// }
+// ________________________________________
+// Problem Statement 49
+// Neha wants to swap two structures using pointer arithmetic
+// Write a program that:
+// ● Uses array of structures
+// ● Uses pointer arithmetic
+// ● Swaps first and last
+// ● Prints result
+// Sample Test Case 1
+// Input:
+// 1 2 3
+// Output:
+// 3 2 1
+// Sample Test Case 2
+// Input:
+// 5 6 7
+// Output:
+// 7 6 5
+// Hidden Test Cases
+// Test Case | Input | Output
+// Hidden 1 | 1 1 1 | 1 1 1
+// Hidden 2 | 2 3 4 | 4 3 2
+// Hidden 3 | 0 1 2 | 2 1 0
+// Hidden 4 | -1 0 1 | 1 0 -1
+// Hidden 5 | 9 8 7 | 7 8 9
+// Solution:
+// #include <stdio.h>
+
+// struct Num {
+//     int x;
+// };
+
+// int main() {
+//     struct Num a[3];
+//     for (int i = 0; i < 3; i++)
+//         scanf("%d", &a[i].x);
+
+//     struct Num *p = a;
+//     struct Num temp = *p;
+//     *p = *(p + 2);
+//     *(p + 2) = temp;
+
+//     for (int i = 0; i < 3; i++)
+//         printf("%d ", a[i].x);
+
+//     return 0;
+// }
+// ________________________________________
+// Problem Statement 50
+// Arjun wants to pass union inside structure
+// Write a program that:
+// ● Uses structure containing union
+// ● Assigns values
+// ● Prints correct member
+// Sample Test Case 1
+// Input:
+// 1 10
+// Output:
+// 10
+// Sample Test Case 2
+// Input:
+// 2 5.5
+// Output:
+// 5.5
+// Hidden Test Cases
+// Test Case | Input | Output
+// Hidden 1 | 1 100 | 100
+// Hidden 2 | 2 2.2 | 2.2
+// Hidden 3 | 1 0 | 0
+// Hidden 4 | 2 0.0 | 0.0
+// Hidden 5 | 1 -5 | -5
+// Solution:
+// #include <stdio.h>
+
+// union Data {
+//     int i;
+//     float f;
+// };
+
+// struct Wrapper {
+//     int type;
+//     union Data d;
+// };
+
+// int main() {
+//     struct Wrapper w;
+//     scanf("%d", &w.type);
+
+//     if (w.type == 1) {
+//         scanf("%d", &w.d.i);
+//         printf("%d", w.d.i);
+//     } else {
+//         scanf("%f", &w.d.f);
+//         printf("%.1f", w.d.f);
+//     }
+
+//     return 0;
+// }
+// ________________________________________
+// Problem Statement 51
+// Simran wants to use pointer to union
+// Write a program that:
+// ● Uses union
+// ● Uses pointer to union
+// ● Assigns and prints value
+// Sample Test Case 1
+// Input:
+// 5
+// Output:
+// 5
+// Sample Test Case 2
+// Input:
+// 10
+// Output:
+// 10
+// Hidden Test Cases
+// Test Case | Input | Output
+// Hidden 1 | 1 | 1
+// Hidden 2 | 2 | 2
+// Hidden 3 | 3 | 3
+// Hidden 4 | 4 | 4
+// Hidden 5 | 0 | 0
+// Solution:
+// #include <stdio.h>
+
+// union Data {
+//     int x;
+// };
+
+// int main() {
+//     union Data d;
+//     union Data *ptr = &d;
+
+//     scanf("%d", &ptr->x);
+//     printf("%d", ptr->x);
+
+//     return 0;
+// }
+// ________________________________________
+// Problem Statement 52
+// Karan wants to demonstrate structure padding
+// Write a program that:
+// ● Uses structure with char and int
+// ● Prints size of structure
+// Sample Test Case 1
+// Input:
+// (no input)
+// Output:
+// (implementation dependent)
+// Sample Test Case 2
+// Input:
+// (no input)
+// Output:
+// (implementation dependent)
+// Hidden Test Cases
+// Test Case | Input | Output
+// Hidden 1 | - | depends
+// Hidden 2 | - | depends
+// Hidden 3 | - | depends
+// Hidden 4 | - | depends
+// Hidden 5 | - | depends
+// Solution:
+// #include <stdio.h>
+
+// struct Data {
+//     char c;
+//     int i;
+// };
+
+// int main() {
+//     printf("%lu", sizeof(struct Data));
+//     return 0;
+// }
+// ________________________________________
+// Problem Statement 53
+// Ravi wants to access structure array using pointer
+// Write a program that:
+// ● Uses array of structures
+// ● Uses pointer
+// ● Prints elements
+// Sample Test Case 1
+// Input:
+// 1 2 3
+// Output:
+// 1 2 3
+// Sample Test Case 2
+// Input:
+// 4 5 6
+// Output:
+// 4 5 6
+// Hidden Test Cases
+// Test Case | Input | Output
+// Hidden 1 | 1 1 1 | 1 1 1
+// Hidden 2 | 2 3 4 | 2 3 4
+// Hidden 3 | 0 0 0 | 0 0 0
+// Hidden 4 | -1 -2 -3 | -1 -2 -3
+// Hidden 5 | 9 8 7 | 9 8 7
+// Solution:
+// #include <stdio.h>
+
+// struct Num {
+//     int x;
+// };
+
+// int main() {
+//     struct Num a[3];
+//     struct Num *p = a;
+
+//     for (int i = 0; i < 3; i++)
+//         scanf("%d", &(p + i)->x);
+
+//     for (int i = 0; i < 3; i++)
+//         printf("%d ", (p + i)->x);
+
+//     return 0;
+// }
+// ________________________________________
+// Problem Statement 54
+// Priya wants to mix pointer casting with structure
+// Write a program that:
+// ● Uses structure
+// ● Casts pointer to int pointer
+// ● Prints first member
+// Sample Test Case 1
+// Input:
+// 5
+// Output:
+// 5
+// Sample Test Case 2
+// Input:
+// 10
+// Output:
+// 10
+// Hidden Test Cases
+// Test Case | Input | Output
+// Hidden 1 | 1 | 1
+// Hidden 2 | 2 | 2
+// Hidden 3 | 3 | 3
+// Hidden 4 | 4 | 4
+// Hidden 5 | 0 | 0
+// Solution:
+// #include <stdio.h>
+
+// struct Data {
+//     int x;
+// };
+
+// int main() {
+//     struct Data d;
+//     scanf("%d", &d.x);
+
+//     int *ptr = (int*)&d;
+//     printf("%d", *ptr);
+
+//     return 0;
+// }
+// ________________________________________
+// Problem Statement 55
+// Amit wants to demonstrate union size
+// Write a program that:
+// ● Uses union
+// ● Prints size
+// Sample Test Case 1
+// Input:
+// (no input)
+// Output:
+// (max member size)
+// Sample Test Case 2
+// Input:
+// (no input)
+// Output:
+// (max member size)
+// Hidden Test Cases
+// Test Case | Input | Output
+// Hidden 1 | - | depends
+// Hidden 2 | - | depends
+// Hidden 3 | - | depends
+// Hidden 4 | - | depends
+// Hidden 5 | - | depends
+// Solution:
+// #include <stdio.h>
+
+// union Data {
+//     int i;
+//     float f;
+//     char c;
+// };
+
+// int main() {
+//     printf("%lu", sizeof(union Data));
+//     return 0;
+// }
+
+
+// Problem Statement 56
+// Aman wants to print enum values
+// Write a program that:
+// ● Defines an enum with 3 values
+// ● Prints all values
+// Sample Test Case 1
+// Input:
+// (no input)
+// Output:
+// 0 1 2
+// Sample Test Case 2
+// Input:
+// (no input)
+// Output:
+// 0 1 2
+// Hidden Test Cases
+// Test Case | Input | Output
+// Hidden 1 | - | 0 1 2
+// Hidden 2 | - | 0 1 2
+// Hidden 3 | - | 0 1 2
+// Hidden 4 | - | 0 1 2
+// Hidden 5 | - | 0 1 2
+// Solution:
+// #include <stdio.h>
+
+// enum Day {MON, TUE, WED};
+
+// int main() {
+//     printf("%d %d %d", MON, TUE, WED);
+//     return 0;
+// }
+// ________________________________________
+// Problem Statement 57
+// Riya wants to assign custom values in enum
+// Write a program that:
+// ● Defines enum with custom values
+// ● Prints them
+// Sample Test Case 1
+// Input:
+// (no input)
+// Output:
+// 10 20 21
+// Sample Test Case 2
+// Input:
+// (no input)
+// Output:
+// 10 20 21
+// Hidden Test Cases
+// Test Case | Input | Output
+// Hidden 1 | - | 10 20 21
+// Hidden 2 | - | 10 20 21
+// Hidden 3 | - | 10 20 21
+// Hidden 4 | - | 10 20 21
+// Hidden 5 | - | 10 20 21
+// Solution:
+// #include <stdio.h>
+
+// enum Num {A=10, B=20, C};
+
+// int main() {
+//     printf("%d %d %d", A, B, C);
+//     return 0;
+// }
+// ________________________________________
+// Problem Statement 58
+// Rahul wants to use enum in switch case
+// Write a program that:
+// ● Uses enum
+// ● Takes integer input
+// ● Prints corresponding value
+// Sample Test Case 1
+// Input:
+// 0
+// Output:
+// MON
+// Sample Test Case 2
+// Input:
+// 1
+// Output:
+// TUE
+// Hidden Test Cases
+// Test Case | Input | Output
+// Hidden 1 | 2 | WED
+// Hidden 2 | 3 | INVALID
+// Hidden 3 | 0 | MON
+// Hidden 4 | 1 | TUE
+// Hidden 5 | 5 | INVALID
+// Solution:
+// #include <stdio.h>
+
+// enum Day {MON, TUE, WED};
+
+// int main() {
+//     int n;
+//     scanf("%d", &n);
+
+//     switch(n) {
+//         case MON: printf("MON"); break;
+//         case TUE: printf("TUE"); break;
+//         case WED: printf("WED"); break;
+//         default: printf("INVALID");
+//     }
+
+//     return 0;
+// }
+// ________________________________________
+// Problem Statement 59
+// Neha wants to find size of enum
+// Write a program that:
+// ● Uses enum
+// ● Prints its size
+// Sample Test Case 1
+// Input:
+// (no input)
+// Output:
+// (implementation dependent)
+// Sample Test Case 2
+// Input:
+// (no input)
+// Output:
+// (implementation dependent)
+// Hidden Test Cases
+// Test Case | Input | Output
+// Hidden 1 | - | depends
+// Hidden 2 | - | depends
+// Hidden 3 | - | depends
+// Hidden 4 | - | depends
+// Hidden 5 | - | depends
+// Solution:
+// #include <stdio.h>
+
+// enum Test {A, B, C};
+
+// int main() {
+//     printf("%lu", sizeof(enum Test));
+//     return 0;
+// }
+// ________________________________________
+// Problem Statement 60
+// Karan wants to use enum variable
+// Write a program that:
+// ● Uses enum variable
+// ● Assigns value
+// ● Prints value
+// Sample Test Case 1
+// Input:
+// (no input)
+// Output:
+// 1
+// Sample Test Case 2
+// Input:
+// (no input)
+// Output:
+// 1
+// Hidden Test Cases
+// Test Case | Input | Output
+// Hidden 1 | - | 1
+// Hidden 2 | - | 1
+// Hidden 3 | - | 1
+// Hidden 4 | - | 1
+// Hidden 5 | - | 1
+// Solution:
+// #include <stdio.h>
+
+// enum Day {MON, TUE, WED};
+
+// int main() {
+//     enum Day d = TUE;
+//     printf("%d", d);
+//     return 0;
+// }
+
+
+
+// Problem Statement 61
+// Aman wants to understand auto storage class
+// Write a program that:
+// ● Uses auto variable
+// ● Prints value
+// Sample Test Case 1
+// Input:
+// 5
+// Output:
+// 5
+// Sample Test Case 2
+// Input:
+// 10
+// Output:
+// 10
+// Hidden Test Cases
+// Test Case | Input | Output
+// Hidden 1 | 1 | 1
+// Hidden 2 | 2 | 2
+// Hidden 3 | 3 | 3
+// Hidden 4 | 4 | 4
+// Hidden 5 | 0 | 0
+// Solution:
+// #include <stdio.h>
+
+// int main() {
+//     auto int x;
+//     scanf("%d", &x);
+//     printf("%d", x);
+//     return 0;
+// }
+// ________________________________________
+// Problem Statement 62
+// Riya wants to understand static variable behavior
+// Write a program that:
+// ● Uses static variable
+// ● Calls function twice
+// ● Prints values
+// Sample Test Case 1
+// Input:
+// (no input)
+// Output:
+// 1 2
+// Sample Test Case 2
+// Input:
+// (no input)
+// Output:
+// 1 2
+// Hidden Test Cases
+// Test Case | Input | Output
+// Hidden 1 | - | 1 2
+// Hidden 2 | - | 1 2
+// Hidden 3 | - | 1 2
+// Hidden 4 | - | 1 2
+// Hidden 5 | - | 1 2
+// Solution:
+// #include <stdio.h>
+
+// void func() {
+//     static int x = 0;
+//     x++;
+//     printf("%d ", x);
+// }
+
+// int main() {
+//     func();
+//     func();
+//     return 0;
+// }
+// ________________________________________
+// Problem Statement 63
+// Rahul wants to use register variable
+// Write a program that:
+// ● Uses register variable
+// ● Prints value
+// Sample Test Case 1
+// Input:
+// 5
+// Output:
+// 5
+// Sample Test Case 2
+// Input:
+// 10
+// Output:
+// 10
+// Hidden Test Cases
+// Test Case | Input | Output
+// Hidden 1 | 1 | 1
+// Hidden 2 | 2 | 2
+// Hidden 3 | 3 | 3
+// Hidden 4 | 4 | 4
+// Hidden 5 | 0 | 0
+// Solution:
+// #include <stdio.h>
+
+// int main() {
+//     register int x;
+//     scanf("%d", &x);
+//     printf("%d", x);
+//     return 0;
+// }
+// ________________________________________
+// Problem Statement 64
+// Neha wants to demonstrate extern variable
+// Write a program that:
+// ● Uses extern variable
+// ● Prints value
+// Sample Test Case 1
+// Input:
+// (no input)
+// Output:
+// 10
+// Sample Test Case 2
+// Input:
+// (no input)
+// Output:
+// 10
+// Hidden Test Cases
+// Test Case | Input | Output
+// Hidden 1 | - | 10
+// Hidden 2 | - | 10
+// Hidden 3 | - | 10
+// Hidden 4 | - | 10
+// Hidden 5 | - | 10
+// Solution:
+// #include <stdio.h>
+
+// int x = 10;
+
+// int main() {
+//     extern int x;
+//     printf("%d", x);
+//     return 0;
+// }
+// ________________________________________
+// Problem Statement 65
+// Karan wants to compare static and auto variables
+// Write a program that:
+// ● Uses static and auto
+// ● Calls function twice
+// ● Prints values
+// Sample Test Case 1
+// Input:
+// (no input)
+// Output:
+// 1 1
+// 2 1
+// Sample Test Case 2
+// Input:
+// (no input)
+// Output:
+// 1 1
+// 2 1
+// Hidden Test Cases
+// Test Case | Input | Output
+// Hidden 1 | - | same
+// Hidden 2 | - | same
+// Hidden 3 | - | same
+// Hidden 4 | - | same
+// Hidden 5 | - | same
+// Solution:
+// #include <stdio.h>
+
+// void func() {
+//     static int s = 0;
+//     auto int a = 0;
+
+//     s++;
+//     a++;
+
+//     printf("%d %d\n", s, a);
+// }
+
+// int main() {
+//     func();
+//     func();
+//     return 0;
+// }
+// Aman wants to allocate memory for n integers using malloc
+// Write a program that:
+// ● Reads size n
+// ● Allocates memory using malloc
+// ● Reads n integers
+// ● Prints them
+// Sample Test Case 1
+// Input:
+// 3
+// 1 2 3
+// Output:
+// 1 2 3
+// Sample Test Case 2
+// Input:
+// 4
+// 5 6 7 8
+// Output:
+// 5 6 7 8
+// Hidden Test Cases
+// Test Case | Input | Output
+// Hidden 1 | 1 → 5 | 5
+// Hidden 2 | 2 → 1 2 | 1 2
+// Hidden 3 | 3 → 3 3 3 | 3 3 3
+// Hidden 4 | 3 → 0 0 0 | 0 0 0
+// Hidden 5 | 5 → 1 2 3 4 5 | 1 2 3 4 5
+// Solution:
+// #include <stdio.h>
+// #include <stdlib.h>
+
+// int main() {
+//     int n;
+//     scanf("%d", &n);
+
+//     int *arr = (int*)malloc(n * sizeof(int));
+
+//     for (int i = 0; i < n; i++)
+//         scanf("%d", &arr[i]);
+
+//     for (int i = 0; i < n; i++)
+//         printf("%d ", arr[i]);
+
+//     free(arr);
+//     return 0;
+// }
+// ________________________________________
+// Problem Statement 66
+// Riya wants to find sum using calloc
+// Write a program that:
+// ● Reads size n
+// ● Allocates memory using calloc
+// ● Reads n integers
+// ● Prints sum
+// Sample Test Case 1
+// Input:
+// 3
+// 1 2 3
+// Output:
+// 6
+// Sample Test Case 2
+// Input:
+// 4
+// 5 5 5 5
+// Output:
+// 20
+// Hidden Test Cases
+// Test Case | Input | Output
+// Hidden 1 | 1 → 5 | 5
+// Hidden 2 | 2 → 1 2 | 3
+// Hidden 3 | 3 → 3 3 3 | 9
+// Hidden 4 | 3 → 0 0 0 | 0
+// Hidden 5 | 5 → 1 1 1 1 1 | 5
+// Solution:
+// #include <stdio.h>
+// #include <stdlib.h>
+
+// int main() {
+//     int n, sum = 0;
+//     scanf("%d", &n);
+
+//     int *arr = (int*)calloc(n, sizeof(int));
+
+//     for (int i = 0; i < n; i++) {
+//         scanf("%d", &arr[i]);
+//         sum += arr[i];
+//     }
+
+//     printf("%d", sum);
+
+//     free(arr);
+//     return 0;
+// }
+// ________________________________________
+// Problem Statement 67
+// Rahul wants to resize array using realloc
+// Write a program that:
+// ● Reads initial size n
+// ● Allocates memory
+// ● Reads n elements
+// ● Reads new size m
+// ● Resizes array using realloc
+// ● Reads additional elements
+// ● Prints all elements
+// Sample Test Case 1
+// Input:
+// 2
+// 1 2
+// 4
+// 3 4
+// Output:
+// 1 2 3 4
+// Sample Test Case 2
+// Input:
+// 3
+// 5 6 7
+// 5
+// 8 9
+// Output:
+// 5 6 7 8 9
+// Hidden Test Cases
+// Test Case | Input | Output
+// Hidden 1 | 1 → 5 → 2 → 6 | 5 6
+// Hidden 2 | 2 → 1 2 → 3 → 3 | 1 2 3
+// Hidden 3 | 3 → 3 3 3 → 5 → 1 1 | 3 3 3 1 1
+// Hidden 4 | 2 → 0 0 → 4 → 0 0 | 0 0 0 0
+// Hidden 5 | 1 → 1 → 1 | 1
+// Solution:
+// #include <stdio.h>
+// #include <stdlib.h>
+
+// int main() {
+//     int n, m;
+//     scanf("%d", &n);
+
+//     int *arr = (int*)malloc(n * sizeof(int));
+
+//     for (int i = 0; i < n; i++)
+//         scanf("%d", &arr[i]);
+
+//     scanf("%d", &m);
+
+//     arr = (int*)realloc(arr, m * sizeof(int));
+
+//     for (int i = n; i < m; i++)
+//         scanf("%d", &arr[i]);
+
+//     for (int i = 0; i < m; i++)
+//         printf("%d ", arr[i]);
+
+//     free(arr);
+//     return 0;
+// }
+// ________________________________________
+// Problem Statement 68
+// Neha wants to find maximum using dynamic array
+// Write a program that:
+// ● Reads size n
+// ● Uses malloc
+// ● Reads n integers
+// ● Finds maximum
+// ● Prints result
+// Sample Test Case 1
+// Input:
+// 3
+// 1 5 2
+// Output:
+// 5
+// Sample Test Case 2
+// Input:
+// 4
+// -1 -2 -3 -4
+// Output:
+// -1
+// Hidden Test Cases
+// Test Case | Input | Output
+// Hidden 1 | 1 → 5 | 5
+// Hidden 2 | 2 → 1 2 | 2
+// Hidden 3 | 3 → 3 3 3 | 3
+// Hidden 4 | 3 → 0 -1 -2 | 0
+// Hidden 5 | 5 → 1 2 10 4 5 | 10
+// Solution:
+// #include <stdio.h>
+// #include <stdlib.h>
+
+// int main() {
+//     int n;
+//     scanf("%d", &n);
+
+//     int *arr = (int*)malloc(n * sizeof(int));
+
+//     for (int i = 0; i < n; i++)
+//         scanf("%d", &arr[i]);
+
+//     int max = arr[0];
+//     for (int i = 1; i < n; i++)
+//         if (arr[i] > max)
+//             max = arr[i];
+
+//     printf("%d", max);
+
+//     free(arr);
+//     return 0;
+// }
+// ________________________________________
+// Problem Statement 69
+// Karan wants to reverse array using dynamic memory
+// Write a program that:
+// ● Reads size n
+// ● Allocates memory
+// ● Reads elements
+// ● Reverses array
+// ● Prints result
+// Sample Test Case 1
+// Input:
+// 3
+// 1 2 3
+// Output:
+// 3 2 1
+// Sample Test Case 2
+// Input:
+// 4
+// 5 6 7 8
+// Output:
+// 8 7 6 5
+// Hidden Test Cases
+// Test Case | Input | Output
+// Hidden 1 | 1 → 5 | 5
+// Hidden 2 | 2 → 1 2 | 2 1
+// Hidden 3 | 3 → 3 3 3 | 3 3 3
+// Hidden 4 | 3 → 0 1 0 | 0 1 0
+// Hidden 5 | 5 → 1 2 3 4 5 | 5 4 3 2 1
+// Solution:
+// #include <stdio.h>
+// #include <stdlib.h>
+
+// int main() {
+//     int n;
+//     scanf("%d", &n);
+
+//     int *arr = (int*)malloc(n * sizeof(int));
+
+//     for (int i = 0; i < n; i++)
+//         scanf("%d", &arr[i]);
+
+//     for (int i = 0; i < n/2; i++) {
+//         int temp = arr[i];
+//         arr[i] = arr[n - i - 1];
+//         arr[n - i - 1] = temp;
+//     }
+
+//     for (int i = 0; i < n; i++)
+//         printf("%d ", arr[i]);
+
+//     free(arr);
+//     return 0;
+// }
 
