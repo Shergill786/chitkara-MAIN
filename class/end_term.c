@@ -183,3 +183,38 @@
 //     // Recursive call for the next pair of characters
 //     reverse_string(str, start + 1, end - 1);
 // }
+
+
+// // ARRAYS use functions and pointers // //
+
+// sum of array elements
+// insert an element in an array
+// count occurrences of an element in an array
+// find the largest and smallest element in an array
+// reverse an array
+// sort an array
+// delete an element from an array
+// count even and odd numbers in an array
+// copy an element array
+// rotate an array
+// search for an element in an array
+// compare elements of a array
+// max and min in an array
+// second largest and second smallest element in an array
+// remve duplicates from an array
+
+// sum using pointers and functions
+#include <stdio.h>
+int sum_of_array(int *arr, int size);
+int main() {
+    int arr[] = {1, 2, 3, 4, 5};
+    int size = sizeof(arr) / sizeof(arr[0]);
+    printf("Sum of array elements is: %d\n", sum_of_array(arr, size));
+    return 0;
+}
+int sum_of_array(int *arr, int size) {
+    if (size == 0)
+        return 0; // Base case: If the array is empty, return 0
+    return *arr + sum_of_array(arr + 1, size - 1); // Recursive call with the next element and reduced size
+}
+    
