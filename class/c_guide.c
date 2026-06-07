@@ -13,7 +13,6 @@ All code is commented out for reference
 
 // ARITHMETIC AND COMPARISON OPERATORS
 // =====================================
-
 /*
 int a = 10;
 int b = 5;
