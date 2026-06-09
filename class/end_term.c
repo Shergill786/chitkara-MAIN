@@ -217,4 +217,299 @@
 //         return 0; // Base case: If the array is empty, return 0
 //     return *arr + sum_of_array(arr + 1, size - 1); // Recursive call with the next element and reduced size
 // }
+
+//  without recursion
+// #include <stdio.h>
+// int sum_of_array(int *arr, int size);
+// int main() {
+//     int arr[] = {1, 2, 3, 4, 5};
+//     int size = sizeof(arr) / sizeof(arr[0]);
+//     printf("Sum of array elements is: %d\n", sum_of_array(arr, size));
+//     return 0;
+// }
+// int sum_of_array(int *arr, int size) {
+//     int sum = 0;
+//     for (int i = 0; i < size; i++) {
+//         sum += arr[i]; // Add each element to the sum
+//     }
+//     return sum; // Return the total sum
+// }
+
+
+// insert an element in an array
+// #include <stdio.h>
+// void insert_element(int *arr, int size, int element, int position);
+// int main() {
+//     int arr[10] = {1, 2, 3, 4, 5}; // Initial array with some elements
+//     int size = 5; // Current size of the array
+//     int element = 10; // Element to be inserted
+//     int position = 2; // Position where the element should be inserted (0-based index)
+
+//     printf("Original array: ");
+//     for (int i = 0; i < size; i++) {
+//         printf("%d ", arr[i]);
+//     }
+//     printf("\n");
+
+//     insert_element(arr, size, element, position);
+//     size++; // Increase the size after insertion
+
+//     printf("Array after insertion: ");
+//     for (int i = 0; i < size; i++) {
+//         printf("%d ", arr[i]);
+//     }
+//     printf("\n");
     
+//     return 0;
+// }
+// void insert_element(int *arr, int size, int element, int position) {
+//     if (position < 0 || position > size) {
+//         printf("Invalid position! Please enter a position between 0 and %d.\n", size);
+//         return; // Exit the function if the position is invalid
+//     }
+//     // Shift elements to the right to create space for the new element
+//     for (int i = size; i > position; i--) {
+//         arr[i] = arr[i - 1]; // Move each element one position to the right
+//     }
+//     arr[position] = element; // Insert the new element at the specified position
+// }
+
+
+// count occurrences of an element in an array
+// #include <stdio.h>
+// int count_occurrences(int *arr, int size, int element);
+// int main() {
+//     int arr[] = {1, 2, 3, 4, 5, 2, 2}; // Array with some duplicate elements
+//     int size = sizeof(arr) / sizeof(arr[0]);
+//     int element = 2; // Element to count occurrences of
+
+//     printf("Array: ");
+//     for (int i = 0; i < size; i++) {
+//         printf("%d ", arr[i]);
+//     }
+//     printf("\n");
+
+//     int count = count_occurrences(arr, size, element);
+//     printf("Number of occurrences of %d is: %d\n", element, count);
+
+//     return 0;
+// }
+// int count_occurrences(int *arr, int size, int element) {
+//     int count = 0; // Initialize count to 0
+//     for (int i = 0; i < size; i++) {
+//         if (arr[i] == element) { // Check if the current element matches the target element
+//             count++; // Increment count if a match is found
+//         }
+//     }
+//     return count; // Return the total count of occurrences
+// }
+
+// find the largest and smallest element in an array
+// #include <stdio.h>
+// void find_largest_smallest(int *arr, int size, int *largest, int *smallest);
+// int main() {
+//     int arr[] = {3, 1, 4, 1, 5, 9}; // Array with some elements
+//     int size = sizeof(arr) / sizeof(arr[0]);
+//     int largest, smallest;
+
+//     printf("Array: ");
+//     for (int i = 0; i < size; i++) {
+//         printf("%d ", arr[i]);
+//     }
+//     printf("\n");
+
+//     find_largest_smallest(arr, size, &largest, &smallest);
+//     printf("Largest element is: %d\n", largest);
+//     printf("Smallest element is: %d\n", smallest);
+
+//     return 0;
+// }
+// void find_largest_smallest(int *arr, int size, int *largest, int *smallest) {
+//     if (size <= 0) {
+//         printf("Array is empty!\n");
+//         return; // Exit the function if the array is empty
+//     }
+//     *largest = arr[0]; // Initialize largest to the first element
+//     *smallest = arr[0]; // Initialize smallest to the first element
+
+//     for (int i = 1; i < size; i++) {
+//         if (arr[i] > *largest) { // Check if the current element is greater than the largest found so far
+//             *largest = arr[i]; // Update largest if a larger element is found
+//         }
+//         if (arr[i] < *smallest) { // Check if the current element is smaller than the smallest found so far
+//             *smallest = arr[i]; // Update smallest if a smaller element is found
+//         }
+//     }
+// }
+
+
+// reverse an array
+// #include <stdio.h>
+// void reverse_array(int *arr, int size);
+// int main() {
+//     int arr[] = {1, 2, 3, 4, 5}; // Array with some elements
+//     int size = sizeof(arr) / sizeof(arr[0]);
+
+//     printf("Original array: ");
+//     for (int i = 0; i < size; i++) {
+//         printf("%d ", arr[i]);
+//     }
+//     printf("\n");
+
+//     reverse_array(arr, size);
+
+//     printf("Reversed array: ");
+//     for (int i = 0; i < size; i++) {
+//         printf("%d ", arr[i]);
+//     }
+//     printf("\n");
+
+//     return 0;
+// }
+// void reverse_array(int *arr, int size) {
+//     for (int i = 0; i < size / 2; i++) { // Loop until the middle of the array
+//         int temp = arr[i]; // Store the current element in a temporary variable
+//         arr[i] = arr[size - 1 - i]; // Replace the current element with the corresponding element from the end
+//         arr[size - 1 - i] = temp; // Replace the corresponding element from the end with the original current element
+//     }
+// }
+
+// sort an array
+// #include <stdio.h>
+// void sort_array(int *arr, int size) {
+//     for (int i = 0; i < size - 1; i++) { // Loop through each element in the array
+//         for (int j = 0; j < size - i - 1; j++) { // Loop through the unsorted elements
+//             if (arr[j] > arr[j + 1]) { // Compare adjacent elements
+//                 int temp = arr[j]; // Swap if the current element is greater than the next element
+//                 arr[j] = arr[j + 1];
+//                 arr[j + 1] = temp;
+//             }
+//         }
+//     }
+// }
+// int main() {
+//     int arr[] = {64, 34, 25, 12, 22, 11, 90}; // Array with some unsorted elements
+//     int size = sizeof(arr) / sizeof(arr[0]);
+
+//     printf("Original array: ");
+//     for (int i = 0; i < size; i++) {
+//         printf("%d ", arr[i]);
+//     }
+//     printf("\n");
+
+//     sort_array(arr, size);
+
+//     printf("Sorted array: ");
+//     for (int i = 0; i < size; i++) {
+//         printf("%d ", arr[i]);
+//     }
+//     printf("\n");
+
+//     return 0;
+// }
+
+// rotate an array
+// #include <stdio.h>
+// void rotate_array(int *arr, int size, int positions);
+// int main() {
+//     int arr[] = {1, 2, 3, 4, 5}; // Array with some elements
+//     int size = sizeof(arr) / sizeof(arr[0]);
+//     int positions = 2; // Number of positions to rotate the array
+
+//     printf("Original array: ");
+//     for (int i = 0; i < size; i++) {
+//         printf("%d ", arr[i]);
+//     }
+//     printf("\n");
+
+//     rotate_array(arr, size, positions);
+
+//     printf("Array after rotation: ");
+//     for (int i = 0; i < size; i++) {
+//         printf("%d ", arr[i]);
+//     }
+//     printf("\n");
+
+//     return 0;
+// }
+// void rotate_array(int *arr, int size, int positions) {
+//     if (positions < 0 || positions >= size) {
+//         printf("Invalid number of positions! Please enter a value between 0 and %d.\n", size - 1);
+//         return; // Exit the function if the number of positions is invalid
+//     }
+//     int temp[positions]; // Temporary array to store the elements to be rotated
+
+//     // Store the first 'positions' elements in the temporary array
+//     for (int i = 0; i < positions; i++) {
+//         temp[i] = arr[i];
+//     }
+
+//     // Shift the remaining elements to the left
+//     for (int i = positions; i < size; i++) {
+//         arr[i - positions] = arr[i];
+//     }
+
+//     // Copy the elements from the temporary array back to the end of the original array
+//     for (int i = 0; i < positions; i++) {
+//         arr[size - positions + i] = temp[i];
+//     }
+// }
+
+// 2nd largest and 2nd smallest element in an array
+// #include <stdio.h>
+// void find_second_largest_smallest(int *arr, int size, int *second_largest, int *second_smallest);
+// int main() {
+//     int arr[] = {3, 1, 4, 1, 5, 9}; // Array with some elements
+//     int size = sizeof(arr) / sizeof(arr[0]);
+//     int second_largest, second_smallest;
+
+//     printf("Array: ");
+//     for (int i = 0; i < size; i++) {
+//         printf("%d ", arr[i]);
+//     }
+//     printf("\n");
+
+//     find_second_largest_smallest(arr, size, &second_largest, &second_smallest);
+//     printf("Second largest element is: %d\n", second_largest);
+//     printf("Second smallest element is: %d\n", second_smallest);
+
+//     return 0;
+// }
+// void find_second_largest_smallest(int *arr, int size, int *second_largest, int *second_smallest) {
+//     if (size < 2) {
+//         printf("Array must have at least two elements!\n");
+//         return; // Exit the function if the array has less than two elements
+//     }
+//     int largest = arr[0]; // Initialize largest to the first element
+//     int smallest = arr[0]; // Initialize smallest to the first element
+//     *second_largest = arr[0]; // Initialize second largest to the first element
+//     *second_smallest = arr[0]; // Initialize second smallest to the first element
+
+//     for (int i = 1; i < size; i++) {
+//         if (arr[i] > largest) { // Check if the current element is greater than the largest found so far
+//             *second_largest = largest; // Update second largest to the previous largest
+//             largest = arr[i]; // Update largest to the current element
+//         } else if (arr[i] > *second_largest && arr[i] != largest) { // Check if the current element is greater than second largest and not equal to largest
+//             *second_largest = arr[i]; // Update second largest if a larger element is found
+//         }
+//         if (arr[i] < smallest) { // Check if the current element is smaller than the smallest found so far
+//             *second_smallest = smallest; // Update second smallest to the previous smallest
+//             smallest = arr[i]; // Update smallest to the current element
+//         } else if (arr[i] < *second_smallest && arr[i] != smallest) { // Check if the current element is smaller than second smallest and not equal to smallest
+//             *second_smallest = arr[i]; // Update second smallest if a smaller element is found
+//         }
+//     }
+// }
+
+
+Define a structure for student details and display records
+Write a program to store employee details 
+Write a function to display details of a student using structure pointer
+Write a program to search employee details using employee ID
+Write a program to calculate average marks of students using structures
+Write a program to display highest salary employee details using structures
+Write a program using array of structures for book details
+Write a program to sort student records based on marks
+Write a function to pass structure to another function.</span>
+Write a program to display details of students who passed.</span></li>
+        

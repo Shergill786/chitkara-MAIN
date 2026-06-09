@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C String Questions</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            padding: 40px;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 20px;
+        }
+        
+        h1 {
+            color: #333;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            color: #666;
+            font-size: 1.1em;
+        }
+        
+        .questions-list {
+            list-style: none;
+        }
+        
+        .questions-list li {
+            background: #f8f9fa;
+            padding: 18px 25px;
+            margin-bottom: 12px;
+            border-left: 5px solid #667eea;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            counter-increment: question-counter;
+        }
+        
+        .questions-list li:hover {
+            background: #e7f0ff;
+            transform: translateX(5px);
+            box-shadow: 0 3px 10px rgba(102, 126, 234, 0.2);
+        }
+        
+        .questions-list li:before {
+            content: counter(question-counter) ". ";
+            font-weight: bold;
+            color: #667eea;
+            margin-right: 10px;
+        }
+        
+        body {
+            counter-reset: question-counter;
+        }
+        
+        .question-text {
+            color: #333;
+            font-size: 1em;
+            line-height: 1.6;
+        }
+        
+        code {
+            background: #e7f0ff;
+            padding: 3px 8px;
+            border-radius: 3px;
+            color: #764ba2;
+            font-family: 'Courier New', monospace;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #eee;
+            color: #999;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>C Language - String Questions</h1>
+            <p class="subtitle">Complete Collection of String Programming Problems</p>
+        </header>
+        
+        <ol class="questions-list">
+            <li><span class="question-text">Write a program to calculate string length using <code>strlen()</code>.</span></li>
+            <li><span class="question-text">Write a program to reverse a string using pointers.</span></li>
+            <li><span class="question-text">Write a function to count vowels and consonants in a string.</span></li>
+            <li><span class="question-text">Write a program to check whether a string is palindrome or not.</span></li>
+            <li><span class="question-text">Write a function to copy one string into another.</span></li>
+            <li><span class="question-text">Write a program to concatenate two strings without using <code>strcat()</code>.</span></li>
+            <li><span class="question-text">Write a function to count spaces and words in a sentence.</span></li>
+            <li><span class="question-text">Write a program to find frequency of a character in a string.</span></li>
+            <li><span class="question-text">Write a function to compare two strings without using <code>strcmp()</code>.</span></li>
+            <li><span class="question-text">Write a program to convert lowercase letters into uppercase.</span></li>
+            <li><span class="question-text">Write a program to count the number of vowels in a string.</span></li>
+        </ol>
+        
+        <footer>
+            <p>Chitkara University - C Programming String Questions</p>
+            <p>Generated from class materials</p>
+        </footer>
+    </div>
+</body>
+</html>

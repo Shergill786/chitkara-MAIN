@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C Structure Questions</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            padding: 40px;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 3px solid #f5576c;
+            padding-bottom: 20px;
+        }
+        
+        h1 {
+            color: #333;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            color: #666;
+            font-size: 1.1em;
+        }
+        
+        .questions-list {
+            list-style: none;
+        }
+        
+        .questions-list li {
+            background: #fef8f9;
+            padding: 18px 25px;
+            margin-bottom: 12px;
+            border-left: 5px solid #f5576c;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            counter-increment: question-counter;
+        }
+        
+        .questions-list li:hover {
+            background: #ffe6ec;
+            transform: translateX(5px);
+            box-shadow: 0 3px 10px rgba(245, 87, 108, 0.2);
+        }
+        
+        .questions-list li:before {
+            content: counter(question-counter) ". ";
+            font-weight: bold;
+            color: #f5576c;
+            margin-right: 10px;
+        }
+        
+        body {
+            counter-reset: question-counter;
+        }
+        
+        .question-text {
+            color: #333;
+            font-size: 1em;
+            line-height: 1.6;
+        }
+        
+        code {
+            background: #ffe6ec;
+            padding: 3px 8px;
+            border-radius: 3px;
+            color: #f5576c;
+            font-family: 'Courier New', monospace;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #eee;
+            color: #999;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>C Language - Structure Questions</h1>
+            <p class="subtitle">Complete Collection of Structure Programming Problems</p>
+        </header>
+        
+        <ol class="questions-list">
+            <li><span class="question-text">Define a structure for student details and display records.</span></li>
+            <li><span class="question-text">Write a program to store employee details using structures.</span></li>
+            <li><span class="question-text">Write a function to display details of a student using structure pointer.</span></li>
+            <li><span class="question-text">Write a program to search employee details using employee ID.</span></li>
+            <li><span class="question-text">Write a program to calculate average marks of students using structures.</span></li>
+            <li><span class="question-text">Write a program to display highest salary employee.</span></li>
+            <li><span class="question-text">Write a program using array of structures for book details.</span></li>
+            <li><span class="question-text">Write a program to sort student records based on marks.</span></li>
+            <li><span class="question-text">Write a function to pass structure to another function.</span></li>
+            <li><span class="question-text">Write a program to display details of students who passed.</span></li>
+        </ol>
+        
+        <footer>
+            <p>Chitkara University - C Programming Structure Questions</p>
+            <p>Generated from class materials</p>
+        </footer>
+    </div>
+</body>
+</html>
